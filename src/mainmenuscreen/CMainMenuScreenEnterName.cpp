@@ -1210,7 +1210,7 @@ void CMainMenuScreenEnterName::vFUN_E0(void)
     if ((this->unkC != this->unk10) && (!gBgMenuManager.isFlashActive(ENGINE_MAIN))) {
         this->unkC = this->unk10;
         gBgMenuManager.finalize(ENGINE_MAIN);
-        gBgMenuManager.initialize(ENGINE_MAIN);
+        gBgMenuManager.init(ENGINE_MAIN);
         this->vFUN_E4();
         this->vFUN_D0();
     }
@@ -1560,7 +1560,7 @@ void CMainMenuScreenEnterName::init(void)
         unk_0209A454.entryLen = strlen(unk_0209A454.entry);
     }
 
-    gBgMenuManager.initialize(ENGINE_MAIN);
+    gBgMenuManager.init(ENGINE_MAIN);
     gBgMenuManager.setScreens(ENGINE_MAIN, G2_GetBG3ScrPtr(), G2_GetBG1ScrPtr(), NULL);
 
     FUN_ov16_020f2f7c(&this->canvas, 1);
@@ -1586,7 +1586,7 @@ void CMainMenuScreenEnterName::update(BOOL param1)
         break;
     case 3:
         gBgMenuManager.finalize(ENGINE_MAIN);
-        gBgMenuManager.initialize(ENGINE_MAIN);
+        gBgMenuManager.init(ENGINE_MAIN);
         this->vFUN_E4();
         this->vFUN_D0();
         gBgMenuManager.updateGraphics(ENGINE_MAIN);
