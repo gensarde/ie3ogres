@@ -52,8 +52,7 @@ public:
     static void FUN_ov55_0211a010(char *param0, char *param1, u16 *param2, int param3);
     static bool FUN_ov55_0211a0c4(char *param0, u16 *param1, int param2, char **param3, int param4);
 
-    CMainMenuScreenEnterName(CScreenManager *manager) : manager(manager) {}
-    virtual ~CMainMenuScreenEnterName() { }
+    CMainMenuScreenEnterName(CScreenManager *manager) : manager(manager) { }
     /* ov55 0x0211aa40 */ virtual void updateKeys(u16 pressed, u16 held);
     /* ov55 0x0211b618 */ virtual void updateTP(TPData *tp);
     /* ov55 0x0211cbf4 */ virtual void init(void);
@@ -66,25 +65,25 @@ public:
     /* ov55 0x0211d030 */ virtual void closeFiles(void);
     /* ov55 0x0211baf4 */ virtual void deallocateFile(int idx);
     /* ov55 0x0211bac4 */ virtual void deallocateFiles(void);
-    /* ov55 0x0211d10c */ private: virtual void loadBG0Char(int fileIdx, u32 offset) {
-        Graphics::LoadBGXCharMain(0, this->files[fileIdx].data, offset);
+    /* ov55 0x0211d10c */ virtual u32 loadBG0Char(int fileIdx, u32 offset) {
+        return Graphics::LoadBGXCharMain(0, this->files[fileIdx].data, offset);
     }
-    /* ov55 0x0211d0f0 */ private: virtual void loadBG1Char(int fileIdx, u32 offset) {
-        Graphics::LoadBGXCharMain(1, this->files[fileIdx].data, offset);
+    /* ov55 0x0211d0f0 */ virtual u32 loadBG1Char(int fileIdx, u32 offset) {
+        return Graphics::LoadBGXCharMain(1, this->files[fileIdx].data, offset);
     }
-    /* ov55 0x0211d0d4 */ private: virtual void loadBG2Char(int fileIdx, u32 offset) {
-        Graphics::LoadBGXCharMain(2, this->files[fileIdx].data, offset);
+    /* ov55 0x0211d0d4 */ virtual u32 loadBG2Char(int fileIdx, u32 offset) {
+        return Graphics::LoadBGXCharMain(2, this->files[fileIdx].data, offset);
     }
-    /* ov55 0x0211d0b8 */ private: virtual void loadBG3Char(int fileIdx, u32 offset) {
-        Graphics::LoadBGXCharMain(3, this->files[fileIdx].data, offset);
+    /* ov55 0x0211d0b8 */ virtual u32 loadBG3Char(int fileIdx, u32 offset) {
+        return Graphics::LoadBGXCharMain(3, this->files[fileIdx].data, offset);
     }
     /* ov55 0x0211bb0c */ virtual void vFUN_94(void);
     /* ov55 0x0211bfcc */ virtual void vFUN_98(void);
-    /* ov55 0x0211d09c */ private: virtual void loadTempPalette(int fileIdx, int plttIdx) {
+    /* ov55 0x0211d09c */ virtual void loadTempPalette(int fileIdx, int plttIdx) {
         Graphics::LoadTempPaletteFromPac(this->files[fileIdx].data, ENGINE_MAIN, plttIdx);
     }
-    /* ov55 0x0211d07c */ private: virtual void setupScreen(int fileIdx, int tileIdx, int plttIdx) {
-        Graphics::SetupScreen(this->files[fileIdx].data, tileIdx + 1, plttIdx);
+    /* ov55 0x0211d07c */ virtual int setupScreen(int fileIdx, int tileIdx, int plttIdx) {
+        return Graphics::SetupScreen(this->files[fileIdx].data, tileIdx + 1, plttIdx);
     }
     /* ov55 0x0211a180 */ virtual void vFUN_A4(int param1);
     /* ov55 0x0211a5d8 */ virtual void setKey(int x, u32 y, SKey *key);
@@ -103,6 +102,7 @@ public:
     /* ov55 0x0211c200 */ virtual void vFUN_DC(void);
     /* ov55 0x0211c2f0 */ virtual void vFUN_E0(void);
     /* ov55 0x0211c454 */ virtual void vFUN_E4(void);
+    virtual ~CMainMenuScreenEnterName() { }
 
 private:
     inline u8 read_u8(u8 *src) {
