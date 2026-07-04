@@ -918,7 +918,7 @@ FUN_ov22_0211aa70: ; 0x0211AA70
 	ldr r0, _0211ACE4 ; =gFont8
 	b _0211AC0C
 _0211ABB4:
-	ldr r0, _0211ACE8 ; =gFont12
+	ldr r0, _0211ACE8 ; =gFont12Manager
 	mov r2, #5
 	ldr r0, [r0]
 	bl _ZN12CFontManager10setSpacingEii
@@ -932,14 +932,14 @@ _0211ABB4:
 	str r0, [sp, #0x10]
 	str r0, [sp, #0x14]
 	str r0, [sp, #0x18]
-	ldr r0, _0211ACE8 ; =gFont12
+	ldr r0, _0211ACE8 ; =gFont12Manager
 	str r4, [sp, #0x1c]
 	ldr r0, [r0]
 	mov r1, r11
 	mov r2, r9
 	mov r3, r10
 	bl _ZN12CFontManager15drawTextTex4bppEPcPviiiiiPNS_11GlyphBoundsEiiNS_9AlignmentE
-	ldr r0, _0211ACE8 ; =gFont12
+	ldr r0, _0211ACE8 ; =gFont12Manager
 _0211AC0C:
 	ldr r0, [r0]
 	bl _ZN12CFontManager12resetSpacingEv
@@ -996,7 +996,7 @@ _0211AC0C:
 	ldmfd sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
 _0211ACE0: .word g3DPlaneCtrl
 _0211ACE4: .word gFont8
-_0211ACE8: .word gFont12
+_0211ACE8: .word gFont12Manager
 	arm_func_end FUN_ov22_0211aa70
 
 	arm_func_start FUN_ov22_0211acec
@@ -3124,7 +3124,7 @@ _0211CAC0:
 	bl MI_CpuFill8
 	ldr r0, _0211CBC0 ; =gLogicThink
 	mov r1, r4
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	ldrh r3, [r0, #0x2a]
 	mov r6, #0
 	ldr r10, _0211CBC0 ; =gLogicThink
@@ -3340,7 +3340,7 @@ _0211CD64:
 	bl FUN_ov22_0211a6f4
 	ldr r0, _0211D0F4 ; =gLogicThink
 	mov r1, #0
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	ldrh r3, [r0, #0x2a]
 	mov r6, #0
 	mov r1, r6
@@ -3551,7 +3551,7 @@ FUN_ov22_0211d110: ; 0x0211D110
 	ldmnefd sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	ldr r0, _0211D2F4 ; =gLogicThink
 	mov r1, #0
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	ldrh r3, [r0, #0x2a]
 	mov r6, #0
 	add r2, r10, #0x300

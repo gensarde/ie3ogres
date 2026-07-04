@@ -74,7 +74,7 @@
 .public _ZN12CFontManager12resetSpacingEv
 .public FUN_02059288
 .public _ZN12C3DPlaneCtrl8setTexWHEiiss
-.public gFont12
+.public gFont12Manager
 .public unk_020A1612
 .public FUN_ov16_020f5868
 .public FUN_ov16_0210f468

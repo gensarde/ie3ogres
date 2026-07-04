@@ -317,7 +317,7 @@ _0212511C:
 	mov r3, #0
 	stmib sp, {r0, r1}
 	ldrh r1, [r4, #8]
-	ldr r0, _02125178 ; =gFont12
+	ldr r0, _02125178 ; =gFont12Manager
 	ldr r2, [sp, #0x40]
 	mov r1, r1, lsl #3
 	str r1, [sp, #0xc]
@@ -334,7 +334,7 @@ _0212511C:
 	blx r4
 	add sp, sp, #0x1c
 	ldmfd sp!, {r3, r4, r5, r6, pc}
-_02125178: .word gFont12
+_02125178: .word gFont12Manager
 	arm_func_end FUN_ov104_02125084
 
 	arm_func_start FUN_ov104_0212517c
@@ -709,7 +709,7 @@ FUN_ov104_0212569c: ; 0x0212569C
 	mov r3, #0
 	mul r1, r12, r1
 	mov r1, r1, lsl #1
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r2, r0
 _021256DC:
 	mov r0, r2

@@ -353,12 +353,12 @@ FUN_ov76_0211a380: ; 0x0211A380
 	ldr r5, _0211A480 ; =gLogicThink
 	mov r1, #0
 	mov r0, r5
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r4, #1
 	mov r6, r0
 	mov r0, r5
 	mov r1, r4
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r5, r0
 	strb r4, [r6, #0x2c]
 	strb r4, [r5, #0x2c]

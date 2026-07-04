@@ -1478,7 +1478,7 @@ FUN_ov37_0211b2c4: ; 0x0211B2C4
 	stmfd sp!, {r4, r5, r6, r7, r8, lr}
 	mov r7, r0
 	ldr r2, [r7, #8]
-	ldr r0, _0211B4A8 ; =0x0209A0F4
+	ldr r0, _0211B4A8 ; =gKeysRepeated
 	mov r6, r1
 	cmp r2, #0xb
 	ldrh r5, [r0]
@@ -1607,7 +1607,7 @@ _0211B490:
 	mov r1, #8
 	bl _ZN11AudioPlayer10playEffectEi
 	ldmfd sp!, {r4, r5, r6, r7, r8, pc}
-_0211B4A8: .word unk_0209A0F4
+_0211B4A8: .word gKeysRepeated
 _0211B4AC: .word gAudioPlayer
 _0211B4B0: .word gMoviePlayer
 _0211B4B4: .word gSprAnimCtrl

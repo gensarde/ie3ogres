@@ -753,7 +753,7 @@ _0211A8F4:
 	ldr r0, _0211A934 ; =0x020A9C40
 	add r1, r4, #0x15c
 	mov r2, #0
-	bl FUN_020460a8
+	bl _ZN17UnkClass_020A9C4012FUN_020460a8Eii
 	ldmfd sp!, {r4, r5, r6, pc}
 _0211A920:
 	mov r0, r6
@@ -1701,7 +1701,7 @@ _0211B614: .word ov45_02120844
 	arm_func_start FUN_ov45_0211b618
 FUN_ov45_0211b618: ; 0x0211B618
 	stmfd sp!, {r4, r5, r6, r7, r8, lr}
-	ldr r3, _0211B828 ; =0x0209A0F4
+	ldr r3, _0211B828 ; =gKeysRepeated
 	ldr r2, _0211B82C ; =gSprAnimCtrl
 	ldrh r3, [r3]
 	mov r6, r1
@@ -1783,7 +1783,7 @@ _0211B744:
 	ldr r0, _0211B840 ; =0x020A9C40
 	ldr r1, _0211B844 ; =0x00000162
 	add r2, r2, r3
-	bl FUN_020460a8
+	bl _ZN17UnkClass_020A9C4012FUN_020460a8Eii
 	mov r0, r7
 	mov r1, #0
 	b _0211B73C
@@ -1805,7 +1805,7 @@ _0211B784:
 	ldr r0, _0211B840 ; =0x020A9C40
 	mov r2, r4
 	mov r1, #0x160
-	bl FUN_020460a8
+	bl _ZN17UnkClass_020A9C4012FUN_020460a8Eii
 	mov r0, r7
 	mov r1, r4
 	bl FUN_ov45_0211b094
@@ -1840,7 +1840,7 @@ _0211B7F0:
 	add r1, r7, #0xac
 	bl FUN_ov45_0211ac08
 	ldmfd sp!, {r4, r5, r6, r7, r8, pc}
-_0211B828: .word unk_0209A0F4
+_0211B828: .word gKeysRepeated
 _0211B82C: .word gSprAnimCtrl
 _0211B830: .word gSprButtonCtrl
 _0211B834: .word gAudioPlayer
@@ -1997,7 +1997,7 @@ FUN_ov45_0211b918: ; 0x0211B918
 	mov r0, r7
 	mov r1, r6
 	mov r2, r5
-	bl FUN_020460a8
+	bl _ZN17UnkClass_020A9C4012FUN_020460a8Eii
 	ldr r0, [r4, #4]
 	bl _ZN14CScreenManager18getLoadedSceneMainEv
 	cmp r0, #0x5f
@@ -2009,7 +2009,7 @@ FUN_ov45_0211b918: ; 0x0211B918
 	mov r0, r7
 	add r1, r6, #4
 	mov r2, #7
-	bl FUN_020460a8
+	bl _ZN17UnkClass_020A9C4012FUN_020460a8Eii
 	mov r0, r4
 	mov r1, r5
 	bl FUN_ov45_0211b094
@@ -2198,7 +2198,7 @@ _0211BD1C:
 	ldr r0, _0211BD60 ; =0x020A9C40
 	ldr r1, _0211BD68 ; =0x00000161
 	mov r2, #0
-	bl FUN_020460a8
+	bl _ZN17UnkClass_020A9C4012FUN_020460a8Eii
 	ldr r0, _0211BD6C ; =gSprButtonCtrl
 	ldr r0, [r0]
 	bl FUN_ov16_0210e9d8 ; may be ov17 ; ov16(Mica)

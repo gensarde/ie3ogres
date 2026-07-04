@@ -1,7 +1,7 @@
 .public FUN_ov1_020dbfdc
 .public FUN_ov1_020dbe00
 .public FUN_ov1_020dbec4
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public FUN_ov1_020dc1f4
 .public _ZN7Archive26PackHeaderGetOffsetAndSizeEPvmPlPm
 .public FUN_ov1_020dbefc

@@ -645,7 +645,7 @@ FUN_ov125_02125568: ; 0x02125568
 	cmp r0, #0
 	addeq sp, sp, #0x1c
 	ldmeqfd sp!, {r4, r5, r6, r7, pc}
-	ldr r6, _02125650 ; =gFont12
+	ldr r6, _02125650 ; =gFont12Manager
 	mov r1, r4
 	ldr r0, [r6]
 	bl _ZN12CFontManager12getTextWidthEPc
@@ -681,7 +681,7 @@ FUN_ov125_02125568: ; 0x02125568
 	add sp, sp, #0x1c
 	ldmfd sp!, {r4, r5, r6, r7, pc}
 _0212564C: .word gLogicThink
-_02125650: .word gFont12
+_02125650: .word gFont12Manager
 	arm_func_end FUN_ov125_02125568
 
 	arm_func_start FUN_ov125_02125654
@@ -1025,7 +1025,7 @@ FUN_ov125_02125ae0: ; 0x02125AE0
 	mov r3, #0
 	mul r1, r12, r1
 	mov r1, r1, lsl #1
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r2, r0
 _02125B20:
 	mov r0, r2

@@ -46,7 +46,7 @@
 .public gSubScreen2
 .public FUN_ov16_020f4894
 .public _ZN11AudioPlayer10playEffectEi
-.public unk_0209A0F4
+.public gKeysRepeated
 .public gAudioPlayer
 .public FUN_ov16_0210eeec
 .public _ZN8Graphics16FadeScreensBlackEl

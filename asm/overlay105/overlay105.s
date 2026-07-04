@@ -698,7 +698,7 @@ FUN_ov105_021255dc: ; 0x021255DC
 	str r6, [sp]
 	str r5, [sp, #4]
 	ldr r0, [r7, #4]
-	ldr r9, _02125728 ; =gFont12
+	ldr r9, _02125728 ; =gFont12Manager
 	str r0, [sp, #8]
 	ldrh r0, [r7, #8]
 	mov r1, r4
@@ -743,7 +743,7 @@ FUN_ov105_021255dc: ; 0x021255DC
 	add sp, sp, #0x1c
 	ldmfd sp!, {r4, r5, r6, r7, r8, r9, pc}
 _02125724: .word gFont8
-_02125728: .word gFont12
+_02125728: .word gFont12Manager
 	arm_func_end FUN_ov105_021255dc
 
 	arm_func_start FUN_ov105_0212572c
@@ -808,7 +808,7 @@ FUN_ov105_021257b8: ; 0x021257B8
 	movs r7, r0
 	addeq sp, sp, #0x1c
 	ldmeqfd sp!, {r3, r4, r5, r6, r7, r8, pc}
-	ldr r5, _021258A0 ; =gFont12
+	ldr r5, _021258A0 ; =gFont12Manager
 	mov r6, #4
 	ldr r0, [r5]
 	mov r2, r6
@@ -845,7 +845,7 @@ FUN_ov105_021257b8: ; 0x021257B8
 	add sp, sp, #0x1c
 	ldmfd sp!, {r3, r4, r5, r6, r7, r8, pc}
 _0212589C: .word gLogicThink
-_021258A0: .word gFont12
+_021258A0: .word gFont12Manager
 	arm_func_end FUN_ov105_021257b8
 
 	arm_func_start FUN_ov105_021258a4
@@ -879,7 +879,7 @@ FUN_ov105_021258a4: ; 0x021258A4
 	movs r9, r0
 	addeq sp, sp, #0x24
 	ldmeqfd sp!, {r3, r4, r5, r6, r7, r8, r9, r10, pc}
-	ldr r7, _021259B0 ; =gFont12
+	ldr r7, _021259B0 ; =gFont12Manager
 	mov r8, #4
 	ldr r0, [r7]
 	mov r2, r8
@@ -917,7 +917,7 @@ FUN_ov105_021258a4: ; 0x021258A4
 	ldmfd sp!, {r3, r4, r5, r6, r7, r8, r9, r10, pc}
 _021259A8: .word ov105_02127754
 _021259AC: .word gLogicThink
-_021259B0: .word gFont12
+_021259B0: .word gFont12Manager
 	arm_func_end FUN_ov105_021258a4
 
 	arm_func_start FUN_ov105_021259b4
@@ -2319,7 +2319,7 @@ FUN_ov105_02126d94: ; 0x02126D94
 	mov r3, #0
 	mul r1, r12, r1
 	mov r1, r1, lsl #1
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r2, r0
 _02126DD4:
 	mov r0, r2
@@ -2485,7 +2485,7 @@ FUN_ov105_02126fe8: ; 0x02126FE8
 	mov r2, r6
 	mov r3, r5
 	add r0, r8, r0
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r0, r8
 	mov r1, r5
 	mov r2, r5
@@ -2529,7 +2529,7 @@ _02127058:
 	mov r3, r9
 	add r0, r8, r0
 	add r2, r6, #1
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	str r0, [sp, #8]
 	mov r0, r8
 	mov r2, r9

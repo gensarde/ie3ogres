@@ -33,11 +33,11 @@ FUN_ov69_02119f00: ; 0x02119F00
 	bl FUN_ov69_0211a0f4
 	mov r1, r6
 	mov r0, r4
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r6, r0
 	mov r0, r4
 	mov r1, #1
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	ldrh r1, [r6, #0x28]
 	mov r4, #0
 	cmp r1, #0
@@ -1410,7 +1410,7 @@ FUN_ov69_0211b2b8: ; 0x0211B2B8
 	stmfd sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, lr}
 	sub sp, sp, #0x28
 	mov r11, r0
-	ldr r0, _0211B40C ; =gFont12
+	ldr r0, _0211B40C ; =gFont12Manager
 	mov r6, #0
 	mov r10, r1
 	ldr r0, [r0]
@@ -1465,7 +1465,7 @@ _0211B368:
 	str r4, [sp, #0x10]
 	str r4, [sp, #0x14]
 	str r0, [sp, #0x18]
-	ldr r0, _0211B40C ; =gFont12
+	ldr r0, _0211B40C ; =gFont12Manager
 	str r4, [sp, #0x1c]
 	ldr r0, [r0]
 	add r1, r5, #0x1c
@@ -1492,12 +1492,12 @@ _0211B3BC:
 	str r4, [sp, #8]
 	bl FUN_02059288
 _0211B3F8:
-	ldr r0, _0211B40C ; =gFont12
+	ldr r0, _0211B40C ; =gFont12Manager
 	ldr r0, [r0]
 	bl _ZN12CFontManager12resetSpacingEv
 	add sp, sp, #0x28
 	ldmfd sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
-_0211B40C: .word gFont12
+_0211B40C: .word gFont12Manager
 _0211B410: .word g3DPlaneCtrl
 	arm_func_end FUN_ov69_0211b2b8
 
@@ -2134,7 +2134,7 @@ _0211BC18:
 	ldr r0, [r8, #0x7cc]
 	cmp r0, #0
 	ldmgtfd sp!, {r3, r4, r5, r6, r7, r8, r9, pc}
-	ldr r0, _0211BE10 ; =0x0209A0F4
+	ldr r0, _0211BE10 ; =gKeysRepeated
 	ldr r9, _0211BE14 ; =gSprButtonCtrl
 	ldrh r1, [r0]
 	ldr r0, [r9]
@@ -2261,7 +2261,7 @@ _0211BE00:
 	bl FUN_ov69_0211bbd8
 	ldmfd sp!, {r3, r4, r5, r6, r7, r8, r9, pc}
 _0211BE0C: .word gSprAnimCtrl
-_0211BE10: .word unk_0209A0F4
+_0211BE10: .word gKeysRepeated
 _0211BE14: .word gSprButtonCtrl
 _0211BE18: .word g3DPlaneCtrl
 _0211BE1C: .word gAudioPlayer
@@ -2823,7 +2823,7 @@ FUN_ov69_0211c594: ; 0x0211C594
 	ldr r0, _0211C5F4 ; =0x020A9C40
 	ldr r1, _0211C5F8 ; =0x000001C3
 	mov r2, r4
-	bl FUN_020460a8
+	bl _ZN17UnkClass_020A9C4012FUN_020460a8Eii
 	b _0211C5E4
 _0211C5C8:
 	ldr r1, [r0, #0x798]

@@ -53,7 +53,7 @@
 .public _ZN15CommonSubScreen16isBrightAdjustedEv
 .public _ZN12CommonScreen6signalEi
 .public _ZN12CommonScreen5stateEv
-.public ov55_0211D784
+.public _ZTV24CMainMenuScreenEnterName
 .public ov61_0211F2D0
 .public ov61_0211F494
 .public ov61_0211F544
@@ -90,7 +90,7 @@
 .public _ZN7Archive10DeallocateEP9SFileData
 .public _ZN7Archive16RequestNewReadExEPKcP9SFileDatalmi
 .public _ZN8Graphics22LoadTempPaletteFromPacEPv12EngineSelecti
-.public _ZN8Graphics11SetupScreenEPtmii
+.public _ZN8Graphics11SetupScreenEPvmii
 .public GXS_LoadBG0Char
 .public GXS_LoadBG0Scr
 .public MIi_CpuClearFast
@@ -117,7 +117,7 @@
 .public _ZN12CFontManager10setSpacingEii
 .public _ZN12CFontManager12resetSpacingEv
 .public FUN_ov16_020f2184
-.public gFont12
+.public gFont12Manager
 .public FUN_ov16_020f51a8
 .public FUN_ov16_020f4894
 .public _ZN14CBgMenuManager10initializeE12EngineSelect
@@ -249,7 +249,7 @@
 .public _ZN11AudioPlayer15setEffectVolumeEt
 .public FUN_020466c0
 .public FUN_0204fe00
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public FUN_020465fc
 .public FUN_ov16_020f2604
 .public _ZN14CScreenManager9pushSceneE12EngineSelect9SceneType
@@ -441,7 +441,7 @@
 .public FUN_0205722c
 .public FUN_0206ed40
 .public FUN_0204e79c
-.public FUN_02062800
+.public _ZN14CRecordManager15getRecordHeaderEP13SRecordHeader
 .public FUN_02072dcc
 .public FUN_02055d68
 .public FUN_0204c680

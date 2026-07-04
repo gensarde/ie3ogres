@@ -159,7 +159,7 @@ _0211A11C:
 _0211A130:
 	cmp r4, #2
 	blt _0211A11C
-	ldr r0, _0211A1D8 ; =0x0209A0F4
+	ldr r0, _0211A1D8 ; =gKeysRepeated
 	ldr r4, _0211A1DC ; =gSprButtonCtrl
 	ldrh r1, [r0]
 	ldr r0, [r4]
@@ -203,7 +203,7 @@ _0211A1C0:
 	bl FUN_ov65_0211a3d4
 	ldmfd sp!, {r3, r4, r5, r6, r7, pc}
 _0211A1D4: .word gSprAnimCtrl
-_0211A1D8: .word unk_0209A0F4
+_0211A1D8: .word gKeysRepeated
 _0211A1DC: .word gSprButtonCtrl
 	arm_func_end FUN_ov65_0211a0cc
 
@@ -1459,7 +1459,7 @@ FUN_ov65_0211b1c8: ; 0x0211B1C8
 	ldr r1, [r7]
 	bl _ZN12C3DPlaneCtrl12getTexHeightEi
 	mov r11, r0
-	ldr r0, _0211B498 ; =gFont12
+	ldr r0, _0211B498 ; =gFont12Manager
 	mov r5, #1
 	mov r6, #5
 	ldr r0, [r0]
@@ -1521,7 +1521,7 @@ _0211B37C:
 	str r6, [sp, #0x10]
 	str r6, [sp, #0x14]
 	str r6, [sp, #0x18]
-	ldr r5, _0211B498 ; =gFont12
+	ldr r5, _0211B498 ; =gFont12Manager
 	str r4, [sp, #0x1c]
 	ldr r0, [r5]
 	ldr r1, [sp, #0x20]
@@ -1584,7 +1584,7 @@ _0211B37C:
 	add sp, sp, #0x84
 	ldmfd sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 _0211B494: .word g3DPlaneCtrl
-_0211B498: .word gFont12
+_0211B498: .word gFont12Manager
 _0211B49C: .word gLogicThink
 _0211B4A0: .word unk_020A1540
 	arm_func_end FUN_ov65_0211b1c8
@@ -2497,7 +2497,7 @@ _0211C0DC:
 	ldrh r2, [r9, #0x8a]
 	ldr r0, _0211C158 ; =0x020A9C40
 	ldr r1, _0211C15C ; =0x00000192
-	bl FUN_020460a8
+	bl _ZN17UnkClass_020A9C4012FUN_020460a8Eii
 	ldrh r1, [r9, #0x8a]
 	mov r0, r5
 	bl FUN_02073a04

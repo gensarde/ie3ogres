@@ -15,7 +15,7 @@
 .public gAllocator
 .public gLogicThink
 .public _ZN7Archive20GetFaceOffsetAndSizeEPvP4UnithPlPm
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public _ZN7Archive20GetBodyOffsetAndSizeEPvP4UnitiiPlPm
 .public _ZN7Archive24GetBodyPlttOffsetAndSizeEPviiPlPm
 .public _ZN7Archive5CloseEP9SFileDatai
@@ -43,11 +43,11 @@
 .public G2_GetBG2CharPtr
 .public GX_LoadBG2Scr
 .public _ZN8Graphics22LoadTempPaletteFromPacEPv12EngineSelecti
-.public _ZN8Graphics11SetupScreenEPtmii
+.public _ZN8Graphics11SetupScreenEPvmii
 .public GX_LoadBG2Char
 .public _ZN8Graphics17LoadBGPaletteMainEv
 .public FUN_ov16_0210eb3c
-.public FUN_020460a8
+.public _ZN17UnkClass_020A9C4012FUN_020460a8Eii
 .public gSprButtonCtrl
 .public unk_020A9C40
 .public MI_CpuFill8
@@ -87,7 +87,7 @@
 .public _ZN12C3DPlaneCtrl12getTexHeightEi
 .public _ZN12CFontManager15drawTextTex4bppEPcPviiiiiPNS_11GlyphBoundsEiiNS_9AlignmentE
 .public gFont8
-.public gFont12
+.public gFont12Manager
 .public FUN_ov16_0210e29c
 .public gSprAnimCtrl
 .public _ZN12C3DPlaneCtrl9clearFlagEit
@@ -104,7 +104,7 @@
 .public FUN_ov131_0213c4f4
 .public FUN_ov16_020edfd0
 .public FUN_02044754
-.public unk_0209A0F4
+.public gKeysRepeated
 .public gUnitMan
 .public unk_02099F44
 .public unk_020AF81C

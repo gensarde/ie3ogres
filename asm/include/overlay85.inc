@@ -30,7 +30,7 @@
 .public FUN_ov16_020f0c30
 .public gPalSkinFaceFile
 .public MIi_CpuCopy16
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public FUN_ov1_020dc1f4
 .public _ZN7Archive26PackHeaderGetOffsetAndSizeEPvmPlPm
 .public FUN_ov1_020dbefc
@@ -62,7 +62,7 @@
 .public FUN_ov1_020dc020
 .public FUN_ov16_020f068c
 .public FUN_ov16_020f2ea8
-.public _ZN8Graphics11SetupScreenEPtmii
+.public _ZN8Graphics11SetupScreenEPvmii
 .public GX_LoadBG3Char
 .public _ZN8Graphics17LoadBGPaletteMainEv
 .public GX_LoadBG2Scr

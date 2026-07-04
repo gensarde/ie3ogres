@@ -83,7 +83,7 @@ _020EDF40:
 	bl FUN_ov16_020f081c
 	mov r1, r0
 	ldr r0, [sp]
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	cmp r0, #0
 	beq _020EDF6C
 	ldrh r0, [r0, #0x4a]
@@ -375,7 +375,7 @@ _020EE2B4:
 	ldmnefd sp!, {r4, r5, r6, r7, r8, r9, r10, pc}
 	mov r0, r5
 	mov r1, r4
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	strh r6, [r0, #0x4a]
 	mov r8, #3
 	mov r7, r10
@@ -432,7 +432,7 @@ FUN_ov16_020ee364: ; 0x020EE364
 	beq _020EE3B0
 	mov r0, r5
 	mov r1, r4
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	strh r9, [r0, #0x4a]
 _020EE3B0:
 	cmp r6, #0
@@ -493,7 +493,7 @@ FUN_ov16_020ee430: ; 0x020EE430
 	arm_func_start FUN_ov16_020ee468
 FUN_ov16_020ee468: ; 0x020EE468
 	stmfd sp!, {r3, lr}
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	ldrh r0, [r0, #0x4a]
 	ldmfd sp!, {r3, pc}
 	arm_func_end FUN_ov16_020ee468

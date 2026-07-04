@@ -20,7 +20,7 @@
 .public _ZN14CBgMenuManager11deleteGroupE12EngineSelectit
 .public _ZN14CBgMenuManager8deleteIDE12EngineSelectit
 .public _ZN14CBgMenuManager14updateGraphicsE12EngineSelect
-.public _ZN8Graphics11SetupScreenEPtmii
+.public _ZN8Graphics11SetupScreenEPvmii
 .public GXS_LoadBG1Char
 .public _ZN8Graphics11SetupScreenEPvii
 .public _ZN8Graphics14LoadBGXCharSubEiPvm

@@ -148,7 +148,7 @@
 .public FUN_020722b4
 .public _ZN6Random5RandAEm
 .public FUN_0206cd88
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public FUN_ov126_021398cc
 .public FUN_0206cc94
 .public FUN_0206cc84

@@ -257,7 +257,7 @@ FUN_ov31_0211a254: ; 0x0211A254
 	mov r1, #1
 	bl FUN_ov31_0211a9cc
 	ldr r0, _0211A2CC ; =gLogicThink
-	bl FUN_0204ec3c
+	bl _ZN11CLogicThink12FUN_0204ec3cEv
 	ldmfd sp!, {r4, pc}
 _0211A2C0: .word unk_020A0640
 _0211A2C4: .word gSprButtonCtrl
@@ -582,7 +582,7 @@ FUN_ov31_0211a5f8: ; 0x0211A5F8
 	ldr r0, _0211A86C ; =gFont8
 	b _0211A784
 _0211A738:
-	ldr r0, _0211A870 ; =gFont12
+	ldr r0, _0211A870 ; =gFont12Manager
 	mov r2, r11
 	ldr r0, [r0]
 	bl _ZN12CFontManager10setSpacingEii
@@ -593,14 +593,14 @@ _0211A738:
 	str r11, [sp, #0x10]
 	str r11, [sp, #0x14]
 	str r11, [sp, #0x18]
-	ldr r0, _0211A870 ; =gFont12
+	ldr r0, _0211A870 ; =gFont12Manager
 	str r11, [sp, #0x1c]
 	ldr r1, [sp, #0x20]
 	ldr r0, [r0]
 	mov r2, r4
 	mov r3, r5
 	bl _ZN12CFontManager15drawTextTex4bppEPcPviiiiiPNS_11GlyphBoundsEiiNS_9AlignmentE
-	ldr r0, _0211A870 ; =gFont12
+	ldr r0, _0211A870 ; =gFont12Manager
 _0211A784:
 	ldr r0, [r0]
 	bl _ZN12CFontManager12resetSpacingEv
@@ -661,7 +661,7 @@ _0211A784:
 	ldmfd sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 _0211A868: .word g3DPlaneCtrl
 _0211A86C: .word gFont8
-_0211A870: .word gFont12
+_0211A870: .word gFont12Manager
 	arm_func_end FUN_ov31_0211a5f8
 
 	arm_func_start FUN_ov31_0211a874

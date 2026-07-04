@@ -37,7 +37,7 @@
 .public _ZN6Random5RandAEm
 .public FUN_02040dc8
 .public FUN_02050740
-.public FUN_0204ec3c
+.public _ZN11CLogicThink12FUN_0204ec3cEv
 .public _ZN10CAllocator10deallocateEPv
 .public unk_0209A11C
 .public unk_020A11DC
@@ -53,9 +53,9 @@
 .public unk_020A0C64
 .public FUN_0205076c
 .public unk_020A12B4
-.public FUN_0204eba0
+.public _ZN11CLogicThink12FUN_0204eba0Ev
 .public unk_0209C220
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public FUN_020509d8
 .public FUN_020508fc
 .public FUN_02050bdc
@@ -193,7 +193,7 @@
 .public FUN_02045594
 .public FUN_02045a78
 .public FUN_02045a80
-.public FUN_02045b40
+.public _ZN17UnkClass_020A9C4012FUN_02045b40Eii
 .public FUN_02045b50
 .public FUN_02045d58
 .public FUN_02045df8

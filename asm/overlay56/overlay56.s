@@ -603,7 +603,7 @@ FUN_ov56_0211a714: ; 0x0211A714
 	ldr r0, _0211AC58 ; =gLogicThink
 	mov r8, r2
 	mov r5, r3
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r1, #0
 	mov r2, r1
 	mov r7, r0
@@ -1975,7 +1975,7 @@ FUN_ov56_0211b970: ; 0x0211B970
 	ldr r1, [r8]
 	bl _ZN12C3DPlaneCtrl12getTexHeightEi
 	mov r5, r0
-	ldr r0, _0211BB70 ; =gFont12
+	ldr r0, _0211BB70 ; =gFont12Manager
 	mov r1, #1
 	ldr r0, [r0]
 	mov r2, #5
@@ -1987,14 +1987,14 @@ FUN_ov56_0211b970: ; 0x0211B970
 	str r6, [sp, #0x10]
 	str r6, [sp, #0x14]
 	str r6, [sp, #0x18]
-	ldr r0, _0211BB70 ; =gFont12
+	ldr r0, _0211BB70 ; =gFont12Manager
 	str r7, [sp, #0x1c]
 	ldr r1, [sp, #0x20]
 	ldr r0, [r0]
 	ldr r3, [sp, #0x24]
 	mov r2, r11
 	bl _ZN12CFontManager15drawTextTex4bppEPcPviiiiiPNS_11GlyphBoundsEiiNS_9AlignmentE
-	ldr r0, _0211BB70 ; =gFont12
+	ldr r0, _0211BB70 ; =gFont12Manager
 	ldr r0, [r0]
 	bl _ZN12CFontManager12resetSpacingEv
 	ldr r3, [sp, #0x2c]
@@ -2050,7 +2050,7 @@ FUN_ov56_0211b970: ; 0x0211B970
 	add sp, sp, #0x38
 	ldmfd sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
 _0211BB6C: .word g3DPlaneCtrl
-_0211BB70: .word gFont12
+_0211BB70: .word gFont12Manager
 	arm_func_end FUN_ov56_0211b970
 
 	arm_func_start FUN_ov56_0211bb74
@@ -3315,7 +3315,7 @@ _0211CD40:
 	ldrb r1, [r0, #0x28]
 	mov r0, r8
 	strb r2, [r3]
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r4, #0
 	mov r5, r0
 	ldr r1, [r6]
@@ -3586,7 +3586,7 @@ _0211D134:
 	ldrb r1, [r4, #0x28]
 	mov r0, r8
 	strb r2, [r3]
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r5, r0
 	ldr r1, [r6]
 	mov r0, r8
@@ -3949,7 +3949,7 @@ FUN_ov56_0211d664: ; 0x0211D664
 	mov r2, #0
 	ldr r0, _0211DBCC ; =gLogicThink
 	str r2, [sp, #0x28]
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	ldr r1, [sp, #0x28]
 	str r0, [sp, #0x34]
 	str r1, [sp, #0x5c]
@@ -4414,7 +4414,7 @@ FUN_ov56_0211dd10: ; 0x0211DD10
 	mov r6, r0
 	mov r0, r4
 	mov r1, r8
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r7, r0
 	mov r0, r4
 	mov r1, r10
@@ -4470,7 +4470,7 @@ FUN_ov56_0211ddfc: ; 0x0211DDFC
 	ldrb r1, [r6, #0x28]
 	mov r5, r0
 	mov r0, r4
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	add r1, r5, #0x1000
 	ldr r2, [r1, #0x4f8]
 	ldr r3, [r5, #0xa8]
@@ -4691,7 +4691,7 @@ FUN_ov56_0211e128: ; 0x0211E128
 	mov r4, r0
 	ldrb r1, [r1, #0x28]
 	ldr r0, _0211E5B4 ; =gLogicThink
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	add r1, r4, #0x1000
 	ldr r1, [r1, #0x3bc]
 	mov r8, r0
@@ -5211,7 +5211,7 @@ FUN_ov56_0211e8ac: ; 0x0211E8AC
 	ldrb r1, [r2, #0x28]
 	mov r5, r0
 	ldr r0, _0211EB84 ; =gLogicThink
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r1, #0x24
 	mul r9, r4, r1
 	add r2, r5, #0x1000
@@ -5890,7 +5890,7 @@ _0211F234:
 _0211F25C:
 	cmp r4, #6
 	blt _0211F234
-	ldr r0, _0211F368 ; =0x0209A0F4
+	ldr r0, _0211F368 ; =gKeysRepeated
 	ldr r4, _0211F36C ; =gSprButtonCtrl
 	ldrh r1, [r0]
 	ldr r0, [r4]
@@ -5964,7 +5964,7 @@ _0211F34C:
 	bl FUN_ov56_0211ff00
 	ldmfd sp!, {r3, r4, r5, r6, r7, pc}
 _0211F364: .word gSprAnimCtrl
-_0211F368: .word unk_0209A0F4
+_0211F368: .word gKeysRepeated
 _0211F36C: .word gSprButtonCtrl
 	arm_func_end FUN_ov56_0211f1fc
 
@@ -7853,7 +7853,7 @@ _02120D74:
 	mov r2, #3
 	mov r3, #2
 	bl _ZN12C3DPlaneCtrl7setFlagEiitb
-	ldr r0, _02120E48 ; =gFont12
+	ldr r0, _02120E48 ; =gFont12Manager
 	mov r1, r6
 	ldr r0, [r0]
 	mov r2, #4
@@ -7883,7 +7883,7 @@ _02120D74:
 	mov r3, #9
 	bl FUN_ov16_020f2304
 _02120E20:
-	ldr r0, _02120E48 ; =gFont12
+	ldr r0, _02120E48 ; =gFont12Manager
 	ldr r0, [r0]
 	bl _ZN12CFontManager12resetSpacingEv
 	add sp, sp, #0x9c
@@ -7893,7 +7893,7 @@ _02120E38: .word g3DPlaneCtrl
 _02120E3C: .word FUN_ov56_02120bd0
 _02120E40: .word FUN_ov56_02120c70
 _02120E44: .word ov56_021214B8
-_02120E48: .word gFont12
+_02120E48: .word gFont12Manager
 	arm_func_end FUN_ov56_02120c9c
 
 	arm_func_start FUN_ov56_02120e4c

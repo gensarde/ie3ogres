@@ -422,7 +422,7 @@ FUN_ov38_0211a430: ; 0x0211A430
 	mov r1, #0
 	ldr r0, _0211A47C ; =0x020A9C40
 	mov r2, r1
-	bl FUN_020460a8
+	bl _ZN17UnkClass_020A9C4012FUN_020460a8Eii
 	mov r0, r4
 	bl FUN_ov38_0211a35c
 	ldmfd sp!, {r4, pc}
@@ -799,7 +799,7 @@ FUN_ov38_0211a958: ; 0x0211A958
 	ldreq r0, [r10, #0x10]
 	cmpeq r1, r0
 	ldmnefd sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
-	ldr r0, _0211AE5C ; =0x0209A0F4
+	ldr r0, _0211AE5C ; =gKeysRepeated
 	cmp r1, #0
 	ldrh r0, [r0]
 	orr r0, r0, r9
@@ -1132,7 +1132,7 @@ _0211AE20:
 	ldmfd sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
 _0211AE54: .word 0x00002020
 _0211AE58: .word gBgMenuManager
-_0211AE5C: .word unk_0209A0F4
+_0211AE5C: .word gKeysRepeated
 _0211AE60: .word gAudioPlayer
 _0211AE64: .word 0x4EC4EC4F
 _0211AE68: .word unk_0209A454
@@ -1847,7 +1847,7 @@ FUN_ov38_0211b7a4: ; 0x0211B7A4
 	mov r3, r10
 	add r0, r9, r0
 	mov r2, #1
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r7, r0
 	mov r0, r9
 	mov r1, r6
@@ -1870,7 +1870,7 @@ _0211B834:
 	mov r3, r10
 	add r0, r9, r0
 	add r2, r7, #1
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r7, r0
 	mov r0, r9
 	mov r2, r10
@@ -1890,7 +1890,7 @@ _0211B88C:
 	add r2, r7, #1
 	mov r1, #0x258
 	mov r3, #0
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r7, r0
 _0211B8AC:
 	ldr r0, [r4, #0x70]
@@ -1919,7 +1919,7 @@ _0211B8CC:
 	mov r1, r1, lsl #1
 	mov r3, #0
 	str r8, [r12, #8]
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 _0211B914:
 	bl G2_GetBG1CharPtr
 	mov r8, #0x20
@@ -1939,7 +1939,7 @@ _0211B914:
 	mov r3, r5
 	add r0, r9, r0
 	mov r2, #1
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r7, r0
 	mov r0, r9
 	mov r1, r6
@@ -1961,7 +1961,7 @@ _0211B990:
 	mov r3, r5
 	add r0, r9, r0
 	add r2, r7, #1
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r7, r0
 	mov r0, r9
 	mov r2, r5
@@ -1983,7 +1983,7 @@ _0211B9E4:
 	mov r3, r5
 	add r0, r9, r0
 	add r2, r7, #1
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r7, r0
 	mov r0, r9
 	mov r2, r5
@@ -2005,7 +2005,7 @@ _0211BA38:
 	mov r3, r5
 	add r0, r9, r0
 	add r2, r7, #1
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r7, r0
 	mov r0, r9
 	mov r2, r5
@@ -2027,7 +2027,7 @@ _0211BA8C:
 	mov r3, r5
 	add r0, r9, r0
 	add r2, r7, #1
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r7, r0
 	mov r0, r9
 	mov r2, r5
@@ -2049,7 +2049,7 @@ _0211BAE0:
 	mov r3, r5
 	add r0, r9, r0
 	add r2, r7, #1
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r7, r0
 	mov r0, r9
 	mov r2, r5
@@ -2072,7 +2072,7 @@ _0211BB34:
 	mov r3, r9
 	add r0, r5, r0
 	add r2, r7, #1
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r7, r0
 	mov r0, r5
 	mov r2, r9
@@ -2095,7 +2095,7 @@ _0211BB8C:
 	mov r3, r9
 	add r0, r5, r0
 	add r2, r7, #1
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r7, r0
 	mov r0, r5
 	mov r2, r9
@@ -2118,7 +2118,7 @@ _0211BBE4:
 	mov r3, r9
 	add r0, r5, r0
 	add r2, r7, #1
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r7, r0
 	mov r0, r5
 	mov r2, r9
@@ -2141,7 +2141,7 @@ _0211BC3C:
 	mov r3, r9
 	add r0, r5, r0
 	add r2, r7, #1
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r0, r5
 	mov r2, r9
 	mov r1, #0
@@ -2165,7 +2165,7 @@ _0211BC88:
 	mov r2, r6
 	mov r3, r4
 	add r0, r5, r0
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	ldr r0, [r5, #0x14]
 	ldr r2, [r5, #0x18]
 	mov r1, r6
@@ -2253,7 +2253,7 @@ FUN_ov38_0211bdc8: ; 0x0211BDC8
 	mov r8, r2
 	mov r7, r3
 	bl FUN_ov16_020f2f20
-	ldr r5, _0211BE68 ; =gFont12
+	ldr r5, _0211BE68 ; =gFont12Manager
 	mov r6, #1
 	ldr r0, [r5]
 	mov r1, r6
@@ -2285,7 +2285,7 @@ FUN_ov38_0211bdc8: ; 0x0211BDC8
 	bl DC_FlushRange
 	add sp, sp, #0x1c
 	ldmfd sp!, {r4, r5, r6, r7, r8, r9, pc}
-_0211BE68: .word gFont12
+_0211BE68: .word gFont12Manager
 	arm_func_end FUN_ov38_0211bdc8
 
 	arm_func_start FUN_ov38_0211be6c
@@ -2450,7 +2450,7 @@ _0211C080:
 	ldr r0, _0211C0F8 ; =0x020A9C40
 	mov r1, r5
 	mov r2, #1
-	bl FUN_020460a8
+	bl _ZN17UnkClass_020A9C4012FUN_020460a8Eii
 	mov r0, r4
 	bl FUN_ov38_0211a2ec
 	b _0211C0E4

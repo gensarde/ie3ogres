@@ -149,7 +149,7 @@ FUN_ov28_0211a08c: ; 0x0211A08C
 	strb r6, [r2, #0x85]
 	add r1, sp, #0x2c
 	strb r6, [r2, #0x86]
-	bl FUN_02062800
+	bl _ZN14CRecordManager15getRecordHeaderEP13SRecordHeader
 	ldrsb r0, [sp, #0x40]
 	cmp r0, #2
 	movge r6, #1
@@ -1666,7 +1666,7 @@ _0211B5E8:
 	bl FUN_02070530
 	mov r0, r6
 	mov r1, r5
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	ldr r1, _0211B6BC ; =0x0211B86C
 	bl sprintf
 	ldr r6, _0211B6C0 ; =0x020AF81C

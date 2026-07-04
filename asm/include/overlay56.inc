@@ -37,7 +37,7 @@
 .public gAllocator
 .public _ZN10CAllocator10deallocateEPv
 .public FUN_ov16_020eedb8
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public FUN_ov16_020eee4c
 .public FUN_ov16_020ee034
 .public FUN_ov16_020ee084
@@ -88,7 +88,7 @@
 .public FUN_02059288
 .public _ZN12C3DPlaneCtrl8setTexSTEiiss
 .public _ZN12C3DPlaneCtrl8setTexWHEiiss
-.public gFont12
+.public gFont12Manager
 .public FUN_0205ae4c
 .public _ZN12C3DPlaneCtrl12setColorMaskEit
 .public _ZN12C3DPlaneCtrl6createEib
@@ -125,7 +125,7 @@
 .public gAudioPlayer
 .public _ZN12C3DPlaneCtrl9clearFlagEiit
 .public FUN_ov16_0210f468
-.public unk_0209A0F4
+.public gKeysRepeated
 .public FUN_ov16_0210fc74
 .public FUN_ov16_0210e6fc
 .public FUN_ov16_0210e720

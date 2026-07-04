@@ -102,7 +102,7 @@
 .public _ZN12CFontManager15drawTextTex4bppEPcPviiiiiPNS_11GlyphBoundsEiiNS_9AlignmentE
 .public _ZN12CFontManager12resetSpacingEv
 .public FUN_02059288
-.public gFont12
+.public gFont12Manager
 .public FUN_02049ea4
 .public FUN_ov16_020ee16c
 .public FUN_02074a2c
@@ -144,7 +144,7 @@
 .public FUN_02049fc8
 .public FUN_ov16_02110b0c
 .public FUN_ov16_02110b04
-.public unk_0209A0F4
+.public gKeysRepeated
 .public FUN_ov16_0210f484
 .public FUN_ov16_0210f20c
 .public FUN_ov16_0210e980

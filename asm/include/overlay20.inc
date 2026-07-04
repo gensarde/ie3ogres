@@ -38,7 +38,7 @@
 .public MI_CpuCopy8
 .public gPalSkinFaceFile
 .public FUN_ov16_0210eb3c
-.public FUN_020460a8
+.public _ZN17UnkClass_020A9C4012FUN_020460a8Eii
 .public gSprButtonCtrl
 .public unk_020A9C40
 .public MI_CpuFill8
@@ -86,7 +86,7 @@
 .public _ZN12C3DPlaneCtrl11getTexWidthEi
 .public _ZN12CFontManager15drawTextTex4bppEPcPviiiiiPNS_11GlyphBoundsEiiNS_9AlignmentE
 .public gFont8
-.public gFont12
+.public gFont12Manager
 .public FUN_ov16_0210e29c
 .public gSprAnimCtrl
 .public _ZN12C3DPlaneCtrl9clearFlagEit
@@ -102,14 +102,14 @@
 .public FUN_ov16_020f53b0
 .public FUN_ov131_0213c5fc
 .public FUN_ov16_020edfd0
-.public unk_0209A0F4
+.public gKeysRepeated
 .public gUnitMan
 .public unk_02099F44
 .public unk_02099EA4
 .public FUN_ov16_0210f20c
 .public FUN_ov16_0210f484
 .public FUN_ov16_0210f48c
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public FUN_ov131_0213c50c
 .public FUN_ov131_0213bf70
 .public FUN_ov131_0213c58c

@@ -6230,7 +6230,7 @@ _0211F914:
 	ldr r1, [r10, #0x64]
 	bl _ZN12C3DPlaneCtrl12getTexHeightEi
 	mov r9, r0
-	ldr r0, _0211FA2C ; =gFont12
+	ldr r0, _0211FA2C ; =gFont12Manager
 	mov r1, #1
 	ldr r0, [r0]
 	mov r2, r1
@@ -6252,7 +6252,7 @@ _0211F97C:
 	str r4, [sp, #0x14]
 	str r11, [sp, #0x18]
 	str r4, [sp, #0x1c]
-	ldr r0, _0211FA2C ; =gFont12
+	ldr r0, _0211FA2C ; =gFont12Manager
 	ldr r1, [r5, r6, lsl #2]
 	ldr r0, [r0]
 	mov r2, r7
@@ -6266,7 +6266,7 @@ _0211F9CC:
 	ldr r1, [sp, #0x24]
 	mov r0, r7
 	bl DC_FlushRange
-	ldr r0, _0211FA2C ; =gFont12
+	ldr r0, _0211FA2C ; =gFont12Manager
 	ldr r0, [r0]
 	bl _ZN12CFontManager12resetSpacingEv
 	ldr r0, _0211FA28 ; =g3DPlaneCtrl
@@ -6285,7 +6285,7 @@ _0211FA1C: .word ov63_02124990
 _0211FA20: .word ov63_0212499C
 _0211FA24: .word ov63_021247F0
 _0211FA28: .word g3DPlaneCtrl
-_0211FA2C: .word gFont12
+_0211FA2C: .word gFont12Manager
 	arm_func_end FUN_ov63_0211f7fc
 
 	arm_func_start FUN_ov63_0211fa30
@@ -7771,7 +7771,7 @@ FUN_ov63_02120ea8: ; 0x02120EA8
 	ldr r1, [sp, #0x20]
 	ldr r6, [sp, #0x24]
 	bl _ZN12C3DPlaneCtrl12getTexHeightEi
-	ldr r4, _02120FAC ; =gFont12
+	ldr r4, _02120FAC ; =gFont12Manager
 	mov r8, r0
 	ldr r0, [r4]
 	mov r1, r7
@@ -7807,7 +7807,7 @@ _02120F58:
 	ldr r1, [sp, #0x28]
 	mov r0, r6
 	bl DC_FlushRange
-	ldr r0, _02120FAC ; =gFont12
+	ldr r0, _02120FAC ; =gFont12Manager
 	ldr r0, [r0]
 	bl _ZN12CFontManager12resetSpacingEv
 	ldr r0, _02120FA8 ; =g3DPlaneCtrl
@@ -7823,7 +7823,7 @@ _02120F58:
 	add sp, sp, #0x2c
 	ldmfd sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 _02120FA8: .word g3DPlaneCtrl
-_02120FAC: .word gFont12
+_02120FAC: .word gFont12Manager
 	arm_func_end FUN_ov63_02120ea8
 
 	arm_func_start FUN_ov63_02120fb0
@@ -9420,7 +9420,7 @@ FUN_ov63_02122564: ; 0x02122564
 	cmp r0, #0
 	ldmnefd sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	add r0, r9, #0x2000
-	ldr r1, _02123438 ; =0x0209A0F4
+	ldr r1, _02123438 ; =gKeysRepeated
 	ldrh r2, [r0, #0x80]
 	ldrh r3, [r1]
 	ldrh r1, [r0, #0x7e]
@@ -10421,7 +10421,7 @@ _0212341C:
 	bl FUN_ov63_021235f4
 	ldmfd sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
 _02123434: .word gSprAnimCtrl
-_02123438: .word unk_0209A0F4
+_02123438: .word gKeysRepeated
 _0212343C: .word gSprButtonCtrl
 _02123440: .word gAudioPlayer
 _02123444: .word gLogicThink

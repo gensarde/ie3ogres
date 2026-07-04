@@ -3,7 +3,7 @@
 .public FUN_ov16_020f068c
 .public FUN_ov1_020dc150
 .public FUN_ov1_020db4f0
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public FUN_ov1_020dc1f4
 .public _ZN7Archive26PackHeaderGetOffsetAndSizeEPvmPlPm
 .public FUN_ov1_020dbefc
@@ -18,7 +18,7 @@
 .public FUN_ov16_020f2fe4
 .public FUN_ov1_020dc13c
 .public FUN_ov16_020f2ea8
-.public _ZN8Graphics11SetupScreenEPtmii
+.public _ZN8Graphics11SetupScreenEPvmii
 .public _ZN8Graphics16LoadBGPaletteSubEv
 .public _ZN8Graphics14LoadBGXCharSubEiPvm
 .public G2S_GetBG1CharPtr

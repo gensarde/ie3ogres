@@ -37,7 +37,7 @@
 .public FUN_ov132_02148ba4
 .public FUN_ov132_02148bac
 .public _ZN7Archive5CloseEP9SFileDatai
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public FUN_ov16_020f0b8c
 .public FUN_ov16_020f068c
 .public _ZdlPv

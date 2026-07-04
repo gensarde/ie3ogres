@@ -4,7 +4,7 @@
 .public FUN_ov16_0210e980
 .public FUN_ov16_0210e0a0
 .public _ZN12C3DPlaneCtrl7acquireEv
-.public FUN_0204eba0
+.public _ZN11CLogicThink12FUN_0204eba0Ev
 .public FUN_02071fac
 .public MI_CpuFill8
 .public _ZN7Archive17ReadNewUncompressEPKcP9SFileData
@@ -23,7 +23,7 @@
 .public FUN_ov16_0210e9d8
 .public FUN_ov16_0210e0d8
 .public _ZN12C3DPlaneCtrl7releaseEv
-.public FUN_0204ec3c
+.public _ZN11CLogicThink12FUN_0204ec3cEv
 .public FUN_02072020
 .public FUN_ov16_0210e10c
 .public FUN_ov16_0210e15c
@@ -33,7 +33,7 @@
 .public FUN_02059004
 .public FUN_02059038
 .public FUN_02058e30
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public _ZN11AudioPlayer10playEffectEi
 .public gAudioPlayer
 .public _u32_div_f
@@ -73,7 +73,7 @@
 .public _ZN12CFontManager10setSpacingEii
 .public _ZN12CFontManager15drawTextTex4bppEPcPviiiiiPNS_11GlyphBoundsEiiNS_9AlignmentE
 .public gFont8
-.public gFont12
+.public gFont12Manager
 .public DC_FlushRange
 .public _ZN12CFontManager12resetSpacingEv
 .public FUN_02059288
@@ -125,7 +125,7 @@
 .public FUN_0205a60c
 .public unk_0209A0F0
 .public unk_0209A0E8
-.public unk_0209A0F4
+.public gKeysRepeated
 .public FUN_0206c62c
 .public FUN_0206c788
 .public FUN_0206c300

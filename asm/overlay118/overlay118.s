@@ -326,7 +326,7 @@ _02125128:
 	mov r1, r4
 	add r2, r5, #1
 	mov r3, r6
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r5, r0
 	add r8, r8, #8
 	add r9, r9, #1
@@ -383,12 +383,12 @@ _021251C0:
 	mov r3, r4
 	mov r1, r1, lsl #1
 	add r2, r5, #1
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	add r0, r10, #0x28
 	bl FUN_ov16_020f2f20
 	mov r8, #3
 	ldr r9, _02125414 ; =gLogicThink
-	ldr r5, _02125418 ; =gFont12
+	ldr r5, _02125418 ; =gFont12Manager
 	b _021252A8
 _02125234:
 	ldr r0, [r10, #0x3c]
@@ -526,7 +526,7 @@ _02125400:
 _0212540C: .word gDebugFont
 _02125410: .word gSubScreen1
 _02125414: .word gLogicThink
-_02125418: .word gFont12
+_02125418: .word gFont12Manager
 _0212541C: .word gSubScreen0
 	arm_func_end FUN_ov118_02124fac
 

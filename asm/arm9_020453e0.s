@@ -613,13 +613,13 @@ _02045B2C:
 	bx lr
 	arm_func_end FUN_02045ae8
 
-	arm_func_start FUN_02045b40
-FUN_02045b40: ; 0x02045B40
+	arm_func_start _ZN17UnkClass_020A9C4012FUN_02045b40Eii
+_ZN17UnkClass_020A9C4012FUN_02045b40Eii: ; 0x02045B40
 	add r0, r0, #0x5000
 	str r1, [r0, #0xb74]
 	str r2, [r0, #0xb78]
 	bx lr
-	arm_func_end FUN_02045b40
+	arm_func_end _ZN17UnkClass_020A9C4012FUN_02045b40Eii
 
 	arm_func_start FUN_02045b50
 FUN_02045b50: ; 0x02045B50
@@ -1066,15 +1066,15 @@ _020460A0: .word gAllocator
 _020460A4: .word gLogicThink
 	arm_func_end FUN_02045edc
 
-	arm_func_start FUN_020460a8
-FUN_020460a8: ; 0x020460A8
+	arm_func_start _ZN17UnkClass_020A9C4012FUN_020460a8Eii
+_ZN17UnkClass_020A9C4012FUN_020460a8Eii: ; 0x020460A8
 	add r0, r0, #0x5000
 	mov r3, #1
 	str r3, [r0, #0xba0]
 	str r1, [r0, #0xba8]
 	str r2, [r0, #0xbac]
 	bx lr
-	arm_func_end FUN_020460a8
+	arm_func_end _ZN17UnkClass_020A9C4012FUN_020460a8Eii
 
 	arm_func_start FUN_020460c0
 FUN_020460c0: ; 0x020460C0

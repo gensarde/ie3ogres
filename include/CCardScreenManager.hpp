@@ -51,7 +51,7 @@ private:
 extern "C" {
 extern void _ZN8Graphics17LoadBGPaletteMainEv(void);
 extern int _ZN8Graphics22LoadTempPaletteFromPacEPv12EngineSelecti(void *, EngineSelect, int);
-extern int _ZN8Graphics11SetupScreenEPtmii(void *, u32, int, int);
+extern int _ZN8Graphics11SetupScreenEPvmii(void *, u32, int, int);
 extern void FUN_ov16_020f3f60(int);
 extern void FUN_ov16_020f4894(int);
 extern void FUN_ov16_020f47fc(void);

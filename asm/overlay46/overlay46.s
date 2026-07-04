@@ -5271,7 +5271,7 @@ _0211E848:
 	ldr r0, _0211E9E4 ; =0x020A9C40
 	mov r1, #0x66
 	mov r2, #0
-	bl FUN_020460a8
+	bl _ZN17UnkClass_020A9C4012FUN_020460a8Eii
 	ldr r0, _0211E9E0 ; =gAudioPlayer
 	mov r1, #6
 	bl _ZN11AudioPlayer10playEffectEi
@@ -6047,7 +6047,7 @@ _0211F2E0:
 	ldrh r2, [r2, #0xa]
 	ldr r6, _0211F394 ; =0x00000FFF
 	and r2, r2, r6
-	bl FUN_020460a8
+	bl _ZN17UnkClass_020A9C4012FUN_020460a8Eii
 	ldr r2, [r4, #0x4f8]
 	ldrb r3, [r4, #0x3d7]
 	mov r0, r4
@@ -6262,7 +6262,7 @@ _0211F60C:
 	ldr r0, _0211F874 ; =0x020A9C40
 	mov r1, #0x66
 	mov r2, #0
-	bl FUN_020460a8
+	bl _ZN17UnkClass_020A9C4012FUN_020460a8Eii
 	ldmfd sp!, {r4, r5, r6, r7, r8, pc}
 _0211F658:
 	ldr r0, [r8]
@@ -8097,7 +8097,7 @@ FUN_ov46_02120fc8: ; 0x02120FC8
 	stmfd sp!, {r4, r5, r6, r7, r8, r9, r10, lr}
 	mov r8, r0
 	ldr r0, _02121084 ; =gLogicThink
-	bl FUN_0204eba0
+	bl _ZN11CLogicThink12FUN_0204eba0Ev
 	add r10, r8, #0x300
 	ldrh r0, [r10, #0xe0]
 	mov r6, #0
@@ -8143,7 +8143,7 @@ _02121068:
 	blt _02120FF8
 _02121078:
 	ldr r0, _02121084 ; =gLogicThink
-	bl FUN_0204ec3c
+	bl _ZN11CLogicThink12FUN_0204ec3cEv
 	ldmfd sp!, {r4, r5, r6, r7, r8, r9, r10, pc}
 _02121084: .word gLogicThink
 	arm_func_end FUN_ov46_02120fc8

@@ -7,7 +7,7 @@
 .public gLogicThink
 .public _ZN10CAllocator10deallocateEPv
 .public FUN_0204bd64
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public FUN_ov16_020eeb24
 .public FUN_0204ea4c
 .public FUN_0204c078

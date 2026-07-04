@@ -221,7 +221,7 @@ FUN_ov68_0211a124: ; 0x0211A124
 _0211A1CC:
 	ldr r0, _0211A2D8 ; =gLogicThink
 	mov r1, #1
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	ldrh r1, [r0, #0x28]
 	cmp r1, #0
 	ldreqh r1, [r0, #0x26]
@@ -5645,7 +5645,7 @@ _0211EF98:
 	ldr r0, _0211EFF0 ; =0x020A9C40
 	mov r2, r4
 	mov r1, #0x1c4
-	bl FUN_020460a8
+	bl _ZN17UnkClass_020A9C4012FUN_020460a8Eii
 	ldmfd sp!, {r3, r4, r5, r6, r7, pc}
 _0211EFEC: .word gLogicThink
 _0211EFF0: .word unk_020A9C40

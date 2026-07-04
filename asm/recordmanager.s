@@ -2887,8 +2887,8 @@ FUN_020627a4: ; 0x020627A4
 	ldmfd sp!, {r4, pc}
 	arm_func_end FUN_020627a4
 
-	arm_func_start FUN_02062800
-FUN_02062800: ; 0x02062800
+	arm_func_start _ZN14CRecordManager15getRecordHeaderEP13SRecordHeader
+_ZN14CRecordManager15getRecordHeaderEP13SRecordHeader: ; 0x02062800
 	stmfd sp!, {r3, lr}
 	ldr r0, _02062818 ; =0x020A17F0
 	mov r2, #0x80
@@ -2896,7 +2896,7 @@ FUN_02062800: ; 0x02062800
 	mov r0, #0
 	ldmfd sp!, {r3, pc}
 _02062818: .word unk_020A17F0
-	arm_func_end FUN_02062800
+	arm_func_end _ZN14CRecordManager15getRecordHeaderEP13SRecordHeader
 
 	arm_func_start FUN_0206281c
 FUN_0206281c: ; 0x0206281C

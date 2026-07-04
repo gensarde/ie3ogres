@@ -410,7 +410,7 @@ _0211A410:
 	bl FUN_ov16_020f081c
 	mov r1, r0
 	ldr r0, _0211A620 ; =gLogicThink
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r8, r0
 	mov r9, r11
 	add r5, r4, #0x1dc
@@ -2086,7 +2086,7 @@ _0211BB4C:
 	add r2, r4, #1
 	mov r1, #0x60
 	mov r3, #0
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r4, r0
 _0211BB6C:
 	bl G2_GetBG1CharPtr
@@ -2387,7 +2387,7 @@ _0211BFA4:
 	mul r1, r2, r1
 	mov r1, r1, lsl #1
 	add r2, r4, #1
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	str r5, [r7, #8]
 	ldrh r2, [r7, #0xc]
 	ldrh r1, [r7, #0xe]
@@ -2421,7 +2421,7 @@ _0211C044:
 	mov r1, r9
 	add r2, r4, #1
 	mov r3, r6
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r4, r0
 	add r7, r7, #8
 	add r8, r8, #1
@@ -2493,12 +2493,12 @@ _0211C114:
 	mov r3, r6
 	mov r1, r1, lsl #1
 	add r2, r4, #1
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r0, r7
 	bl FUN_ov16_020f2f20
 	mov r9, #4
 	ldr r8, _0211C23C ; =gLogicThink
-	ldr r4, _0211C240 ; =gFont12
+	ldr r4, _0211C240 ; =gFont12Manager
 	b _0211C1F4
 _0211C184:
 	add r0, r10, r6, lsl #1
@@ -2552,7 +2552,7 @@ _0211C224:
 _0211C234: .word gFont8
 _0211C238: .word gMainScreen2
 _0211C23C: .word gLogicThink
-_0211C240: .word gFont12
+_0211C240: .word gFont12Manager
 	arm_func_end FUN_ov80_0211ba04
 
 	arm_func_start FUN_ov80_0211c244
@@ -3863,7 +3863,7 @@ FUN_ov80_0211d434: ; 0x0211D434
 	add r1, r1, #0x300
 	ldrh r1, [r1, #0xa4]
 	mov r2, #5
-	bl FUN_02045b40
+	bl _ZN17UnkClass_020A9C4012FUN_02045b40Eii
 	mov r0, #1
 	strb r0, [r4, #0x3a0]
 	ldmfd sp!, {r4, pc}
@@ -3879,7 +3879,7 @@ FUN_ov80_0211d468: ; 0x0211D468
 	cmp r3, #0
 	bne _0211D48C
 	mov r0, r5
-	bl FUN_0204eba0
+	bl _ZN11CLogicThink12FUN_0204eba0Ev
 	ldr r3, [r5, #0x7ec]
 _0211D48C:
 	ldr r0, _0211D4F4 ; =0x0209C220
@@ -3909,7 +3909,7 @@ _0211D4D4:
 	blt _0211D4A4
 _0211D4E4:
 	ldr r0, _0211D4F0 ; =gLogicThink
-	bl FUN_0204ec3c
+	bl _ZN11CLogicThink12FUN_0204ec3cEv
 	ldmfd sp!, {r4, r5, r6, pc}
 _0211D4F0: .word gLogicThink
 _0211D4F4: .word unk_0209C220
@@ -9207,7 +9207,7 @@ _02121F5C:
 	strb r3, [r6, #0x950]
 	str r2, [r6, #0x93c]
 	str r4, [r6, #0x940]
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	ldrh r3, [r0, #0x2a]
 	ldr r7, _02122054 ; =gLogicThink
 	add r2, r6, #0x900

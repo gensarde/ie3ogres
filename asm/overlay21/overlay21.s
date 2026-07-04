@@ -312,7 +312,7 @@ _0211A2C4:
 	ldr r0, _0211A310 ; =0x020A9C40
 	mov r1, #0x97
 	mov r2, #0
-	bl FUN_020460a8
+	bl _ZN17UnkClass_020A9C4012FUN_020460a8Eii
 	ldmfd sp!, {r3, r4, r5, pc}
 _0211A2F8:
 	add r1, r5, #0x1ec
@@ -1389,7 +1389,7 @@ FUN_ov21_0211b120: ; 0x0211B120
 	ldr r1, [r8]
 	bl _ZN12C3DPlaneCtrl12getTexHeightEi
 	mov r5, r0
-	ldr r0, _0211B318 ; =gFont12
+	ldr r0, _0211B318 ; =gFont12Manager
 	mov r1, #1
 	ldr r0, [r0]
 	mov r2, #5
@@ -1401,14 +1401,14 @@ FUN_ov21_0211b120: ; 0x0211B120
 	str r6, [sp, #0x10]
 	str r6, [sp, #0x14]
 	str r6, [sp, #0x18]
-	ldr r0, _0211B318 ; =gFont12
+	ldr r0, _0211B318 ; =gFont12Manager
 	str r6, [sp, #0x1c]
 	ldr r1, [sp, #0x20]
 	ldr r0, [r0]
 	mov r2, r7
 	mov r3, r11
 	bl _ZN12CFontManager15drawTextTex4bppEPcPviiiiiPNS_11GlyphBoundsEiiNS_9AlignmentE
-	ldr r0, _0211B318 ; =gFont12
+	ldr r0, _0211B318 ; =gFont12Manager
 	ldr r0, [r0]
 	bl _ZN12CFontManager12resetSpacingEv
 	ldr r3, [sp, #0x28]
@@ -1463,7 +1463,7 @@ FUN_ov21_0211b120: ; 0x0211B120
 	add sp, sp, #0x34
 	ldmfd sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 _0211B314: .word g3DPlaneCtrl
-_0211B318: .word gFont12
+_0211B318: .word gFont12Manager
 	arm_func_end FUN_ov21_0211b120
 
 	arm_func_start FUN_ov21_0211b31c
@@ -2302,7 +2302,7 @@ FUN_ov21_0211bed4: ; 0x0211BED4
 	mov r8, r0
 	mov r5, r7
 	mov r4, #1
-	ldr r11, _0211BFBC ; =gFont12
+	ldr r11, _0211BFBC ; =gFont12Manager
 	b _0211BF74
 _0211BF28:
 	ldr r0, [r10, r7, lsl #2]
@@ -2344,7 +2344,7 @@ _0211BF74:
 	add sp, sp, #0x2c
 	ldmfd sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 _0211BFB8: .word g3DPlaneCtrl
-_0211BFBC: .word gFont12
+_0211BFBC: .word gFont12Manager
 	arm_func_end FUN_ov21_0211bed4
 
 	arm_func_start FUN_ov21_0211bfc0
@@ -2839,7 +2839,7 @@ _0211C684: .word ov21_0211D484
 	arm_func_start FUN_ov21_0211c688
 FUN_ov21_0211c688: ; 0x0211C688
 	stmfd sp!, {r3, r4, r5, r6, r7, r8, r9, lr}
-	ldr r2, _0211CAE8 ; =0x0209A0F4
+	ldr r2, _0211CAE8 ; =gKeysRepeated
 	mov r8, r0
 	ldrh r0, [r2]
 	mov r7, r1
@@ -2916,7 +2916,7 @@ _0211C79C:
 	ldr r0, _0211CAFC ; =0x020A9C40
 	mov r2, r6
 	mov r1, #0x98
-	bl FUN_020460a8
+	bl _ZN17UnkClass_020A9C4012FUN_020460a8Eii
 	mov r0, r8
 	mov r1, r6
 	bl FUN_ov21_0211bc24
@@ -2935,7 +2935,7 @@ _0211C7C4:
 	bne _0211C824
 	ldr r0, _0211CAFC ; =0x020A9C40
 	mov r1, #0x9a
-	bl FUN_020460a8
+	bl _ZN17UnkClass_020A9C4012FUN_020460a8Eii
 	mov r0, r8
 	mov r1, #3
 	bl FUN_ov21_0211bc34
@@ -2948,7 +2948,7 @@ _0211C7C4:
 _0211C824:
 	ldr r0, _0211CAFC ; =0x020A9C40
 	mov r1, #0x9c
-	bl FUN_020460a8
+	bl _ZN17UnkClass_020A9C4012FUN_020460a8Eii
 	ldmfd sp!, {r3, r4, r5, r6, r7, r8, r9, pc}
 _0211C834:
 	ldr r0, _0211CAF4 ; =gAudioPlayer
@@ -2964,7 +2964,7 @@ _0211C844:
 	ldr r0, _0211CAFC ; =0x020A9C40
 	mov r2, r6
 	mov r1, #0x98
-	bl FUN_020460a8
+	bl _ZN17UnkClass_020A9C4012FUN_020460a8Eii
 	mov r0, r8
 	mov r1, r6
 	bl FUN_ov21_0211bc24
@@ -3060,7 +3060,7 @@ _0211C980:
 	ldr r0, _0211CAFC ; =0x020A9C40
 	mov r2, r6
 	mov r1, #0x9b
-	bl FUN_020460a8
+	bl _ZN17UnkClass_020A9C4012FUN_020460a8Eii
 	ldr r0, _0211CAF0 ; =gSprButtonCtrl
 	mov r1, #0xb
 	ldr r0, [r0]
@@ -3139,7 +3139,7 @@ _0211CAD8:
 	mov r2, #1
 	bl FUN_ov21_0211c24c
 	ldmfd sp!, {r3, r4, r5, r6, r7, r8, r9, pc}
-_0211CAE8: .word unk_0209A0F4
+_0211CAE8: .word gKeysRepeated
 _0211CAEC: .word gSprAnimCtrl
 _0211CAF0: .word gSprButtonCtrl
 _0211CAF4: .word gAudioPlayer
@@ -3518,7 +3518,7 @@ FUN_ov21_0211ce64: ; 0x0211CE64
 	mov r2, r6
 	ldr r0, _0211D05C ; =0x020A9C40
 	mov r1, #0x96
-	bl FUN_020460a8
+	bl _ZN17UnkClass_020A9C4012FUN_020460a8Eii
 	ldmfd sp!, {r3, r4, r5, r6, r7, pc}
 _0211D04C: .word gSprButtonCtrl
 _0211D050: .word gSprAnimCtrl
@@ -3666,7 +3666,7 @@ FUN_ov21_0211d204: ; 0x0211D204
 	ldr r0, _0211D2F0 ; =0x020A9C40
 	mov r2, r5
 	mov r1, #0x99
-	bl FUN_020460a8
+	bl _ZN17UnkClass_020A9C4012FUN_020460a8Eii
 	ldr r0, _0211D2F4 ; =gSprButtonCtrl
 	ldr r0, [r0]
 	bl FUN_ov16_0210e9d8 ; may be ov17 ; ov16(Mica)

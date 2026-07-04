@@ -23,7 +23,7 @@
 .public unk_02099F44
 .public FUN_ov16_0210e15c
 .public FUN_ov16_0210f468
-.public unk_0209A0F4
+.public gKeysRepeated
 .public _ZN11AudioPlayer10playEffectEi
 .public gAudioPlayer
 .public _ZN12C3DPlaneCtrl9clearFlagEiit
@@ -111,7 +111,7 @@
 .public FUN_02059288
 .public _ZN12C3DPlaneCtrl8setTexSTEiiss
 .public _ZN12C3DPlaneCtrl8setTexWHEiiss
-.public gFont12
+.public gFont12Manager
 .public _ZN12C3DPlaneCtrl12setColorMaskEit
 .public FUN_02058e30
 .public FUN_02059004

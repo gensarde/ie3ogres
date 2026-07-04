@@ -862,8 +862,8 @@ _ZN8Graphics22IsScreenBrightAdjustedE12EngineSelect: ; 0x020F1844
 _020F1864: .word gScreenFades
 	arm_func_end _ZN8Graphics22IsScreenBrightAdjustedE12EngineSelect
 
-	arm_func_start _ZN8Graphics11SetupScreenEPtmii
-_ZN8Graphics11SetupScreenEPtmii: ; 0x020F1868
+	arm_func_start _ZN8Graphics11SetupScreenEPvmii
+_ZN8Graphics11SetupScreenEPvmii: ; 0x020F1868
 	stmfd sp!, {r3, r4, r5, r6, r7, r8, r9, lr}
 	mov r5, #0
 	cmp r0, #0
@@ -898,7 +898,7 @@ _020F18D4:
 	bl DC_FlushRange
 	mov r0, r5
 	ldmfd sp!, {r3, r4, r5, r6, r7, r8, r9, pc}
-	arm_func_end _ZN8Graphics11SetupScreenEPtmii
+	arm_func_end _ZN8Graphics11SetupScreenEPvmii
 
 	arm_func_start _ZN8Graphics11SetupScreenEPvii
 _ZN8Graphics11SetupScreenEPvii: ; 0x020F18E8
@@ -913,7 +913,7 @@ _ZN8Graphics11SetupScreenEPvii: ; 0x020F18E8
 	ldr r12, [r0, #0xc]
 	mov r2, lr
 	add r0, r0, r12
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	ldmfd sp!, {r3, pc}
 	arm_func_end _ZN8Graphics11SetupScreenEPvii
 
@@ -1591,7 +1591,7 @@ FUN_ov16_020f2184: ; 0x020F2184
 	add r2, sp, #0x920
 	bl FUN_ov16_020f24e8
 	ldr r1, [sp, #0xb54]
-	ldr r5, _020F22FC ; =gFont12
+	ldr r5, _020F22FC ; =gFont12Manager
 	str r0, [sp, #0x1c]
 	add r2, r1, #8
 	ldr r0, [r5]
@@ -1672,7 +1672,7 @@ _020F22E4:
 	bl DC_FlushRange
 	add sp, sp, #0xb20
 	ldmfd sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
-_020F22FC: .word gFont12
+_020F22FC: .word gFont12Manager
 _020F2300: .word gFontRubi8
 	arm_func_end FUN_ov16_020f2184
 
@@ -1706,7 +1706,7 @@ FUN_ov16_020f2304: ; 0x020F2304
 	add r3, sp, #0x28
 	str r9, [sp, #0x24]
 	bl FUN_0205935c
-	ldr r0, _020F24E0 ; =gFont12
+	ldr r0, _020F24E0 ; =gFont12Manager
 	ldr r2, [sp, #0x6d4]
 	ldr r1, [sp, #0x6d0]
 	ldr r0, [r0]
@@ -1729,12 +1729,12 @@ FUN_ov16_020f2304: ; 0x020F2304
 	ldr r0, [sp, #0x6e0]
 	add r1, sp, #0x2c
 	str r0, [sp, #0x1c]
-	ldr r0, _020F24E0 ; =gFont12
+	ldr r0, _020F24E0 ; =gFont12Manager
 	mov r2, r5
 	ldr r0, [r0]
 	mov r3, r7
 	bl _ZN12CFontManager15drawTextTex4bppEPcPviiiiiPNS_11GlyphBoundsEiiNS_9AlignmentE
-	ldr r0, _020F24E0 ; =gFont12
+	ldr r0, _020F24E0 ; =gFont12Manager
 	ldr r0, [r0]
 	bl _ZN12CFontManager12resetSpacingEv
 	b _020F2494
@@ -1799,7 +1799,7 @@ _020F2494:
 	add sp, sp, #0x400
 	ldmfd sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 _020F24DC: .word g3DPlaneCtrl
-_020F24E0: .word gFont12
+_020F24E0: .word gFont12Manager
 _020F24E4: .word gFontRubi8
 	arm_func_end FUN_ov16_020f2304
 
@@ -2326,7 +2326,7 @@ _020F2C04:
 	str r2, [sp, #8]
 	mov r1, #0x20
 	str r1, [sp, #0xc]
-	ldr r3, _020F2CD8 ; =gFont12
+	ldr r3, _020F2CD8 ; =gFont12Manager
 	mov r1, r0
 	ldr r0, [r3]
 	mov r3, #0xc0
@@ -2366,7 +2366,7 @@ _020F2CC8: .word 0x04000006
 _020F2CCC: .word gMoviePlayer
 _020F2CD0: .word sMovieInfo
 _020F2CD4: .word 0x10624DD3
-_020F2CD8: .word gFont12
+_020F2CD8: .word gFont12Manager
 	arm_func_end FUN_ov16_020f2ab4
 
 	arm_func_start FUN_ov16_020f2cdc

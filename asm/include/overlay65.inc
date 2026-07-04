@@ -10,7 +10,7 @@
 .public _ZN10CAllocator10deallocateEPv
 .public FUN_ov16_0210e15c
 .public FUN_ov16_0210f468
-.public unk_0209A0F4
+.public gKeysRepeated
 .public _ZN11AudioPlayer10playEffectEi
 .public gAudioPlayer
 .public _ZN12C3DPlaneCtrl9clearFlagEiit
@@ -79,7 +79,7 @@
 .public FUN_02059288
 .public _ZN12C3DPlaneCtrl8setTexSTEiiss
 .public _ZN12C3DPlaneCtrl8setTexWHEiiss
-.public gFont12
+.public gFont12Manager
 .public unk_020A1540
 .public _ZN12C3DPlaneCtrl12setColorMaskEit
 .public FUN_02058e30
@@ -100,7 +100,7 @@
 .public sprintf
 .public FUN_ov16_0210fba4
 .public FUN_ov16_020edf8c
-.public FUN_020460a8
+.public _ZN17UnkClass_020A9C4012FUN_020460a8Eii
 .public FUN_02073a04
 .public _ZdlPv
 .public FX_Sqrt

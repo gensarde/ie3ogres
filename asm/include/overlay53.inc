@@ -11,7 +11,7 @@
 .public g2DAdventureLogic
 .public FUN_ov16_0210e15c
 .public FUN_ov16_0210f468
-.public unk_0209A0F4
+.public gKeysRepeated
 .public _ZN11AudioPlayer10playEffectEi
 .public gAudioPlayer
 .public _s32_div_f
@@ -42,7 +42,7 @@
 .public gDeltaTime
 .public g3DSpriteCtrl
 .public g2DGChar
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public FUN_ov16_020f081c
 .public FUN_ov16_020f078c
 .public FUN_0206fb74
@@ -101,7 +101,7 @@
 .public FUN_02059288
 .public _ZN12C3DPlaneCtrl8setTexSTEiiss
 .public _ZN12C3DPlaneCtrl8setTexWHEiiss
-.public gFont12
+.public gFont12Manager
 .public _ZN12C3DPlaneCtrl12setColorMaskEit
 .public FUN_02058e30
 .public FUN_02059004

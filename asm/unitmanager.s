@@ -266,7 +266,7 @@ _0206C3E8:
 	bl FUN_0206e4a4
 	mov r0, r10
 	mov r1, r9
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	cmp r0, #0
 	beq _0206C480
 	ldrh r1, [r4, #0x58]
@@ -282,7 +282,7 @@ _0206C480:
 	mov r7, r0
 	mov r0, r10
 	mov r1, r9
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	movs r9, r0
 	ldrneh r0, [r9, #0x30]
 	cmpne r0, #0

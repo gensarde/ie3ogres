@@ -182,7 +182,7 @@ _02124F1C:
 	movne r5, #1
 	ldr r0, _021251C0 ; =gLogicThink
 	mov r1, r5
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	ldrh r0, [r0, #0x22]
 	mov r3, #0x60
 	mul r1, r0, r3
@@ -219,7 +219,7 @@ _02124FC8:
 	mov r1, #0
 	ldr r0, _021251C0 ; =gLogicThink
 	movne r1, #1
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	ldr r0, [r4, #0xc]
 	mov r1, #1
 	cmp r0, #1
@@ -249,7 +249,7 @@ _02125038:
 	mov r1, #0
 	ldr r0, _021251C0 ; =gLogicThink
 	movne r1, #1
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r10, r0
 	mov r9, #0
 	add r5, r4, #0x40
@@ -558,7 +558,7 @@ _02125454:
 	add r0, r9, r0
 	add r2, r7, #1
 	add r3, r10, #4
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r7, r0
 _021254B4:
 	add r10, r10, #1
@@ -582,7 +582,7 @@ _021254D8:
 	mov r3, r5
 	add r0, r9, r0
 	add r2, r7, #1
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r7, r0
 	mov r0, r9
 	mov r1, r6
@@ -620,7 +620,7 @@ _02125524:
 	mov r3, r5
 	add r2, r7, #1
 	mov r1, #0x90
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 _02125594:
 	bl _ZN8Graphics16LoadBGPaletteSubEv
 	b _021256AC

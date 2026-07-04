@@ -15,7 +15,7 @@
 .public _ZN14CBgMenuManager9addStaticE12EngineSelectiiiiaahhhPv
 .public gBgMenuManager
 .public _ZN7Archive10DeallocateEP9SFileData
-.public _ZN8Graphics11SetupScreenEPtmii
+.public _ZN8Graphics11SetupScreenEPvmii
 .public GXS_LoadBG1Char
 .public FUN_ov1_020dc13c
 .public _ZN8Graphics11SetupScreenEPvii

@@ -14,7 +14,7 @@
 .public unk_020A0640
 .public FUN_ov16_0210e9d8
 .public FUN_ov16_0210e0d8
-.public FUN_0204ec3c
+.public _ZN11CLogicThink12FUN_0204ec3cEv
 .public gLogicThink
 .public FUN_ov16_0210e15c
 .public FUN_ov16_0210f20c
@@ -45,7 +45,7 @@
 .public _ZN12C3DPlaneCtrl6setPosEiiss
 .public _ZN12C3DPlaneCtrl8setDepthEiij
 .public gFont8
-.public gFont12
+.public gFont12Manager
 .public FUN_ov16_0210e10c
 .public _ffltu
 .public _fadd

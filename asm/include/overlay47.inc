@@ -65,7 +65,7 @@
 .public FUN_ov16_0210e7d0
 .public FUN_ov16_0210efac
 .public FUN_ov0_020cd110
-.public FUN_020460a8
+.public _ZN17UnkClass_020A9C4012FUN_020460a8Eii
 .public FUN_ov0_020cd104
 .public unk_020A9C40
 .public FUN_ov16_0210f48c
@@ -97,7 +97,7 @@
 .public FUN_ov16_0210e0d8
 .public _ZN12C3DPlaneCtrl7releaseEv
 .public FUN_ov0_020cd0ec
-.public FUN_02045b40
+.public _ZN17UnkClass_020A9C4012FUN_02045b40Eii
 .public _ZdlPv
 .public FX_Sqrt
 .public _ZN12CommonScreen7vFUN_14Ev

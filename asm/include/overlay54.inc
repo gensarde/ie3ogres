@@ -38,15 +38,15 @@
 .public FUN_ov16_0210e7d0
 .public FUN_ov16_0210e15c
 .public FUN_ov16_0210f468
-.public FUN_020460a8
-.public unk_0209A0F4
+.public _ZN17UnkClass_020A9C4012FUN_020460a8Eii
+.public gKeysRepeated
 .public unk_020A9C40
 .public FUN_ov16_0210f20c
 .public FUN_ov16_0210f484
 .public FUN_ov16_0210e980
 .public FUN_ov16_0210e0a0
 .public MI_CpuFill8
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public gLogicThink
 .public _ZN7Archive11TryFinalizeEP9SFileDatai
 .public _ZN14CScreenManager8popSceneE12EngineSelect
@@ -78,7 +78,7 @@
 .public _ZN12C3DPlaneCtrl8setTexSTEiiss
 .public _ZN12C3DPlaneCtrl8setTexWHEiiss
 .public gFont8
-.public gFont12
+.public gFont12Manager
 .public FUN_ov16_02110a04
 .public FUN_ov16_02110b04
 .public FUN_ov16_02110b0c

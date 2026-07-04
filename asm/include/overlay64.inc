@@ -55,11 +55,11 @@
 .public FUN_02059004
 .public FUN_02059038
 .public _ZN8Graphics16FadeScreensBlackEl
-.public FUN_020460a8
+.public _ZN17UnkClass_020A9C4012FUN_020460a8Eii
 .public _ZN14CScreenManager8popSceneE12EngineSelect
 .public _ZN12C3DPlaneCtrl6createEib
 .public FUN_ov16_020f081c
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public FUN_0204bd64
 .public FUN_ov16_020f0bcc
 .public _ZN7Archive20GetFaceOffsetAndSizeEPvP4UnithPlPm
@@ -82,7 +82,7 @@
 .public _ZN12CFontManager15getNameFuriganaEPaS0_S0_
 .public _ZN12CFontManager12getTextWidthEPc
 .public gFont8
-.public gFont12
+.public gFont12Manager
 .public sprintf
 .public _dflt
 .public pow

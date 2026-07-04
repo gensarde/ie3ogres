@@ -51,7 +51,7 @@
 .public _ZN12CFontManager12getTextWidthEPc
 .public STD_ConcatenateString
 .public _ZN12CFontManager12getCharWidthEPc
-.public gFont12
+.public gFont12Manager
 .public gDeltaTime
 .public FX_Sqrt
 .public _ZN12CommonScreen7vFUN_14Ev

@@ -11,7 +11,7 @@
 .public FUN_02073ea4
 .public gLogicThink
 .public FUN_ov1_020dc13c
-.public _ZN8Graphics11SetupScreenEPtmii
+.public _ZN8Graphics11SetupScreenEPvmii
 .public _ZN8Graphics16LoadBGPaletteSubEv
 .public _ZN8Graphics14LoadBGXCharSubEiPvm
 .public G2S_GetBG1CharPtr
@@ -29,11 +29,11 @@
 .public gUtilGame
 .public FUN_ov16_020f2f20
 .public FUN_ov16_020f2184
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public FUN_0207039c
 .public FUN_ov16_020f081c
 .public _ZN15CBgAnimeManager8addFrameEhssh
-.public gFont12
+.public gFont12Manager
 .public unk_020A3D14
 .public ov1_020E9480
 .public GXS_LoadBG1Scr

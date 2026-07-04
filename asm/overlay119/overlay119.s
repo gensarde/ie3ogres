@@ -105,7 +105,7 @@ FUN_ov119_02124e1c: ; 0x02124E1C
 	mov r3, r4
 	add r0, r5, r0
 	mov r2, #0
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r0, r5
 	mov r1, r4
 	mov r2, r4
@@ -121,7 +121,7 @@ _02124E5C:
 	mov r2, r4
 	mov r3, r7
 	add r0, r8, r0
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r5, r0
 	mov r0, r8
 	mov r1, r4
@@ -137,7 +137,7 @@ _02124E9C:
 	mov r3, r7
 	add r0, r8, r0
 	add r2, r5, #1
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r5, r0
 	mov r0, r8
 	mov r2, r7
@@ -153,7 +153,7 @@ _02124ED8:
 	mov r3, r7
 	add r0, r8, r0
 	add r2, r5, #1
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r5, r0
 	mov r0, r8
 	mov r2, r7
@@ -169,7 +169,7 @@ _02124F14:
 	mov r3, r7
 	add r0, r8, r0
 	add r2, r5, #1
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r0, r8
 	mov r2, r7
 	mov r1, #1
@@ -185,7 +185,7 @@ _02124F4C:
 	mov r2, r4
 	mov r3, r7
 	add r0, r8, r0
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r5, r0
 	mov r0, r8
 	mov r1, r4
@@ -206,7 +206,7 @@ _02124F8C:
 	mov r3, #0
 	mul r1, r4, r1
 	mov r1, r1, lsl #1
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	ldmfd sp!, {r4, r5, r6, r7, r8, pc}
 	arm_func_end FUN_ov119_02124e1c
 
@@ -348,7 +348,7 @@ FUN_ov119_02125124: ; 0x02125124
 	cmp r0, #0
 	addeq sp, sp, #0x20
 	ldmeqfd sp!, {r4, r5, r6, r7, r8, pc}
-	ldr r8, _02125264 ; =gFont12
+	ldr r8, _02125264 ; =gFont12Manager
 	strb r4, [r7, #0x1c]
 	ldr r0, [r8]
 	mov r1, r6
@@ -387,7 +387,7 @@ FUN_ov119_02125124: ; 0x02125124
 	add sp, sp, #0x20
 	ldmfd sp!, {r4, r5, r6, r7, r8, pc}
 _02125260: .word gBgMenuManager
-_02125264: .word gFont12
+_02125264: .word gFont12Manager
 	arm_func_end FUN_ov119_02125124
 
 	arm_func_start FUN_ov119_02125268

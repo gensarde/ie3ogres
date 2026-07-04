@@ -36,7 +36,7 @@ FUN_ov71_02119f3c: ; 0x02119F3C
 	bl FUN_ov16_020f081c
 	mov r1, r0
 	ldr r0, _02119FE0 ; =gLogicThink
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	cmp r0, #0
 	beq _02119F88
 	ldrb r1, [r0, #0x2d]
@@ -330,7 +330,7 @@ FUN_ov71_0211a324: ; 0x0211A324
 	cmp r9, #0
 	addeq sp, sp, #0x48
 	ldmeqfd sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
-	ldr r4, _0211A410 ; =gFont12
+	ldr r4, _0211A410 ; =gFont12Manager
 	mov r11, #1
 	ldr r0, [r4]
 	mov r2, r11
@@ -371,7 +371,7 @@ FUN_ov71_0211a324: ; 0x0211A324
 	add sp, sp, #0x48
 	ldmfd sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
 _0211A40C: .word g3DPlaneCtrl
-_0211A410: .word gFont12
+_0211A410: .word gFont12Manager
 	arm_func_end FUN_ov71_0211a324
 
 	arm_func_start FUN_ov71_0211a414
@@ -380,7 +380,7 @@ FUN_ov71_0211a414: ; 0x0211A414
 	bl FUN_ov16_020f081c
 	mov r1, r0
 	ldr r0, _0211A434 ; =gLogicThink
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	cmp r0, #0
 	moveq r0, #0
 	ldmfd sp!, {r3, pc}

@@ -378,7 +378,7 @@ _02125200:
 	bl FUN_ov16_020f0810
 	mov r1, r0
 	ldr r0, _0212533C ; =gLogicThink
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r5, r0
 	ldr r0, [r7, #0x374]
 	cmp r0, #0
@@ -920,7 +920,7 @@ _02125930:
 	blx r9
 	cmp r5, #0
 	bne _021259BC
-	ldr r0, _02125AC4 ; =gFont12
+	ldr r0, _02125AC4 ; =gFont12Manager
 	mov r1, r7
 	ldr r0, [r0]
 	bl _ZN12CFontManager12getTextWidthEPc
@@ -933,7 +933,7 @@ _021259BC:
 	mov r0, #0
 	str r0, [sp, #4]
 	ldr r1, [r4, #4]
-	ldr r9, _02125AC4 ; =gFont12
+	ldr r9, _02125AC4 ; =gFont12Manager
 	str r1, [sp, #8]
 	ldrh r2, [r4, #8]
 	mov r1, r6
@@ -971,7 +971,7 @@ _021259BC:
 	str r2, [sp, #8]
 	ldrh r6, [r4, #8]
 	mov r2, r5
-	ldr r0, _02125AC4 ; =gFont12
+	ldr r0, _02125AC4 ; =gFont12Manager
 	mov r5, r6, lsl #3
 	str r5, [sp, #0xc]
 	ldrh r5, [r4, #0xa]
@@ -994,7 +994,7 @@ _021259BC:
 	ldmfd sp!, {r3, r4, r5, r6, r7, r8, r9, r10, pc}
 _02125ABC: .word gAllocator
 _02125AC0: .word gFont8
-_02125AC4: .word gFont12
+_02125AC4: .word gFont12Manager
 	arm_func_end FUN_ov94_02125858
 
 	arm_func_start FUN_ov94_02125ac8
@@ -1100,7 +1100,7 @@ FUN_ov94_02125be8: ; 0x02125BE8
 	movs r6, r0
 	addeq sp, sp, #0x1c
 	ldmeqfd sp!, {r4, r5, r6, r7, pc}
-	ldr r5, _02125CCC ; =gFont12
+	ldr r5, _02125CCC ; =gFont12Manager
 	mov r1, #1
 	ldr r0, [r5]
 	mov r2, #4
@@ -1136,7 +1136,7 @@ FUN_ov94_02125be8: ; 0x02125BE8
 	add sp, sp, #0x1c
 	ldmfd sp!, {r4, r5, r6, r7, pc}
 _02125CC8: .word gLogicThink
-_02125CCC: .word gFont12
+_02125CCC: .word gFont12Manager
 	arm_func_end FUN_ov94_02125be8
 
 	arm_func_start FUN_ov94_02125cd0
@@ -1164,7 +1164,7 @@ FUN_ov94_02125cd0: ; 0x02125CD0
 	movs r6, r0
 	addeq sp, sp, #0x1c
 	ldmeqfd sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
-	ldr r4, _02125E50 ; =gFont12
+	ldr r4, _02125E50 ; =gFont12Manager
 	mov r11, #1
 	ldr r0, [r4]
 	mov r1, r11
@@ -1237,7 +1237,7 @@ FUN_ov94_02125cd0: ; 0x02125CD0
 	add sp, sp, #0x1c
 	ldmfd sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 _02125E4C: .word gLogicThink
-_02125E50: .word gFont12
+_02125E50: .word gFont12Manager
 	arm_func_end FUN_ov94_02125cd0
 
 	arm_func_start FUN_ov94_02125e54
@@ -3132,7 +3132,7 @@ FUN_ov94_02127958: ; 0x02127958
 	mov r3, #0
 	mul r1, r12, r1
 	mov r1, r1, lsl #1
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r2, r0
 _02127998:
 	mov r0, r2
@@ -3387,7 +3387,7 @@ _02127CF8:
 	mov r2, r4
 	mov r3, r6
 	add r0, r5, r0
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r0, r5
 	mov r1, r6
 	mov r2, r6
@@ -3434,7 +3434,7 @@ _02127D50:
 	mov r3, r8
 	add r0, r5, r0
 	add r2, r4, #1
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	str r0, [sp, #0xc]
 	mov r0, r5
 	mov r2, r8

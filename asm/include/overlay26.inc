@@ -88,7 +88,7 @@
 .public _ZN14CScreenManager12setNextSceneE12EngineSelect9SceneType
 .public gDeltaTime
 .public gPalSkinFaceFile
-.public gFont12
+.public gFont12Manager
 .public gFont8
 .public _ZN7Archive5CloseEP9SFileDatai
 .public _ZN7Archive10DeallocateEP9SFileData

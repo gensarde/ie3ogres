@@ -91,7 +91,7 @@
 .public MI_CpuCopy8
 .public _ZN12C3DPlaneCtrl9clearFlagEit
 .public _ZN12CFontManager12getCharWidthEPc
-.public gFont12
+.public gFont12Manager
 .public FUN_02059630
 .public _ZN12C3DPlaneCtrl9setTexAllEih
 .public _ZN12C3DPlaneCtrl11setDepthAllEij
@@ -277,7 +277,7 @@
 .public FUN_ov132_02143c28
 .public FUN_ov132_02143c34
 .public FUN_ov132_02143c40
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public FUN_ov16_020f068c
 .public gLogicThink
 .public unk_0208FE24

@@ -41,7 +41,7 @@
 .public G2_GetBG1CharPtr
 .public MIi_CpuClearFast
 .public FUN_ov1_020dc020
-.public _ZN8Graphics11SetupScreenEPtmii
+.public _ZN8Graphics11SetupScreenEPvmii
 .public GX_LoadBG3Char
 .public _ZN8Graphics17LoadBGPaletteMainEv
 .public _ZN14CBgMenuManager9addStaticE12EngineSelectiiiiaahhhPv

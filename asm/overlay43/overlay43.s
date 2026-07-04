@@ -234,7 +234,7 @@ FUN_ov43_0211a1f0: ; 0x0211A1F0
 	ldrb r0, [r6, #0x6d]
 	cmp r0, #2
 	ldmeqfd sp!, {r3, r4, r5, r6, r7, pc}
-	ldr r0, _0211A368 ; =0x0209A0F4
+	ldr r0, _0211A368 ; =gKeysRepeated
 	ldr r7, _0211A36C ; =gSprButtonCtrl
 	ldrh r1, [r0]
 	ldr r0, [r7]
@@ -311,7 +311,7 @@ _0211A350:
 	bl FUN_ov43_0211a6dc
 	ldmfd sp!, {r3, r4, r5, r6, r7, pc}
 _0211A364: .word gSprAnimCtrl
-_0211A368: .word unk_0209A0F4
+_0211A368: .word gKeysRepeated
 _0211A36C: .word gSprButtonCtrl
 	arm_func_end FUN_ov43_0211a1f0
 
@@ -1207,7 +1207,7 @@ FUN_ov43_0211ae84: ; 0x0211AE84
 	str r9, [r0, #0x16c]
 	mov r0, r4
 	mov r1, r9
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r5, r0
 	bl FUN_ov16_020f081c
 	bl FUN_ov16_020f078c
@@ -3332,7 +3332,7 @@ _0211CC7C:
 	mov r1, r6
 	bl _ZN12C3DPlaneCtrl12getTexHeightEi
 	mov r7, r0
-	ldr r0, _0211CE5C ; =gFont12
+	ldr r0, _0211CE5C ; =gFont12Manager
 	mov r1, #1
 	ldr r0, [r0]
 	mov r2, r1
@@ -3348,7 +3348,7 @@ _0211CC7C:
 	str r0, [sp, #0x14]
 	str r0, [sp, #0x18]
 	str r0, [sp, #0x1c]
-	ldr r0, _0211CE5C ; =gFont12
+	ldr r0, _0211CE5C ; =gFont12Manager
 	ldr r1, [sp, #0x2c]
 	mov r2, #0x5c
 	mla r1, r8, r2, r1
@@ -3356,7 +3356,7 @@ _0211CC7C:
 	mov r2, r10
 	mov r3, r11
 	bl _ZN12CFontManager15drawTextTex4bppEPcPviiiiiPNS_11GlyphBoundsEiiNS_9AlignmentE
-	ldr r0, _0211CE5C ; =gFont12
+	ldr r0, _0211CE5C ; =gFont12Manager
 	ldr r0, [r0]
 	bl _ZN12CFontManager12resetSpacingEv
 	mov r2, r10
@@ -3420,7 +3420,7 @@ _0211CE4C: .word 0x000001EF
 _0211CE50: .word g3DPlaneCtrl
 _0211CE54: .word 0x66666667
 _0211CE58: .word gSprButtonCtrl
-_0211CE5C: .word gFont12
+_0211CE5C: .word gFont12Manager
 	arm_func_end FUN_ov43_0211c84c
 
 	arm_func_start FUN_ov43_0211ce60
@@ -3779,7 +3779,7 @@ _0211D300:
 	mov r1, r5
 	bl _ZN12C3DPlaneCtrl12getTexHeightEi
 	mov r11, r0
-	ldr r0, _0211D53C ; =gFont12
+	ldr r0, _0211D53C ; =gFont12Manager
 	mov r1, #1
 	ldr r0, [r0]
 	mov r2, r1
@@ -3795,7 +3795,7 @@ _0211D300:
 	str r0, [sp, #0x14]
 	str r0, [sp, #0x18]
 	str r0, [sp, #0x1c]
-	ldr r0, _0211D53C ; =gFont12
+	ldr r0, _0211D53C ; =gFont12Manager
 	ldr r1, [sp, #0x24]
 	mov r2, #0x5c
 	mla r1, r8, r2, r1
@@ -3803,7 +3803,7 @@ _0211D300:
 	ldr r3, [sp, #0x20]
 	mov r2, r10
 	bl _ZN12CFontManager15drawTextTex4bppEPcPviiiiiPNS_11GlyphBoundsEiiNS_9AlignmentE
-	ldr r0, _0211D53C ; =gFont12
+	ldr r0, _0211D53C ; =gFont12Manager
 	ldr r0, [r0]
 	bl _ZN12CFontManager12resetSpacingEv
 	mov r2, r10
@@ -3892,7 +3892,7 @@ _0211D52C: .word g3DPlaneCtrl
 _0211D530: .word 0x000001EF
 _0211D534: .word 0x000001EA
 _0211D538: .word 0x66666667
-_0211D53C: .word gFont12
+_0211D53C: .word gFont12Manager
 _0211D540: .word gSprButtonCtrl
 	arm_func_end FUN_ov43_0211ce60
 
@@ -6390,7 +6390,7 @@ FUN_ov43_0211f778: ; 0x0211F778
 	mov r6, r0
 	mov r0, r5
 	mov r1, r8
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r7, r0
 	mov r10, r8
 	mov r9, r8

@@ -83,7 +83,7 @@
 .public FUN_02059288
 .public _ZN12C3DPlaneCtrl8setTexSTEiiss
 .public _ZN12C3DPlaneCtrl8setTexWHEiiss
-.public gFont12
+.public gFont12Manager
 .public _ZN12C3DPlaneCtrl12setColorMaskEit
 .public _ZN12C3DPlaneCtrl6createEib
 .public FUN_ov16_020edec4
@@ -107,7 +107,7 @@
 .public FUN_ov16_0210fd0c
 .public FUN_ov16_0210f48c
 .public FUN_ov16_0210f468
-.public unk_0209A0F4
+.public gKeysRepeated
 .public _s32_div_f
 .public FUN_ov16_0210fc74
 .public FUN_ov16_0210e6fc

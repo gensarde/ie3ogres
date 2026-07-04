@@ -12,7 +12,7 @@
 .public unk_02099E8F
 .public unk_0209A124
 .public MI_CpuFill8
-.public FUN_02062800
+.public _ZN14CRecordManager15getRecordHeaderEP13SRecordHeader
 .public gRecordManager
 .public FUN_020627a4
 .public _ZN11AudioPlayer10playEffectEi
@@ -27,7 +27,7 @@
 .public _ZN14CBgMenuManager13releaseButtonEi
 .public unk_0209A070
 .public _ZN14CBgMenuManager13isFlashActiveE12EngineSelect
-.public unk_0209A0F4
+.public gKeysRepeated
 .public _ZN14CBgMenuManager6getHitE12EngineSelectii
 .public _ZN18CBgMenuRadioButton10activateGxEh
 .public _ZN18CBgMenuRadioButton12deactivateGxEh
@@ -40,7 +40,7 @@
 .public FUN_020735a0
 .public _ZN7Archive10DeallocateEP9SFileData
 .public _ZN8Graphics11SetupScreenEPvii
-.public _ZN8Graphics11SetupScreenEPtmii
+.public _ZN8Graphics11SetupScreenEPvmii
 .public G2_GetBG3CharPtr
 .public MIi_CpuClearFast
 .public DC_FlushRange
@@ -66,7 +66,7 @@
 .public FUN_ov16_0210fba4
 .public sprintf
 .public STD_ConcatenateString
-.public gFont12
+.public gFont12Manager
 .public _ZN14CBgMenuManager9deleteAllE12EngineSelectt
 .public _ZN18CBgMenuRadioButton5resetEv
 .public FUN_ov16_0210eb3c

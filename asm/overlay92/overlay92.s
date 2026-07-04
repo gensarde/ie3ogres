@@ -692,7 +692,7 @@ FUN_ov92_0212566c: ; 0x0212566C
 	ldr r1, [r4, #0x10]
 	add r0, r4, r0
 	add r2, r6, #1
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	ldrb r1, [sp, #0x10]
 	mov r6, r0
 	cmp r1, #0
@@ -722,7 +722,7 @@ FUN_ov92_021256cc: ; 0x021256CC
 	mov r3, #0
 	mul r1, r12, r1
 	mov r1, r1, lsl #1
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r2, r0
 _0212570C:
 	mov r0, r2

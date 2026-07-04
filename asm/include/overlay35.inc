@@ -24,7 +24,7 @@
 .public G2_GetBG3CharPtr
 .public MIi_CpuClearFast
 .public DC_FlushRange
-.public _ZN8Graphics11SetupScreenEPtmii
+.public _ZN8Graphics11SetupScreenEPvmii
 .public G2_GetBG1CharPtr
 .public G2_GetBG2CharPtr
 .public GX_LoadBG2Scr
@@ -35,7 +35,7 @@
 .public _ZN12CFontManager10setSpacingEii
 .public FUN_ov16_020f2184
 .public _ZN12CFontManager12resetSpacingEv
-.public gFont12
+.public gFont12Manager
 .public _ZN14CBgMenuManager10addDynamicE12EngineSelecthhhP18SBgMenuElementInitiii
 .public _ZN18CBgMenuRadioButton6createEhhhi
 .public _ZN14CBgMenuManager11updateRadioEv

@@ -13,6 +13,12 @@ class CAllocator;
 class AudioPlayer
 {
 public:
+    typedef enum {
+        SE_SELECT = 1,
+        SE_DENY = 4,
+        SE_SELECT_FAIL = 9,
+    } ESoundEffects;
+
     typedef struct {
         void *data;
         u32 unk4;

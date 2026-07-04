@@ -35,7 +35,7 @@
 .public gSprAnimCtrl
 .public gSprButtonCtrl
 .public FUN_ov16_0210f468
-.public unk_0209A0F4
+.public gKeysRepeated
 .public FUN_ov16_0210e7d0
 .public G2_GetBG1CharPtr
 .public MIi_CpuClearFast
@@ -90,7 +90,7 @@
 .public g3DSpriteCtrl
 .public FUN_ov16_0210e9d8
 .public FUN_ov16_0210e0d8
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public _ZN7Archive5CloseEP9SFileDatai
 .public FUN_ov16_020eedb8
 .public _ZN12C3DPlaneCtrl7releaseEv

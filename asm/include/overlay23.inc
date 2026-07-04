@@ -64,7 +64,7 @@
 .public _ZN11AudioPlayer12FUN_0202d578Ei
 .public _ZN8Graphics15FadeScreenBlackE12EngineSelectl
 .public _ZN14CScreenManager12setNextSceneE12EngineSelect9SceneType
-.public FUN_02045b40
+.public _ZN17UnkClass_020A9C4012FUN_02045b40Eii
 .public gDeltaTime
 .public unk_0209A454
 .public unk_020A9C40

@@ -1997,11 +1997,11 @@ FUN_01ffa12c: ; 0x01FFA12C
 	mov r11, r0
 	mov r0, r6
 	mov r1, r8
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	str r0, [sp, #0x10]
 	mov r0, r6
 	mov r1, r5
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	str r0, [sp, #0x14]
 	b _01FFA1A0
 _01FFA184:
@@ -2760,11 +2760,11 @@ FUN_01ffac60: ; 0x01FFAC60
 	mov r0, r7
 	mov r1, r6
 	strb r6, [r2, #0x39]
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	str r0, [sp]
 	mov r0, r7
 	mov r1, #1
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	str r0, [sp, #4]
 	mov r0, r7
 	strb r6, [r5, #0x344]
@@ -2880,7 +2880,7 @@ FUN_01ffae20: ; 0x01FFAE20
 	ldmnefd sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	ldr r5, _01FFB108 ; =gLogicThink
 	mov r0, r5
-	bl FUN_0204eba0
+	bl _ZN11CLogicThink12FUN_0204eba0Ev
 	mov r0, r5
 	bl FUN_020732d8
 	cmp r0, #0
@@ -2978,7 +2978,7 @@ _01FFAF98:
 _01FFAFA0:
 	ldr r5, _01FFB108 ; =gLogicThink
 	mov r0, r5
-	bl FUN_0204ec3c
+	bl _ZN11CLogicThink12FUN_0204ec3cEv
 	mov r4, #1
 	mov r0, r5
 	mov r1, r4

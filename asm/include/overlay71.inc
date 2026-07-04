@@ -1,7 +1,7 @@
 .public _ZN7Archive14RequestNewReadEPKcP9SFileData
 .public FUN_ov16_020f5450
 .public FUN_ov16_020f081c
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public FUN_02059630
 .public gLogicThink
 .public g3DPlaneCtrl
@@ -25,7 +25,7 @@
 .public _ZN12CFontManager12resetSpacingEv
 .public FUN_02059288
 .public gFont12T
-.public gFont12
+.public gFont12Manager
 .public FUN_ov16_020f03fc
 .public unk_020A0640
 .public _ZN12C3DPlaneCtrl6createEib

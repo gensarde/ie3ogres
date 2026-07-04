@@ -81,7 +81,7 @@
 .public _ZN12C3DPlaneCtrl8setTexSTEiiss
 .public _ZN12C3DPlaneCtrl8setTexWHEiiss
 .public gFont8
-.public gFont12
+.public gFont12Manager
 .public _ZN12C3DPlaneCtrl12setColorMaskEit
 .public sprintf
 .public FUN_ov16_020f5450
@@ -130,7 +130,7 @@
 .public FUN_0204f02c
 .public FUN_0206cbf8
 .public _ZN6Random5RandBEm
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public FUN_0207273c
 .public unk_0209A134
 .public _s32_div_f

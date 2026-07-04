@@ -714,7 +714,7 @@ FUN_ov64_0211a858: ; 0x0211A858
 	ldr r0, _0211A884 ; =0x020A9C40
 	ldr r1, _0211A888 ; =0x00000193
 	mov r2, #0
-	bl FUN_020460a8
+	bl _ZN17UnkClass_020A9C4012FUN_020460a8Eii
 	mov r0, #7
 	str r0, [r4, #0xc]
 	ldmfd sp!, {r4, pc}
@@ -789,7 +789,7 @@ FUN_ov64_0211a93c: ; 0x0211A93C
 	ldr r5, _0211ACA4 ; =gLogicThink
 	mov r1, r0
 	mov r0, r5
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r6, r0
 	ldrh r1, [r10, #0x58]
 	mov r0, r5
@@ -1056,7 +1056,7 @@ FUN_ov64_0211acc0: ; 0x0211ACC0
 	mov r2, r5
 	mov r3, r4
 	bl FUN_ov64_0211b5b0
-	ldr r9, _0211AE28 ; =gFont12
+	ldr r9, _0211AE28 ; =gFont12Manager
 	mov r1, r6
 	ldr r0, [r9]
 	bl _ZN12CFontManager12getTextWidthEPc
@@ -1099,7 +1099,7 @@ FUN_ov64_0211acc0: ; 0x0211ACC0
 	ldmfd sp!, {r3, r4, r5, r6, r7, r8, r9, pc}
 _0211AE20: .word g3DPlaneCtrl
 _0211AE24: .word gFont8
-_0211AE28: .word gFont12
+_0211AE28: .word gFont12Manager
 	arm_func_end FUN_ov64_0211acc0
 
 	arm_func_start FUN_ov64_0211ae2c
@@ -1694,7 +1694,7 @@ FUN_ov64_0211b5b0: ; 0x0211B5B0
 	ldr r0, _0211B808 ; =gFont8
 	b _0211B728
 _0211B6DC:
-	ldr r0, _0211B80C ; =gFont12
+	ldr r0, _0211B80C ; =gFont12Manager
 	mov r2, r8
 	ldr r0, [r0]
 	bl _ZN12CFontManager10setSpacingEii
@@ -1705,14 +1705,14 @@ _0211B6DC:
 	str r8, [sp, #0x10]
 	str r8, [sp, #0x14]
 	str r8, [sp, #0x18]
-	ldr r0, _0211B80C ; =gFont12
+	ldr r0, _0211B80C ; =gFont12Manager
 	str r8, [sp, #0x1c]
 	ldr r0, [r0]
 	mov r1, r11
 	mov r2, r9
 	mov r3, r10
 	bl _ZN12CFontManager15drawTextTex4bppEPcPviiiiiPNS_11GlyphBoundsEiiNS_9AlignmentE
-	ldr r0, _0211B80C ; =gFont12
+	ldr r0, _0211B80C ; =gFont12Manager
 _0211B728:
 	ldr r0, [r0]
 	bl _ZN12CFontManager12resetSpacingEv
@@ -1771,7 +1771,7 @@ _0211B728:
 	ldmfd sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
 _0211B804: .word g3DPlaneCtrl
 _0211B808: .word gFont8
-_0211B80C: .word gFont12
+_0211B80C: .word gFont12Manager
 	arm_func_end FUN_ov64_0211b5b0
 
 	arm_func_start FUN_ov64_0211b810

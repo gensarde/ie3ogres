@@ -7,7 +7,7 @@
 .public FUN_ov1_020dc020
 .public G2_GetBG2CharPtr
 .public GX_LoadBG2Scr
-.public _ZN8Graphics11SetupScreenEPtmii
+.public _ZN8Graphics11SetupScreenEPvmii
 .public _ZN8Graphics17LoadBGPaletteMainEv
 .public _ZN7Archive10DeallocateEP9SFileData
 .public _ZN14CBgMenuManager9deleteAllE12EngineSelectt
@@ -20,7 +20,7 @@
 .public _ZN12CFontManager12resetSpacingEv
 .public gBgMenuManager
 .public unk_0209A070
-.public gFont12
+.public gFont12Manager
 .public FUN_ov16_020f2f20
 .public MI_CpuCopy8
 .public FUN_ov16_020f2184

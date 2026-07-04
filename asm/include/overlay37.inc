@@ -51,7 +51,7 @@
 .public FUN_ov16_0210f468
 .public STD_GetStringLength
 .public _Z11SetNextMode8GameMode
-.public unk_0209A0F4
+.public gKeysRepeated
 .public gMoviePlayer
 .public unk_020A0640
 .public unk_020A1640

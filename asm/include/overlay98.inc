@@ -36,7 +36,7 @@
 .public _ZN8Graphics11SetupScreenEPvii
 .public _ZN8Graphics14LoadBGXCharSubEiPvm
 .public _ZN8Graphics22LoadTempPaletteFromPacEPv12EngineSelecti
-.public _ZN8Graphics11SetupScreenEPtmii
+.public _ZN8Graphics11SetupScreenEPvmii
 .public GXS_LoadBG1Char
 .public GXS_LoadBG2Char
 .public _ZN14CBgMenuManager11deleteGroupE12EngineSelectit
@@ -46,7 +46,7 @@
 .public FUN_ov16_020f2184
 .public _ZN12CFontManager10setSpacingEii
 .public _ZN12CFontManager12resetSpacingEv
-.public gFont12
+.public gFont12Manager
 .public gFont8
 .public _ZN12CFontManager12FUN_02043780Eii
 .public gFont12T

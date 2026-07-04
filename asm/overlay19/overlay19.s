@@ -42,7 +42,7 @@ FUN_ov19_02119f2c: ; 0x02119F2C
 	ldr r0, [r6, #0x30]
 	cmp r0, #4
 	ldmnefd sp!, {r3, r4, r5, r6, r7, pc}
-	ldr r0, _0211A0F8 ; =0x0209A0F4
+	ldr r0, _0211A0F8 ; =gKeysRepeated
 	strh r7, [r6, #8]
 	ldrh r0, [r0]
 	ldr r7, _0211A0FC ; =gSprButtonCtrl
@@ -152,7 +152,7 @@ _0211A0D8:
 	str r1, [r6, #0x1c0]
 	ldmfd sp!, {r3, r4, r5, r6, r7, pc}
 _0211A0F4: .word gSprAnimCtrl
-_0211A0F8: .word unk_0209A0F4
+_0211A0F8: .word gKeysRepeated
 _0211A0FC: .word gSprButtonCtrl
 _0211A100: .word ov19_0211C820
 	arm_func_end FUN_ov19_02119f2c
@@ -1105,7 +1105,7 @@ FUN_ov19_0211ae48: ; 0x0211AE48
 	addne sp, sp, #0x10
 	mov r2, #1
 	ldmnefd sp!, {r4, r5, r6, r7, r8, pc}
-	ldr r0, _0211B02C ; =0x0209A0F4
+	ldr r0, _0211B02C ; =gKeysRepeated
 	ldrh r3, [r7, #8]
 	ldrh r1, [r0]
 	ldrh r0, [r7, #0x5e]
@@ -1228,7 +1228,7 @@ _0211B00C:
 	bl _ZN11AudioPlayer10playEffectEi
 	add sp, sp, #0x10
 	ldmfd sp!, {r4, r5, r6, r7, r8, pc}
-_0211B02C: .word unk_0209A0F4
+_0211B02C: .word gKeysRepeated
 _0211B030: .word gAudioPlayer
 	arm_func_end FUN_ov19_0211ae48
 

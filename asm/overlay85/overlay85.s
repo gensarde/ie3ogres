@@ -583,7 +583,7 @@ FUN_ov85_0211a694: ; 0x0211A694
 	mov r5, #0
 	ldr r0, _0211A7F0 ; =gLogicThink
 	mov r1, r5
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r0, r5
 	bl FUN_ov1_020dc1f4
 	mov r5, r0
@@ -626,7 +626,7 @@ _0211A744:
 	mov r5, #1
 	ldr r0, _0211A7F0 ; =gLogicThink
 	mov r1, r5
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r0, r5
 	bl FUN_ov1_020dc1f4
 	mov r6, r0
@@ -686,7 +686,7 @@ FUN_ov85_0211a804: ; 0x0211A804
 	movne r7, r5
 	ldr r0, _0211A920 ; =gLogicThink
 	mov r1, r7
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r6, r0
 	mov r0, r7
 	bl FUN_ov1_020dc150
@@ -811,7 +811,7 @@ _0211A9E4:
 	movne r5, #1
 	ldr r0, _0211ACB0 ; =gLogicThink
 	mov r1, r5
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	ldrh r0, [r0, #0x22]
 	mov r3, #0x60
 	mul r1, r0, r3
@@ -886,7 +886,7 @@ _0211AAF8:
 	cmp r0, #1
 	ldr r0, _0211ACB0 ; =gLogicThink
 	movne r1, #1
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r8, r0
 	add r0, r4, #0x34
 	mov r9, #0
@@ -1380,7 +1380,7 @@ _0211B174:
 	mov r1, #0x3c
 	add r2, r8, #1
 	mov r3, r7
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r8, r0
 	mla r0, r9, r5, r10
 	ldr r0, [r0, #0x40]
@@ -1577,7 +1577,7 @@ _0211B440:
 	add r0, r8, r0
 	add r2, r7, #1
 	mov r3, r5
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r7, r0
 	ldr r2, [sp, #0x1c]
 	mov r1, r8
@@ -1640,7 +1640,7 @@ _0211B4C8:
 	mov r3, r4
 	add r2, r7, #1
 	mov r1, #0x90
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r7, r0
 _0211B59C:
 	ldr r8, [r10, #0x50c]
@@ -1723,7 +1723,7 @@ _0211B688:
 	add r2, r7, #1
 	mov r1, #0x3c
 	mov r3, #0
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r7, r0
 	ldr r0, [r10, #0x40]
 	ldr r1, [sp, #0x1c]
@@ -1789,7 +1789,7 @@ _0211B784:
 	add r0, r8, r0
 	add r2, r7, #1
 	mov r3, r5
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r7, r0
 	ldr r2, [sp, #0x1c]
 	mov r1, r8

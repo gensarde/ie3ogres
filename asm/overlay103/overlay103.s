@@ -114,7 +114,7 @@ FUN_ov103_02124e1c: ; 0x02124E1C
 	mov r3, r7
 	add r0, r4, r0
 	mov r2, #0
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r0, r4
 	mov r1, r7
 	mov r2, r7
@@ -130,7 +130,7 @@ _02124E5C:
 	mov r2, r7
 	mov r3, r6
 	add r0, r8, r0
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r4, r0
 	mov r0, r8
 	mov r1, r7
@@ -146,7 +146,7 @@ _02124E9C:
 	mov r3, r6
 	add r0, r7, r0
 	add r2, r4, #1
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r4, r0
 	mov r0, r7
 	mov r2, r6
@@ -162,7 +162,7 @@ _02124ED8:
 	mov r3, r6
 	add r0, r7, r0
 	add r2, r4, #1
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r0, r7
 	mov r2, r6
 	mov r1, #1
@@ -182,7 +182,7 @@ _02124F10:
 	mov r3, #0
 	mul r1, r4, r1
 	mov r1, r1, lsl #1
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 _02124F4C:
 	bl _ZN8Graphics16LoadBGPaletteSubEv
 	ldmfd sp!, {r4, r5, r6, r7, r8, pc}
@@ -333,7 +333,7 @@ FUN_ov103_021250c0: ; 0x021250C0
 	bl STD_ConcatenateString
 _0212516C:
 	mov r9, #0
-	ldr r5, _0212524C ; =gFont12
+	ldr r5, _0212524C ; =gFont12Manager
 	add r8, sp, #0x20
 	add r7, sp, #0x70
 	mov r6, r9
@@ -390,7 +390,7 @@ _0212521C:
 	ldmfd sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
 _02125244: .word gBgMenuManager
 _02125248: .word ov103_02125764
-_0212524C: .word gFont12
+_0212524C: .word gFont12Manager
 	arm_func_end FUN_ov103_021250c0
 
 	arm_func_start FUN_ov103_02125250

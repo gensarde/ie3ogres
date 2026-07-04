@@ -845,7 +845,7 @@ FUN_ov98_02125884: ; 0x02125884
 	beq _021258C4
 	add r2, r2, #1
 	mov r3, #0
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r2, r0
 _021258C4:
 	mov r0, r2
@@ -1117,7 +1117,7 @@ FUN_ov98_02125c48: ; 0x02125C48
 	mov r3, #0x10
 	bl FUN_ov98_02125ac0
 	mov r6, #1
-	ldr r5, _02125CF4 ; =gFont12
+	ldr r5, _02125CF4 ; =gFont12Manager
 	mov r1, r6
 	ldr r0, [r5]
 	mov r2, r6
@@ -1151,7 +1151,7 @@ FUN_ov98_02125c48: ; 0x02125C48
 	bl _ZN12CFontManager12resetSpacingEv
 	add sp, sp, #0x1c
 	ldmfd sp!, {r4, r5, r6, r7, pc}
-_02125CF4: .word gFont12
+_02125CF4: .word gFont12Manager
 	arm_func_end FUN_ov98_02125c48
 
 	arm_func_start FUN_ov98_02125cf8

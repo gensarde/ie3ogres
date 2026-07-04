@@ -19,7 +19,7 @@
 .public gAllocator
 .public FUN_ov16_020eef1c
 .public FUN_ov16_020eee80
-.public gFont12
+.public gFont12Manager
 .public FUN_ov16_020efa9c
 .public MI_CpuCopy8
 .public FUN_0206dcd4
@@ -38,7 +38,7 @@
 .public FUN_ov16_020eef40
 .public _ZN14CBgMenuManager11deleteGroupE12EngineSelectit
 .public _ZN14CBgMenuManager14updateGraphicsE12EngineSelect
-.public _ZN8Graphics11SetupScreenEPtmii
+.public _ZN8Graphics11SetupScreenEPvmii
 .public GXS_LoadBG1Char
 .public GXS_LoadBG2Char
 .public _ZN8Graphics11SetupScreenEPvii

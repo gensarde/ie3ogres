@@ -41,6 +41,7 @@ class CRecordManager
 {
 public:
     /* 0x020617d8 */ s32 verifySave(void);
+    /* 0x02062800 */ bool getRecordHeader(SRecordHeader *dst);
 
 private:
     SRecordInfo recordInfo;

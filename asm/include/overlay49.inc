@@ -32,7 +32,7 @@
 .public _ZN14CScreenManager13fadeMainBlackEv
 .public _ZN8Graphics16FadeScreensBlackEl
 .public unk_02099E8F
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public gLogicThink
 .public unk_02099EA2
 .public unk_02099E98
@@ -45,7 +45,7 @@
 .public FUN_ov16_0210e15c
 .public FUN_ov16_0210f468
 .public FUN_ov16_0210efac
-.public FUN_020460a8
+.public _ZN17UnkClass_020A9C4012FUN_020460a8Eii
 .public FUN_ov0_020cd0f8
 .public gSprAnimCtrl
 .public unk_020A9C40

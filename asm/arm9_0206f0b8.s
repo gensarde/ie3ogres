@@ -1508,7 +1508,7 @@ _02070570:
 	bl FUN_02070134
 	ldr r1, [sp, #0x10]
 	mov r0, r11
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	str r0, [sp, #0x44]
 	ldr r1, [sp, #0x10]
 	mov r0, r11
@@ -2318,7 +2318,7 @@ _020710CC:
 	bgt _020711C4
 	ldr r1, [sp, #0x10]
 	mov r0, r11
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	add r1, r4, #0x1c
 	str r0, [sp, #0x44]
 	bl STD_CopyString
@@ -3801,13 +3801,13 @@ _02072484:
 	ldmfd sp!, {r3, r4, r5, pc}
 	arm_func_end FUN_02072434
 
-	arm_func_start FUN_0207249c
-FUN_0207249c: ; 0x0207249C
+	arm_func_start _ZN11CLogicThink11getTeamInfoEi
+_ZN11CLogicThink11getTeamInfoEi: ; 0x0207249C
 	add r2, r0, #0x24
 	mov r0, #0x4c
 	mla r0, r1, r0, r2
 	bx lr
-	arm_func_end FUN_0207249c
+	arm_func_end _ZN11CLogicThink11getTeamInfoEi
 
 	arm_func_start FUN_020724ac
 FUN_020724ac: ; 0x020724AC
@@ -3884,7 +3884,7 @@ FUN_02072560: ; 0x02072560
 	mov r7, r0
 	mov r6, r1
 	mov r5, r2
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r4, r0
 	mov r0, r7
 	bl _ZN11CLogicThink12FUN_020731a4Ev
@@ -3971,7 +3971,7 @@ _02072680:
 	mov r2, r1
 	mov r0, r10
 	strb r3, [r4, r2]
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	ldr r1, [sp]
 	ldrb r2, [r4, r1]
 	ldrb r1, [r0, #0x43]
@@ -4796,7 +4796,7 @@ _02073124:
 	blt _020730F8
 	mov r0, r10
 	mov r1, r4
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	ldrh r2, [r0, #0x2e]
 	mov r0, r10
 	mov r1, r4
@@ -5281,7 +5281,7 @@ FUN_0207371c: ; 0x0207371C
 	cmp r2, #0
 	ldr r5, _020737D4 ; =0x020A0DB0
 	bne _02073754
-	bl FUN_0204eba0
+	bl _ZN11CLogicThink12FUN_0204eba0Ev
 	cmp r0, #0
 	moveq r0, r7
 	ldmeqfd sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
@@ -5321,7 +5321,7 @@ _020737B0:
 	cmp r11, #0
 	beq _020737CC
 	mov r0, r10
-	bl FUN_0204ec3c
+	bl _ZN11CLogicThink12FUN_0204ec3cEv
 _020737CC:
 	mov r0, r7
 	ldmfd sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}

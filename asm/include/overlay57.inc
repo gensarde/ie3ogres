@@ -23,7 +23,7 @@
 .public FUN_0206e20c
 .public FUN_02056e94
 .public FUN_0205711c
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public MI_CpuFill8
 .public FUN_ov16_020efb6c
 .public FUN_ov16_020efa9c
@@ -90,7 +90,7 @@
 .public _ZN12C3DPlaneCtrl6setPosEiiss
 .public G2_GetBG1CharPtr
 .public MIi_CpuClearFast
-.public _ZN8Graphics11SetupScreenEPtmii
+.public _ZN8Graphics11SetupScreenEPvmii
 .public GX_LoadBG3Char
 .public _ZN8Graphics17LoadBGPaletteMainEv
 .public _ZN8Graphics15LoadTempPaletteEP10GXBGPltt1612EngineSelecti
@@ -159,7 +159,7 @@
 .public _ZN12CFontManager15drawTextTex4bppEPcPviiiiiPNS_11GlyphBoundsEiiNS_9AlignmentE
 .public _ZN12CFontManager12resetSpacingEv
 .public gFont8
-.public gFont12
+.public gFont12Manager
 .public FUN_ov16_0210f47c
 .public FUN_ov16_020f543c
 .public FUN_ov16_020f53e8
@@ -177,7 +177,7 @@
 .public _ZN14CScreenManager12setNextSceneE12EngineSelect9SceneType
 .public FUN_ov16_02110b0c
 .public FUN_ov16_02110b04
-.public unk_0209A0F4
+.public gKeysRepeated
 .public unk_02099F44
 .public FUN_ov16_020f53b0
 .public FUN_ov16_0210f20c

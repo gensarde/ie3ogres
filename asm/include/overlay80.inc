@@ -27,7 +27,7 @@
 .public _ZN7Archive14RequestNewReadEPKcP9SFileData
 .public FUN_ov1_020dbf50
 .public FUN_ov16_020f081c
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public FUN_ov16_020efa9c
 .public _ZN7Archive20GetFaceOffsetAndSizeEPvP4UnithPlPm
 .public FUN_ov16_020f0bcc
@@ -89,7 +89,7 @@
 .public _ZN8Graphics11SetupScreenEPvii
 .public _ZN8Graphics15LoadBGXCharMainEiPvm
 .public _ZN8Graphics15LoadTempPaletteEP10GXBGPltt1612EngineSelecti
-.public _ZN8Graphics11SetupScreenEPtmii
+.public _ZN8Graphics11SetupScreenEPvmii
 .public _ZN8Graphics22LoadTempPaletteFromPacEPv12EngineSelecti
 .public MIi_CpuCopyFast
 .public FUN_ov16_020f2ea8
@@ -99,7 +99,7 @@
 .public _ZN8Graphics17LoadBGPaletteMainEv
 .public gFont8
 .public gMainScreen2
-.public gFont12
+.public gFont12Manager
 .public _ZN8Graphics10ScreenCopyEiiiiPtS0_
 .public gMainScreen0
 .public gMainScreen1
@@ -132,9 +132,9 @@
 .public FUN_0206c7dc
 .public _ZN7CConfig8getParamEPKc
 .public gConfig
-.public FUN_02045b40
-.public FUN_0204eba0
-.public FUN_0204ec3c
+.public _ZN17UnkClass_020A9C4012FUN_02045b40Eii
+.public _ZN11CLogicThink12FUN_0204eba0Ev
+.public _ZN11CLogicThink12FUN_0204ec3cEv
 .public unk_0209C220
 .public FUN_0206cc00
 .public FUN_0206d6c4

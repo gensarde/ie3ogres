@@ -9,7 +9,7 @@
 .public _ZN7Archive11TryFinalizeEP9SFileDatai
 .public OS_Sleep
 .public _ZN7Archive10DeallocateEP9SFileData
-.public _ZN8Graphics11SetupScreenEPtmii
+.public _ZN8Graphics11SetupScreenEPvmii
 .public _ZN8Graphics22LoadTempPaletteFromPacEPv12EngineSelecti
 .public GXS_LoadBG0Char
 .public GXS_LoadBG0Scr
@@ -27,7 +27,7 @@
 .public _ZN12CFontManager10setSpacingEii
 .public FUN_ov16_020f2184
 .public _ZN12CFontManager12resetSpacingEv
-.public gFont12
+.public gFont12Manager
 .public strlen
 .public sprintf
 .public _ZN14CBgMenuManager11deleteGroupE12EngineSelectit

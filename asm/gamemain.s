@@ -177,7 +177,7 @@ FUN_0202a870: ; 0x0202A870
 	mov r4, #0
 	ldr lr, _0202A8DC ; =0x0209A0F0
 	ldr r12, _0202A8E0 ; =0x0209A0E8
-	ldr r3, _0202A8E4 ; =0x0209A0F4
+	ldr r3, _0202A8E4 ; =gKeysRepeated
 	ldr r0, _0202A8E8 ; =0x020B5B58
 	mov r1, r4
 	mov r2, #0x20
@@ -202,7 +202,7 @@ FUN_0202a870: ; 0x0202A870
 	ldmfd sp!, {r4, pc}
 _0202A8DC: .word unk_0209A0F0
 _0202A8E0: .word unk_0209A0E8
-_0202A8E4: .word unk_0209A0F4
+_0202A8E4: .word gKeysRepeated
 _0202A8E8: .word unk_020B5B58
 _0202A8EC: .word 0x04000130
 _0202A8F0: .word 0x02FFFFA8
@@ -240,7 +240,7 @@ _0202A95C:
 	ldr r0, _0202AA04 ; =0x0209A0E8
 	mov r1, #1
 	ldrh r3, [r0]
-	ldr lr, _0202AA08 ; =0x0209A0F4
+	ldr lr, _0202AA08 ; =gKeysRepeated
 	mov r2, #0
 	ldr r0, _0202AA0C ; =0x020B5B58
 	strh r2, [lr]
@@ -283,7 +283,7 @@ _0202A9CC:
 _0202A9FC: .word 0x02FFFFA8
 _0202AA00: .word 0x04000130
 _0202AA04: .word unk_0209A0E8
-_0202AA08: .word unk_0209A0F4
+_0202AA08: .word gKeysRepeated
 _0202AA0C: .word unk_020B5B58
 _0202AA10: .word unk_0209A0F0
 	arm_func_end FUN_0202a900

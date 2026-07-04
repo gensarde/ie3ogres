@@ -19,12 +19,12 @@
 .public gFont8
 .public FUN_ov16_020ee034
 .public _ZN12CFontManager12getTextWidthEPc
-.public gFont12
+.public gFont12Manager
 .public _ZN14CBgMenuManager9addStaticE12EngineSelectiiiiaahhhPv
 .public gBgMenuManager
 .public _ZN14CBgMenuManager11deleteGroupE12EngineSelectit
 .public _ZN14CBgMenuManager14updateGraphicsE12EngineSelect
-.public _ZN8Graphics11SetupScreenEPtmii
+.public _ZN8Graphics11SetupScreenEPvmii
 .public GXS_LoadBG0Char
 .public GXS_LoadBG1Char
 .public _ZN8Graphics11SetupScreenEPvii

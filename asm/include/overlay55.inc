@@ -4,10 +4,10 @@
 .public STD_CompareNString
 .public _ZN14CBgMenuManager8setFlashE12EngineSelecthh
 .public gBgMenuManager
-.public FUN_02062800
-.public FUN_02045b40
+.public _ZN14CRecordManager15getRecordHeaderEP13SRecordHeader
+.public _ZN17UnkClass_020A9C4012FUN_02045b40Eii
 .public _ZN11AudioPlayer10playEffectEi
-.public FUN_020460a8
+.public _ZN17UnkClass_020A9C4012FUN_020460a8Eii
 .public STD_CompareString
 .public unk_0209A454
 .public unk_0209A460
@@ -23,7 +23,7 @@
 .public _ZN14CBgMenuManager6hideIDE12EngineSelecti
 .public _ZN14CBgMenuManager6showIDE12EngineSelecti
 .public _ZN14CBgMenuManager13isFlashActiveE12EngineSelect
-.public unk_0209A0F4
+.public gKeysRepeated
 .public _ZN14CBgMenuManager6getHitE12EngineSelectii
 .public MIi_CpuClearFast
 .public _ZN12CFontManager10setSpacingEii
@@ -31,7 +31,7 @@
 .public FUN_ov16_020f2f20
 .public FUN_ov16_020f2184
 .public _ZN12CFontManager12resetSpacingEv
-.public gFont12
+.public gFont12Manager
 .public MI_CpuFill8
 .public _ZN7Archive14RequestNewReadEPKcP9SFileData
 .public _ZN7Archive11ReadFromSFPEPcP9SFileDataS0_
@@ -40,7 +40,7 @@
 .public gAllocator
 .public _ZN7Archive10DeallocateEP9SFileData
 .public G2_GetBG3CharPtr
-.public _ZN8Graphics11SetupScreenEPtmii
+.public _ZN8Graphics11SetupScreenEPvmii
 .public _ZN8Graphics22LoadTempPaletteFromPacEPv12EngineSelecti
 .public GX_LoadBG3Char
 .public G2_GetBG1CharPtr
@@ -55,9 +55,9 @@
 .public _ZN14CBgMenuManager10isFlashingE12EngineSelect
 .public _ZN14CBgMenuManager10addDynamicE12EngineSelecthhhP18SBgMenuElementInitiii
 .public _ZN14CBgMenuManager9addStaticE12EngineSelectiiiiaahhhPv
-.public FUN_0204eba0
+.public _ZN11CLogicThink12FUN_0204eba0Ev
 .public FUN_ov16_020f081c
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public G2_GetBG3ScrPtr
 .public G2_GetBG1ScrPtr
 .public _ZN14CBgMenuManager10setScreensE12EngineSelectPvS1_S1_
@@ -66,7 +66,7 @@
 .public _ZN14CBgMenuManager14updateGraphicsE12EngineSelect
 .public _ZN7Archive11TryFinalizeEP9SFileDatai
 .public _ZN14CBgMenuManager4drawE12EngineSelect
-.public FUN_0204ec3c
+.public _ZN11CLogicThink12FUN_0204ec3cEv
 .public G2_GetBG2ScrPtr
 .public _ZN10CAllocator10deallocateEPv
 .public FUN_ov16_020f2fe4

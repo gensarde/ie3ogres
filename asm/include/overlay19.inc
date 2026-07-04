@@ -2,7 +2,7 @@
 .public FUN_ov16_0210e15c
 .public FUN_ov16_0210f468
 .public gSprAnimCtrl
-.public unk_0209A0F4
+.public gKeysRepeated
 .public gSprButtonCtrl
 .public FUN_ov16_0210f20c
 .public FUN_ov16_0210f484

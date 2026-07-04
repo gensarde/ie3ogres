@@ -59,7 +59,7 @@
 .public G2_GetBG3CharPtr
 .public MIi_CpuClearFast
 .public DC_FlushRange
-.public _ZN8Graphics11SetupScreenEPtmii
+.public _ZN8Graphics11SetupScreenEPvmii
 .public G2_GetBG1CharPtr
 .public G2_GetBG2CharPtr
 .public GX_LoadBG2Scr
@@ -70,7 +70,7 @@
 .public _ZN12CFontManager10setSpacingEii
 .public FUN_ov16_020f2184
 .public _ZN12CFontManager12resetSpacingEv
-.public gFont12
+.public gFont12Manager
 .public G2x_SetBlendBrightness_
 .public _ZN14CBgMenuManager11resetBoundsE12EngineSelect
 .public _ZN14CBgMenuManager11updateRadioEv
@@ -127,7 +127,7 @@
 .public _ZN7Archive26PackHeaderGetOffsetAndSizeEPvmPlPm
 .public FUN_02058800
 .public OS_Sleep
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public FUN_0204c50c
 .public strlen
 .public sprintf
