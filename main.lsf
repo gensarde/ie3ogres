@@ -648,7 +648,7 @@ Overlay overlay55
 {
 	After overlay16
 	Object src/mainmenuscreen/CMainMenuScreenEnterName.o
-	Object asm/overlay55/overlay55.o
+	Object asm/overlay55/phonepassword.o
 }
 Overlay overlay56
 {
