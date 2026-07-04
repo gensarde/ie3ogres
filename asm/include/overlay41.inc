@@ -40,7 +40,7 @@
 .public gAudioPlayer
 .public FUN_ov16_0210e15c
 .public FUN_ov16_0210f468
-.public unk_0209A0F4
+.public gKeysRepeated
 .public FUN_ov16_02110b0c
 .public FUN_ov16_02110b04
 .public FUN_ov16_020f2604
@@ -89,7 +89,7 @@
 .public DC_FlushRange
 .public FUN_ov1_020dc020
 .public G2_GetBG3CharPtr
-.public _ZN8Graphics11SetupScreenEPtmii
+.public _ZN8Graphics11SetupScreenEPvmii
 .public _ZN8Graphics17LoadBGPaletteMainEv
 .public GX_LoadBG3Char
 .public _ZN14CBgMenuManager4drawE12EngineSelect
@@ -102,7 +102,7 @@
 .public FUN_ov16_020f0634
 .public ov1_020E9482
 .public unk_020A0676
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public FUN_ov16_020ee0f8
 .public FUN_ov16_020ee034
 .public FUN_ov16_020f0a30
@@ -169,7 +169,7 @@
 .public _ZN8Graphics15LoadTempPaletteEP10GXBGPltt1612EngineSelecti
 .public _ZN12CFontManager12FUN_02043780Eii
 .public _ZN12CFontManager10setSpacingEii
-.public gFont12
+.public gFont12Manager
 .public gFont12T
 .public _ZN12CFontManager12resetSpacingEv
 .public FUN_ov16_020f083c

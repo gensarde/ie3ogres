@@ -28,7 +28,7 @@
 .public FUN_ov16_020efa80
 .public FUN_02073e54
 .public FUN_02073e14
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public FUN_ov132_02143cd0
 .public FUN_0206fb74
 .public unk_0209A720

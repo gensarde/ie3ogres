@@ -47,7 +47,7 @@ _02124D6C:
 _02124D84:
 	ldr r0, _02124E4C ; =gLogicThink
 	mov r1, r9
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r0, r9
 	bl FUN_ov1_020dc1f4
 	mov r8, r0

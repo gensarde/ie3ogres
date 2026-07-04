@@ -10,7 +10,7 @@
 .public _ZN11AudioPlayer10playEffectEi
 .public gAudioPlayer
 .public STD_CopyString
-.public FUN_020460a8
+.public _ZN17UnkClass_020A9C4012FUN_020460a8Eii
 .public unk_020A9C40
 .public strlen
 .public _ZN14CBgMenuManager6hideIDE12EngineSelecti
@@ -18,7 +18,7 @@
 .public _ZN14CBgMenuManager13isFlashActiveE12EngineSelect
 .public _ZN14CBgMenuManager13releaseButtonEi
 .public _ZN18CBgMenuRadioButton13releaseButtonEib
-.public unk_0209A0F4
+.public gKeysRepeated
 .public unk_0209A070
 .public _ZN14CBgMenuManager6getHitE12EngineSelectii
 .public MIi_CpuClearFast
@@ -35,7 +35,7 @@
 .public gAllocator
 .public _ZN7Archive10DeallocateEP9SFileData
 .public G2_GetBG3CharPtr
-.public _ZN8Graphics11SetupScreenEPtmii
+.public _ZN8Graphics11SetupScreenEPvmii
 .public _ZN8Graphics22LoadTempPaletteFromPacEPv12EngineSelecti
 .public GX_LoadBG3Char
 .public G2_GetBG1CharPtr
@@ -47,7 +47,7 @@
 .public FUN_ov16_020f2f20
 .public _ZN12CFontManager10setSpacingEii
 .public _ZN12CFontManager12resetSpacingEv
-.public gFont12
+.public gFont12Manager
 .public _ZN14CBgMenuManager9hideGroupE12EngineSelecti
 .public unk_020A0BB4
 .public _ZN14CBgMenuManager10addDynamicE12EngineSelecthhhP18SBgMenuElementInitiii

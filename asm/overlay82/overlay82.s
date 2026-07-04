@@ -2863,7 +2863,7 @@ _0211C6E8:
 	bl FUN_ov16_020f081c
 	mov r1, r0
 	mov r0, r6
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	ldr r1, _0211C7F8 ; =0x020EAAB4
 	ldrh r0, [r0, #0x22]
 	ldrh r1, [r1]
@@ -3066,7 +3066,7 @@ FUN_ov82_0211c90c: ; 0x0211C90C
 	bl FUN_ov16_020f081c
 	mov r1, r0
 	mov r0, r6
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	ldrh r1, [r0, #0x22]
 	ldr r0, _0211CA18 ; =0x020EAAB4
 	strh r1, [r0]
@@ -5217,7 +5217,7 @@ _0211E844:
 	mov r1, #0x20
 	mov r3, r5
 	add r2, r8, #1
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r8, r0
 	ldr r0, [r9, #4]
 	ldr r1, [sp, #4]
@@ -5300,7 +5300,7 @@ _0211E9AC:
 	add r2, r8, #1
 	mov r1, #0x54
 	mov r3, #0
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	ldr r1, [sp, #4]
 	mov r8, r0
 	add r0, r1, #0x540
@@ -5331,7 +5331,7 @@ _0211EA18:
 	mov r1, r4
 	mov r3, r5
 	add r2, r8, #1
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	ldr r1, [sp, #4]
 	mov r8, r0
 	add r1, r1, r11, lsl #5
@@ -5791,7 +5791,7 @@ _0211F0A4:
 	beq _0211F2B8
 	ldr r0, _0211F2E4 ; =gLogicThink
 	mov r1, #1
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r7, r0
 	mov r0, r10
 	bl FUN_ov82_0211ef40
@@ -5906,7 +5906,7 @@ _0211F240:
 	bl FUN_ov16_020f083c
 	mov r1, r0
 	ldr r0, _0211F2E4 ; =gLogicThink
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	cmp r0, #0
 	beq _0211F2B8
 	ldrh r1, [r0, #0x2a]

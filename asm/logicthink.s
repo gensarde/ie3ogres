@@ -2244,7 +2244,7 @@ FUN_0204b7b0: ; 0x0204B7B0
 	mov r7, r0
 	strh r4, [sp, #2]
 	strh r3, [r2, #0x94]
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	add r9, sp, #0x34
 	mov r8, #0x4c
 	mov r1, r9
@@ -2256,30 +2256,30 @@ FUN_0204b7b0: ; 0x0204B7B0
 	mov r5, #1
 	mov r0, r7
 	mov r1, r5
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r4, r0
 	mov r0, r7
 	mov r1, r6
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r1, r0
 	mov r0, r4
 	mov r2, r8
 	bl MI_CpuCopy8
 	mov r0, r7
 	mov r1, r6
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r1, r8
 	bl DC_FlushRange
 	mov r0, r7
 	mov r1, r5
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r1, r0
 	mov r0, r9
 	mov r2, r8
 	bl MI_CpuCopy8
 	mov r1, r5
 	mov r0, r7
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r1, r8
 	bl DC_FlushRange
 	add r0, r7, #0xc
@@ -2397,7 +2397,7 @@ FUN_0204b9c4: ; 0x0204B9C4
 	bl MI_CpuCopy8
 	mov r0, r4
 	mov r1, #0
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	ldrh r2, [r0, #0x22]
 	ldrh r1, [r0, #0x48]
 	strh r1, [r0, #0x22]
@@ -2415,7 +2415,7 @@ FUN_0204ba48: ; 0x0204BA48
 	cmp r1, #0
 	ldmeqfd sp!, {r4, pc}
 	mov r1, #0
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	ldrb r0, [r0, #0x43]
 	strb r0, [r4, #0x8a0]
 	ldmfd sp!, {r4, pc}
@@ -2431,7 +2431,7 @@ FUN_0204ba78: ; 0x0204BA78
 	cmp r1, #0
 	ldmeqfd sp!, {r4, pc}
 	mov r1, #0
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	ldrb r1, [r4, #0x8a0]
 	strb r1, [r0, #0x43]
 	ldmfd sp!, {r4, pc}
@@ -3056,7 +3056,7 @@ FUN_0204c2ec: ; 0x0204C2EC
 	bl FUN_ov16_020f0810
 	mov r1, r0
 	mov r0, r4
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	cmp r0, #0
 	beq _0204C324
 	ldrb r0, [r0, #0x2c]
@@ -4665,7 +4665,7 @@ FUN_0204d8cc: ; 0x0204D8CC
 	stmfd sp!, {r4, r5, r6, r7, r8, r9, r10, r11, lr}
 	sub sp, sp, #0x14
 	mov r10, r1
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	add r1, sp, #0
 	mov r0, #5
 	mov r6, #0
@@ -4851,7 +4851,7 @@ _0204DB38:
 	mov r8, r0
 	ldr r0, [sp, #8]
 	mov r1, r10
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r6, #0
 	str r0, [sp, #0xc]
 	mov r5, r6
@@ -4939,7 +4939,7 @@ _0204DC94:
 	mov r8, r0
 	ldr r0, [sp, #8]
 	mov r1, r10
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r6, #0
 	mov r11, r0
 	mov r5, r6
@@ -6031,8 +6031,8 @@ _0204EB80:
 	ldmfd sp!, {r3, r4, r5, r6, r7, pc}
 	arm_func_end FUN_0204eb4c
 
-	arm_func_start FUN_0204eba0
-FUN_0204eba0: ; 0x0204EBA0
+	arm_func_start _ZN11CLogicThink12FUN_0204eba0Ev
+_ZN11CLogicThink12FUN_0204eba0Ev: ; 0x0204EBA0
 	stmfd sp!, {r4, r5, r6, lr}
 	sub sp, sp, #8
 	mov r6, r0
@@ -6074,10 +6074,10 @@ _0204EC04:
 	ldmfd sp!, {r4, r5, r6, pc}
 _0204EC34: .word unk_02090548
 _0204EC38: .word 0xBA2E8BA3
-	arm_func_end FUN_0204eba0
+	arm_func_end _ZN11CLogicThink12FUN_0204eba0Ev
 
-	arm_func_start FUN_0204ec3c
-FUN_0204ec3c: ; 0x0204EC3C
+	arm_func_start _ZN11CLogicThink12FUN_0204ec3cEv
+_ZN11CLogicThink12FUN_0204ec3cEv: ; 0x0204EC3C
 	stmfd sp!, {r4, lr}
 	mov r4, r0
 	ldr r1, [r4, #0x7ec]
@@ -6091,7 +6091,7 @@ FUN_0204ec3c: ; 0x0204EC3C
 	mov r0, #1
 	ldmfd sp!, {r4, pc}
 _0204EC6C: .word gAllocator
-	arm_func_end FUN_0204ec3c
+	arm_func_end _ZN11CLogicThink12FUN_0204ec3cEv
 
 	arm_func_start FUN_0204ec70
 FUN_0204ec70: ; 0x0204EC70
@@ -6102,7 +6102,7 @@ FUN_0204ec70: ; 0x0204EC70
 	cmp r2, #0
 	mov r1, #0
 	bne _0204EC94
-	bl FUN_0204eba0
+	bl _ZN11CLogicThink12FUN_0204eba0Ev
 	mov r1, #1
 _0204EC94:
 	add r0, r5, #0x800
@@ -6121,7 +6121,7 @@ _0204ECAC:
 	cmp r1, #0
 	beq _0204ECD4
 	mov r0, r5
-	bl FUN_0204ec3c
+	bl _ZN11CLogicThink12FUN_0204ec3cEv
 _0204ECD4:
 	mov r0, #1
 	ldmfd sp!, {r3, r4, r5, pc}
@@ -6134,7 +6134,7 @@ _0204ECEC:
 	cmp r1, #0
 	beq _0204ECFC
 	mov r0, r5
-	bl FUN_0204ec3c
+	bl _ZN11CLogicThink12FUN_0204ec3cEv
 _0204ECFC:
 	mov r0, #0
 	ldmfd sp!, {r3, r4, r5, pc}

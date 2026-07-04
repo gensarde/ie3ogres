@@ -31,7 +31,7 @@
 .public _ZN12CFontManager12getTextWidthEPc
 .public _ZN12CFontManager15getNameFuriganaEPaS0_S0_
 .public gFont8
-.public gFont12
+.public gFont12Manager
 .public FUN_ov16_020f2184
 .public FUN_ov16_020ee064
 .public _ZN12CFontManager10setSpacingEii
@@ -59,7 +59,7 @@
 .public unk_020A0640
 .public gWirelessUtil
 .public _ZN14CBgMenuManager14updateGraphicsE12EngineSelect
-.public _ZN8Graphics11SetupScreenEPtmii
+.public _ZN8Graphics11SetupScreenEPvmii
 .public GXS_LoadBG1Char
 .public _ZN8Graphics11SetupScreenEPvii
 .public _ZN8Graphics14LoadBGXCharSubEiPvm

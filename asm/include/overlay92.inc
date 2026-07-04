@@ -8,7 +8,7 @@
 .public FUN_ov16_020f2184
 .public DC_FlushRange
 .public _ZN14CBgMenuManager11deleteGroupE12EngineSelectit
-.public _ZN8Graphics11SetupScreenEPtmii
+.public _ZN8Graphics11SetupScreenEPvmii
 .public _ZN8Graphics22LoadTempPaletteFromPacEPv12EngineSelecti
 .public GXS_LoadBG1Char
 .public GXS_LoadBG2Char

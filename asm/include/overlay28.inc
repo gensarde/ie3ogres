@@ -9,7 +9,7 @@
 .public FUN_02058ee0
 .public _ZdlPv
 .public _ZN11AudioPlayer12FUN_0202b838Eiii
-.public FUN_02062800
+.public _ZN14CRecordManager15getRecordHeaderEP13SRecordHeader
 .public FUN_ov16_020f47fc
 .public FUN_ov16_020f3f60
 .public GX_SetGraphicsMode
@@ -60,7 +60,7 @@
 .public FUN_0205ff0c
 .public FUN_ov16_020efa4c
 .public FUN_02070530
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public sprintf
 .public FUN_020443b0
 .public FUN_02044734

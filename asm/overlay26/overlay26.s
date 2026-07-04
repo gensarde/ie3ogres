@@ -795,7 +795,7 @@ _0211A994:
 	str r9, [sp, #0x10]
 	str r9, [sp, #0x14]
 	str r11, [sp, #0x18]
-	ldr r0, _0211B2EC ; =gFont12
+	ldr r0, _0211B2EC ; =gFont12Manager
 	str r11, [sp, #0x1c]
 	ldr r0, [r0]
 	ldr r3, [sp, #0x20]
@@ -898,7 +898,7 @@ _0211AB40:
 	str r9, [sp, #0x10]
 	str r9, [sp, #0x14]
 	str r11, [sp, #0x18]
-	ldr r0, _0211B2EC ; =gFont12
+	ldr r0, _0211B2EC ; =gFont12Manager
 	str r11, [sp, #0x1c]
 	ldr r0, [r0]
 	mov r3, r8
@@ -999,7 +999,7 @@ _0211ACA0:
 	str r5, [sp, #0x14]
 	str r0, [sp, #0x18]
 	str r0, [sp, #0x1c]
-	ldr r0, _0211B2EC ; =gFont12
+	ldr r0, _0211B2EC ; =gFont12Manager
 	mov r3, r9
 	ldr r0, [r0]
 	add r1, sp, #0x80
@@ -1343,7 +1343,7 @@ _0211B2DC: .word ov26_0211BA58
 _0211B2E0: .word gPalSkinFaceFile
 _0211B2E4: .word 0x40240000
 _0211B2E8: .word 0x66666667
-_0211B2EC: .word gFont12
+_0211B2EC: .word gFont12Manager
 _0211B2F0: .word gFont8
 _0211B2F4: .word ov26_0211BA70
 _0211B2F8: .word ov26_0211BA88

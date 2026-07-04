@@ -9,7 +9,7 @@
 .public _ZN10CAllocator10deallocateEPv
 .public gAllocator
 .public _ZN7Archive10DeallocateEP9SFileData
-.public _ZN8Graphics11SetupScreenEPtmii
+.public _ZN8Graphics11SetupScreenEPvmii
 .public _ZN8Graphics22LoadTempPaletteFromPacEPv12EngineSelecti
 .public DC_FlushRange
 .public _ZN14CBgMenuManager9addStaticE12EngineSelectiiiiaahhhPv

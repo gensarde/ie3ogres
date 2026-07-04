@@ -105,7 +105,7 @@
 .public FUN_ov126_02139aa4
 .public FUN_ov126_02139ab4
 .public FUN_02073184
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public _ZN7CConfig8getParamEPKc
 .public _fflt
 .public _fmul
@@ -173,7 +173,7 @@
 .public unk_020A0B00
 .public unk_0209BE4C
 .public unk_0209BEFC
-.public FUN_0204eba0
+.public _ZN11CLogicThink12FUN_0204eba0Ev
 .public FUN_020732d8
 .public FUN_0206c6fc
 .public FUN_0206d69c
@@ -186,7 +186,7 @@
 .public FUN_0204fbe8
 .public FUN_0204fbfc
 .public FUN_02050930
-.public FUN_0204ec3c
+.public _ZN11CLogicThink12FUN_0204ec3cEv
 .public FUN_0206f9dc
 .public FUN_ov16_020f0810
 .public FUN_0206c5d8

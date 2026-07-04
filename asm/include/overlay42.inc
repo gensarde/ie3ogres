@@ -4,7 +4,7 @@
 .public FUN_0204fca0
 .public FUN_0206d9cc
 .public FUN_0206d9b0
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public FUN_ov16_0210e980
 .public FUN_ov16_0210e0a0
 .public MI_CpuFill8
@@ -24,7 +24,7 @@
 .public g2DAdventureLogic
 .public FUN_ov16_0210e15c
 .public FUN_ov16_0210f468
-.public unk_0209A0F4
+.public gKeysRepeated
 .public _ZN12C3DPlaneCtrl9clearFlagEiit
 .public _ZN12C3DPlaneCtrl7setFlagEiitb
 .public _ZN11AudioPlayer10playEffectEi
@@ -101,7 +101,7 @@
 .public _ZN12CFontManager15drawTextTex4bppEPcPviiiiiPNS_11GlyphBoundsEiiNS_9AlignmentE
 .public _ZN12CFontManager12resetSpacingEv
 .public FUN_02059288
-.public gFont12
+.public gFont12Manager
 .public FUN_ov16_0210eb3c
 .public FUN_ov16_0210fd0c
 .public FUN_ov16_0210e674

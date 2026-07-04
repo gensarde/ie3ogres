@@ -288,7 +288,7 @@ _0211A264:
 	moveq r0, #2
 	ldmeqfd sp!, {r3, r4, r5, r6, r7, pc}
 	mov r0, r7
-	bl FUN_02062800
+	bl _ZN14CRecordManager15getRecordHeaderEP13SRecordHeader
 	add r1, r0, #0x7d
 	cmp r1, #1
 	movls r0, #2
@@ -412,7 +412,7 @@ _0211A3DC:
 _0211A414:
 	ldr r1, [r4, #0x50]
 	ldr r0, _0211A434 ; =gRecordManager
-	bl FUN_02062800
+	bl _ZN14CRecordManager15getRecordHeaderEP13SRecordHeader
 	mov r0, r4
 	bl FUN_ov61_0211a22c
 	mov r0, r4
@@ -804,7 +804,7 @@ FUN_ov61_0211a8e8: ; 0x0211A8E8
 	cmp r0, #1
 	ldmeqfd sp!, {r4, r5, r6, r7, r8, pc}
 _0211A93C:
-	ldr r0, _0211ACAC ; =0x0209A0F4
+	ldr r0, _0211ACAC ; =gKeysRepeated
 	cmp r1, #0xe
 	ldrh r0, [r0]
 	orr r0, r0, r5
@@ -1047,7 +1047,7 @@ _0211AC9C:
 	str r7, [r6, #0x1c]
 	ldmfd sp!, {r4, r5, r6, r7, r8, pc}
 _0211ACA8: .word gBgMenuManager
-_0211ACAC: .word unk_0209A0F4
+_0211ACAC: .word gKeysRepeated
 _0211ACB0: .word gAudioPlayer
 _0211ACB4: .word unk_0209A070
 	arm_func_end FUN_ov61_0211a8e8
@@ -1636,7 +1636,7 @@ FUN_ov61_0211b220: ; 0x0211B220
 	mov r3, #0
 	mul r1, r4, r1
 	mov r1, r1, lsl #1
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 _0211B4E0:
 	mov r4, #1
 	ldr r0, [r6, #0x64]
@@ -2762,7 +2762,7 @@ FUN_ov61_0211c470: ; 0x0211C470
 	mov r0, #0x80
 	str r0, [sp, #0x10]
 	str r4, [sp, #0x14]
-	ldr r0, _0211C688 ; =gFont12
+	ldr r0, _0211C688 ; =gFont12Manager
 	str r4, [sp, #0x18]
 	ldr r0, [r0]
 	mov r7, #0xa
@@ -2835,7 +2835,7 @@ _0211C5B4:
 	mov r4, #0x80
 	str r4, [sp, #0x10]
 	str r6, [sp, #0x14]
-	ldr r11, _0211C688 ; =gFont12
+	ldr r11, _0211C688 ; =gFont12Manager
 	str r6, [sp, #0x18]
 	ldr r0, [r11]
 	add r3, sp, #0x1c
@@ -2877,7 +2877,7 @@ _0211C674:
 	bl DC_FlushRange
 	add sp, sp, #0x2c
 	ldmfd sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
-_0211C688: .word gFont12
+_0211C688: .word gFont12Manager
 _0211C68C: .word ov61_0211F3B0
 _0211C690: .word 0x66666667
 _0211C694: .word ov61_0211EF00
@@ -4458,7 +4458,7 @@ _0211DC68:
 	ldr r1, [r4, #0x50]
 	mov r0, r7
 	str r8, [r4, #8]
-	bl FUN_02062800
+	bl _ZN14CRecordManager15getRecordHeaderEP13SRecordHeader
 	bl _ZN6Thread5YieldEv
 	mov r0, r4
 	bl FUN_ov61_0211b9cc

@@ -1035,7 +1035,7 @@ FUN_ov40_0211abd0: ; 0x0211ABD0
 	mov r3, #0
 	mul r1, r12, r1
 	mov r1, r1, lsl #1
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	ldrh r3, [r4, #0x6c]
 	ldrh r2, [r4, #0x6e]
 	ldr r0, [r4, #0x64]

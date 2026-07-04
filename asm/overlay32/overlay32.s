@@ -161,7 +161,7 @@ _0211A0A0:
 	bl FUN_02070530
 	mov r0, r6
 	mov r1, r5
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	ldr r1, _0211A180 ; =0x0211A788
 	bl sprintf
 	ldr r0, _0211A184 ; =gConfig
@@ -411,7 +411,7 @@ FUN_ov32_0211a3a4: ; 0x0211A3A4
 	mov r3, r6
 	add r0, r5, r0
 	add r2, r4, #1
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	ldr r0, [r5, #0x14]
 	ldr r2, [r5, #0x18]
 	mov r1, r8

@@ -2778,7 +2778,7 @@ _020325EC:
 	mov r6, r7
 	b _0203263C
 _020325F8:
-	ldr r0, _0203266C ; =gFont12
+	ldr r0, _0203266C ; =gFont12Manager
 	mov r1, r5
 	ldr r0, [r0]
 	bl _ZN12CFontManager12getCharWidthEPc
@@ -2810,7 +2810,7 @@ _02032660:
 	strb r0, [r10]
 	add sp, sp, #0x200
 	ldmfd sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
-_0203266C: .word gFont12
+_0203266C: .word gFont12Manager
 	arm_func_end FUN_0203257c
 
 	arm_func_start FUN_02032670
@@ -4237,7 +4237,7 @@ _02033AF8:
 	add r0, r9, #2
 	strb r10, [r7, r0]
 	ldrsb r0, [r8]
-	ldr r7, _020342EC ; =gFont12
+	ldr r7, _020342EC ; =gFont12Manager
 	mov r2, #3
 	cmp r0, #0
 	addne r1, r8, #1
@@ -4764,7 +4764,7 @@ _020342D8:
 	ldmfd sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 _020342E4: .word g3DPlaneCtrl
 _020342E8: .word 0x00007FFF
-_020342EC: .word gFont12
+_020342EC: .word gFont12Manager
 _020342F0: .word 0x51EB851F
 _020342F4: .word gFontRubi8
 _020342F8: .word gAudioPlayer
@@ -10496,7 +10496,7 @@ FUN_020391a8: ; 0x020391A8
 	mov r10, r0
 	ldr r0, _0203956C ; =gLogicThink
 	mov r1, #0
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	ldr r1, _02039570 ; =0x020A0640
 	mov r4, r0
 	ldrb r0, [r1, #0x1a]
@@ -10525,7 +10525,7 @@ _02039214:
 	bl STD_TSPrintf
 	ldr r0, _0203956C ; =gLogicThink
 	mov r1, #1
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	ldr r1, _02039570 ; =0x020A0640
 	mov r4, r0
 	ldrb r0, [r1, #0x1a]
@@ -11348,7 +11348,7 @@ _02039D38:
 	ldr r5, _02039F04 ; =gLogicThink
 	mov r1, r0
 	mov r0, r5
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r4, r0
 	ldrb r6, [r4, #0x43]
 	bl FUN_ov16_020f081c
@@ -11373,7 +11373,7 @@ _02039E18:
 	ldr r5, _02039F04 ; =gLogicThink
 	mov r1, r0
 	mov r0, r5
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r4, r0
 	ldrb r6, [r4, #0x43]
 	bl FUN_ov16_020f083c
@@ -11553,7 +11553,7 @@ FUN_0203a058: ; 0x0203A058
 	ldr r7, _0203A2F8 ; =gLogicThink
 	mov r1, r0
 	mov r0, r7
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	ldrb r6, [r0, #0x43]
 	bl FUN_ov16_020f081c
 _0203A0A8:
@@ -11571,7 +11571,7 @@ _0203A0C0:
 	ldr r7, _0203A2F8 ; =gLogicThink
 	mov r1, r0
 	mov r0, r7
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	ldrb r6, [r0, #0x43]
 	bl FUN_ov16_020f083c
 	b _0203A0A8

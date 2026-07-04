@@ -23,7 +23,7 @@
 .public G2_GetBG3CharPtr
 .public MIi_CpuClearFast
 .public DC_FlushRange
-.public _ZN8Graphics11SetupScreenEPtmii
+.public _ZN8Graphics11SetupScreenEPvmii
 .public G2_GetBG1CharPtr
 .public G2_GetBG2CharPtr
 .public GX_LoadBG2Scr
@@ -31,7 +31,7 @@
 .public GX_LoadBG3Char
 .public _ZN18CBgMenuRadioButton6createEhhhi
 .public _ZN14CScreenManager12setNextSceneE12EngineSelect9SceneType
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public strcpy
 .public FUN_020724c8
 .public FUN_020735a0

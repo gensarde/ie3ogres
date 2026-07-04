@@ -64,7 +64,7 @@
 .public _ZN12CFontManager10setSpacingEii
 .public _ZN12CFontManager12resetSpacingEv
 .public _ZN12CFontManager12getTextWidthEPc
-.public gFont12
+.public gFont12Manager
 .public gFontRubi8
 .public _ZN12C3DPlaneCtrl11getTexWidthEi
 .public _ZN12C3DPlaneCtrl12getTexHeightEi

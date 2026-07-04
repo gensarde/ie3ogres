@@ -1121,7 +1121,7 @@ _0211AE78: .word 0x04000304
 FUN_ov39_0211ae7c: ; 0x0211AE7C
 	stmfd sp!, {r3, r4, r5, lr}
 	sub sp, sp, #8
-	ldr r2, _0211AF80 ; =0x0209A0F4
+	ldr r2, _0211AF80 ; =gKeysRepeated
 	mov r5, r0
 	ldrh r3, [r5, #8]
 	ldrh r2, [r2]
@@ -1184,7 +1184,7 @@ FUN_ov39_0211ae7c: ; 0x0211AE7C
 	bl FUN_ov39_0211b220
 	add sp, sp, #8
 	ldmfd sp!, {r3, r4, r5, pc}
-_0211AF80: .word unk_0209A0F4
+_0211AF80: .word gKeysRepeated
 _0211AF84: .word ov39_0211BB60
 _0211AF88: .word 0x55555556
 _0211AF8C: .word 0x66666667

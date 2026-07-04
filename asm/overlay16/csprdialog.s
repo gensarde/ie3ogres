@@ -36,7 +36,7 @@
 .public _ZN12CFontManager15drawTextTex4bppEPcPviiiiiPNS_11GlyphBoundsEiiNS_9AlignmentE
 .public _ZdlPv
 .public g3DPlaneCtrl
-.public gFont12
+.public gFont12Manager
 .public gSprButtonCtrl
 .public strchr
 
@@ -216,7 +216,7 @@ _0210FF60:
 	ldr r7, [sp, #0x20]
 	cmp r7, #0
 	beq _0211001C
-	ldr r4, _02110038 ; =gFont12
+	ldr r4, _02110038 ; =gFont12Manager
 	mov r1, #1
 	ldr r0, [r4]
 	mov r2, r1
@@ -263,7 +263,7 @@ _02110028:
 	add sp, sp, #0x28
 	ldmfd sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
 _02110034: .word g3DPlaneCtrl
-_02110038: .word gFont12
+_02110038: .word gFont12Manager
 	arm_func_end FUN_ov16_0210fe8c
 
 	arm_func_start FUN_ov16_0211003c

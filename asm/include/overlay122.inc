@@ -4,7 +4,7 @@
 .public FUN_ov16_020efa9c
 .public FUN_ov16_020f0c30
 .public gPalSkinFaceFile
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public _ZN7Archive16RequestNewReadExEPKcP9SFileDatalmi
 .public FUN_ov1_020dbe00
 .public FUN_ov1_020dbec4
@@ -34,7 +34,7 @@
 .public _ZN14CBgMenuManager4initE12EngineSelect
 .public FUN_ov1_020dc13c
 .public _ZN8Graphics15LoadTempPaletteEP10GXBGPltt1612EngineSelecti
-.public _ZN8Graphics11SetupScreenEPtmii
+.public _ZN8Graphics11SetupScreenEPvmii
 .public _ZN8Graphics22LoadTempPaletteFromPacEPv12EngineSelecti
 .public FUN_ov16_020f2ea8
 .public _ZN8Graphics16LoadBGPaletteSubEv

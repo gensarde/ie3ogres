@@ -198,8 +198,8 @@ sArenaSize:
 	.global sHeapHandle
 sHeapHandle:
 	.space 0x04
-	.global gFont12
-gFont12:
+	.global gFont12Manager
+gFont12Manager:
 	.space 0x04
 	.global gDungeonManager
 gDungeonManager:
@@ -318,8 +318,8 @@ gBGPulsePhase:
 	.global unk_0209A0F0
 unk_0209A0F0:
 	.space 0x04
-	.global unk_0209A0F4
-unk_0209A0F4:
+	.global gKeysRepeated
+gKeysRepeated:
 	.space 0x04
 	.global unk_0209A0F8
 unk_0209A0F8:

@@ -14,7 +14,7 @@
 .public _ZN14CScreenManager13fadeMainBlackEv
 .public _ZN14CScreenManager8popSceneE12EngineSelect
 .public _ZN8Graphics16FadeScreensBlackEl
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public FUN_020727a8
 .public _Z11SetNextMode8GameMode
 .public unk_020A1640
@@ -49,7 +49,7 @@
 .public FUN_ov16_0210f468
 .public FUN_ov16_02110b04
 .public FUN_ov16_02110b0c
-.public unk_0209A0F4
+.public gKeysRepeated
 .public FUN_ov16_0210e7d0
 .public G2_GetBG1CharPtr
 .public MIi_CpuClearFast

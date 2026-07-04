@@ -1496,7 +1496,7 @@ FUN_ov49_0211b41c: ; 0x0211B41C
 	bl _ZN8Graphics16FadeScreensBlackEl
 	ldr r0, _0211B490 ; =gLogicThink
 	mov r1, r5
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	ldrh r2, [r0, #0x2e]
 	ldr r0, _0211B494 ; =0x00000FFF
 	ldr r1, _0211B498 ; =0x02099EA2
@@ -1883,7 +1883,7 @@ _0211B960:
 	ldr r0, _0211BCE4 ; =0x020A9C40
 	mov r1, #0xfc
 	mov r2, #0
-	bl FUN_020460a8
+	bl _ZN17UnkClass_020A9C4012FUN_020460a8Eii
 _0211B988:
 	ldr r0, _0211BCE0 ; =gAudioPlayer
 	mov r1, #4
@@ -2172,7 +2172,7 @@ FUN_ov49_0211bd80: ; 0x0211BD80
 	ldr r0, _0211BDE4 ; =0x020A9C40
 	mov r1, #0xff
 	mov r2, #0
-	bl FUN_020460a8
+	bl _ZN17UnkClass_020A9C4012FUN_020460a8Eii
 	ldr r5, _0211BDE8 ; =gLogicThink
 	mov r0, r5
 	bl FUN_020737fc
@@ -2589,12 +2589,12 @@ FUN_ov49_0211c2d4: ; 0x0211C2D4
 	ldr r6, _0211C3D8 ; =gLogicThink
 	mov r1, r4
 	mov r0, r6
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r4, #1
 	mov r5, r0
 	mov r0, r6
 	mov r1, r4
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	ldrh r1, [r5, #0x40]
 	strh r1, [r5, #0x28]
 	ldrh r1, [r0, #0x40]
@@ -2716,7 +2716,7 @@ _0211C4D8:
 	blt _0211C4D8
 	ldr r0, _0211C5BC ; =gLogicThink
 	mov r1, #0
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	cmp r5, #0
 	beq _0211C528
 	cmp r4, #0

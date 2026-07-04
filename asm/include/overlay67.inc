@@ -1,7 +1,7 @@
 .public _ZN7Archive17ReadNewUncompressEPKcP9SFileData
 .public FUN_ov16_020f5450
 .public FUN_ov16_020f081c
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public FUN_ov16_020efa9c
 .public FUN_0206d6d8
 .public FUN_0205aa80
@@ -44,7 +44,7 @@
 .public _ZN12C3DPlaneCtrl7setFlagEiitb
 .public _ZN12CFontManager10setSpacingEii
 .public FUN_ov16_020ee034
-.public gFont12
+.public gFont12Manager
 .public _ZN12C3DPlaneCtrl11getTexWidthEi
 .public FUN_0205935c
 .public _ZN12C3DPlaneCtrl12getTexHeightEi
@@ -111,7 +111,7 @@
 .public FUN_ov16_0210f468
 .public FUN_ov16_02110b04
 .public FUN_ov16_02110b0c
-.public unk_0209A0F4
+.public gKeysRepeated
 .public FUN_ov16_0210f20c
 .public FUN_ov16_0210f484
 .public FUN_ov16_0210e980
@@ -167,7 +167,7 @@
 .public FUN_0205b264
 .public G2_GetBG1CharPtr
 .public FUN_ov1_020dc020
-.public _ZN8Graphics11SetupScreenEPtmii
+.public _ZN8Graphics11SetupScreenEPvmii
 .public GX_LoadBG3Char
 .public _ZN8Graphics17LoadBGPaletteMainEv
 .public _ZN12CFontManager12FUN_02043780Eii

@@ -35,12 +35,12 @@
 .public G2_GetBG2CharPtr
 .public GX_LoadBG2Scr
 .public _ZN8Graphics22LoadTempPaletteFromPacEPv12EngineSelecti
-.public _ZN8Graphics11SetupScreenEPtmii
+.public _ZN8Graphics11SetupScreenEPvmii
 .public GX_LoadBG2Char
 .public _ZN8Graphics17LoadBGPaletteMainEv
 .public FUN_ov16_0210eb3c
 .public MI_CpuFill8
-.public FUN_020460a8
+.public _ZN17UnkClass_020A9C4012FUN_020460a8Eii
 .public gSprButtonCtrl
 .public unk_020A9C40
 .public _ZN12C3DPlaneCtrl12setColorMaskEit
@@ -68,7 +68,7 @@
 .public unk_0209A460
 .public _ZN12C3DPlaneCtrl12getTexHeightEi
 .public _ZN12CFontManager15drawTextTex4bppEPcPviiiiiPNS_11GlyphBoundsEiiNS_9AlignmentE
-.public gFont12
+.public gFont12Manager
 .public gFont8
 .public FUN_ov16_0210e29c
 .public gSprAnimCtrl
@@ -89,7 +89,7 @@
 .public FUN_ov16_0210e15c
 .public FUN_ov16_0210f468
 .public FUN_ov16_020f53b0
-.public unk_0209A0F4
+.public gKeysRepeated
 .public FUN_ov16_0210f20c
 .public FUN_ov16_0210f484
 .public FUN_ov16_0210e980

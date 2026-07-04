@@ -87,6 +87,11 @@ typedef struct {
     u32 unkC;
 } SFPEntry;
 
+typedef struct {
+    char *name;
+    u32 idx;
+} SFPFileEntry;
+
 // `'s'`: high poly
 // `'b'`: low poly
 static inline char GetModelQuality(int quality)

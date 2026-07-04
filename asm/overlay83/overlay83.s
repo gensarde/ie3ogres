@@ -1454,7 +1454,7 @@ _0211B2E8:
 	bl _ZN14CBgMenuManager13isFlashActiveE12EngineSelect
 	cmp r0, #0
 	ldmnefd sp!, {r4, r5, r6, r7, r8, pc}
-	ldr r0, _0211B618 ; =0x0209A0F4
+	ldr r0, _0211B618 ; =gKeysRepeated
 	ldr r1, [r8, #8]
 	ldrh r0, [r0]
 	sub r1, r1, #9
@@ -1674,7 +1674,7 @@ _0211B5FC:
 	bl FUN_ov83_0211b234
 	ldmfd sp!, {r4, r5, r6, r7, r8, pc}
 _0211B614: .word gBgMenuManager
-_0211B618: .word unk_0209A0F4
+_0211B618: .word gKeysRepeated
 _0211B61C: .word gAudioPlayer
 _0211B620: .word unk_0209A070
 	arm_func_end FUN_ov83_0211b2bc
@@ -2089,7 +2089,7 @@ _0211BB44:
 	mul r1, r2, r1
 	mov r1, r1, lsl #1
 	add r2, r7, #1
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	ldrh r2, [r8, #0xc]
 	ldrh r1, [r8, #0xe]
 	ldr r3, [sp, #4]
@@ -2304,7 +2304,7 @@ FUN_ov83_0211be60: ; 0x0211BE60
 	mov r8, r2
 	mov r7, r3
 	bl FUN_ov16_020f2f20
-	ldr r5, _0211BF00 ; =gFont12
+	ldr r5, _0211BF00 ; =gFont12Manager
 	mov r6, #1
 	ldr r0, [r5]
 	mov r1, r6
@@ -2336,7 +2336,7 @@ FUN_ov83_0211be60: ; 0x0211BE60
 	bl DC_FlushRange
 	add sp, sp, #0x1c
 	ldmfd sp!, {r4, r5, r6, r7, r8, r9, pc}
-_0211BF00: .word gFont12
+_0211BF00: .word gFont12Manager
 	arm_func_end FUN_ov83_0211be60
 
 	arm_func_start FUN_ov83_0211bf04

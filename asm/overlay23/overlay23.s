@@ -2204,7 +2204,7 @@ _0211BE04:
 	ldrh r1, [r5, #0xf2]
 	ldr r0, _0211BE84 ; =0x020A9C40
 	mov r2, #0x14
-	bl FUN_02045b40
+	bl _ZN17UnkClass_020A9C4012FUN_02045b40Eii
 	mov r6, #0x61
 	ldr r0, [r5, #4]
 	mov r1, r4

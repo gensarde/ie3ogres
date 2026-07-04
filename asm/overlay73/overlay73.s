@@ -1125,7 +1125,7 @@ FUN_ov73_0211acec: ; 0x0211ACEC
 	add r2, r3, #1
 	mov r3, #0
 	str r4, [r5, #0xbc]
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	ldrh r1, [r5, #0xc0]
 	ldrh r0, [r5, #0xc2]
 	ldr r2, [sp, #8]
@@ -2833,7 +2833,7 @@ _0211C6E4:
 	mov r9, #0
 	mov r0, r7
 	mov r1, r9
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	ldr r1, [r4, #0x28]
 	mov r10, r0
 	cmp r1, #0xe

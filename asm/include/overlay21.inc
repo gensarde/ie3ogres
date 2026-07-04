@@ -16,7 +16,7 @@
 .public FUN_02059004
 .public FUN_02059038
 .public FUN_ov16_0210eb3c
-.public FUN_020460a8
+.public _ZN17UnkClass_020A9C4012FUN_020460a8Eii
 .public gSprButtonCtrl
 .public unk_020A9C40
 .public MI_CpuFill8
@@ -46,7 +46,7 @@
 .public FUN_02059288
 .public _ZN12C3DPlaneCtrl8setTexSTEiiss
 .public _ZN12C3DPlaneCtrl8setTexWHEiiss
-.public gFont12
+.public gFont12Manager
 .public FUN_ov16_0210fc74
 .public FUN_ov16_0210e6fc
 .public FUN_ov16_0210e720
@@ -75,7 +75,7 @@
 .public FUN_ov131_0213c288
 .public FUN_02044754
 .public FUN_ov131_0213c5fc
-.public unk_0209A0F4
+.public gKeysRepeated
 .public gLogicThink
 .public unk_02099F44
 .public unk_020AF81C

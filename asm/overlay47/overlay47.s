@@ -4252,7 +4252,7 @@ _0211DA5C:
 	ldr r0, _0211DC24 ; =0x020A9C40
 	mov r1, #0xfc
 	mov r2, #0
-	bl FUN_020460a8
+	bl _ZN17UnkClass_020A9C4012FUN_020460a8Eii
 	b _0211DA9C
 _0211DA90:
 	ldr r0, [r4]
@@ -5205,7 +5205,7 @@ _0211E784:
 	ldr r0, _0211EA58 ; =0x020A9C40
 	mov r1, #0xfc
 	mov r2, #0
-	bl FUN_020460a8
+	bl _ZN17UnkClass_020A9C4012FUN_020460a8Eii
 	b _0211E7E8
 _0211E7DC:
 	ldr r0, [r4]
@@ -6070,7 +6070,7 @@ _0211F3E8:
 	mov r2, #1
 _0211F3EC:
 	ldr r0, _0211F404 ; =0x020A9C40
-	bl FUN_02045b40
+	bl _ZN17UnkClass_020A9C4012FUN_02045b40Eii
 	mov r0, #6
 	bl _ZN8Graphics16FadeScreensBlackEl
 	ldmfd sp!, {r4, pc}

@@ -189,7 +189,7 @@ _02124F48:
 	add r2, r11, #1
 	mul r1, r7, r1
 	mov r1, r1, lsl #1
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r11, r0
 _02124F88:
 	add r6, r6, #1
@@ -848,12 +848,12 @@ _021258DC:
 	bl FUN_ov16_020f2f20
 	mov r0, r5
 	mov r1, r8
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	movs r4, r0
 	beq _021259C8
 	mov r0, r5
 	mov r1, r8
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	cmp r0, #0
 	beq _021259C8
 	ldrh r1, [r0, #0x20]
@@ -887,7 +887,7 @@ _02125998:
 	mov r0, r0, lsl #3
 	str r0, [sp, #0x10]
 	str r7, [sp, #0x14]
-	ldr r0, _02125AF4 ; =gFont12
+	ldr r0, _02125AF4 ; =gFont12Manager
 	str r7, [sp, #0x18]
 	ldr r0, [r0]
 	ldr r4, [r0]
@@ -973,7 +973,7 @@ _02125A88:
 	add sp, sp, #0x188
 	ldmfd sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
 _02125AF0: .word gLogicThink
-_02125AF4: .word gFont12
+_02125AF4: .word gFont12Manager
 _02125AF8: .word unk_020A3D14
 _02125AFC: .word ov1_020E9480
 	arm_func_end FUN_ov115_02125834

@@ -1505,7 +1505,7 @@ _0211B36C:
 _0211B3B0:
 	cmp r7, #0
 	beq _0211B484
-	ldr r0, _0211B4A0 ; =gFont12
+	ldr r0, _0211B4A0 ; =gFont12Manager
 	add r7, sp, #0
 	ldr r0, [r0]
 	mov r1, r7
@@ -1548,7 +1548,7 @@ _0211B444:
 	cmp r0, #0xa
 	cmpne r0, #0xc
 	beq _0211B464
-	ldr r0, _0211B4A0 ; =gFont12
+	ldr r0, _0211B4A0 ; =gFont12Manager
 	mov r1, r4
 	ldr r0, [r0]
 	bl _ZN12CFontManager12getCharWidthEPc
@@ -1570,7 +1570,7 @@ _0211B490:
 	add sp, sp, #0xc8
 	ldmfd sp!, {r4, r5, r6, r7, r8, r9, r10, pc}
 _0211B49C: .word gLogicThink
-_0211B4A0: .word gFont12
+_0211B4A0: .word gFont12Manager
 	arm_func_end FUN_ov18_0211b288
 
 	arm_func_start FUN_ov18_0211b4a4

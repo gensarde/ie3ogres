@@ -2,7 +2,7 @@
 .public gWirelessUtil
 .public unk_0209A4E0
 .public FUN_ov16_020f081c
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public unk_0209A4E4
 .public gLogicThink
 .public FUN_ov16_020f0634
@@ -47,12 +47,12 @@
 .public gSprAnimCtrl
 .public gSprButtonCtrl
 .public FUN_ov16_0210f468
-.public unk_0209A0F4
+.public gKeysRepeated
 .public FUN_ov16_0210e7d0
 .public G2_GetBG1CharPtr
 .public MIi_CpuClearFast
 .public FUN_ov1_020dc020
-.public _ZN8Graphics11SetupScreenEPtmii
+.public _ZN8Graphics11SetupScreenEPvmii
 .public GX_LoadBG3Char
 .public _ZN8Graphics17LoadBGPaletteMainEv
 .public _ZN12C3DPlaneCtrl6createEib

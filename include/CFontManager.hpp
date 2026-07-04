@@ -73,6 +73,8 @@ private:
     u8 encoding; // 0: SJIS, 1: UTF16
 };
 
+extern CFontManager *gFont12Manager;
+
 class CFontManager_2 : public CFontManager
 {
 public:

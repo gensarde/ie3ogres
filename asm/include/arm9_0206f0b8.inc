@@ -175,9 +175,9 @@
 .public unk_020916F4
 .public unk_02091710
 .public unk_0209172C
-.public FUN_0204eba0
+.public _ZN11CLogicThink12FUN_0204eba0Ev
 .public FUN_020508fc
-.public FUN_0204ec3c
+.public _ZN11CLogicThink12FUN_0204ec3cEv
 .public unk_020A0DB0
 .public unk_0208C504
 .public FUN_020404cc

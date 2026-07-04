@@ -120,7 +120,7 @@ _0211A054:
 	add r2, r5, #1
 	mov r3, #0
 	str r4, [r6, #0x34]
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	ldrh r1, [r6, #0x38]
 	ldrh r0, [r6, #0x3a]
 	ldr r2, [sp, #4]
@@ -242,7 +242,7 @@ _0211A228:
 	cmp r0, #0
 	addeq sp, sp, #0x38
 	ldmeqfd sp!, {r3, r4, r5, r6, r7, r8, r9, pc}
-	ldr r8, _0211A2F8 ; =gFont12
+	ldr r8, _0211A2F8 ; =gFont12Manager
 	mov r5, #4
 	ldr r0, [r8]
 	mov r2, r5
@@ -284,7 +284,7 @@ _0211A228:
 	ldmfd sp!, {r3, r4, r5, r6, r7, r8, r9, pc}
 _0211A2F0: .word gBgMenuManager
 _0211A2F4: .word unk_0209A070
-_0211A2F8: .word gFont12
+_0211A2F8: .word gFont12Manager
 _0211A2FC: .word ov79_0211AAD0
 	arm_func_end FUN_ov79_0211a0e8
 

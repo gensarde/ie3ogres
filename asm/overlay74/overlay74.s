@@ -678,7 +678,7 @@ FUN_ov74_0211a748: ; 0x0211A748
 	mov r2, #1
 	mov r3, #0
 	str r4, [r5, #0xb0]
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	ldrh r1, [r5, #0xb4]
 	ldrh r0, [r5, #0xb6]
 	ldr r2, [sp, #8]
@@ -1026,7 +1026,7 @@ _0211ABF0:
 	strb r0, [r4, #0x75]
 	ldr r11, _0211AE34 ; =gLogicThink
 	mov r0, r11
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r6, r0
 	ldr r0, _0211AE38 ; =0x020A0700
 	ldr r5, _0211AE3C ; =0x020A1640
@@ -1680,7 +1680,7 @@ FUN_ov74_0211b5cc: ; 0x0211B5CC
 	ldmeqfd sp!, {r4, r5, r6, r7, r8, pc}
 	ldr r0, _0211B68C ; =gLogicThink
 	mov r1, r6
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	ldrb r0, [r0, #0x2d]
 	cmp r0, #0
 	beq _0211B664
@@ -2237,7 +2237,7 @@ _0211BD20:
 	strb r0, [r4, #0x75]
 	ldr r5, _0211BF34 ; =gLogicThink
 	mov r0, r5
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r10, r0
 	ldr r0, _0211BF38 ; =0x020A0700
 	ldr r9, _0211BF3C ; =0x020A1640

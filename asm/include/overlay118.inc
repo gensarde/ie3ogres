@@ -16,12 +16,12 @@
 .public G2S_GetBG1CharPtr
 .public DC_FlushRange
 .public FUN_ov16_020f2ea8
-.public _ZN8Graphics11SetupScreenEPtmii
+.public _ZN8Graphics11SetupScreenEPvmii
 .public _ZN8Graphics15LoadTempPaletteEP10GXBGPltt1612EngineSelecti
 .public FUN_ov16_020f2f20
 .public _ZN8Graphics10ScreenCopyEiiiiPtS0_
 .public gDebugFont
-.public gFont12
+.public gFont12Manager
 .public _ZN8Graphics14LoadBGXCharSubEiPvm
 .public GXS_LoadBG0Scr
 .public GXS_LoadBG2Char

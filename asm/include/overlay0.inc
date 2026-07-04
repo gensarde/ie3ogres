@@ -20,7 +20,7 @@
 .public ov65_0211CEC0
 .public ov66_0211A480
 .public ov53_0211EA50
-.public ov55_0211D784
+.public _ZTV24CMainMenuScreenEnterName
 .public ov61_0211F2D0
 .public ov44_02122640
 .public ov43_0211FBD0
@@ -177,7 +177,7 @@
 .public _ZN11AudioPlayer10playEffectEi
 .public FUN_ov16_020efa9c
 .public strcat
-.public unk_0209A0F4
+.public gKeysRepeated
 .public unk_020A1640
 .public FUN_ov16_0210f484
 .public FUN_ov16_0210e7d0
@@ -428,7 +428,7 @@
 .public FUN_ov16_020f2118
 .public _ZN12CFontManager10setSpacingEii
 .public _ZN12CFontManager12resetSpacingEv
-.public gFont12
+.public gFont12Manager
 .public gFont8
 .public _ZN8Graphics16LoadBGPaletteSubEv
 .public _ZN8Graphics14LoadBGXCharSubEiPvm
@@ -462,7 +462,7 @@
 .public FUN_ov16_020f2fa8
 .public FUN_ov16_020f2f20
 .public _ZN7Archive16RequestNewReadExEPKcP9SFileDatalmi
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public _ZN7Archive20GetFaceOffsetAndSizeEPvP4UnithPlPm
 .public FUN_ov16_020f0bcc
 .public FUN_ov16_020f0b3c
@@ -470,7 +470,7 @@
 .public _ZN7Archive24GetBodyPlttOffsetAndSizeEPviiPlPm
 .public _ZN7Archive11ReadFromSFPEPcP9SFileDataS0_
 .public _ZN8Graphics15LoadTempPaletteEP10GXBGPltt1612EngineSelecti
-.public _ZN8Graphics11SetupScreenEPtmii
+.public _ZN8Graphics11SetupScreenEPvmii
 .public G2S_GetBG1CharPtr
 .public GXS_LoadBG1Char
 .public G2S_GetBG2CharPtr

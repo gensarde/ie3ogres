@@ -54,7 +54,7 @@ _02124DA8:
 	mov r6, #0
 	ldr r0, _02124F30 ; =gLogicThink
 	mov r1, r6
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r0, r6
 	bl FUN_ov1_020dc1f4
 	mov r6, r0
@@ -92,7 +92,7 @@ _02124DF8:
 _02124E3C:
 	ldr r0, _02124F30 ; =gLogicThink
 	mov r1, r4
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r0, r4
 	bl FUN_ov1_020dc1f4
 	mov r6, r0
@@ -284,7 +284,7 @@ _021250A8:
 	add r2, r6, #1
 	mov r1, #0x30
 	mov r3, #0
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r6, r0
 _02125100:
 	mov r0, r8
@@ -307,7 +307,7 @@ _02125100:
 	add r2, r6, #1
 	mov r1, #0x30
 	mov r3, #0
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r6, r0
 _02125158:
 	ldrb r0, [r5, #0x1a]

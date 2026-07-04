@@ -7978,7 +7978,7 @@ _02141CB4:
 	beq _02141D00
 	ldr r0, _02141DD8 ; =gLogicThink
 	mov r1, r11
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	cmp r0, #0
 	beq _02141D00
 	ldrb r0, [r0, #0x42]
@@ -12460,7 +12460,7 @@ FUN_ov132_021457b8: ; 0x021457B8
 	ldr r6, _02145834 ; =gLogicThink
 	mov r1, r0
 	mov r0, r6
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r4, r0
 	mov r0, r5
 	bl FUN_ov132_0215a440
@@ -13566,7 +13566,7 @@ _02146624:
 	bl MI_CpuCopy8
 	mov r0, r5
 	mov r1, r4
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	ldrb r0, [r0, #0x43]
 	strb r0, [r7, #0x4e9]
 	ldmfd sp!, {r4, r5, r6, r7, r8, r9, r10, pc}
@@ -13765,7 +13765,7 @@ _02146924:
 	blt _02146898
 	ldr r0, _02146944 ; =gLogicThink
 	mov r1, #1
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	ldrb r1, [r7, #0x4e9]
 	strb r1, [r0, #0x43]
 	ldmfd sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
@@ -13788,7 +13788,7 @@ FUN_ov132_02146950: ; 0x02146950
 	ldr r6, _02146A2C ; =gLogicThink
 	mov r1, r0
 	mov r0, r6
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	cmp r0, #0
 	moveq r0, #0
 	ldmeqfd sp!, {r3, r4, r5, r6, r7, pc}
@@ -13863,7 +13863,7 @@ _02146A70:
 	ldr r6, _02146B3C ; =gLogicThink
 	mov r1, r0
 	mov r0, r6
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	cmp r0, #0
 	moveq r0, #0
 	ldmeqfd sp!, {r3, r4, r5, r6, r7, pc}
@@ -13927,7 +13927,7 @@ FUN_ov132_02146b48: ; 0x02146B48
 	ldr r6, _02146C24 ; =gLogicThink
 	mov r1, r0
 	mov r0, r6
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	cmp r0, #0
 	moveq r0, #0
 	ldmeqfd sp!, {r3, r4, r5, r6, r7, pc}
@@ -13991,7 +13991,7 @@ FUN_ov132_02146c30: ; 0x02146C30
 	ldr r6, _02146D0C ; =gLogicThink
 	mov r1, r0
 	mov r0, r6
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	cmp r0, #0
 	moveq r0, #0
 	ldmeqfd sp!, {r3, r4, r5, r6, r7, pc}
@@ -16678,7 +16678,7 @@ FUN_ov132_02149128: ; 0x02149128
 	bl FUN_ov16_020f081c
 	mov r1, r0
 	ldr r0, _021491A8 ; =gLogicThink
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	cmp r0, #0
 	ldmeqfd sp!, {r4, pc}
 	cmp r4, #0
@@ -35716,7 +35716,7 @@ FUN_ov132_02159f8c: ; 0x02159F8C
 	ldr r5, _02159FD4 ; =gLogicThink
 	mov r6, r2
 	mov r0, r5
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r4, r0
 	cmp r6, #0
 	movle r0, #0

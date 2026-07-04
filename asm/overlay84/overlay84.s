@@ -337,7 +337,7 @@ FUN_ov84_0211a328: ; 0x0211A328
 	bl FUN_ov16_020f081c
 	mov r1, r0
 	ldr r0, _0211A3F0 ; =gLogicThink
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r7, #0
 	mov r9, r0
 	mov r6, r7

@@ -2130,7 +2130,7 @@ FUN_ov62_0211bd1c: ; 0x0211BD1C
 	ldr r1, [r9, #0x60]
 	ldr r7, [sp, #0x20]
 	bl _ZN12C3DPlaneCtrl12getTexHeightEi
-	ldr r4, _0211BE84 ; =gFont12
+	ldr r4, _0211BE84 ; =gFont12Manager
 	mov r8, r0
 	ldr r0, [r4]
 	mov r1, r6
@@ -2184,7 +2184,7 @@ _0211BE38:
 	ldr r1, [sp, #0x24]
 	mov r0, r7
 	bl DC_FlushRange
-	ldr r0, _0211BE84 ; =gFont12
+	ldr r0, _0211BE84 ; =gFont12Manager
 	ldr r0, [r0]
 	bl _ZN12CFontManager12resetSpacingEv
 	ldr r0, _0211BE80 ; =g3DPlaneCtrl
@@ -2200,7 +2200,7 @@ _0211BE38:
 	add sp, sp, #0x44
 	ldmfd sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 _0211BE80: .word g3DPlaneCtrl
-_0211BE84: .word gFont12
+_0211BE84: .word gFont12Manager
 _0211BE88: .word gLogicThink
 	arm_func_end FUN_ov62_0211bd1c
 
@@ -4662,7 +4662,7 @@ _0211E0F4:
 	bl FUN_ov16_020f081c
 	mov r1, r0
 	ldr r0, _0211E318 ; =gLogicThink
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r4, r0
 	ldr r0, [sp, #4]
 	add r1, sp, #0x8c
@@ -4970,7 +4970,7 @@ FUN_ov62_0211e544: ; 0x0211E544
 	mov r5, #1
 	mov r10, #0
 	bl FUN_ov62_0211c7e0
-	ldr r2, _0211EF0C ; =0x0209A0F4
+	ldr r2, _0211EF0C ; =gKeysRepeated
 	add r1, r9, #0x500
 	ldrh r2, [r2]
 	ldrh r7, [r1, #0x10]
@@ -5636,7 +5636,7 @@ _0211EF00:
 	add sp, sp, #8
 	ldmfd sp!, {r4, r5, r6, r7, r8, r9, r10, pc}
 _0211EF08: .word gSprButtonCtrl
-_0211EF0C: .word unk_0209A0F4
+_0211EF0C: .word gKeysRepeated
 _0211EF10: .word gSprAnimCtrl
 _0211EF14: .word gAudioPlayer
 _0211EF18: .word 0x000040A6
@@ -7126,7 +7126,7 @@ FUN_ov62_02120368: ; 0x02120368
 	ldr r1, [r8]
 	bl _ZN12C3DPlaneCtrl12getTexHeightEi
 	mov r5, r0
-	ldr r0, _02120560 ; =gFont12
+	ldr r0, _02120560 ; =gFont12Manager
 	mov r1, #1
 	ldr r0, [r0]
 	mov r2, #5
@@ -7138,14 +7138,14 @@ FUN_ov62_02120368: ; 0x02120368
 	str r6, [sp, #0x10]
 	str r6, [sp, #0x14]
 	str r6, [sp, #0x18]
-	ldr r0, _02120560 ; =gFont12
+	ldr r0, _02120560 ; =gFont12Manager
 	str r6, [sp, #0x1c]
 	ldr r1, [sp, #0x20]
 	ldr r0, [r0]
 	mov r2, r7
 	mov r3, r11
 	bl _ZN12CFontManager15drawTextTex4bppEPcPviiiiiPNS_11GlyphBoundsEiiNS_9AlignmentE
-	ldr r0, _02120560 ; =gFont12
+	ldr r0, _02120560 ; =gFont12Manager
 	ldr r0, [r0]
 	bl _ZN12CFontManager12resetSpacingEv
 	ldr r3, [sp, #0x28]
@@ -7200,7 +7200,7 @@ FUN_ov62_02120368: ; 0x02120368
 	add sp, sp, #0x34
 	ldmfd sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 _0212055C: .word g3DPlaneCtrl
-_02120560: .word gFont12
+_02120560: .word gFont12Manager
 	arm_func_end FUN_ov62_02120368
 
 	arm_func_start FUN_ov62_02120564

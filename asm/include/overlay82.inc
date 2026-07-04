@@ -88,7 +88,7 @@
 .public ov1_020E9482
 .public ov1_020EAAA8
 .public _ZN11AudioPlayer12FUN_0202b838Eiii
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public FUN_ov126_021363ac
 .public ov1_020EAAB4
 .public FUN_ov126_02134088
@@ -146,7 +146,7 @@
 .public G2_GetBG2CharPtr
 .public G2_GetBG3CharPtr
 .public FUN_ov1_020dc088
-.public _ZN8Graphics11SetupScreenEPtmii
+.public _ZN8Graphics11SetupScreenEPvmii
 .public GX_LoadBG1Char
 .public FUN_ov16_020f066c
 .public FUN_ov16_020f068c

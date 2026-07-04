@@ -590,7 +590,7 @@ FUN_ov57_0211a66c: ; 0x0211A66C
 	str r0, [sp, #0xc]
 	ldr r0, _0211A7C8 ; =gLogicThink
 	ldr r1, [sp, #0xc]
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r7, r0
 	add r0, r10, #0xe4
 	mov r5, #0
@@ -2645,7 +2645,7 @@ FUN_ov57_0211c1dc: ; 0x0211C1DC
 	mov r3, #0
 	mul r1, r5, r1
 	mov r1, r1, lsl #1
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	ldrh r3, [r4, #0xc]
 	ldrh r2, [r4, #0xe]
 	ldr r0, [r4, #4]
@@ -3362,7 +3362,7 @@ _0211CCA4:
 	ldr r7, _0211CE08 ; =gLogicThink
 	mov r1, r5
 	mov r0, r7
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	movs r6, r0
 	addeq sp, sp, #0x10
 	ldmeqfd sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
@@ -5430,7 +5430,7 @@ FUN_ov57_0211e9d4: ; 0x0211E9D4
 	mov r1, r6
 	ldr r0, [r0]
 	bl _ZN12C3DPlaneCtrl12getTexHeightEi
-	ldr r11, _0211EB30 ; =gFont12
+	ldr r11, _0211EB30 ; =gFont12Manager
 	mov r9, r0
 	ldr r0, [r11]
 	mov r1, r8
@@ -5503,13 +5503,13 @@ _0211EAE8:
 	str r4, [sp, #8]
 	bl FUN_02059288
 _0211EB18:
-	ldr r0, _0211EB30 ; =gFont12
+	ldr r0, _0211EB30 ; =gFont12Manager
 	ldr r0, [r0]
 	bl _ZN12CFontManager12resetSpacingEv
 	add sp, sp, #0x28
 	ldmfd sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
 _0211EB2C: .word g3DPlaneCtrl
-_0211EB30: .word gFont12
+_0211EB30: .word gFont12Manager
 _0211EB34: .word gLogicThink
 	arm_func_end FUN_ov57_0211e9d4
 
@@ -6413,7 +6413,7 @@ FUN_ov57_0211f7e8: ; 0x0211F7E8
 	ldr r4, _0211F868 ; =0x0209A454
 	ldr r0, _0211F86C ; =gLogicThink
 	ldrb r1, [r4, #0x28]
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	cmp r0, #0
 	moveq r0, #0
 	ldmeqfd sp!, {r4, pc}
@@ -6505,7 +6505,7 @@ _0211F910: .word ov57_021247F8
 FUN_ov57_0211f914: ; 0x0211F914
 	stmfd sp!, {r4, r5, r6, r7, r8, r9, r10, r11, lr}
 	sub sp, sp, #0xc
-	ldr r3, _02120228 ; =0x0209A0F4
+	ldr r3, _02120228 ; =gKeysRepeated
 	ldr r2, _0212022C ; =gSprAnimCtrl
 	ldrh r3, [r3]
 	mov r8, r1
@@ -7146,7 +7146,7 @@ _02120210:
 _02120220:
 	add sp, sp, #0xc
 	ldmfd sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
-_02120228: .word unk_0209A0F4
+_02120228: .word gKeysRepeated
 _0212022C: .word gSprAnimCtrl
 _02120230: .word unk_0209A454
 _02120234: .word gSprButtonCtrl
@@ -8702,7 +8702,7 @@ _02121820:
 	bne _021218B4
 	ldrb r1, [r5, #0x28]
 	mov r0, r7
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r6, r0
 	ldrb r0, [r5, #0x28]
 	bl FUN_ov16_020f078c
@@ -8951,7 +8951,7 @@ _02121BD8:
 _02121BF8:
 	ldr r0, _02121D8C ; =gLogicThink
 	mov r1, r9
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	ldrb r1, [r5, #5]
 	strh r1, [r0, #0x22]
 	b _02121C50
@@ -9551,7 +9551,7 @@ _02122438:
 	mov r2, #3
 	mov r3, #2
 	bl _ZN12C3DPlaneCtrl7setFlagEiitb
-	ldr r0, _021224FC ; =gFont12
+	ldr r0, _021224FC ; =gFont12Manager
 	mov r1, r5
 	ldr r0, [r0]
 	mov r2, #4
@@ -9578,7 +9578,7 @@ _02122438:
 	mov r3, #9
 	bl FUN_ov16_020f2304
 _021224D4:
-	ldr r0, _021224FC ; =gFont12
+	ldr r0, _021224FC ; =gFont12Manager
 	ldr r0, [r0]
 	bl _ZN12CFontManager12resetSpacingEv
 	add sp, sp, #0x9c
@@ -9588,7 +9588,7 @@ _021224EC: .word gSprButtonCtrl
 _021224F0: .word FUN_ov57_021222d0
 _021224F4: .word FUN_ov57_02122370
 _021224F8: .word ov57_02124C90
-_021224FC: .word gFont12
+_021224FC: .word gFont12Manager
 	arm_func_end FUN_ov57_0212239c
 
 	arm_func_start FUN_ov57_02122500
@@ -9833,7 +9833,7 @@ _021227F0:
 	str r0, [sp, #0x28]
 	mov r0, r1, asr #0x10
 	str r0, [sp, #0x2c]
-	ldr r4, _02122B34 ; =gFont12
+	ldr r4, _02122B34 ; =gFont12Manager
 	b _02122A5C
 _0212288C:
 	ldr r2, [sp, #0x38]
@@ -10009,7 +10009,7 @@ _02122B24: .word g3DPlaneCtrl
 _02122B28: .word unk_0209A454
 _02122B2C: .word ov57_021247D8
 _02122B30: .word ov57_021247C0
-_02122B34: .word gFont12
+_02122B34: .word gFont12Manager
 _02122B38: .word gSprButtonCtrl
 	arm_func_end FUN_ov57_02122554
 

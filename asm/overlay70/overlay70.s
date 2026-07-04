@@ -4061,7 +4061,7 @@ FUN_ov70_0211d7dc: ; 0x0211D7DC
 	mov r1, r7
 	bl _ZN12C3DPlaneCtrl12getTexHeightEi
 	mov r5, r0
-	ldr r0, _0211D98C ; =gFont12
+	ldr r0, _0211D98C ; =gFont12Manager
 	mov r1, #1
 	ldr r0, [r0]
 	mov r2, r1
@@ -4073,14 +4073,14 @@ FUN_ov70_0211d7dc: ; 0x0211D7DC
 	str r8, [sp, #0x10]
 	str r8, [sp, #0x14]
 	str r8, [sp, #0x18]
-	ldr r0, _0211D98C ; =gFont12
+	ldr r0, _0211D98C ; =gFont12Manager
 	str r8, [sp, #0x1c]
 	ldr r0, [r0]
 	ldr r1, [sp, #0x24]
 	mov r2, r9
 	mov r3, r6
 	bl _ZN12CFontManager15drawTextTex4bppEPcPviiiiiPNS_11GlyphBoundsEiiNS_9AlignmentE
-	ldr r0, _0211D98C ; =gFont12
+	ldr r0, _0211D98C ; =gFont12Manager
 	ldr r0, [r0]
 	bl _ZN12CFontManager12resetSpacingEv
 	ldr r3, [sp, #0x2c]
@@ -4117,7 +4117,7 @@ FUN_ov70_0211d7dc: ; 0x0211D7DC
 	add sp, sp, #0x38
 	ldmfd sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
 _0211D988: .word g3DPlaneCtrl
-_0211D98C: .word gFont12
+_0211D98C: .word gFont12Manager
 	arm_func_end FUN_ov70_0211d7dc
 
 	arm_func_start FUN_ov70_0211d990

@@ -423,7 +423,7 @@ _02125280:
 	str r1, [sp, #8]
 	ldrh r3, [r4, #0x84]
 	mov r1, #0
-	ldr r0, _02125324 ; =gFont12
+	ldr r0, _02125324 ; =gFont12Manager
 	mov r3, r3, lsl #3
 	str r3, [sp, #0xc]
 	ldrh r12, [r4, #0x86]
@@ -448,7 +448,7 @@ _02125280:
 	ldmfd sp!, {r3, r4, r5, r6, pc}
 _0212531C: .word ov110_02126FA4
 _02125320: .word gLogicThink
-_02125324: .word gFont12
+_02125324: .word gFont12Manager
 	arm_func_end FUN_ov110_02125190
 
 	arm_func_start FUN_ov110_02125328
@@ -639,7 +639,7 @@ _021255A4:
 	add r6, r6, #1
 	cmp r6, #8
 	blt _021255A4
-	ldr r6, _02125740 ; =gFont12
+	ldr r6, _02125740 ; =gFont12Manager
 	mov r1, r5
 	ldr r0, [r6]
 	mov r2, #5
@@ -698,7 +698,7 @@ _02125684:
 	add r6, r6, #1
 	cmp r6, #8
 	blt _02125684
-	ldr r6, _02125740 ; =gFont12
+	ldr r6, _02125740 ; =gFont12Manager
 	mov r1, r5
 	ldr r0, [r6]
 	mov r2, #5
@@ -733,7 +733,7 @@ _02125684:
 	ldmfd sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
 _02125738: .word gLogicThink
 _0212573C: .word ov110_02127084
-_02125740: .word gFont12
+_02125740: .word gFont12Manager
 _02125744: .word ov110_02127088
 	arm_func_end FUN_ov110_02125328
 
@@ -1707,7 +1707,7 @@ FUN_ov110_021264e0: ; 0x021264E0
 	mov r3, #0
 	mul r1, r12, r1
 	mov r1, r1, lsl #1
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r2, r0
 _02126520:
 	mov r0, r2

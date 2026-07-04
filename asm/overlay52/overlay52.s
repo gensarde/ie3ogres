@@ -259,7 +259,7 @@ FUN_ov52_0211a214: ; 0x0211A214
 	bl _ZN12C3DPlaneCtrl7acquireEv
 	ldr r4, _0211A494 ; =gLogicThink
 	mov r0, r4
-	bl FUN_0204eba0
+	bl _ZN11CLogicThink12FUN_0204eba0Ev
 	mov r0, r4
 	bl FUN_02071fac
 	add r0, r6, #0x28c
@@ -523,7 +523,7 @@ _0211A60C:
 	bl _ZN12C3DPlaneCtrl7releaseEv
 	ldr r4, _0211A65C ; =gLogicThink
 	mov r0, r4
-	bl FUN_0204ec3c
+	bl _ZN11CLogicThink12FUN_0204ec3cEv
 	mov r0, r4
 	bl FUN_02072020
 	ldmfd sp!, {r4, r5, r6, r7, r8, r9, r10, pc}
@@ -983,7 +983,7 @@ _0211AC34:
 _0211AC44:
 	ldr r0, _0211AC90 ; =gLogicThink
 	mov r1, #1
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	add r1, r7, #0x1000
 	str r0, [r1, #0x6b8]
 	b _0211AC60
@@ -2381,7 +2381,7 @@ _0211BE64:
 	add sp, sp, #0x20
 	ldmfd sp!, {r3, r4, r5, r6, r7, pc}
 _0211BECC:
-	ldr r6, _0211BF38 ; =gFont12
+	ldr r6, _0211BF38 ; =gFont12Manager
 	mov r7, #1
 	ldr r0, [r6]
 	mov r1, r7
@@ -2408,7 +2408,7 @@ _0211BECC:
 	add sp, sp, #0x20
 	ldmfd sp!, {r3, r4, r5, r6, r7, pc}
 _0211BF34: .word gFont8
-_0211BF38: .word gFont12
+_0211BF38: .word gFont12Manager
 	arm_func_end FUN_ov52_0211be3c
 
 	arm_func_start FUN_ov52_0211bf3c
@@ -2451,7 +2451,7 @@ _0211BFC0:
 	mov r0, r6
 	mov r1, r5
 	bl DC_FlushRange
-	ldr r0, _0211C010 ; =gFont12
+	ldr r0, _0211C010 ; =gFont12Manager
 	ldr r0, [r0]
 	bl _ZN12CFontManager12resetSpacingEv
 	ldr r0, _0211C00C ; =g3DPlaneCtrl
@@ -2468,7 +2468,7 @@ _0211BFC0:
 	ldmfd sp!, {r4, r5, r6, r7, pc}
 _0211C008: .word gFont8
 _0211C00C: .word g3DPlaneCtrl
-_0211C010: .word gFont12
+_0211C010: .word gFont12Manager
 	arm_func_end FUN_ov52_0211bf3c
 
 	arm_func_start FUN_ov52_0211c014
@@ -6699,7 +6699,7 @@ _0211FA3C:
 	bl FUN_0205a60c
 	ldr r1, _0211FB04 ; =0x0209A0F0
 	ldr r0, _0211FB08 ; =0x0209A0E8
-	ldr r2, _0211FB0C ; =0x0209A0F4
+	ldr r2, _0211FB0C ; =gKeysRepeated
 	ldrh r1, [r1]
 	ldrh r0, [r0]
 	ldrh r2, [r2]
@@ -6731,7 +6731,7 @@ _0211FAFC: .word g3DGameChar
 _0211FB00: .word gDeltaTime
 _0211FB04: .word unk_0209A0F0
 _0211FB08: .word unk_0209A0E8
-_0211FB0C: .word unk_0209A0F4
+_0211FB0C: .word gKeysRepeated
 	arm_func_end FUN_ov52_0211f948
 
 	arm_func_start FUN_ov52_0211fb10
@@ -6808,7 +6808,7 @@ _0211FC10:
 	mov r10, #1
 	ldr r0, _0211FEF8 ; =gLogicThink
 	mov r1, r10
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r7, r0
 	ldrh r1, [r7, #0x30]
 	add r0, r4, #0x108
@@ -6939,7 +6939,7 @@ _0211FDF8:
 	strh r6, [r2, #0x6e]
 	strh r11, [r2, #0x70]
 	mov r5, r1
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	ldr r1, [r4, #0x138]
 	cmp r1, #0
 	cmpne r1, #1
@@ -7295,7 +7295,7 @@ _021202F0:
 	mov r8, #1
 	ldr r0, _02120390 ; =gLogicThink
 	mov r1, r8
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r6, #5
 	add r5, sp, #0x18
 	mov r7, r0

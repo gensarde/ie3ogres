@@ -6113,7 +6113,7 @@ FUN_ov16_020fbf60: ; 0x020FBF60
 	bl FUN_ov16_020f0810
 	mov r1, r0
 	ldr r0, _020FC284 ; =gLogicThink
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	movs r10, r0
 	addeq sp, sp, #0x210
 	moveq r0, #0
@@ -6320,7 +6320,7 @@ FUN_ov16_020fc288: ; 0x020FC288
 	bl FUN_ov16_020f0810
 	mov r1, r0
 	ldr r0, _020FC474 ; =gLogicThink
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	cmp r0, #0
 	addeq sp, sp, #0x20
 	moveq r0, #0
@@ -13730,7 +13730,7 @@ _021025B4:
 	bl FUN_ov16_020f0810
 	mov r1, r0
 	ldr r0, _02102698 ; =gLogicThink
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	ldrh r6, [r0, #0x28]
 	cmp r6, #0
 	ldreqh r6, [r0, #0x26]
@@ -14641,7 +14641,7 @@ _0210328C:
 _02103290:
 	cmp r5, #0
 	beq _02103374
-	ldr r0, _021033E4 ; =gFont12
+	ldr r0, _021033E4 ; =gFont12Manager
 	add r5, sp, #0x23
 	ldr r0, [r0]
 	mov r1, r5
@@ -14685,7 +14685,7 @@ _02103328:
 	cmp r0, #0xa
 	cmpne r0, #0xc
 	beq _0210334C
-	ldr r0, _021033E4 ; =gFont12
+	ldr r0, _021033E4 ; =gFont12Manager
 	mov r1, r6
 	ldr r0, [r0]
 	bl _ZN12CFontManager12getCharWidthEPc
@@ -14731,7 +14731,7 @@ _02103380:
 _021033D8: .word ov16_0211798C
 _021033DC: .word ov16_02119C90
 _021033E0: .word 0x00007FFF
-_021033E4: .word gFont12
+_021033E4: .word gFont12Manager
 	arm_func_end FUN_ov16_02103044
 
 	arm_func_start FUN_ov16_021033e8
@@ -24694,7 +24694,7 @@ FUN_ov16_0210bca4: ; 0x0210BCA4
 	ldr r5, _0210BD68 ; =gLogicThink
 	mov r1, r0
 	mov r0, r5
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	ldr r1, [sp]
 	strh r1, [r0, #0x2e]
 	mov r0, r6
@@ -25897,7 +25897,7 @@ _0210CD14:
 	mov r5, #0
 	mov r0, r6
 	mov r1, r5
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r4, r0
 	mov r0, r6
 	mov r1, r5
@@ -26334,7 +26334,7 @@ FUN_ov16_0210d2e0: ; 0x0210D2E0
 	cmp r6, #0
 	bne _0210D358
 	mov r0, r7
-	bl FUN_0204eba0
+	bl _ZN11CLogicThink12FUN_0204eba0Ev
 	ldr r6, [r7, #0x7ec]
 	mov r5, r9
 _0210D358:
@@ -26371,7 +26371,7 @@ _0210D3BC:
 	cmp r5, #0
 	beq _0210D3D0
 	ldr r0, _0210D498 ; =gLogicThink
-	bl FUN_0204ec3c
+	bl _ZN11CLogicThink12FUN_0204ec3cEv
 _0210D3D0:
 	cmp r7, #0
 	mvn r5, #0

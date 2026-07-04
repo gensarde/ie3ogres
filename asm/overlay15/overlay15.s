@@ -3150,7 +3150,7 @@ FUN_ov15_020e1b98: ; 0x020E1B98
 	add r2, r3, #1
 	mov r3, #0
 	str r4, [r5, #0x60]
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	ldrh r1, [r5, #0x64]
 	ldrh r0, [r5, #0x66]
 	ldr r2, [sp, #8]
@@ -3316,7 +3316,7 @@ FUN_ov15_020e1ed8: ; 0x020E1ED8
 	mov r8, r1
 	mov r7, r2
 	bl FUN_ov16_020f2f20
-	ldr r5, _020E1F74 ; =gFont12
+	ldr r5, _020E1F74 ; =gFont12Manager
 	mov r6, #1
 	ldr r0, [r5]
 	mov r1, r6
@@ -3348,7 +3348,7 @@ FUN_ov15_020e1ed8: ; 0x020E1ED8
 	bl DC_FlushRange
 	add sp, sp, #0x1c
 	ldmfd sp!, {r3, r4, r5, r6, r7, r8, pc}
-_020E1F74: .word gFont12
+_020E1F74: .word gFont12Manager
 	arm_func_end FUN_ov15_020e1ed8
 
 	arm_func_start FUN_ov15_020e1f78
@@ -4811,7 +4811,7 @@ FUN_ov15_020e3310: ; 0x020E3310
 	mov r3, r4
 	add r0, r5, r0
 	mov r2, #0
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r0, r5
 	mov r1, r4
 	mov r2, r4
@@ -4827,7 +4827,7 @@ _020E3350:
 	mov r2, r4
 	mov r3, r7
 	add r0, r8, r0
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r5, r0
 	mov r0, r8
 	mov r1, r4
@@ -4843,7 +4843,7 @@ _020E3390:
 	mov r3, r7
 	add r0, r8, r0
 	add r2, r5, #1
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r5, r0
 	mov r0, r8
 	mov r2, r7
@@ -4859,7 +4859,7 @@ _020E33CC:
 	mov r3, r7
 	add r0, r8, r0
 	add r2, r5, #1
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r0, r8
 	mov r2, r7
 	mov r1, #1
@@ -4875,7 +4875,7 @@ _020E3404:
 	mov r2, r4
 	mov r3, r7
 	add r0, r8, r0
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r5, r0
 	mov r0, r8
 	mov r1, r4
@@ -4896,7 +4896,7 @@ _020E3444:
 	mov r3, #0
 	mul r1, r4, r1
 	mov r1, r1, lsl #1
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	ldmfd sp!, {r4, r5, r6, r7, r8, pc}
 	arm_func_end FUN_ov15_020e3310
 
@@ -5034,7 +5034,7 @@ FUN_ov15_020e35cc: ; 0x020E35CC
 	add r0, r8, #0x20
 	strb r6, [r8, #0x1c]
 	bl FUN_ov16_020f2f20
-	ldr r0, _020E37EC ; =gFont12
+	ldr r0, _020E37EC ; =gFont12Manager
 	mov r1, r7
 	ldr r0, [r0]
 	mov r2, r4
@@ -5117,7 +5117,7 @@ _020E3754:
 	mov r3, r3, lsl #3
 	bl FUN_ov16_020f2184
 _020E37B4:
-	ldr r0, _020E37EC ; =gFont12
+	ldr r0, _020E37EC ; =gFont12Manager
 	ldr r0, [r0]
 	bl _ZN12CFontManager12resetSpacingEv
 	ldrh r2, [r8, #0x2c]
@@ -5131,7 +5131,7 @@ _020E37B4:
 	add sp, sp, #0x34
 	ldmfd sp!, {r3, r4, r5, r6, r7, r8, pc}
 _020E37E8: .word gBgMenuManager
-_020E37EC: .word gFont12
+_020E37EC: .word gFont12Manager
 _020E37F0: .word ov15_020E6D20
 _020E37F4: .word ov15_020E6D24
 	arm_func_end FUN_ov15_020e35cc

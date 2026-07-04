@@ -40,7 +40,7 @@
 .public FUN_ov16_0210ec34
 .public FUN_ov16_0210ef88
 .public FUN_ov16_0210eb3c
-.public FUN_020460a8
+.public _ZN17UnkClass_020A9C4012FUN_020460a8Eii
 .public unk_020A9C40
 .public MI_CpuFill8
 .public _ZN12C3DPlaneCtrl12setColorMaskEit
@@ -67,7 +67,7 @@
 .public FUN_ov16_0210e15c
 .public FUN_ov16_0210f468
 .public FUN_ov16_020f53b0
-.public unk_0209A0F4
+.public gKeysRepeated
 .public gSprAnimCtrl
 .public unk_020A1640
 .public unk_0209A454

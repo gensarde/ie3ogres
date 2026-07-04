@@ -9,7 +9,7 @@
 .public FUN_ov16_020efa9c
 .public _ZN7Archive20GetFaceOffsetAndSizeEPvP4UnithPlPm
 .public FUN_02058800
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public FUN_ov16_020f0b3c
 .public _ZN7Archive20GetBodyOffsetAndSizeEPvP4UnitiiPlPm
 .public _ZN7Archive24GetBodyPlttOffsetAndSizeEPviiPlPm
@@ -97,7 +97,7 @@
 .public FUN_ov16_020edf8c
 .public FUN_0206ceac
 .public FUN_0206d150
-.public FUN_020460a8
+.public _ZN17UnkClass_020A9C4012FUN_020460a8Eii
 .public unk_020A9C40
 .public FUN_02049fc8
 .public FUN_ov16_020ee034

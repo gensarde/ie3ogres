@@ -453,7 +453,7 @@
 .public _ZN18CBgMenuRadioButton12deactivateGxEh
 .public _ZN18CBgMenuRadioButton13releaseButtonEib
 .public FUN_ov16_020f2fa8
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public _ZN7Archive26PackHeaderGetOffsetAndSizeEPvmPlPm
 .public _ZN7Archive10DeallocateEP9SFileData
 .public FUN_ov16_020f2fe4
@@ -463,7 +463,7 @@
 .public GX_LoadBG1Char
 .public _ZN8Graphics11SetupScreenEPvii
 .public FUN_ov16_020f2ea8
-.public _ZN8Graphics11SetupScreenEPtmii
+.public _ZN8Graphics11SetupScreenEPvmii
 .public _ZN14CBgMenuManager9hideGroupE12EngineSelecti
 .public _ZN14CBgMenuManager6showIDE12EngineSelecti
 .public _ZN14CBgMenuManager6hideIDE12EngineSelecti

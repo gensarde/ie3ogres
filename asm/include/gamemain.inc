@@ -44,7 +44,7 @@
 .public TP_WaitCalibratedResult
 .public unk_0209A0F0
 .public unk_0209A0E8
-.public unk_0209A0F4
+.public gKeysRepeated
 .public unk_020B5B58
 .public unk_020B5B00
 .public unk_020B5B40

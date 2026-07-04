@@ -9,13 +9,13 @@
 .public _ZN10CAllocator8allocateEm
 .public DC_FlushRange
 .public FUN_ov16_020f2184
-.public gFont12
+.public gFont12Manager
 .public _ZN14CBgMenuManager9addStaticE12EngineSelectiiiiaahhhPv
 .public gBgMenuManager
 .public _ZN14CBgMenuManager11deleteGroupE12EngineSelectit
 .public unk_02099E8E
 .public unk_020A12C0
-.public _ZN8Graphics11SetupScreenEPtmii
+.public _ZN8Graphics11SetupScreenEPvmii
 .public _ZN8Graphics11SetupScreenEPvii
 .public GXS_LoadBG1Char
 .public _ZN8Graphics14LoadBGXCharSubEiPvm

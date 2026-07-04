@@ -4,7 +4,7 @@
 .public _ZN7Archive14RequestNewReadEPKcP9SFileData
 .public _ZN7Archive11ReadFromSFPEPcP9SFileDataS0_
 .public _ZN7Archive10DeallocateEP9SFileData
-.public _ZN8Graphics11SetupScreenEPtmii
+.public _ZN8Graphics11SetupScreenEPvmii
 .public _ZN8Graphics22LoadTempPaletteFromPacEPv12EngineSelecti
 .public _ZN8Graphics16LoadBGPaletteSubEv
 .public _ZN14CBgMenuManager11deleteGroupE12EngineSelectit
@@ -17,7 +17,7 @@
 .public _ZN12CFontManager10setSpacingEii
 .public STD_GetStringLength
 .public DC_FlushRange
-.public gFont12
+.public gFont12Manager
 .public GXS_LoadBG0Char
 .public GXS_LoadBG0Scr
 .public G2S_GetBG1CharPtr

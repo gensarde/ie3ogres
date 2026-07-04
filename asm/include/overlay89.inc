@@ -27,7 +27,7 @@
 .public gDeltaTime
 .public g3DSpriteCtrl
 .public g2DGChar
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public FUN_0204c778
 .public FUN_ov16_020efa9c
 .public FUN_0206d64c
@@ -93,7 +93,7 @@
 .public FUN_02059288
 .public _ZN12C3DPlaneCtrl8setTexSTEiiss
 .public _ZN12C3DPlaneCtrl8setTexWHEiiss
-.public gFont12
+.public gFont12Manager
 .public _ZN12C3DPlaneCtrl12setColorMaskEit
 .public _ZN12C3DPlaneCtrl6createEib
 .public FUN_ov16_0210fba4
@@ -102,10 +102,10 @@
 .public _ZN11AudioPlayer10playEffectEi
 .public gAudioPlayer
 .public _ZN12C3DPlaneCtrl9clearFlagEiit
-.public FUN_02045b40
+.public _ZN17UnkClass_020A9C4012FUN_02045b40Eii
 .public unk_02099EA4
 .public FUN_ov16_0210f468
-.public unk_0209A0F4
+.public gKeysRepeated
 .public _s32_div_f
 .public FUN_ov16_0210fc74
 .public FUN_ov16_0210e6fc

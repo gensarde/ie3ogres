@@ -762,7 +762,7 @@ FUN_ov33_0211a7fc: ; 0x0211A7FC
 	add r2, r3, #1
 	mov r3, #0
 	str r4, [r8, #0x74]
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	ldrh r1, [r8, #0x78]
 	ldrh r0, [r8, #0x7a]
 	ldr r2, [sp, #8]
@@ -937,7 +937,7 @@ FUN_ov33_0211ab44: ; 0x0211AB44
 	mov r9, r1
 	mov r8, r2
 	bl FUN_ov16_020f2f20
-	ldr r5, _0211ABE0 ; =gFont12
+	ldr r5, _0211ABE0 ; =gFont12Manager
 	mov r7, #1
 	mov r6, #4
 	ldr r0, [r5]
@@ -969,7 +969,7 @@ FUN_ov33_0211ab44: ; 0x0211AB44
 	bl DC_FlushRange
 	add sp, sp, #0x1c
 	ldmfd sp!, {r4, r5, r6, r7, r8, r9, pc}
-_0211ABE0: .word gFont12
+_0211ABE0: .word gFont12Manager
 	arm_func_end FUN_ov33_0211ab44
 
 	arm_func_start FUN_ov33_0211abe4

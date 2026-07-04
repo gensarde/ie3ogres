@@ -30,7 +30,7 @@
 .public _ZN7Archive10DeallocateEP9SFileData
 .public FUN_ov16_020f5278
 .public _ZN7Archive17ReadNewUncompressEPKcP9SFileData
-.public FUN_0204eba0
+.public _ZN11CLogicThink12FUN_0204eba0Ev
 .public FUN_0206c158
 .public FUN_ov16_020efa04
 .public gAudioPlayer
@@ -44,7 +44,7 @@
 .public FUN_ov16_021105c0
 .public FUN_ov16_020f57b0
 .public FUN_ov16_020f52c4
-.public FUN_0204ec3c
+.public _ZN11CLogicThink12FUN_0204ec3cEv
 .public FUN_ov16_020eef64
 .public FUN_ov16_0210e9d8
 .public FUN_ov16_0210e0d8
@@ -108,7 +108,7 @@
 .public FUN_ov16_0210efac
 .public FUN_ov16_0210f484
 .public FUN_ov16_0210f20c
-.public FUN_02045b40
+.public _ZN17UnkClass_020A9C4012FUN_02045b40Eii
 .public unk_020AF740
 .public FX_Atan2Idx
 .public abs

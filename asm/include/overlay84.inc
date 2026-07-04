@@ -16,7 +16,7 @@
 .public _ZN7Archive14RequestNewReadEPKcP9SFileData
 .public FUN_ov16_020f5450
 .public unk_020A0640
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public FUN_ov16_020efa9c
 .public FUN_ov16_020f0bcc
 .public FUN_02056ed4

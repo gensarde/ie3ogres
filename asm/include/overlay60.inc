@@ -113,7 +113,7 @@
 .public _ZN12CFontManager15drawTextTex4bppEPcPviiiiiPNS_11GlyphBoundsEiiNS_9AlignmentE
 .public _ZN12CFontManager12resetSpacingEv
 .public FUN_02059288
-.public gFont12
+.public gFont12Manager
 .public _ZN12C3DPlaneCtrl12setColorMaskEit
 .public _ZN12C3DPlaneCtrl6createEib
 .public _ZN12C3DPlaneCtrl9setTexAllEih
@@ -121,7 +121,7 @@
 .public FUN_ov16_0210e674
 .public FUN_ov16_0210fba4
 .public FUN_ov16_0210eb3c
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public FUN_02045b50
 .public FUN_0204c778
 .public FUN_0206dcd4
@@ -183,7 +183,7 @@
 .public unk_02099E8E
 .public unk_020A12C0
 .public FUN_ov16_0210f468
-.public unk_0209A0F4
+.public gKeysRepeated
 .public _s32_div_f
 .public FUN_ov16_0210fc74
 .public FUN_ov16_0210e6fc

@@ -23,7 +23,7 @@
 .public FUN_ov16_02116654
 .public gDeltaTime
 .public g3DSpriteCtrl
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public FUN_ov16_020ee034
 .public MI_CpuCopy8
 .public FUN_ov16_020edeb4
@@ -72,7 +72,7 @@
 .public FUN_02059288
 .public _ZN12C3DPlaneCtrl8setTexSTEiiss
 .public _ZN12C3DPlaneCtrl8setTexWHEiiss
-.public gFont12
+.public gFont12Manager
 .public _ZN12C3DPlaneCtrl12setColorMaskEit
 .public _ZN12C3DPlaneCtrl6createEib
 .public FUN_ov16_0210fba4
@@ -84,7 +84,7 @@
 .public _ZN12C3DPlaneCtrl9clearFlagEiit
 .public FUN_ov16_020ede60
 .public FUN_ov16_0210f468
-.public unk_0209A0F4
+.public gKeysRepeated
 .public _s32_div_f
 .public FUN_ov16_0210fc74
 .public FUN_ov16_0210e6fc

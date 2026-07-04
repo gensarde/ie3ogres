@@ -244,7 +244,7 @@ FUN_ov108_02125014: ; 0x02125014
 	bl FUN_ov16_020f0810
 	mov r1, r0
 	ldr r0, _02125158 ; =gLogicThink
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r8, r0
 	ldr r0, [r6, #0x15c]
 	cmp r0, #0
@@ -530,7 +530,7 @@ FUN_ov108_02125380: ; 0x02125380
 	str r6, [sp]
 	str r5, [sp, #4]
 	ldr r1, [r8, #4]
-	ldr r0, _021254A0 ; =gFont12
+	ldr r0, _021254A0 ; =gFont12Manager
 	str r1, [sp, #8]
 	ldrh r2, [r8, #8]
 	mov r1, r4
@@ -556,7 +556,7 @@ FUN_ov108_02125380: ; 0x02125380
 	add sp, sp, #0x3c
 	ldmfd sp!, {r4, r5, r6, r7, r8, r9, pc}
 _0212549C: .word gFont8
-_021254A0: .word gFont12
+_021254A0: .word gFont12Manager
 	arm_func_end FUN_ov108_02125380
 
 	arm_func_start FUN_ov108_021254a4
@@ -697,7 +697,7 @@ _0212564C:
 	mov r2, #4
 	str r0, [sp, #8]
 	ldrh r4, [r5, #8]
-	ldr r0, _02125744 ; =gFont12
+	ldr r0, _02125744 ; =gFont12Manager
 	mov r4, r4, lsl #3
 	str r4, [sp, #0xc]
 	ldrh r4, [r5, #0xa]
@@ -715,7 +715,7 @@ _021256C0:
 	mov r0, #1
 	stmib sp, {r0, r1}
 	ldrh r2, [r5, #8]
-	ldr r0, _02125744 ; =gFont12
+	ldr r0, _02125744 ; =gFont12Manager
 	mov r1, r4
 	mov r2, r2, lsl #3
 	str r2, [sp, #0xc]
@@ -742,7 +742,7 @@ _02125718:
 	add sp, sp, #0x28
 	ldmfd sp!, {r4, r5, r6, r7, r8, pc}
 _02125740: .word ov108_02127584
-_02125744: .word gFont12
+_02125744: .word gFont12Manager
 	arm_func_end FUN_ov108_021255cc
 
 	arm_func_start FUN_ov108_02125748
@@ -1752,7 +1752,7 @@ FUN_ov108_0212655c: ; 0x0212655C
 	mov r3, #0
 	mul r1, r12, r1
 	mov r1, r1, lsl #1
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r2, r0
 _0212659C:
 	mov r0, r2
@@ -1883,7 +1883,7 @@ FUN_ov108_02126710: ; 0x02126710
 	mov r2, r6
 	mov r3, r5
 	add r0, r4, r0
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r0, r4
 	mov r1, r5
 	mov r2, r5

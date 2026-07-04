@@ -22961,7 +22961,7 @@ _020D049C:
 	bne _020D04FC
 	ldr r0, _020D0594 ; =gLogicThink
 	mov r1, r4
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	ldrh r1, [r0, #0x2a]
 	add r2, sp, #8
 	add r3, sp, #4
@@ -22984,7 +22984,7 @@ _020D04FC:
 	bne _020D0558
 	ldr r0, _020D0594 ; =gLogicThink
 	mov r1, r7
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	ldrh r1, [r0, #0x2a]
 	add r2, sp, #8
 	add r3, sp, #4
@@ -23629,7 +23629,7 @@ _020D0E08:
 	mov r1, #0x54
 	add r2, r8, #1
 	mov r3, #0
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	b _020D0E8C
 _020D0E74:
 	add r1, r9, #0x1e
@@ -27140,7 +27140,7 @@ _020D3F48:
 	bl FUN_ov1_020e4498
 	ldr r0, _020D4250 ; =gLogicThink
 	mov r1, r5
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	ldrb r5, [r0, #0x43]
 	ldr r1, _020D425C ; =0x51EB851F
 	smull r0, r8, r1, r5
@@ -33164,7 +33164,7 @@ _020D9328:
 _020D9334:
 	ldr r0, _020D9428 ; =gLogicThink
 	ldr r1, [sp, #8]
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r8, r0
 	ldr r0, [sp, #8]
 	mov r1, #0x54
@@ -33357,7 +33357,7 @@ _020D95B0:
 	add r0, r2, r0
 	mov r3, r7
 	add r2, r8, #1
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r8, r0
 _020D95DC:
 	add r10, r10, #1
@@ -33447,7 +33447,7 @@ _020D96C8:
 	add r2, r6, #1
 	mov r1, #0x48
 	mov r3, #0
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 _020D9728:
 	mov r8, #0
 	str r8, [sp, #0x1c]
@@ -33470,7 +33470,7 @@ _020D974C:
 	add r0, r9, r0
 	add r2, r8, #1
 	mov r3, r7
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r8, r0
 	mov r0, r9
 	mov r1, #1
@@ -35622,7 +35622,7 @@ _020DB520:
 	bl MI_CpuFill8
 	ldr r0, _020DB5F8 ; =gLogicThink
 	mov r1, r4
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	movs r4, r0
 	beq _020DB5D4
 	ldr r7, _020DB5FC ; =gFont12T
@@ -36511,7 +36511,7 @@ FUN_ov1_020dc150: ; 0x020DC150
 	mov r5, r0
 	ldr r0, _020DC1EC ; =gLogicThink
 	mov r1, r5
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r4, r0
 	bl FUN_ov16_020f068c ; may be ov17 ; ov16(Mica)
 	cmp r0, #0
@@ -36558,7 +36558,7 @@ FUN_ov1_020dc1f4: ; 0x020DC1F4
 	mov r5, r0
 	ldr r0, _020DC230 ; =gLogicThink
 	mov r1, r5
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r4, r0
 	mov r0, r5
 	bl FUN_ov1_020dc150
@@ -40149,7 +40149,7 @@ FUN_ov1_020df420: ; 0x020DF420
 	mov r6, r0
 	ldr r0, _020DF504 ; =gLogicThink
 	mov r5, r1
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r1, #0xb
 	mul r4, r5, r1
 	add r1, r6, #0x128
@@ -40505,7 +40505,7 @@ _020DF8E0:
 	bne _020DFA08
 	mov r0, r4
 	mov r1, r5
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r4, r0
 	bl FUN_ov16_020f068c ; may be ov17 ; ov16(Mica)
 	cmp r0, #0
@@ -40537,7 +40537,7 @@ _020DF97C:
 	mov r5, #1
 	ldr r0, _020DFA34 ; =gLogicThink
 	mov r1, r5
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r4, r0
 	bl FUN_ov16_020f068c ; may be ov17 ; ov16(Mica)
 	cmp r0, #0
@@ -48294,7 +48294,7 @@ _020E65BC:
 	cmp r8, r0
 	bne _020E6D90
 	ldr r0, _020E6DA8 ; =gLogicThink
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r4, r0
 	add r0, r9, #0xac
 	mla r0, r7, r5, r0
@@ -49306,7 +49306,7 @@ _020E74D0:
 	bl FUN_ov16_020f081c
 	mov r1, r0
 	ldr r0, _020E75A4 ; =gLogicThink
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r1, r11
 	mov r2, r4
 	add r0, r0, r6

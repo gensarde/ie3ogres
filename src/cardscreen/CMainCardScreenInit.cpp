@@ -110,7 +110,7 @@ asm void CMainCardScreenInit::displayGraphics(void) {
 	mov r3, r6
 	add r0, r7, r0
 	add r2, r5, #1
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r0, r7
 	mov r1, r5
 	mov r2, r6

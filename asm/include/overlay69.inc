@@ -1,7 +1,7 @@
 .public FUN_0204da5c
 .public FUN_ov16_0210e980
 .public FUN_ov16_0210e0a0
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public MI_CpuFill8
 .public _ZN12C3DPlaneCtrl7acquireEv
 .public FUN_ov16_020f5278
@@ -66,7 +66,7 @@
 .public _ZN12CFontManager15drawTextTex4bppEPcPviiiiiPNS_11GlyphBoundsEiiNS_9AlignmentE
 .public FUN_02059288
 .public _ZN12CFontManager12resetSpacingEv
-.public gFont12
+.public gFont12Manager
 .public _ZN12C3DPlaneCtrl7destroyEi
 .public FUN_02058ee0
 .public DC_FlushRange
@@ -81,7 +81,7 @@
 .public FUN_ov16_0210f48c
 .public FUN_ov16_0210ecb8
 .public FUN_ov16_0210f468
-.public unk_0209A0F4
+.public gKeysRepeated
 .public _ZN12C3DPlaneCtrl9setTexAllEih
 .public _ZN12C3DPlaneCtrl16setGraphicIdxAllEihb
 .public _ZN12C3DPlaneCtrl11setDepthAllEij
@@ -99,7 +99,7 @@
 .public FUN_ov16_020f52c4
 .public FUN_ov16_0210f940
 .public FUN_ov16_0210e5f0
-.public FUN_020460a8
+.public _ZN17UnkClass_020A9C4012FUN_020460a8Eii
 .public unk_020A9C40
 .public FUN_020739e4
 .public _ZN12C3DPlaneCtrl12setColorMaskEit

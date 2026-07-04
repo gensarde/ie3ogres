@@ -57,7 +57,7 @@
 .public DC_FlushRange
 .public _ZN12CFontManager12resetSpacingEv
 .public FUN_02059288
-.public gFont12
+.public gFont12Manager
 .public FUN_ov16_020eef40
 .public FUN_ov16_020f52f4
 .public FUN_ov16_020f53e8
@@ -97,7 +97,7 @@
 .public FUN_ov16_020ee58c
 .public FUN_02074a2c
 .public FUN_ov16_020f081c
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public MIi_CpuClear16
 .public FUN_ov131_0213ade0
 .public unk_02099F44
@@ -111,7 +111,7 @@
 .public FUN_ov131_0213b04c
 .public FUN_ov131_0213ad20
 .public FUN_ov16_0210efac
-.public unk_0209A0F4
+.public gKeysRepeated
 .public FUN_ov16_0210f20c
 .public FUN_ov16_0210f484
 .public FUN_0204da5c

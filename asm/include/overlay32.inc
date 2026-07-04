@@ -12,7 +12,7 @@
 .public FUN_0205ff0c
 .public FUN_ov16_020efa4c
 .public FUN_02070530
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public sprintf
 .public _ZN7CConfig8getParamEPKc
 .public FUN_020443b0
@@ -43,7 +43,7 @@
 .public G2_GetBG2CharPtr
 .public GX_LoadBG2Scr
 .public _ZN8Graphics22LoadTempPaletteFromPacEPv12EngineSelecti
-.public _ZN8Graphics11SetupScreenEPtmii
+.public _ZN8Graphics11SetupScreenEPvmii
 .public GX_LoadBG2Char
 .public _ZN8Graphics17LoadBGPaletteMainEv
 .public _ZN14CScreenManager18getLoadedSceneMainEv

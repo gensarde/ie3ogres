@@ -989,7 +989,7 @@ _0211AC44: .word gSprButtonCtrl
 	arm_func_start FUN_ov91_0211ac48
 FUN_ov91_0211ac48: ; 0x0211AC48
 	stmfd sp!, {r3, r4, r5, r6, r7, lr}
-	ldr r2, _0211ADF8 ; =0x0209A0F4
+	ldr r2, _0211ADF8 ; =gKeysRepeated
 	mov r6, r0
 	ldrh r0, [r2]
 	mov r5, r1
@@ -1105,7 +1105,7 @@ _0211ADEC:
 	mov r1, #1
 	bl FUN_ov91_0211c01c
 	ldmfd sp!, {r3, r4, r5, r6, r7, pc}
-_0211ADF8: .word unk_0209A0F4
+_0211ADF8: .word gKeysRepeated
 _0211ADFC: .word gSprAnimCtrl
 _0211AE00: .word gSprButtonCtrl
 _0211AE04: .word gAudioPlayer
@@ -2953,11 +2953,11 @@ FUN_ov91_0211c770: ; 0x0211C770
 	ldr r5, _0211C864 ; =gLogicThink
 	mov r1, #0
 	mov r0, r5
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	mov r6, r0
 	mov r0, r5
 	mov r1, #1
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	ldrh r2, [r6, #0x40]
 	ldr r1, _0211C868 ; =0x0209A454
 	strh r2, [r6, #0x28]

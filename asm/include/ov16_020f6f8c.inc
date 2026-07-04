@@ -164,8 +164,8 @@
 .public FUN_0204dea4
 .public FUN_0204eb00
 .public FUN_0204eb4c
-.public FUN_0204eba0
-.public FUN_0204ec3c
+.public _ZN11CLogicThink12FUN_0204eba0Ev
+.public _ZN11CLogicThink12FUN_0204ec3cEv
 .public FUN_0204fbe8
 .public FUN_0204fd68
 .public FUN_0204fda4
@@ -236,7 +236,7 @@
 .public FUN_02071d74
 .public FUN_0207224c
 .public FUN_02072338
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public FUN_020724c8
 .public FUN_020724e8
 .public FUN_020725ac
@@ -745,7 +745,7 @@
 .public gDeltaTime
 .public gDungeonManager
 .public gFileIO
-.public gFont12
+.public gFont12Manager
 .public gGlovesInfoFile
 .public gLogicThink
 .public gMainScreen0

@@ -88,7 +88,7 @@
 .public FUN_ov16_0210ee78
 .public FUN_ov16_0210e7d0
 .public FUN_ov16_0210efac
-.public FUN_020460a8
+.public _ZN17UnkClass_020A9C4012FUN_020460a8Eii
 .public unk_020A9C40
 .public FUN_ov16_0210f48c
 .public OS_GetTick
@@ -141,8 +141,8 @@
 .public unk_020A11DC
 .public FUN_ov131_0213c7e8
 .public FUN_ov131_02142694
-.public FUN_0204eba0
-.public FUN_0204ec3c
+.public _ZN11CLogicThink12FUN_0204eba0Ev
+.public _ZN11CLogicThink12FUN_0204ec3cEv
 .public FUN_0206c110
 .public _ZdlPv
 .public FX_Sqrt

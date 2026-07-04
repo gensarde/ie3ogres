@@ -29,7 +29,7 @@
 .public FUN_0206d824
 .public MI_CpuFill8
 .public FUN_ov16_020f07d0
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public DC_FlushRange
 .public FUN_02040138
 .public FUN_0206d600

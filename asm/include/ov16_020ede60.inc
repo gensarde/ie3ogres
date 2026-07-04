@@ -2,7 +2,7 @@
 .public FUN_0206c6fc
 .public FUN_0206cd90
 .public FUN_ov16_020f081c
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public gUnitMan
 .public unk_020A0640
 .public unk_020A0B00

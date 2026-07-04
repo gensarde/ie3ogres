@@ -73,14 +73,14 @@
 .public _ZN18CBgMenuRadioButton13releaseButtonEib
 .public _ZN14CBgMenuManager13isFlashActiveE12EngineSelect
 .public _ZN14CBgMenuManager13releaseButtonEi
-.public unk_0209A0F4
+.public gKeysRepeated
 .public _ZN14CBgMenuManager6getHitE12EngineSelectii
 .public _ZN18CBgMenuRadioButton10activateGxEh
 .public _ZN18CBgMenuRadioButton12deactivateGxEh
 .public G2_GetBG3CharPtr
 .public MIi_CpuClearFast
 .public FUN_ov1_020dc020
-.public _ZN8Graphics11SetupScreenEPtmii
+.public _ZN8Graphics11SetupScreenEPvmii
 .public G2_GetBG1CharPtr
 .public GX_LoadBG2Scr
 .public _ZN8Graphics17LoadBGPaletteMainEv
@@ -90,7 +90,7 @@
 .public _ZN12CFontManager10setSpacingEii
 .public FUN_ov16_020f2184
 .public _ZN12CFontManager12resetSpacingEv
-.public gFont12
+.public gFont12Manager
 .public _ZN14CBgMenuManager10addDynamicE12EngineSelecthhhP18SBgMenuElementInitiii
 .public _ZN18CBgMenuRadioButton6createEhhhi
 .public _ZN14CBgMenuManager6hideIDE12EngineSelecti

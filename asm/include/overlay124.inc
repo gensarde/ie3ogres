@@ -9,7 +9,7 @@
 .public _ZN7Archive11ReadFromSFPEPcP9SFileDataS0_
 .public unk_020A0640
 .public FUN_ov16_020f0810
-.public FUN_0207249c
+.public _ZN11CLogicThink11getTeamInfoEi
 .public _ZN7Archive20GetFaceOffsetAndSizeEPvP4UnithPlPm
 .public _ZN7Archive16RequestNewReadExEPKcP9SFileDatalmi
 .public FUN_ov16_020f0b3c
@@ -26,7 +26,7 @@
 .public _ZN12CFontManager12getTextWidthEPc
 .public _ZN12CFontManager15getNameFuriganaEPaS0_S0_
 .public gFont8
-.public gFont12
+.public gFont12Manager
 .public _ZN14CBgMenuManager9addStaticE12EngineSelectiiiiaahhhPv
 .public gBgMenuManager
 .public FUN_0206dcd4
@@ -36,7 +36,7 @@
 .public FUN_0206cc94
 .public _ZN14CBgMenuManager11deleteGroupE12EngineSelectit
 .public _ZN14CBgMenuManager14updateGraphicsE12EngineSelect
-.public _ZN8Graphics11SetupScreenEPtmii
+.public _ZN8Graphics11SetupScreenEPvmii
 .public GXS_LoadBG1Char
 .public _ZN8Graphics11SetupScreenEPvii
 .public _ZN8Graphics14LoadBGXCharSubEiPvm

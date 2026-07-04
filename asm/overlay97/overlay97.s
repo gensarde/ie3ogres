@@ -521,7 +521,7 @@ _02125380:
 	blx r5
 	cmp r7, #0
 	bne _0212540C
-	ldr r0, _0212552C ; =gFont12
+	ldr r0, _0212552C ; =gFont12Manager
 	mov r1, r9
 	ldr r0, [r0]
 	bl _ZN12CFontManager12getTextWidthEPc
@@ -533,7 +533,7 @@ _0212540C:
 	str r5, [sp]
 	str r4, [sp, #4]
 	ldr r0, [r6, #4]
-	ldr r7, _0212552C ; =gFont12
+	ldr r7, _0212552C ; =gFont12Manager
 	str r0, [sp, #8]
 	ldrh r0, [r6, #8]
 	mov r1, r8
@@ -579,7 +579,7 @@ _021254B8:
 	stmib sp, {r0, r1}
 	ldrh r2, [r6, #8]
 	mov r1, r4
-	ldr r0, _0212552C ; =gFont12
+	ldr r0, _0212552C ; =gFont12Manager
 	mov r2, r2, lsl #3
 	str r2, [sp, #0xc]
 	ldrh r4, [r6, #0xa]
@@ -603,7 +603,7 @@ _021254FC:
 	add sp, sp, #0x3c
 	ldmfd sp!, {r4, r5, r6, r7, r8, r9, pc}
 _02125528: .word gFont8
-_0212552C: .word gFont12
+_0212552C: .word gFont12Manager
 _02125530: .word ov97_02126EB4
 	arm_func_end FUN_ov97_021252ec
 
@@ -1595,7 +1595,7 @@ FUN_ov97_02126344: ; 0x02126344
 	mov r3, #0
 	mul r1, r12, r1
 	mov r1, r1, lsl #1
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r2, r0
 _02126384:
 	mov r0, r2
@@ -1814,7 +1814,7 @@ FUN_ov97_02126648: ; 0x02126648
 	mov r2, r6
 	mov r3, r5
 	add r0, r7, r0
-	bl _ZN8Graphics11SetupScreenEPtmii
+	bl _ZN8Graphics11SetupScreenEPvmii
 	mov r0, r7
 	mov r2, r5
 	mov r1, #1

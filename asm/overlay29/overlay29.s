@@ -418,7 +418,7 @@ _0211A410:
 	add r1, r7, #0x24
 	bl _ZN7Archive17ReadNewUncompressEPKcP9SFileData
 	ldr r0, _0211A660 ; =gLogicThink
-	bl FUN_0204eba0
+	bl _ZN11CLogicThink12FUN_0204eba0Ev
 	add r0, r7, #0x1a0
 	mov r1, r4
 	bl FUN_0206c158
@@ -590,7 +590,7 @@ _0211A71C:
 	add r0, r10, #0x198
 	bl FUN_ov16_020f52c4
 	ldr r0, _0211A7E8 ; =gLogicThink
-	bl FUN_0204ec3c
+	bl _ZN11CLogicThink12FUN_0204ec3cEv
 	ldr r0, _0211A7EC ; =gUnitMan
 	bl FUN_ov16_020efa04
 	ldr r5, _0211A7F0 ; =gConfig
@@ -4383,7 +4383,7 @@ FUN_ov29_0211ddf8: ; 0x0211DDF8
 	mov r1, r4
 	strh r4, [r2, #0xd6]
 	mov r2, #1
-	bl FUN_02045b40
+	bl _ZN17UnkClass_020A9C4012FUN_02045b40Eii
 	ldmfd sp!, {r3, r4, r5, pc}
 _0211DE4C: .word gAudioPlayer
 _0211DE50: .word unk_020AF740
@@ -5406,7 +5406,7 @@ FUN_ov29_0211ec2c: ; 0x0211EC2C
 	ldr r0, _0211EC8C ; =0x020A9C40
 	strh r1, [r2, #0xd6]
 	ldrb r2, [r5, #0x269]
-	bl FUN_02045b40
+	bl _ZN17UnkClass_020A9C4012FUN_02045b40Eii
 	ldmfd sp!, {r3, r4, r5, pc}
 _0211EC84: .word gAudioPlayer
 _0211EC88: .word unk_020AF740

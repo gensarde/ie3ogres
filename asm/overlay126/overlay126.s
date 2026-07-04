@@ -385,7 +385,7 @@ FUN_ov126_0212aebc: ; 0x0212AEBC
 	mov r8, r0
 	mov r5, r1
 	mov r4, r2
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	cmp r6, #0
 	addne r7, r0, #0x24
 	bne _0212AEF4
@@ -425,7 +425,7 @@ FUN_ov126_0212af50: ; 0x0212AF50
 	stmfd sp!, {r3, r4, r5, lr}
 	mov r5, r2
 	mov r4, r3
-	bl FUN_0207249c
+	bl _ZN11CLogicThink11getTeamInfoEi
 	cmp r5, #0
 	ldrneh r0, [r0, #0x24]
 	ldmnefd sp!, {r3, r4, r5, pc}
