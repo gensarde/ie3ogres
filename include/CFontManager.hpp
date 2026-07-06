@@ -7,6 +7,8 @@
 #include <nnsys/g2d/g2d_Font.h>
 // clang-format on
 
+extern u16 gFontBlankCode;
+
 class CFontManager
 {
 public:
@@ -23,42 +25,47 @@ public:
     } Alignment;
 
     typedef struct {
-        u16 xPos;
-        u16 yPos;
-        u16 width;
+        u8 startIndex;
+        u8 length;
+        char text[30];
+    } RubyBlock;
+
+    typedef struct {
+        s16 x;
+        s16 y;
+        s16 width;
         s16 height;
     } GlyphBounds;
 
     CFontManager();
     virtual ~CFontManager();
-    /* 0x02042e4c */ virtual BOOL drawTextTile4bpp(int indentation, int yPos, char *text, int color, Alignment align, void *dest, int maxWidth, int maxHeight, GlyphBounds *bounds, int maxGlyphs);
-    /* 0x020430b0 */ virtual BOOL drawTextTile8bpp(int indentation, int yPos, char *text, int color, Alignment align, void *dest, int maxWidth, int maxHeight, GlyphBounds *bounds, int maxGlyphs);
-    /* 0x02042b4c */ virtual int drawGlyphTile4bpp(const u8 *glyphImage, void *dest, int maxWidth, u8 color, const NNSG2dCharWidths *charWidths, int height, int xPos, int yPos);
-    /* 0x02042298 */ virtual int drawGlyphTex4bpp(const u8 *glyphImage, void *dest, int maxWidth, u8 color, const NNSG2dCharWidths *charWidths, int height, int xPos, int yPos);
-    /* 0x02042cf4 */ virtual int drawGlyphTile8bpp(const u8 *glyphImage, void *dest, int maxWidth, u8 color, const NNSG2dCharWidths *charWidths, int height, int xPos, int yPos);
-    /* 0x02042420 */ virtual int drawGlyphTex8bpp(const u8 *glyphImage, void *dest, int maxWidth, u8 color, const NNSG2dCharWidths *charWidths, int height, int xPos, int yPos);
+    virtual BOOL drawTextTile4bpp(int indentation, int yPos, char *text, int color, Alignment align, void *dest, int maxWidth, int maxHeight, GlyphBounds *bounds, int maxGlyphs);
+    virtual BOOL drawTextTile8bpp(int indentation, int yPos, char *text, int color, Alignment align, void *dest, int maxWidth, int maxHeight, GlyphBounds *bounds, int maxGlyphs);
+    virtual int drawGlyphTile4bpp(const u8 *glyphImage, void *dest, int maxWidth, u8 color, const NNSG2dCharWidths *charWidths, int height, int xPos, int yPos);
+    virtual int drawGlyphTex4bpp(const u8 *glyphImage, void *dest, int maxWidth, u8 color, const NNSG2dCharWidths *charWidths, int height, int xPos, int yPos);
+    virtual int drawGlyphTile8bpp(const u8 *glyphImage, void *dest, int maxWidth, u8 color, const NNSG2dCharWidths *charWidths, int height, int xPos, int yPos);
+    virtual int drawGlyphTex8bpp(const u8 *glyphImage, void *dest, int maxWidth, u8 color, const NNSG2dCharWidths *charWidths, int height, int xPos, int yPos);
 
-    /* 0x0204224c */ void clear();
-    /* 0x02042274 */ void writeCharByte(void *dest, u8 param2);
-    /* 0x02042544 */ static CharType getCharTypeSJIS(char *text);
-    /* 0x02042584 */ static CharType getCharTypeUTF16(char *text);
-    /* 0x020425a0 */ CharType getCharType(char *text);
-    /* 0x020425c4 */ u16 decodeChar(char *text);
-    /* 0x020425fc */ BOOL drawTextTex4bpp(char *text, void *dest, int maxWidth, int maxHeight, int indentation, int yPos, int color, GlyphBounds *bounds, int maxGlyphs, int param10, Alignment align);
-    /* 0x0204294c */ int getTextWidth(char *text);
-    /* 0x020429fc */ int getLineWidth(char *text);
-    /* 0x02042aa4 */ int getCharPosX(int indentation, int maxWidth, char *text, Alignment align);
-    /* 0x02042b0c */ s8 getCharWidth(char *text);
-    /* 0x02043310 */ void setSpacing(int charSpacing, int lineSpacing);
-    /* 0x0204331c */ void resetSpacing(void);
-    /* 0x02043330 */ BOOL init(void *pNftrFile, u32 param2, u8 encoding);
-    /* 0x02043380 */ void clearTexture(void *dest, int texWidth,int texHeight, int x, int y, int width, int height);
-    /* 0x020435b0 */ void clearVram(void *dest, int texWidth,int texHeight, int x, int y, int width, int height);
+    void clear();
+    void writeCharByte(void *dest, u8 param2);
+    static CharType getCharTypeSJIS(char *text);
+    static CharType getCharTypeUTF16(char *text);
+    CharType getCharType(char *text);
+    u16 decodeChar(char *text);
+    BOOL drawTextTex4bpp(char *text, void *dest, int maxWidth, int maxHeight, int indentation, int yPos, int color, GlyphBounds *bounds, int maxGlyphs, int param10, Alignment align);
+    int getTextWidth(char *text);
+    int getLineWidth(char *text);
+    int getCharPosX(int indentation, int maxWidth, char *text, Alignment align);
+    s8 getCharWidth(char *text);
+    void setSpacing(int charSpacing, int lineSpacing);
+    void resetSpacing(void);
+    BOOL init(void *pNftrFile, u32 param2, u8 encoding);
+    void clearTexture(void *dest, int texWidth,int texHeight, int x, int y, int width, int height);
+    void clearVram(void *dest, int texWidth,int texHeight, int x, int y, int width, int height);
     void FUN_02043780(int param1, int param2);
     
-    /* 0x0204378c */ static void getNameFurigana(s8 *dst, s8 *furigana, s8 *name);
+    static void getNameFurigana(s8 *dst, s8 *furigana, s8 *name);
 
-private:
     NNSG2dFont g2dfont;
     void *file;
     u32 unk10;
@@ -74,6 +81,7 @@ private:
 };
 
 extern CFontManager *gFont12Manager;
+extern CFontManager *gRubi8Manager;
 
 class CFontManager_2 : public CFontManager
 {

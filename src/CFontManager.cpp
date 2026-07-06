@@ -229,8 +229,8 @@ BOOL CFontManager::drawTextTex4bpp(char *text, void *dest, int maxWidth, int max
             }
 
             if ((bounds) && (i < maxGlyphs)) {
-                bounds->xPos = xPos;
-                bounds->yPos = yPos;
+                bounds->x = xPos;
+                bounds->y = yPos;
                 bounds->width = charWidth;
                 bounds->height = cellHeight;
                 bounds++;
@@ -486,8 +486,8 @@ BOOL CFontManager::drawTextTile4bpp(int indentation, int yPos, char *text, int c
             }
             
             if ((bounds) && (i < maxGlyphs)) {
-                bounds->xPos = xPos;
-                bounds->yPos = yPos;
+                bounds->x = xPos;
+                bounds->y = yPos;
                 bounds->width = charWidth;
                 bounds->height = cellHeight;
                 bounds++;
@@ -550,8 +550,8 @@ BOOL CFontManager::drawTextTile8bpp(int indentation, int yPos, char *text, int c
             }
             
             if ((bounds) && (i < maxGlyphs)) {
-                bounds->xPos = xPos;
-                bounds->yPos = yPos;
+                bounds->x = xPos;
+                bounds->y = yPos;
                 bounds->width = charWidth;
                 bounds->height = cellHeight;
                 bounds++;
@@ -618,7 +618,8 @@ BOOL CFontManager::init(void *pNftrFile, u32 param2, u8 encoding)
 	return TRUE;
 }
  
-void CFontManager::clearTexture(void *dest, int texWidth,int texHeight, int x, int y, int width, int height) {
+void CFontManager::clearTexture(void *dest, int texWidth, int texHeight, int x, int y, int width, int height)
+{
     if (!dest) return;
     if (x < 0) return;
     if (x >= texWidth) return;

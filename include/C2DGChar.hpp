@@ -11,6 +11,8 @@ public:
     /* 0x020567b0 */ virtual ~C2DGChar();
 
     /* 0x02056828 */ void reset(void);
+    void FUN_02057238(void);
+    void FUN_02057250(void);
 
     u8 unk4[0xAC];
 };

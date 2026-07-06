@@ -4366,7 +4366,7 @@ _02033CA0:
 	ldr r10, [sp, #0x24]
 	add r5, r4, #0x1000
 	mov r11, #0x40
-	ldr r6, _020342F4 ; =gFontRubi8
+	ldr r6, _020342F4 ; =gRubi8Manager
 	b _02033DB8
 _02033D20:
 	mov r0, #0x2a
@@ -4766,7 +4766,7 @@ _020342E4: .word g3DPlaneCtrl
 _020342E8: .word 0x00007FFF
 _020342EC: .word gFont12Manager
 _020342F0: .word 0x51EB851F
-_020342F4: .word gFontRubi8
+_020342F4: .word gRubi8Manager
 _020342F8: .word gAudioPlayer
 _020342FC: .word 0x55555556
 _02034300: .word unk_020AF8AC

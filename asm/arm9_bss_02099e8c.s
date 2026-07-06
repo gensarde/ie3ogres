@@ -159,8 +159,8 @@ g3DFieldSprite:
 	.global g3DDevice
 g3DDevice:
 	.space 0x04
-	.global gFontRubi8
-gFontRubi8:
+	.global gRubi8Manager
+gRubi8Manager:
 	.space 0x04
 	.global sArenaLow
 sArenaLow:

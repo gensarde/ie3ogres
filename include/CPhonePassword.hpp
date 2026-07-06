@@ -1,10 +1,13 @@
+#pragma once
+
 #include <nitro.h>
 #include <string.h>
 
 #include "archive.hpp"
 #include "CLogicThink.hpp"
 
-class CPhonePassword {
+class CPhonePassword
+{
 public:
     CPhonePassword();
     virtual ~CPhonePassword();

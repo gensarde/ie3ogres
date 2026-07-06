@@ -57,6 +57,9 @@ public:
     void *getPaletteData(C3DSprSheet *sheet, u32 *outSize);
     bool getResKeyAddresses(C3DSprSheet *sheet, u32 *texOut, u32 *plttOut);
     bool FUN_02059004(sfkey_t key);
+    void FUN_02059880(void);
+    void FUN_020598ec(void);
+
     inline u32 getPaletteSizeSingle(C3DSprSheet *sheet)
     {
         if (!sheet) return 0;

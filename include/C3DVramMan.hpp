@@ -5,11 +5,13 @@
 #include <nitro/types.h>             // for u32, s32
 // clang-format on
 
-class C3DVramMan {
-    public:
-        /* 0x02051690 */ void init(int texBlkSize, int pltBlkCount, int queueBlkCount);
-        /* 0x02051778 */ void reset(void);
-        void FUN_02051c10(void);
+class C3DVramMan
+{
+public:
+    /* 0x02051690 */ void init(int texBlkSize, int pltBlkCount, int queueBlkCount);
+    /* 0x02051778 */ void reset(void);
+    void FUN_02051c10(void);
+    void FUN_02051e50(void);
     
     void *texWork;
     void *plttWork;

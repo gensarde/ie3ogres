@@ -23,7 +23,7 @@ BANNER_SPEC     := $(buildname)/banner.bsf
 ICON_PNG        := $(buildname)/icon.png
 HEADER_TEMPLATE := $(buildname)/rom_header_template.sbin
 
-.PHONY: main sub libsyscall dsprot sdk sdk9 sdk7
+.PHONY: main sub libsyscall libmobiclip dsprot sdk sdk9 sdk7
 .PRECIOUS: $(ROM)
 
 MAKEFLAGS += --no-print-directory
@@ -35,6 +35,7 @@ all:
 
 tidy:
 	@$(MAKE) -C lib/syscall tidy
+	@$(MAKE) -C lib/libMobiclip tidy
 	@$(MAKE) -C lib/dsprot tidy
 	$(RM) -r build
 	$(RM) -r $(PROJECT_CLEAN_TARGETS)
@@ -42,6 +43,7 @@ tidy:
 
 clean: tidy clean-tools
 	@$(MAKE) -C lib/syscall clean
+	@$(MAKE) -C lib/libMobiclip clean
 	@$(MAKE) -C lib/dsprot clean
 	$(RM) $(foreach bn,$(SUPPORTED_ROMS),$(bn)/icon.nbf[pc])
 
@@ -58,10 +60,13 @@ ROMSPEC        := rom.rsf
 MAKEROM_FLAGS  := $(DEFINES)
 
 $(ALL_OBJS): files_for_compile
-$(ELF): files_for_compile libsyscall dsprot
+$(ELF): files_for_compile libsyscall libmobiclip dsprot
 
 libsyscall: files_for_compile
 	$(MAKE) -C lib/syscall all install INSTALL_PREFIX=$(abspath $(WORK_DIR)/$(BUILD_DIR)) GAME_CODE=$(GAME_CODE)
+
+libmobiclip: files_for_compile
+	$(MAKE) -C lib/libMobiclip all install INSTALL_PREFIX=$(abspath $(WORK_DIR)/$(BUILD_DIR))
 
 dsprot:
 	$(MAKE) -C lib/dsprot all install INSTALL_PREFIX=$(abspath $(WORK_DIR)/$(BUILD_DIR))

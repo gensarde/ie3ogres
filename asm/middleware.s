@@ -25,8 +25,3 @@ _version_NINTENDO_WIFI: ; 0x02000C20
 	.public _version_UBIQUITOUS_SSL
 _version_UBIQUITOUS_SSL: ; 0x02000C4C
 	.asciz "[SDK+UBIQUITOUS:SSL]"
-
-	.balign 4, 0
-	.public _version_MOBICLIP
-_version_MOBICLIP: ; 0x02000C64
-	.asciz "[SDK+Actimagine:Mobiclip SDK V1.2.1]"

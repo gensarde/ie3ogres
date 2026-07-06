@@ -1,3 +1,5 @@
+#pragma once
+
 #include <nitro.h>
 #include <string.h>
 
@@ -19,7 +21,7 @@
 
 extern u16 gKeysRepeated;
 extern "C" {
-    int FUN_ov16_020f081c(void);
+    extern int FUN_ov16_020f081c(void);
     extern void FUN_ov16_020f2184(char *text, void *dest, int width, int height, int color, int rubyColor, int charSpacing, int lineSpacing, int x, int y, int align);
     typedef struct {
         u16 *unk0;
@@ -46,62 +48,62 @@ class CMainMenuScreenEnterName : public CommonMainScreen
 {
 public:
     static bool FUN_ov55_02119f00(int param0);
-    /* ov55 0x02119f54 */ static CFontManager::CharType getCharType(char *text);
-    /* ov55 0x02119f94 */ static u16 decodeChar(char *text, CFontManager::CharType type);
-    /* ov55 0x02119fc0 */ static u16 normalizeChar(u16 c, u16 *data, int size);
+    static CFontManager::CharType getCharType(char *text);
+    static u16 decodeChar(char *text, CFontManager::CharType type);
+    static u16 normalizeChar(u16 c, u16 *data, int size);
     static void FUN_ov55_0211a010(char *param0, char *param1, u16 *param2, int param3);
     static bool FUN_ov55_0211a0c4(char *param0, u16 *param1, int param2, char **param3, int param4);
 
     CMainMenuScreenEnterName(CScreenManager *manager) : manager(manager) { }
-    /* ov55 0x0211aa40 */ virtual void updateKeys(u16 pressed, u16 held);
-    /* ov55 0x0211b618 */ virtual void updateTP(TPData *tp);
-    /* ov55 0x0211cbf4 */ virtual void init(void);
-    /* ov55 0x0211cd8c */ virtual void update(BOOL param1);
-    /* ov55 0x0211cea4 */ virtual void updateLate(void);
-    /* ov55 0x0211cf04 */ virtual void close(void);
-    /* ov55 0x0211b854 */ virtual void vFUN_6C(void);
-    /* ov55 0x0211b750 */ virtual void vFUN_70(void);
-    /* ov55 0x0211ce90 */ virtual BOOL tryFinalize(void);
-    /* ov55 0x0211d030 */ virtual void closeFiles(void);
-    /* ov55 0x0211baf4 */ virtual void deallocateFile(int idx);
-    /* ov55 0x0211bac4 */ virtual void deallocateFiles(void);
-    /* ov55 0x0211d10c */ virtual u32 loadBG0Char(int fileIdx, u32 offset) {
+    virtual void updateKeys(u16 pressed, u16 held);
+    virtual void updateTP(TPData *tp);
+    virtual void init(void);
+    virtual void update(BOOL param1);
+    virtual void updateLate(void);
+    virtual void close(void);
+    virtual void vFUN_6C(void);
+    virtual void vFUN_70(void);
+    virtual BOOL tryFinalize(void);
+    virtual void closeFiles(void);
+    virtual void deallocateFile(int idx);
+    virtual void deallocateFiles(void);
+    virtual u32 loadBG0Char(int fileIdx, u32 offset) {
         return Graphics::LoadBGXCharMain(0, this->files[fileIdx].data, offset);
     }
-    /* ov55 0x0211d0f0 */ virtual u32 loadBG1Char(int fileIdx, u32 offset) {
+    virtual u32 loadBG1Char(int fileIdx, u32 offset) {
         return Graphics::LoadBGXCharMain(1, this->files[fileIdx].data, offset);
     }
-    /* ov55 0x0211d0d4 */ virtual u32 loadBG2Char(int fileIdx, u32 offset) {
+    virtual u32 loadBG2Char(int fileIdx, u32 offset) {
         return Graphics::LoadBGXCharMain(2, this->files[fileIdx].data, offset);
     }
-    /* ov55 0x0211d0b8 */ virtual u32 loadBG3Char(int fileIdx, u32 offset) {
+    virtual u32 loadBG3Char(int fileIdx, u32 offset) {
         return Graphics::LoadBGXCharMain(3, this->files[fileIdx].data, offset);
     }
-    /* ov55 0x0211bb0c */ virtual void vFUN_94(void);
-    /* ov55 0x0211bfcc */ virtual void vFUN_98(void);
-    /* ov55 0x0211d09c */ virtual void loadTempPalette(int fileIdx, int plttIdx) {
+    virtual void vFUN_94(void);
+    virtual void vFUN_98(void);
+    virtual void loadTempPalette(int fileIdx, int plttIdx) {
         Graphics::LoadTempPaletteFromPac(this->files[fileIdx].data, ENGINE_MAIN, plttIdx);
     }
-    /* ov55 0x0211d07c */ virtual int setupScreen(int fileIdx, int tileIdx, int plttIdx) {
+    virtual int setupScreen(int fileIdx, int tileIdx, int plttIdx) {
         return Graphics::SetupScreen(this->files[fileIdx].data, tileIdx + 1, plttIdx);
     }
-    /* ov55 0x0211a180 */ virtual void vFUN_A4(int param1);
-    /* ov55 0x0211a5d8 */ virtual void setKey(int x, u32 y, SKey *key);
-    /* ov55 0x0211a580 */ virtual u16 getChara(int x, u32 y);
-    /* ov55 0x0211af80 */ virtual void vFUN_B0(int param1, int param2, SKey *key);
-    /* ov55 0x0211a640 */ virtual void typeCharacter(void);
-    /* ov55 0x0211b52c */ virtual void vFUN_B8(void);
-    /* ov55 0x0211b308 */ virtual void vFUN_BC(void);
-    /* ov55 0x0211a1f0 */ virtual void vFUN_C0(void);
-    /* ov55 0x0211a448 */ virtual void vFUN_C4(int param1);
-    /* ov55 0x0211a4f4 */ virtual void vFUN_C8(void);
-    /* ov55 0x0211c05c */ virtual void vFUN_CC(int param1);
-    /* ov55 0x0211b07c */ virtual void vFUN_D0(void);
-    /* ov55 0x0211c178 */ virtual void vFUN_D4(void);
-    /* ov55 0x0211c1bc */ virtual void vFUN_D8(void);
-    /* ov55 0x0211c200 */ virtual void vFUN_DC(void);
-    /* ov55 0x0211c2f0 */ virtual void vFUN_E0(void);
-    /* ov55 0x0211c454 */ virtual void vFUN_E4(void);
+    virtual void vFUN_A4(int param1);
+    virtual void setKey(int x, u32 y, SKey *key);
+    virtual u16 getChara(int x, u32 y);
+    virtual void vFUN_B0(int param1, int param2, SKey *key);
+    virtual void typeCharacter(void);
+    virtual void vFUN_B8(void);
+    virtual void vFUN_BC(void);
+    virtual void vFUN_C0(void);
+    virtual void vFUN_C4(int param1);
+    virtual void vFUN_C8(void);
+    virtual void vFUN_CC(int param1);
+    virtual void vFUN_D0(void);
+    virtual void vFUN_D4(void);
+    virtual void vFUN_D8(void);
+    virtual void vFUN_DC(void);
+    virtual void vFUN_E0(void);
+    virtual void vFUN_E4(void);
     virtual ~CMainMenuScreenEnterName() { }
 
 private:

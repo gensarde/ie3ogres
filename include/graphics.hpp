@@ -1,11 +1,20 @@
 #pragma once
 
-#include <nitro/gx/struct_2d.h>
-#include <nitro/types.h>
+#include <nitro.h>
 
 #include "allocator.hpp"
 #include "archive.hpp"
 #include "filesystem.hpp"
+#include "pac.hpp"
+#include "C3DGameChar.hpp"
+#include "C3DGameEffect.hpp"
+#include "C3DGameMap.hpp"
+#include "C3DGameMapObject.hpp"
+#include "C2DGChar.hpp"
+#include "C3DSpriteCtrl.hpp"
+#include "C3DPlaneCtrl.hpp"
+#include "C3DVramMan.hpp"
+#include "CFontManager.hpp"
 
 typedef enum {
     ENGINE_MAIN,
@@ -152,4 +161,25 @@ u32 LoadBGXCharSub(int bg, void *data, u32 offset);
 void ClearBGXMain(int bg, CharFormat charFmt);
 void ClearBGXSub(int bg, CharFormat charFmt);
 
+void FUN_ov16_020f1d64(void);
+void FUN_ov16_020f1e14(void);
+void FUN_ov16_020f1ee4(u32 *src, int width, int height, u32 *dst);
+
+void FUN_ov16_020f1f5c(char *src, char* dst);
+void ApplyFontBlankCode(char *str);
+void DrawTextTileWithRuby(char *text, void *dest, int width, int height, int color, int rubyColor, int charSpacing, int lineSpacing, int x, int y, CFontManager::Alignment align);
+void DrawTextTexWithRuby(char *text, sfkey_t key, int color, int rubyColor, int charSpacing, int lineSpacing, int width, int height, int x, int y, CFontManager::Alignment align);
+int FUN_ov16_020f24e8(char *src, char *dst, CFontManager::RubyBlock *ruby);
+
 } /* namespace Graphics */
+
+extern u16 unk_0208F728[]; /* = {
+    0x4081, 0x4981, 0x6881, 0x9481,
+    0x9081, 0x9381, 0x9581, 0x6681,
+    0x6981, 0x6A81, 0x9681, 0x7B81,
+    0x4381, 0x7C81, 0x4481, 0x5E81,
+    0x4681, 0x4781, 0x8381, 0x8181,
+    0x8481, 0x4881, 0x9781, 0x6D81,
+    0x8F81, 0x6E81, 0x4F81, 0x5181,
+    0x6F81, 0x6281, 0x7081, 0x6081
+}; */

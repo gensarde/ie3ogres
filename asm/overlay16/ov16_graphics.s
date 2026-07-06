@@ -1626,7 +1626,7 @@ _020F2238:
 	add r8, r0, r5, lsl #5
 	ldrb r6, [r0, r5, lsl #5]
 	ldrb r2, [r8, #1]
-	ldr r0, _020F2300 ; =gFontRubi8
+	ldr r0, _020F2300 ; =gRubi8Manager
 	add r1, r8, #2
 	ldr r0, [r0]
 	add r7, r6, r2
@@ -1651,7 +1651,7 @@ _020F2238:
 	str r9, [sp, #0x10]
 	str r0, [sp, #0x14]
 	str r0, [sp, #0x18]
-	ldr r0, _020F2300 ; =gFontRubi8
+	ldr r0, _020F2300 ; =gRubi8Manager
 	ldrb r2, [r2, r5, lsl #5]
 	ldr r0, [r0]
 	add r3, r8, #2
@@ -1673,7 +1673,7 @@ _020F22E4:
 	add sp, sp, #0xb20
 	ldmfd sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
 _020F22FC: .word gFont12Manager
-_020F2300: .word gFontRubi8
+_020F2300: .word gRubi8Manager
 	arm_func_end FUN_ov16_020f2184
 
 	arm_func_start FUN_ov16_020f2304
@@ -1739,7 +1739,7 @@ FUN_ov16_020f2304: ; 0x020F2304
 	bl _ZN12CFontManager12resetSpacingEv
 	b _020F2494
 _020F23F4:
-	ldr r0, _020F24E4 ; =gFontRubi8
+	ldr r0, _020F24E4 ; =gRubi8Manager
 	add r1, r11, r9, lsl #5
 	ldr r0, [r0]
 	add r1, r1, #2
@@ -1772,7 +1772,7 @@ _020F23F4:
 	str r0, [sp, #0x14]
 	str r0, [sp, #0x18]
 	str r0, [sp, #0x1c]
-	ldr r0, _020F24E4 ; =gFontRubi8
+	ldr r0, _020F24E4 ; =gRubi8Manager
 	add r1, r1, #2
 	ldr r0, [r0]
 	mov r2, r5
@@ -1800,7 +1800,7 @@ _020F2494:
 	ldmfd sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 _020F24DC: .word g3DPlaneCtrl
 _020F24E0: .word gFont12Manager
-_020F24E4: .word gFontRubi8
+_020F24E4: .word gRubi8Manager
 	arm_func_end FUN_ov16_020f2304
 
 	arm_func_start FUN_ov16_020f24e8

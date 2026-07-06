@@ -1013,7 +1013,7 @@ Overlay overlay126
 Overlay overlay127
 {
 	After overlay109
-	Object lib/libMobiclip/asm/libMobiclip.o
+	Library libMobiclip.a
 }
 Overlay overlay128
 {

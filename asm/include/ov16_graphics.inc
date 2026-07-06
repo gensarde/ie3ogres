@@ -65,7 +65,7 @@
 .public _ZN12CFontManager12resetSpacingEv
 .public _ZN12CFontManager12getTextWidthEPc
 .public gFont12Manager
-.public gFontRubi8
+.public gRubi8Manager
 .public _ZN12C3DPlaneCtrl11getTexWidthEi
 .public _ZN12C3DPlaneCtrl12getTexHeightEi
 .public FUN_0205935c

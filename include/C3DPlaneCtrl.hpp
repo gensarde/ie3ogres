@@ -198,7 +198,9 @@ private:
         return s->parts + (part - 1);
     }
 
+    public:
     C3DSprFile file;
+    private:
     S3DPlaneSet *list;
     s32 count;
     S3DPlaneSet *head;

@@ -120,14 +120,14 @@ RESPONSE          := $(ELF:%.elf=%.response)
 SBIN              := $(ELF:%.elf=%.sbin)
 XMAP              := $(ELF).xMAP
 
-MW_LIB            = ./lib/metroskrew
+MW_LIB            = $(WORK_DIR)/lib/metroskrew
 MW_INCLUDES       = -i $(MW_LIB)/msl/MSL_C/MSL_ARM/Include -i $(MW_LIB)/msl/MSL_C/MSL_Common/Include -i $(MW_LIB)/msl/MSL_C/MSL_Common_Embedded/Math/Include \
 					-i $(MW_LIB)/msl/MSL_C++/MSL_ARM/Include -i $(MW_LIB)/msl/MSL_C++/MSL_Common/Include \
 					-i $(MW_LIB)/msl/MSL_Extras/MSL_ARM/Include -i $(MW_LIB)/msl/MSL_Extras/MSL_Common/Include \
 					-i $(MW_LIB)/Profiler/include \
 					-i $(MW_LIB)/Runtime/Runtime_ARM/Runtime_NITRO/Common_Includes
 
-MWCFLAGS           = $(DEFINES) $(OPTFLAGS) -proc $(PROC) $(EXCCFLAGS) -lang c++ -enum int -char signed -str noreuse -gccext,on -fp soft -inline on,noauto -RTTI off -interworking -sym on -ipa file -W all -W pedantic -W noimpl_signedunsigned -W noimplicitconv -W nounusedarg -W nomissingreturn -W error -gccinc -i ./src -i ./include -I$(WORK_DIR)/lib/include -i $(WORK_DIR)/lib/TwlDWC/include -i $(WORK_DIR)/lib/TwlSDK/include -i $(WORK_DIR)/lib/TwlSystem/include -i $(WORK_DIR)/lib/libMobiclip/include -i $(WORK_DIR)/lib/dsprot -i $(WORK_DIR)/lib/DSE/include $(MW_INCLUDES)
+MWCFLAGS           = $(DEFINES) $(OPTFLAGS) -proc $(PROC) $(EXCCFLAGS) -lang c++ -enum int -char signed -str noreuse -gccext,on -fp soft -inline on,noauto $(RTTIFLAG) -interworking -sym on -ipa file -W all -W pedantic -W noimpl_signedunsigned -W noimplicitconv -W nounusedarg -W nomissingreturn -W error -gccinc -i ./src -i ./include -I$(WORK_DIR)/lib/include -i $(WORK_DIR)/lib/TwlDWC/include -i $(WORK_DIR)/lib/TwlSDK/include -i $(WORK_DIR)/lib/TwlSystem/include -i $(WORK_DIR)/lib/libMobiclip/include -i $(WORK_DIR)/lib/dsprot -i $(WORK_DIR)/lib/DSE/include $(MW_INCLUDES)
 
 MWASFLAGS          = $(DEFINES) -proc $(PROC_S) -g -gccinc -i . -i ./include -i $(WORK_DIR)/asm/include -i $(WORK_DIR)/files -i $(WORK_DIR)/lib/asm/include -i $(WORK_DIR)/lib/TwlDWC/asm/include -i $(WORK_DIR)/lib/metroskrew/asm/include -i $(WORK_DIR)/lib/TwlSDK/asm/include -i $(WORK_DIR)/lib/TwlSystem/asm/include -i $(WORK_DIR)/lib/libMobiclip/asm/include -i $(WORK_DIR)/lib/DSE/asm/include -i $(WORK_DIR)/lib/TwlDWC_dl/asm/include -i $(WORK_DIR)/lib/syscall/asm/include -i $(WORK_DIR)/asm -I$(WORK_DIR)/lib/include -DSDK_ASM
 MWLDFLAGS         := -proc $(PROC) -sym on -nopic -nopid -interworking -map closure,unused -symtab sort -m _start -msgstyle gcc

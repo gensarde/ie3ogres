@@ -1660,33 +1660,3 @@ void CMainMenuScreenEnterName::closeFiles(void)
 {
     Archive::Close(this->files, FILE_MAX);
 }
-
-//void CMainMenuScreenEnterName::setupScreen(int fileIdx, int tileIdx, int plttIdx)
-//{
-//    Graphics::SetupScreen(this->files[fileIdx].data, tileIdx + 1, plttIdx);
-//}
-//
-//void CMainMenuScreenEnterName::loadTempPalette(int fileIdx, int plttIdx)
-//{
-//    Graphics::LoadTempPaletteFromPac(this->files[fileIdx].data, ENGINE_MAIN, plttIdx);
-//}
-//
-//void CMainMenuScreenEnterName::loadBG3Char(int fileIdx, u32 offset)
-//{
-//    Graphics::LoadBGXCharMain(3, this->files[fileIdx].data, offset);
-//}
-//
-//void CMainMenuScreenEnterName::loadBG2Char(int fileIdx, u32 offset)
-//{
-//    Graphics::LoadBGXCharMain(2, this->files[fileIdx].data, offset);
-//}
-//
-//void CMainMenuScreenEnterName::loadBG1Char(int fileIdx, u32 offset)
-//{
-//    Graphics::LoadBGXCharMain(1, this->files[fileIdx].data, offset);
-//}
-//
-//void CMainMenuScreenEnterName::loadBG0Char(int fileIdx, u32 offset)
-//{
-//    Graphics::LoadBGXCharMain(0, this->files[fileIdx].data, offset);
-//}
