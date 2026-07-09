@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.public _version_NINTENDO_WIFI
 	.public CPSDnsIp
 	.public CPSGatewayIp

@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.public AOSSi_EndLocal
 	.public AOSSi_Init
 	.public AOSSi_InitLocal

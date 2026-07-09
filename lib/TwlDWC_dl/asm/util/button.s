@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.public DWCi_CEINlSet
 	.public DWCi_CEINlSetExCell
 	.public DWCi_CELLlDelete

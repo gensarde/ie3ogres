@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.public MI_CpuFill8
 	.public OS_Sleep
 	.public SOCLSocketParamTCP

@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.public DC_FlushRange
 	.public DWCi_ARClReadEx
 	.public DWCi_ARClRelease

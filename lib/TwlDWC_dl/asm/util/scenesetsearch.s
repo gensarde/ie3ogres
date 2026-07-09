@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.public DWCi_ANIMElEnd
 	.public DWCi_ANIMElInitEx
 	.public DWCi_BTNlDisable

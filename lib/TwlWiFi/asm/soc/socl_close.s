@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.public CPS_SocRelease
 	.public CPS_SocUnRegister
 	.public CPS_TcpClose

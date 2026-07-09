@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.public DWCi_MOV_WH_MemInit
 	.public FS_CloseFile
 	.public FS_InitFile

@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.public DWCi_HEAPlAllocEx
 	.public DWCi_LSTlErase
 	.public DWCi_LSTlForm

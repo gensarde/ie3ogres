@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.public CPS_SslAddRandomSeed
 	.public NHTTPi_Request2Connection
 	.public NHTTPi_alloc

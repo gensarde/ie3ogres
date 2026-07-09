@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.public DWCi_AC_GetMemPtr
 	.public DWCi_AC_GetPhase
 	.public DWCi_AC_SetStealthChannel

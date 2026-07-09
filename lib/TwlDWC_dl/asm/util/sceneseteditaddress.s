@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.public DWC_BACKUPlCheckAddress
 	.public DWCi_CEINlSetExObj
 	.public DWCi_CMNlLoadResource

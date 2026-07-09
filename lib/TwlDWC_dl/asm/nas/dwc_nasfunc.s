@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.public DWC_Alloc
 	.public DWC_Auth_Abort
 	.public DWC_Auth_Create

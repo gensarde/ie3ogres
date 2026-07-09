@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.public CPS_SetSsl
 	.public OS_LockMutex
 	.public OS_UnlockMutex

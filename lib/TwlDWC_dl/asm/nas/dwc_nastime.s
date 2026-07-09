@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.public RTC_ConvertDateTimeToSecond
 	.public RTC_GetDateTime
 	.public atoi

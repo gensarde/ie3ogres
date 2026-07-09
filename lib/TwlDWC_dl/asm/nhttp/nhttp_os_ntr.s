@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.public NHTTPi_CommThreadProcMain
 	.public NHTTPi_IsCreateCommThreadMessageQueue
 	.public NHTTPi_IsCreateCommThreadMessageQueueOn

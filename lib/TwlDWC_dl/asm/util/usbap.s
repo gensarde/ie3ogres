@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.public DC_InvalidateRange
 	.public DWCi_HEAPlAllocEx
 	.public DWCi_HEAPlFree_

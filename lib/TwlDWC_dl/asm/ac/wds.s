@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.public CRYPTO_RC4Encrypt
 	.public CRYPTO_RC4Init
 	.public DC_InvalidateRange

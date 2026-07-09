@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.public NHTTPi_InitBgnEndInfo
 	.public NHTTPi_InitListInfo
 	.public NHTTPi_InitMutex

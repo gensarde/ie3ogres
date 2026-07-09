@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.public DWC_BACKUPlCheckAddress
 	.public DWC_BACKUPlCheckIp
 	.public DWCi_ARClReadEx

@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.public NHTTP_GetResponseHeaderField
 	.public NHTTPi_AddRequestHeaderField
 	.public NHTTPi_AddRequestPostDataAscii

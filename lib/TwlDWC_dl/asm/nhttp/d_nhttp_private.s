@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.public NHTTPi_CancelRequestAsync
 	.public NHTTPi_CheckCurrentThread
 	.public NHTTPi_CommitConnectionList

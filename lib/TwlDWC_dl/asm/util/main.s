@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.public DWC_Auth_GetCustomNas
 	.public DWC_Auth_SetCustomNas
 	.public DWC_BM_Init

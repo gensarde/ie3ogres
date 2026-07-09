@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.public DWCi_TSKlAct
 	.public OS_EnableInterrupts
 	.public OS_EnableIrqMask
