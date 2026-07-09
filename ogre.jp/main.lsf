@@ -10,177 +10,177 @@ Static main
 	Address 0x02000000
 	StackSize 0 1024
 
-	Object asm/middleware.o (.version)
+	Object main.nef.p/asm_middleware.s.o (.version)
 
-	Object src/nitromain.o
+	Object main.nef.p/src_nitromain.cpp.o
 
 	# TwlSDK library
-	Object lib/TwlSDK/asm/os/libos.o
-	Object lib/TwlSDK/asm/gx/libgx.o
-	Object lib/TwlSDK/asm/memory/libmi.o
-	Object lib/TwlSDK/asm/fx/libfx.o
-	Object lib/TwlSDK/asm/cp/libcp.o
-	Object lib/TwlSDK/asm/math/libmath.o
-	Object lib/TwlSDK/asm/rtc/librtc.o
-	Object lib/TwlSDK/asm/snd/libsnd.o
-	Object lib/TwlSDK/asm/fs/libfs.o
-	Object lib/TwlSDK/asm/card/libcard.o
-	Object lib/TwlSDK/asm/ctrdg/libctrdg.o
-	Object lib/TwlSDK/asm/wm/libwm.o
-	Object lib/TwlSDK/asm/std/libstd.o
-	Object lib/TwlSDK/asm/pxi/libpxi.o
-	Object lib/TwlSDK/asm/tp/libtp.o
-	Object lib/TwlSDK/asm/pm/libpm.o
+	Object main.nef.p/lib_TwlSDK_asm_os_libos.s.o
+	Object main.nef.p/lib_TwlSDK_asm_gx_libgx.s.o
+	Object main.nef.p/lib_TwlSDK_asm_memory_libmi.s.o
+	Object main.nef.p/lib_TwlSDK_asm_fx_libfx.s.o
+	Object main.nef.p/lib_TwlSDK_asm_cp_libcp.s.o
+	Object main.nef.p/lib_TwlSDK_asm_math_libmath.s.o
+	Object main.nef.p/lib_TwlSDK_asm_rtc_librtc.s.o
+	Object main.nef.p/lib_TwlSDK_asm_snd_libsnd.s.o
+	Object main.nef.p/lib_TwlSDK_asm_fs_libfs.s.o
+	Object main.nef.p/lib_TwlSDK_asm_card_libcard.s.o
+	Object main.nef.p/lib_TwlSDK_asm_ctrdg_libctrdg.s.o
+	Object main.nef.p/lib_TwlSDK_asm_wm_libwm.s.o
+	Object main.nef.p/lib_TwlSDK_asm_std_libstd.s.o
+	Object main.nef.p/lib_TwlSDK_asm_pxi_libpxi.s.o
+	Object main.nef.p/lib_TwlSDK_asm_tp_libtp.s.o
+	Object main.nef.p/lib_TwlSDK_asm_pm_libpm.s.o
 
 	# TwlSystem library
-	Object lib/TwlSystem/asm/fnd/libnnsfnd.o
-	Object lib/TwlSystem/asm/g2d/libnnsg2d.o
-	Object lib/TwlSystem/asm/gfd/libnnsgfd.o
-	Object lib/TwlSystem/asm/snd/libnnssnd.o
+	Object main.nef.p/lib_TwlSystem_asm_fnd_libnnsfnd.s.o
+	Object main.nef.p/lib_TwlSystem_asm_g2d_libnnsg2d.s.o
+	Object main.nef.p/lib_TwlSystem_asm_gfd_libnnsgfd.s.o
+	Object main.nef.p/lib_TwlSystem_asm_snd_libnnssnd.s.o
 
-	Object asm/arm9_rodata_0208bfb0.o
+	Object main.nef.p/asm_arm9_rodata_0208bfb0.s.o
 
     # MSL library
-    Object lib/metroskrew/asm/libmsl.o
+    Object main.nef.p/lib_libmsl_asm_libmsl.s.o
 
-	Object asm/init/arm9_init_02086768.o
-	Object asm/init/arm9_init_02086aec.o
-	Object asm/init/arm9_init_02086b40.o
+	Object main.nef.p/asm_init_arm9_init_02086768.s.o
+	Object main.nef.p/asm_init_arm9_init_02086aec.s.o
+	Object main.nef.p/asm_init_arm9_init_02086b40.s.o
 
-	Object asm/arm9_02028fa0.o
-	Object asm/arm9_data_0208f680.o
-	Object asm/arm9_bss_02099e8c.o
-	Object src/izmain.o
-	Object asm/izmain_0.o
-	Object asm/gamemodes_0.o
-	Object src/gamemodes.o
-	Object asm/gamemodes_1.o
-	Object asm/gamemain.o
-	Object asm/commonscreen.o
-	Object asm/commonsubscreen.o
-	Object asm/commonmainscreen.o
-	Object asm/audioplayer_data.o
-	Object src/audioplayer.o
-	Object asm/allocator.o
-	Object src/movieplayer.o
+	Object main.nef.p/asm_arm9_02028fa0.s.o
+	Object main.nef.p/asm_arm9_data_0208f680.s.o
+	Object main.nef.p/asm_arm9_bss_02099e8c.s.o
+	Object main.nef.p/src_izmain.cpp.o
+	Object main.nef.p/asm_izmain_0.s.o
+	Object main.nef.p/asm_gamemodes_0.s.o
+	Object main.nef.p/src_gamemodes.cpp.o
+	Object main.nef.p/asm_gamemodes_1.s.o
+	Object main.nef.p/asm_gamemain.s.o
+	Object main.nef.p/asm_commonscreen.s.o
+	Object main.nef.p/asm_commonsubscreen.s.o
+	Object main.nef.p/asm_commonmainscreen.s.o
+	Object main.nef.p/asm_audioplayer_data.s.o
+	Object main.nef.p/src_audioplayer.cpp.o
+	Object main.nef.p/asm_allocator.s.o
+	Object main.nef.p/src_movieplayer.cpp.o
 
-	Object asm/init/arm9_init_02086be8.o
-	Object asm/init/arm9_init_02086c3c.o
-	Object asm/init/arm9_init_02086c8c.o
-	Object asm/init/arm9_init_02086ce0.o
+	Object main.nef.p/asm_init_arm9_init_02086be8.s.o
+	Object main.nef.p/asm_init_arm9_init_02086c3c.s.o
+	Object main.nef.p/asm_init_arm9_init_02086c8c.s.o
+	Object main.nef.p/asm_init_arm9_init_02086ce0.s.o
 
-	Object src/CFileIO.o
-	Object asm/scenescriptdata.o
-	Object asm/scenedirection.o
-	Object asm/arm9_0203df80.o
-	Object asm/arm9_0203fb5c.o
-	Object asm/memcopy.o
-	Object asm/vram.o
-	Object src/CConfig.o
-	Object asm/arm9_data_0208ff5c.o
-	Object asm/init/arm9_init_02086d34.o
-	Object src/CScreenManager.o
-	Object asm/init/arm9_init_02086d88.o
-	Object asm/init/arm9_init_02086ddc.o
-	Object asm/init/arm9_init_02086e30.o
-	Object asm/init/arm9_init_02086e84.o
-	Object asm/init/arm9_init_02086ed8.o
-	Object asm/init/arm9_init_02086f2c.o
+	Object main.nef.p/src_CFileIO.cpp.o
+	Object main.nef.p/asm_scenescriptdata.s.o
+	Object main.nef.p/asm_scenedirection.s.o
+	Object main.nef.p/asm_arm9_0203df80.s.o
+	Object main.nef.p/asm_arm9_0203fb5c.s.o
+	Object main.nef.p/asm_memcopy.s.o
+	Object main.nef.p/asm_vram.s.o
+	Object main.nef.p/src_CConfig.cpp.o
+	Object main.nef.p/asm_arm9_data_0208ff5c.s.o
+	Object main.nef.p/asm_init_arm9_init_02086d34.s.o
+	Object main.nef.p/src_CScreenManager.cpp.o
+	Object main.nef.p/asm_init_arm9_init_02086d88.s.o
+	Object main.nef.p/asm_init_arm9_init_02086ddc.s.o
+	Object main.nef.p/asm_init_arm9_init_02086e30.s.o
+	Object main.nef.p/asm_init_arm9_init_02086e84.s.o
+	Object main.nef.p/asm_init_arm9_init_02086ed8.s.o
+	Object main.nef.p/asm_init_arm9_init_02086f2c.s.o
 
-	Object src/CFontManager.o
-	Object asm/fontmanager.o
-	Object asm/calcmap.o
-	Object asm/distancemap.o
-	Object asm/eventscreenmanager.o
-	Object asm/arm9_020453e0.o
-	Object asm/wirelessutil.o
-	Object asm/scenescriptmanager.o
-	Object asm/init/arm9_init_02086f80.o
-	Object src/script/CSceneScriptFileContext.o
+	Object main.nef.p/src_CFontManager.cpp.o
+	Object main.nef.p/asm_fontmanager.s.o
+	Object main.nef.p/asm_calcmap.s.o
+	Object main.nef.p/asm_distancemap.s.o
+	Object main.nef.p/asm_eventscreenmanager.s.o
+	Object main.nef.p/asm_arm9_020453e0.s.o
+	Object main.nef.p/asm_wirelessutil.s.o
+	Object main.nef.p/asm_scenescriptmanager.s.o
+	Object main.nef.p/asm_init_arm9_init_02086f80.s.o
+	Object main.nef.p/src_script_CSceneScriptFileContext.cpp.o
 
-	Object asm/init/arm9_init_02087028.o
-	Object asm/init/arm9_init_0208707c.o
-	Object asm/init/arm9_init_020870d0.o
-	Object asm/init/arm9_init_02087120.o
+	Object main.nef.p/asm_init_arm9_init_02087028.s.o
+	Object main.nef.p/asm_init_arm9_init_0208707c.s.o
+	Object main.nef.p/asm_init_arm9_init_020870d0.s.o
+	Object main.nef.p/asm_init_arm9_init_02087120.s.o
 	
-	Object asm/thinkmanager_mini.o
-	Object asm/thinkmanager.o
-	Object asm/logicthink.o
-	Object src/C3DDevice.o
-	Object asm/init/arm9_init_020871c8.o
-	Object asm/init/arm9_init_02087218.o
-	Object asm/init/arm9_init_02087268.o
-	Object asm/init/arm9_init_020872bc.o
-	Object asm/init/arm9_init_02087310.o
-	Object asm/init/arm9_init_02087360.o
-	Object asm/init/arm9_init_020873b4.o
-	Object asm/init/arm9_init_02087408.o
-	Object asm/init/arm9_init_0208745c.o
-	Object asm/init/arm9_init_020874b0.o
-	Object asm/init/arm9_init_02087500.o
-	Object asm/init/arm9_init_02087554.o
-	Object asm/init/arm9_init_020875a8.o
-	Object asm/init/arm9_init_020875fc.o
-	Object asm/init/arm9_init_02087650.o
-	Object asm/init/arm9_init_020876a4.o
-	Object asm/init/arm9_init_020876f8.o
+	Object main.nef.p/asm_thinkmanager_mini.s.o
+	Object main.nef.p/asm_thinkmanager.s.o
+	Object main.nef.p/asm_logicthink.s.o
+	Object main.nef.p/src_C3DDevice.cpp.o
+	Object main.nef.p/asm_init_arm9_init_020871c8.s.o
+	Object main.nef.p/asm_init_arm9_init_02087218.s.o
+	Object main.nef.p/asm_init_arm9_init_02087268.s.o
+	Object main.nef.p/asm_init_arm9_init_020872bc.s.o
+	Object main.nef.p/asm_init_arm9_init_02087310.s.o
+	Object main.nef.p/asm_init_arm9_init_02087360.s.o
+	Object main.nef.p/asm_init_arm9_init_020873b4.s.o
+	Object main.nef.p/asm_init_arm9_init_02087408.s.o
+	Object main.nef.p/asm_init_arm9_init_0208745c.s.o
+	Object main.nef.p/asm_init_arm9_init_020874b0.s.o
+	Object main.nef.p/asm_init_arm9_init_02087500.s.o
+	Object main.nef.p/asm_init_arm9_init_02087554.s.o
+	Object main.nef.p/asm_init_arm9_init_020875a8.s.o
+	Object main.nef.p/asm_init_arm9_init_020875fc.s.o
+	Object main.nef.p/asm_init_arm9_init_02087650.s.o
+	Object main.nef.p/asm_init_arm9_init_020876a4.s.o
+	Object main.nef.p/asm_init_arm9_init_020876f8.s.o
 
-	Object asm/resourcemanager.o
-	Object asm/3dgamebase.o
-	Object asm/arm9_0205244c.o
-	Object asm/arm9_0205318c.o
-	Object asm/actor2d.o
-	Object asm/2dadventurelogic.o
-	Object asm/2dgamechar.o
-	Object asm/3dspritefile.o
-	Object asm/cameracontroller.o
-	Object asm/3dgamechar.o
-	Object asm/3dgameeffect.o
-	Object asm/3dgamemap.o
-	Object asm/3dgamemapobject.o
-	Object asm/recordmanager.o
-	Object src/CCardCtrl.o
+	Object main.nef.p/asm_resourcemanager.s.o
+	Object main.nef.p/asm_3dgamebase.s.o
+	Object main.nef.p/asm_arm9_0205244c.s.o
+	Object main.nef.p/asm_arm9_0205318c.s.o
+	Object main.nef.p/asm_actor2d.s.o
+	Object main.nef.p/asm_2dadventurelogic.s.o
+	Object main.nef.p/asm_2dgamechar.s.o
+	Object main.nef.p/asm_3dspritefile.s.o
+	Object main.nef.p/asm_cameracontroller.s.o
+	Object main.nef.p/asm_3dgamechar.s.o
+	Object main.nef.p/asm_3dgameeffect.s.o
+	Object main.nef.p/asm_3dgamemap.s.o
+	Object main.nef.p/asm_3dgamemapobject.s.o
+	Object main.nef.p/asm_recordmanager.s.o
+	Object main.nef.p/src_CCardCtrl.cpp.o
 
 	# TwlSystem G3d
-	Object lib/TwlSystem/asm/g3d/libnnsg3d.o
+	Object main.nef.p/lib_TwlSystem_asm_g3d_libnnsg3d.s.o
 
-	Object asm/fontmanager_2.o
-	Object asm/unitmanager.o
-	Object src/thread.o
-	Object asm/arm9_0206f0b8.o
+	Object main.nef.p/asm_fontmanager_2.s.o
+	Object main.nef.p/asm_unitmanager.s.o
+	Object main.nef.p/src_thread.cpp.o
+	Object main.nef.p/asm_arm9_0206f0b8.s.o
 
 	# DSE library
-	Object lib/DSE/asm/libDSE.o
+	Object main.nef.p/lib_DSE_asm_libDSE.s.o
 
-	Object src/filesystem.o
+	Object main.nef.p/src_filesystem.cpp.o
 
-	Object asm/init/arm9_init_020877a0.o
+	Object main.nef.p/asm_init_arm9_init_020877a0.s.o
 }
 
 Autoload ITCM
 {
 	Address 0x01FF8000
-	Object lib/TwlSDK/asm/os/libos.o (.itcm)
-	Object lib/TwlSDK/asm/memory/libmi.o (.itcm)
-	Object asm/itcm.o (.itcm)
+	Object main.nef.p/lib_TwlSDK_asm_os_libos.s.o (.itcm)
+	Object main.nef.p/lib_TwlSDK_asm_memory_libmi.s.o (.itcm)
+	Object main.nef.p/asm_itcm.s.o (.itcm)
 }
 
 Autoload DTCM
 {
 	Address 0x027E0000
-	Object lib/TwlSDK/asm/os/dtcm.o (.dtcm)
-	Object lib/TwlSDK/asm/os/dtcm.o (.bss)
+	Object main.nef.p/lib_TwlSDK_asm_os_dtcm.s.o (.dtcm)
+	Object main.nef.p/lib_TwlSDK_asm_os_dtcm.s.o (.bss)
 }
 
 Overlay overlay0
 {
 	After main
-	Object asm/overlay0/overlay0.o
+	Object main.nef.p/asm_overlay0_overlay0.s.o
 }
 Overlay overlay1
 {
 	After main
-	Object asm/overlay1/overlay1.o
+	Object main.nef.p/asm_overlay1_overlay1.s.o
 }
 Overlay overlay2
 {
@@ -189,28 +189,28 @@ Overlay overlay2
 Overlay overlay3
 {
 	After main
-	Object src/cardscreen/CCardScreenManager.o
-	Object src/cardscreen/CMainCardScreenInit.o
+	Object main.nef.p/src_cardscreen_CCardScreenManager.cpp.o
+	Object main.nef.p/src_cardscreen_CMainCardScreenInit.cpp.o
 }
 Overlay overlay4
 {
 	After main
-	Object asm/overlay4/overlay4.o
+	Object main.nef.p/asm_overlay4_overlay4.s.o
 }
 Overlay overlay5
 {
 	After main
-	Object src/logoscreen/CLogoScreenManager.o
-	Object src/logoscreen/CMainLogoScreenDCBmp.o
-	Object src/logoscreen/CMainLogoScreenInit.o
-	Object src/logoscreen/CSubLogoScreenInit.o
+	Object main.nef.p/src_logoscreen_CLogoScreenManager.cpp.o
+	Object main.nef.p/src_logoscreen_CMainLogoScreenDCBmp.cpp.o
+	Object main.nef.p/src_logoscreen_CMainLogoScreenInit.cpp.o
+	Object main.nef.p/src_logoscreen_CSubLogoScreenInit.cpp.o
 }
 Overlay overlay6
 {
 	After main
-	Object src/endrollscreen/CEndrollScreenManager.o
-	Object src/endrollscreen/CMainEndrollScreenInit.o
-	Object src/endrollscreen/CSubEndrollScreenInit.o
+	Object main.nef.p/src_endrollscreen_CEndrollScreenManager.cpp.o
+	Object main.nef.p/src_endrollscreen_CMainEndrollScreenInit.cpp.o
+	Object main.nef.p/src_endrollscreen_CSubEndrollScreenInit.cpp.o
 }
 Overlay overlay7
 {
@@ -249,520 +249,520 @@ Overlay overlay15
 	After main
 
 	# TwlDWC_dl and TwlWiFi libraries
-	Object lib/TwlWiFi/asm/cps/network.o
+	Object main.nef.p/lib_TwlWiFi_asm_cps_network.s.o
 
-	Object lib/TwlDWC_dl/asm/ac/wds.o
-	Object lib/TwlDWC_dl/asm/ac/beacon.o
-	Object lib/TwlDWC_dl/asm/ac/callback.o
-	Object lib/TwlDWC_dl/asm/ac/close.o
-	Object lib/TwlDWC_dl/asm/ac/connect.o
-	Object lib/TwlDWC_dl/asm/ac/dwc_ac.o
-	Object lib/TwlDWC_dl/asm/ac/dwc_connectinet.o
-	Object lib/TwlDWC_dl/asm/ac/error.o
-	Object lib/TwlDWC_dl/asm/ac/makelist.o
-	Object lib/TwlDWC_dl/asm/ac/nintendospot.o
-	Object lib/TwlDWC_dl/asm/ac/retry.o
-	Object lib/TwlDWC_dl/asm/ac/search.o
-	Object lib/TwlDWC_dl/asm/ac/shop_usb.o
-	Object lib/TwlDWC_dl/asm/ac/start.o
-	Object lib/TwlDWC_dl/asm/ac/test.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_ac_wds.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_ac_beacon.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_ac_callback.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_ac_close.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_ac_connect.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_ac_dwc_ac.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_ac_dwc_connectinet.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_ac_error.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_ac_makelist.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_ac_nintendospot.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_ac_retry.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_ac_search.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_ac_shop_usb.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_ac_start.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_ac_test.s.o
 
-	Object lib/TwlDWC_dl/asm/auth/dwc_auth.o
-	Object lib/TwlDWC_dl/asm/auth/dwc_auth_interface.o
-	Object lib/TwlDWC_dl/asm/auth/dwc_cal.o
-	Object lib/TwlDWC_dl/asm/auth/dwc_http.o
-	Object lib/TwlDWC_dl/asm/auth/dwc_netcheck.o
-	Object lib/TwlDWC_dl/asm/auth/dwc_svl.o
-	Object lib/TwlDWC_dl/asm/auth/dwc_ca_cybertrust_baltimore.o
-	Object lib/TwlDWC_dl/asm/auth/dwc_ca_cybertrust_globalsign.o
-	Object lib/TwlDWC_dl/asm/auth/dwc_ca_cybertrust_gteglroot.o
-	Object lib/TwlDWC_dl/asm/auth/dwc_ca_cybertrust_gteroot.o
-	Object lib/TwlDWC_dl/asm/auth/dwc_ca_globalsign_rootcar2.o
-	Object lib/TwlDWC_dl/asm/auth/dwc_ca_nas_self.o
-	Object lib/TwlDWC_dl/asm/auth/dwc_ca_thawte_premiumserver.o
-	Object lib/TwlDWC_dl/asm/auth/dwc_ca_thawte_server.o
-	Object lib/TwlDWC_dl/asm/auth/dwc_ca_verisign_c3pcag2v2.o
-	Object lib/TwlDWC_dl/asm/auth/dwc_ca_verisign_c3pcag3v2.o
-	Object lib/TwlDWC_dl/asm/auth/dwc_ca_verisign_pca3ssg4.o
-	Object lib/TwlDWC_dl/asm/auth/dwc_ca_verisign_secureserver.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_auth_dwc_auth.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_auth_dwc_auth_interface.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_auth_dwc_cal.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_auth_dwc_http.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_auth_dwc_netcheck.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_auth_dwc_svl.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_auth_dwc_ca_cybertrust_baltimore.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_auth_dwc_ca_cybertrust_globalsign.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_auth_dwc_ca_cybertrust_gteglroot.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_auth_dwc_ca_cybertrust_gteroot.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_auth_dwc_ca_globalsign_rootcar2.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_auth_dwc_ca_nas_self.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_auth_dwc_ca_thawte_premiumserver.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_auth_dwc_ca_thawte_server.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_auth_dwc_ca_verisign_c3pcag2v2.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_auth_dwc_ca_verisign_c3pcag3v2.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_auth_dwc_ca_verisign_pca3ssg4.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_auth_dwc_ca_verisign_secureserver.s.o
 
-	Object lib/TwlDWC_dl/asm/bm/dwc_backup.o
-	Object lib/TwlDWC_dl/asm/bm/dwc_bm_init.o
-	Object lib/TwlDWC_dl/asm/bm/util_wifiidtool.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_bm_dwc_backup.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_bm_dwc_bm_init.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_bm_util_wifiidtool.s.o
 
-	Object lib/TwlDWC_dl/asm/common/dwc_base64.o
-	Object lib/TwlDWC_dl/asm/common/dwc_error.o
-	Object lib/TwlDWC_dl/asm/common/dwc_init.o
-	Object lib/TwlDWC_dl/asm/common/dwc_memfunc.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_common_dwc_base64.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_common_dwc_error.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_common_dwc_init.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_common_dwc_memfunc.s.o
 
-	Object lib/TwlDWC_dl/asm/nas/dwc_nasfunc.o
-	Object lib/TwlDWC_dl/asm/nas/dwc_nastime.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_nas_dwc_nasfunc.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_nas_dwc_nastime.s.o
 
-	Object lib/TwlDWC_dl/asm/nd/dwc_nd.o
-	Object lib/TwlDWC_dl/asm/nd/dwci_nd.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_nd_dwc_nd.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_nd_dwci_nd.s.o
 	
-	Object lib/TwlDWC_dl/asm/nhttp/nhttp_os_ntr.o
-	Object lib/TwlDWC_dl/asm/nhttp/nhttp_socket_ntr.o
-	Object lib/TwlDWC_dl/asm/nhttp/nhttp_stdlib_ntr.o
-	Object lib/TwlDWC_dl/asm/nhttp/nhttp_bgnend.o
-	Object lib/TwlDWC_dl/asm/nhttp/nhttp_control.o
-	Object lib/TwlDWC_dl/asm/nhttp/nhttp_list.o
-	Object lib/TwlDWC_dl/asm/nhttp/nhttp_recvbuf.o
-	Object lib/TwlDWC_dl/asm/nhttp/nhttp_request.o
-	Object lib/TwlDWC_dl/asm/nhttp/nhttp_response.o
-	Object lib/TwlDWC_dl/asm/nhttp/nhttp_thread.o
-	Object lib/TwlDWC_dl/asm/nhttp/d_nhttp.o
-	Object lib/TwlDWC_dl/asm/nhttp/d_nhttp_common.o
-	Object lib/TwlDWC_dl/asm/nhttp/d_nhttp_private.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_nhttp_nhttp_os_ntr.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_nhttp_nhttp_socket_ntr.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_nhttp_nhttp_stdlib_ntr.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_nhttp_nhttp_bgnend.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_nhttp_nhttp_control.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_nhttp_nhttp_list.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_nhttp_nhttp_recvbuf.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_nhttp_nhttp_request.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_nhttp_nhttp_response.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_nhttp_nhttp_thread.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_nhttp_d_nhttp.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_nhttp_d_nhttp_common.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_nhttp_d_nhttp_private.s.o
 
-	Object lib/TwlWiFi/asm/soc/socl_startup.o
-	Object lib/TwlWiFi/asm/soc/socl_command.o
-	Object lib/TwlWiFi/asm/soc/socl_create.o
-	Object lib/TwlWiFi/asm/soc/socl_bind.o
-	Object lib/TwlWiFi/asm/soc/socl_read.o
-	Object lib/TwlWiFi/asm/soc/socl_write.o
-	Object lib/TwlWiFi/asm/soc/socl_shutdown.o
-	Object lib/TwlWiFi/asm/soc/socl_close.o
-	Object lib/TwlWiFi/asm/soc/socl_cleanup.o
-	Object lib/TwlWiFi/asm/soc/socl_const.o
-	Object lib/TwlWiFi/asm/soc/socl_resolve.o
-	Object lib/TwlWiFi/asm/soc/socl_poll.o
-	Object lib/TwlWiFi/asm/soc/socl_misc.o
-	Object lib/TwlWiFi/asm/soc/socl_list.o
-	Object lib/TwlWiFi/asm/soc/soc.o
-	Object lib/TwlWiFi/asm/soc/socl_ssl.o
+	Object main.nef.p/lib_TwlWiFi_asm_soc_socl_startup.s.o
+	Object main.nef.p/lib_TwlWiFi_asm_soc_socl_command.s.o
+	Object main.nef.p/lib_TwlWiFi_asm_soc_socl_create.s.o
+	Object main.nef.p/lib_TwlWiFi_asm_soc_socl_bind.s.o
+	Object main.nef.p/lib_TwlWiFi_asm_soc_socl_read.s.o
+	Object main.nef.p/lib_TwlWiFi_asm_soc_socl_write.s.o
+	Object main.nef.p/lib_TwlWiFi_asm_soc_socl_shutdown.s.o
+	Object main.nef.p/lib_TwlWiFi_asm_soc_socl_close.s.o
+	Object main.nef.p/lib_TwlWiFi_asm_soc_socl_cleanup.s.o
+	Object main.nef.p/lib_TwlWiFi_asm_soc_socl_const.s.o
+	Object main.nef.p/lib_TwlWiFi_asm_soc_socl_resolve.s.o
+	Object main.nef.p/lib_TwlWiFi_asm_soc_socl_poll.s.o
+	Object main.nef.p/lib_TwlWiFi_asm_soc_socl_misc.s.o
+	Object main.nef.p/lib_TwlWiFi_asm_soc_socl_list.s.o
+	Object main.nef.p/lib_TwlWiFi_asm_soc_soc.s.o
+	Object main.nef.p/lib_TwlWiFi_asm_soc_socl_ssl.s.o
 
-	Object lib/TwlWiFi/asm/ssl/ssl.o
-	Object lib/TwlWiFi/asm/ssl/md5.o
-	Object lib/TwlWiFi/asm/ssl/sha1.o
-	Object lib/TwlWiFi/asm/ssl/arc4.o
-	Object lib/TwlWiFi/asm/ssl/biginteger.o
+	Object main.nef.p/lib_TwlWiFi_asm_ssl_ssl.s.o
+	Object main.nef.p/lib_TwlWiFi_asm_ssl_md5.s.o
+	Object main.nef.p/lib_TwlWiFi_asm_ssl_sha1.s.o
+	Object main.nef.p/lib_TwlWiFi_asm_ssl_arc4.s.o
+	Object main.nef.p/lib_TwlWiFi_asm_ssl_biginteger.s.o
 
-	Object lib/TwlWiFi/asm/wcm/system.o
-	Object lib/TwlWiFi/asm/wcm/aplist.o
-	Object lib/TwlWiFi/asm/wcm/cpsif.o
-	Object lib/TwlWiFi/asm/wcm/util.o
-	Object lib/TwlWiFi/asm/wcm/wmif.o
+	Object main.nef.p/lib_TwlWiFi_asm_wcm_system.s.o
+	Object main.nef.p/lib_TwlWiFi_asm_wcm_aplist.s.o
+	Object main.nef.p/lib_TwlWiFi_asm_wcm_cpsif.s.o
+	Object main.nef.p/lib_TwlWiFi_asm_wcm_util.s.o
+	Object main.nef.p/lib_TwlWiFi_asm_wcm_wmif.s.o
 
-	Object asm/overlay15/overlay15.o
+	Object main.nef.p/asm_overlay15_overlay15.s.o
 
 	# Libcrypto RC4
-	Object lib/TwlSDK/asm/crypto/rc4.o
+	Object main.nef.p/lib_TwlSDK_asm_crypto_rc4.s.o
 }
 Overlay overlay16
 {
 	After overlay15
-	Object asm/overlay16/ov16_020ede60.o
-	Object asm/overlay16/ov16_020ef624.o
-	Object src/random.o
-	Object asm/overlay16/ov16_020efa04.o
-	Object asm/overlay16/ov16_graphics.o
-	Object asm/overlay16/ov16_020f2cf8.o
-	Object asm/overlay16/ov16_rodata_021178a4.o
-	Object asm/overlay16/archive_sti.o
-	Object src/archive.o
-	Object src/overlay.o
-	Object asm/overlay16/ov16_020f3f00.o
-	Object src/CBgAnimeManager.o
-	Object asm/overlay16/CBgMenuManager.o
-	Object src/CBgMenuRadioButton.o
-	Object asm/overlay16/ov16_020f6f8c.o
-	Object asm/overlay16/CSprAnimeCtrl.o
-	Object asm/overlay16/CSprButtonCtrl.o
-	Object asm/overlay16/CSprDialog.o
-	Object asm/overlay16/CTexture.o
-	Object asm/overlay16/C3DPlaneCtrl.o
-	Object asm/overlay16/C3DSpriteCtrl.o
+	Object main.nef.p/asm_overlay16_ov16_020ede60.s.o
+	Object main.nef.p/asm_overlay16_ov16_020ef624.s.o
+	Object main.nef.p/src_random.cpp.o
+	Object main.nef.p/asm_overlay16_ov16_020efa04.s.o
+	Object main.nef.p/asm_overlay16_ov16_graphics.s.o
+	Object main.nef.p/asm_overlay16_ov16_020f2cf8.s.o
+	Object main.nef.p/asm_overlay16_ov16_rodata_021178a4.s.o
+	Object main.nef.p/asm_overlay16_archive_sti.s.o
+	Object main.nef.p/src_archive.cpp.o
+	Object main.nef.p/src_overlay.cpp.o
+	Object main.nef.p/asm_overlay16_ov16_020f3f00.s.o
+	Object main.nef.p/src_CBgAnimeManager.cpp.o
+	Object main.nef.p/asm_overlay16_CBgMenuManager.s.o
+	Object main.nef.p/src_CBgMenuRadioButton.cpp.o
+	Object main.nef.p/asm_overlay16_ov16_020f6f8c.s.o
+	Object main.nef.p/asm_overlay16_CSprAnimeCtrl.s.o
+	Object main.nef.p/asm_overlay16_CSprButtonCtrl.s.o
+	Object main.nef.p/asm_overlay16_CSprDialog.s.o
+	Object main.nef.p/asm_overlay16_CTexture.s.o
+	Object main.nef.p/asm_overlay16_C3DPlaneCtrl.s.o
+	Object main.nef.p/asm_overlay16_C3DSpriteCtrl.s.o
 }
 Overlay overlay17
 {
 	After overlay15
 
 	# DWCutil library
-	Object lib/TwlDWC_dl/asm/util/aoss.o
-	Object lib/TwlDWC_dl/asm/util/aosslink.o
-	Object lib/TwlDWC_dl/asm/util/apc.o
-	Object lib/TwlDWC_dl/asm/util/atermset.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_aoss.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_aosslink.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_apc.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_atermset.s.o
 
-	Object lib/TwlDWC_dl/asm/util/anime.o
-	Object lib/TwlDWC_dl/asm/util/button.o
-	Object lib/TwlDWC_dl/asm/util/comment.o
-	Object lib/TwlDWC_dl/asm/util/common.o
-	Object lib/TwlDWC_dl/asm/util/focus.o
-	Object lib/TwlDWC_dl/asm/util/headline.o
-	Object lib/TwlDWC_dl/asm/util/icon.o
-	Object lib/TwlDWC_dl/asm/util/keyboard.o
-	Object lib/TwlDWC_dl/asm/util/keyboard10.o
-	Object lib/TwlDWC_dl/asm/util/libaoss.o
-	Object lib/TwlDWC_dl/asm/util/main.o
-	Object lib/TwlDWC_dl/asm/util/message.o
-	Object lib/TwlDWC_dl/asm/util/move.o
-	Object lib/TwlDWC_dl/asm/util/rakuraku.o
-	Object lib/TwlDWC_dl/asm/util/sceneend.o
-	Object lib/TwlDWC_dl/asm/util/sceneinit.o
-	Object lib/TwlDWC_dl/asm/util/scenemenu.o
-	Object lib/TwlDWC_dl/asm/util/sceneopterase.o
-	Object lib/TwlDWC_dl/asm/util/sceneopterase1.o
-	Object lib/TwlDWC_dl/asm/util/sceneoptinfo.o
-	Object lib/TwlDWC_dl/asm/util/sceneoptmenu.o
-	Object lib/TwlDWC_dl/asm/util/sceneoptmovcomm.o
-	Object lib/TwlDWC_dl/asm/util/sceneoptmovcomplete.o
-	Object lib/TwlDWC_dl/asm/util/sceneoptmovconfirm.o
-	Object lib/TwlDWC_dl/asm/util/sceneoptmovconfirm1.o
-	Object lib/TwlDWC_dl/asm/util/sceneoptmovdisconnect.o
-	Object lib/TwlDWC_dl/asm/util/sceneoptmovfailure.o
-	Object lib/TwlDWC_dl/asm/util/sceneoptmovuser.o
-	Object lib/TwlDWC_dl/asm/util/sceneoptmovwait.o
-	Object lib/TwlDWC_dl/asm/util/scenesetaossbutton.o
-	Object lib/TwlDWC_dl/asm/util/scenesetaosscomplete.o
-	Object lib/TwlDWC_dl/asm/util/scenesetaplist.o
-	Object lib/TwlDWC_dl/asm/util/scenesetedit32.o
-	Object lib/TwlDWC_dl/asm/util/sceneseteditaddress.o
-	Object lib/TwlDWC_dl/asm/util/sceneseterror.o
-	Object lib/TwlDWC_dl/asm/util/scenesetlist.o
-	Object lib/TwlDWC_dl/asm/util/scenesetlistsave.o
-	Object lib/TwlDWC_dl/asm/util/scenesetrakubutton.o
-	Object lib/TwlDWC_dl/asm/util/scenesetrakubutton1.o
-	Object lib/TwlDWC_dl/asm/util/scenesetrakucomplete.o
-	Object lib/TwlDWC_dl/asm/util/scenesetrakuready.o
-	Object lib/TwlDWC_dl/asm/util/scenesetsearch.o
-	Object lib/TwlDWC_dl/asm/util/scenesetselectap.o
-	Object lib/TwlDWC_dl/asm/util/scenesetselectway.o
-	Object lib/TwlDWC_dl/asm/util/scenesettest.o
-	Object lib/TwlDWC_dl/asm/util/scenesettestcompletet.o
-	Object lib/TwlDWC_dl/asm/util/scenesettestconfirm.o
-	Object lib/TwlDWC_dl/asm/util/scenesetusbcomplete.o
-	Object lib/TwlDWC_dl/asm/util/scenesetusbready.o
-	Object lib/TwlDWC_dl/asm/util/scenesetusbready1.o
-	Object lib/TwlDWC_dl/asm/util/screen.o
-	Object lib/TwlDWC_dl/asm/util/scrollbar.o
-	Object lib/TwlDWC_dl/asm/util/search_dwc_util.o
-	Object lib/TwlDWC_dl/asm/util/setting.o
-	Object lib/TwlDWC_dl/asm/util/sound.o
-	Object lib/TwlDWC_dl/asm/util/step.o
-	Object lib/TwlDWC_dl/asm/util/usbap.o
-	Object lib/TwlDWC_dl/asm/util/window.o
-	Object lib/TwlDWC_dl/asm/util/dwc_mov_mbp.o
-	Object lib/TwlDWC_dl/asm/util/dwc_mov_wh.o
-	Object lib/TwlDWC_dl/asm/util/dwc_moveid.o
-	Object lib/TwlDWC_dl/asm/util/archive_.o
-	Object lib/TwlDWC_dl/asm/util/cell.o
-	Object lib/TwlDWC_dl/asm/util/cellinfo.o
-	Object lib/TwlDWC_dl/asm/util/deque.o
-	Object lib/TwlDWC_dl/asm/util/effect.o
-	Object lib/TwlDWC_dl/asm/util/font.o
-	Object lib/TwlDWC_dl/asm/util/foundation.o
-	Object lib/TwlDWC_dl/asm/util/graphics.o
-	Object lib/TwlDWC_dl/asm/util/heap.o
-	Object lib/TwlDWC_dl/asm/util/input.o
-	Object lib/TwlDWC_dl/asm/util/interrupt.o
-	Object lib/TwlDWC_dl/asm/util/list.o
-	Object lib/TwlDWC_dl/asm/util/obj.o
-	Object lib/TwlDWC_dl/asm/util/objvram.o
-	Object lib/TwlDWC_dl/asm/util/str.o
-	Object lib/TwlDWC_dl/asm/util/sub.o
-	Object lib/TwlDWC_dl/asm/util/task.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_anime.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_button.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_comment.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_common.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_focus.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_headline.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_icon.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_keyboard.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_keyboard10.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_libaoss.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_main.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_message.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_move.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_rakuraku.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_sceneend.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_sceneinit.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_scenemenu.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_sceneopterase.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_sceneopterase1.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_sceneoptinfo.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_sceneoptmenu.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_sceneoptmovcomm.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_sceneoptmovcomplete.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_sceneoptmovconfirm.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_sceneoptmovconfirm1.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_sceneoptmovdisconnect.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_sceneoptmovfailure.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_sceneoptmovuser.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_sceneoptmovwait.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_scenesetaossbutton.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_scenesetaosscomplete.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_scenesetaplist.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_scenesetedit32.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_sceneseteditaddress.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_sceneseterror.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_scenesetlist.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_scenesetlistsave.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_scenesetrakubutton.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_scenesetrakubutton1.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_scenesetrakucomplete.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_scenesetrakuready.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_scenesetsearch.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_scenesetselectap.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_scenesetselectway.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_scenesettest.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_scenesettestcompletet.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_scenesettestconfirm.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_scenesetusbcomplete.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_scenesetusbready.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_scenesetusbready1.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_screen.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_scrollbar.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_search_dwc_util.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_setting.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_sound.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_step.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_usbap.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_window.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_dwc_mov_mbp.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_dwc_mov_wh.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_dwc_moveid.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_archive_.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_cell.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_cellinfo.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_deque.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_effect.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_font.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_foundation.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_graphics.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_heap.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_input.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_interrupt.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_list.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_obj.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_objvram.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_str.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_sub.s.o
+	Object main.nef.p/lib_TwlDWC_dl_asm_util_task.s.o
 }
 Overlay overlay18
 {
 	After overlay16
-	Object asm/overlay18/overlay18.o
+	Object main.nef.p/asm_overlay18_overlay18.s.o
 }
 Overlay overlay19
 {
 	After overlay16
-	Object asm/overlay19/overlay19.o
+	Object main.nef.p/asm_overlay19_overlay19.s.o
 }
 Overlay overlay20
 {
 	After overlay16
-	Object asm/overlay20/overlay20.o
+	Object main.nef.p/asm_overlay20_overlay20.s.o
 }
 Overlay overlay21
 {
 	After overlay16
-	Object asm/overlay21/overlay21.o
+	Object main.nef.p/asm_overlay21_overlay21.s.o
 }
 Overlay overlay22
 {
 	After overlay16
-	Object asm/overlay22/overlay22.o
+	Object main.nef.p/asm_overlay22_overlay22.s.o
 }
 Overlay overlay23
 {
 	After overlay16
-	Object asm/overlay23/overlay23.o
+	Object main.nef.p/asm_overlay23_overlay23.s.o
 }
 Overlay overlay24
 {
 	After overlay16
-	Object asm/overlay24/overlay24.o
+	Object main.nef.p/asm_overlay24_overlay24.s.o
 }
 Overlay overlay25
 {
 	After overlay16
-	Object asm/overlay25/overlay25.o
+	Object main.nef.p/asm_overlay25_overlay25.s.o
 }
 Overlay overlay26
 {
 	After overlay16
-	Object asm/overlay26/overlay26.o
+	Object main.nef.p/asm_overlay26_overlay26.s.o
 }
 Overlay overlay27
 {
 	After overlay16
-	Object asm/overlay27/overlay27.o
+	Object main.nef.p/asm_overlay27_overlay27.s.o
 }
 Overlay overlay28
 {
 	After overlay16
-	Object asm/overlay28/overlay28.o
+	Object main.nef.p/asm_overlay28_overlay28.s.o
 }
 Overlay overlay29
 {
 	After overlay16
-	Object asm/overlay29/overlay29.o
+	Object main.nef.p/asm_overlay29_overlay29.s.o
 }
 Overlay overlay30
 {
 	After overlay16
-	Object asm/overlay30/overlay30.o
+	Object main.nef.p/asm_overlay30_overlay30.s.o
 }
 Overlay overlay31
 {
 	After overlay16
-	Object asm/overlay31/overlay31.o
+	Object main.nef.p/asm_overlay31_overlay31.s.o
 }
 Overlay overlay32
 {
 	After overlay16
-	Object asm/overlay32/overlay32.o
+	Object main.nef.p/asm_overlay32_overlay32.s.o
 }
 Overlay overlay33
 {
 	After overlay16
-	Object asm/overlay33/overlay33.o
+	Object main.nef.p/asm_overlay33_overlay33.s.o
 }
 Overlay overlay34
 {
 	After overlay16
-	Object asm/overlay34/overlay34.o
+	Object main.nef.p/asm_overlay34_overlay34.s.o
 }
 Overlay overlay35
 {
 	After overlay16
-	Object asm/overlay35/overlay35.o
+	Object main.nef.p/asm_overlay35_overlay35.s.o
 }
 Overlay overlay36
 {
 	After overlay16
-	Object asm/overlay36/overlay36.o
+	Object main.nef.p/asm_overlay36_overlay36.s.o
 }
 Overlay overlay37
 {
 	After overlay16
-	Object asm/overlay37/overlay37.o
+	Object main.nef.p/asm_overlay37_overlay37.s.o
 }
 Overlay overlay38
 {
 	After overlay16
-	Object asm/overlay38/overlay38.o
+	Object main.nef.p/asm_overlay38_overlay38.s.o
 }
 Overlay overlay39
 {
 	After overlay16
-	Object asm/overlay39/overlay39.o
+	Object main.nef.p/asm_overlay39_overlay39.s.o
 }
 Overlay overlay40
 {
 	After overlay16
-	Object asm/overlay40/overlay40.o
+	Object main.nef.p/asm_overlay40_overlay40.s.o
 }
 Overlay overlay41
 {
 	After overlay16
-	Object asm/overlay41/overlay41.o
+	Object main.nef.p/asm_overlay41_overlay41.s.o
 }
 Overlay overlay42
 {
 	After overlay16
-	Object asm/overlay42/overlay42.o
+	Object main.nef.p/asm_overlay42_overlay42.s.o
 }
 Overlay overlay43
 {
 	After overlay16
-	Object asm/overlay43/overlay43.o
+	Object main.nef.p/asm_overlay43_overlay43.s.o
 }
 Overlay overlay44
 {
 	After overlay16
-	Object asm/overlay44/overlay44.o
+	Object main.nef.p/asm_overlay44_overlay44.s.o
 }
 Overlay overlay45
 {
 	After overlay16
-	Object asm/overlay45/overlay45.o
+	Object main.nef.p/asm_overlay45_overlay45.s.o
 }
 Overlay overlay46
 {
 	After overlay16
-	Object asm/overlay46/overlay46.o
+	Object main.nef.p/asm_overlay46_overlay46.s.o
 }
 Overlay overlay47
 {
 	After overlay16
-	Object asm/overlay47/overlay47.o
+	Object main.nef.p/asm_overlay47_overlay47.s.o
 }
 Overlay overlay48
 {
 	After overlay16
-	Object asm/overlay48/overlay48.o
+	Object main.nef.p/asm_overlay48_overlay48.s.o
 }
 Overlay overlay49
 {
 	After overlay16
-	Object asm/overlay49/overlay49.o
+	Object main.nef.p/asm_overlay49_overlay49.s.o
 }
 Overlay overlay50
 {
 	After overlay16
-	Object asm/overlay50/overlay50.o
+	Object main.nef.p/asm_overlay50_overlay50.s.o
 }
 Overlay overlay51
 {
 	After overlay16
-	Object asm/overlay51/overlay51.o
+	Object main.nef.p/asm_overlay51_overlay51.s.o
 }
 Overlay overlay52
 {
 	After overlay16
-	Object asm/overlay52/overlay52.o
+	Object main.nef.p/asm_overlay52_overlay52.s.o
 }
 Overlay overlay53
 {
 	After overlay16
-	Object asm/overlay53/overlay53.o
+	Object main.nef.p/asm_overlay53_overlay53.s.o
 }
 Overlay overlay54
 {
 	After overlay16
-	Object asm/overlay54/overlay54.o
+	Object main.nef.p/asm_overlay54_overlay54.s.o
 }
 Overlay overlay55
 {
 	After overlay16
-	Object src/mainmenuscreen/CMainMenuScreenEnterName.o
-	Object asm/overlay55/phonepassword.o
+	Object main.nef.p/src_mainmenuscreen_CMainMenuScreenEnterName.cpp.o
+	Object main.nef.p/asm_overlay55_phonepassword.s.o
 }
 Overlay overlay56
 {
 	After overlay16
-	Object asm/overlay56/overlay56.o
+	Object main.nef.p/asm_overlay56_overlay56.s.o
 }
 Overlay overlay57
 {
 	After overlay16
-	Object asm/overlay57/overlay57.o
+	Object main.nef.p/asm_overlay57_overlay57.s.o
 }
 Overlay overlay58
 {
 	After overlay16
-	Object asm/overlay58/overlay58.o
+	Object main.nef.p/asm_overlay58_overlay58.s.o
 }
 Overlay overlay59
 {
 	After overlay16
-	Object asm/overlay59/overlay59.o
+	Object main.nef.p/asm_overlay59_overlay59.s.o
 }
 Overlay overlay60
 {
 	After overlay16
-	Object asm/overlay60/overlay60.o
+	Object main.nef.p/asm_overlay60_overlay60.s.o
 }
 Overlay overlay61
 {
 	After overlay16
-	Object asm/overlay61/overlay61.o
+	Object main.nef.p/asm_overlay61_overlay61.s.o
 }
 Overlay overlay62
 {
 	After overlay16
-	Object asm/overlay62/overlay62.o
+	Object main.nef.p/asm_overlay62_overlay62.s.o
 }
 Overlay overlay63
 {
 	After overlay16
-	Object asm/overlay63/overlay63.o
+	Object main.nef.p/asm_overlay63_overlay63.s.o
 }
 Overlay overlay64
 {
 	After overlay16
-	Object asm/overlay64/overlay64.o
+	Object main.nef.p/asm_overlay64_overlay64.s.o
 }
 Overlay overlay65
 {
 	After overlay16
-	Object asm/overlay65/overlay65.o
+	Object main.nef.p/asm_overlay65_overlay65.s.o
 }
 Overlay overlay66
 {
 	After overlay16
-	Object asm/overlay66/overlay66.o
+	Object main.nef.p/asm_overlay66_overlay66.s.o
 }
 Overlay overlay67
 {
 	After overlay16
-	Object asm/overlay67/overlay67.o
+	Object main.nef.p/asm_overlay67_overlay67.s.o
 }
 Overlay overlay68
 {
 	After overlay16
-	Object asm/overlay68/overlay68.o
+	Object main.nef.p/asm_overlay68_overlay68.s.o
 }
 Overlay overlay69
 {
 	After overlay16
-	Object asm/overlay69/overlay69.o
+	Object main.nef.p/asm_overlay69_overlay69.s.o
 }
 Overlay overlay70
 {
 	After overlay16
-	Object asm/overlay70/overlay70.o
+	Object main.nef.p/asm_overlay70_overlay70.s.o
 }
 Overlay overlay71
 {
 	After overlay16
-	Object asm/overlay71/overlay71.o
+	Object main.nef.p/asm_overlay71_overlay71.s.o
 }
 Overlay overlay72
 {
 	After overlay16
-	Object asm/overlay72/overlay72.o
+	Object main.nef.p/asm_overlay72_overlay72.s.o
 }
 Overlay overlay73
 {
 	After overlay16
-	Object asm/overlay73/overlay73.o
+	Object main.nef.p/asm_overlay73_overlay73.s.o
 }
 Overlay overlay74
 {
 	After overlay16
-	Object asm/overlay74/overlay74.o
+	Object main.nef.p/asm_overlay74_overlay74.s.o
 }
 Overlay overlay75
 {
 	After overlay16
-	Object asm/overlay75/overlay75.o
+	Object main.nef.p/asm_overlay75_overlay75.s.o
 }
 Overlay overlay76
 {
 	After overlay16
-	Object asm/overlay76/overlay76.o
+	Object main.nef.p/asm_overlay76_overlay76.s.o
 }
 Overlay overlay77
 {
 	After overlay16
-	Object asm/overlay77/overlay77.o
+	Object main.nef.p/asm_overlay77_overlay77.s.o
 }
 Overlay overlay78
 {
@@ -771,244 +771,244 @@ Overlay overlay78
 Overlay overlay79
 {
 	After overlay16
-	Object asm/overlay79/overlay79.o
+	Object main.nef.p/asm_overlay79_overlay79.s.o
 }
 Overlay overlay80
 {
 	After overlay16
-	Object asm/overlay80/overlay80.o
+	Object main.nef.p/asm_overlay80_overlay80.s.o
 }
 Overlay overlay81
 {
 	After overlay16
-	Object asm/overlay81/overlay81.o
+	Object main.nef.p/asm_overlay81_overlay81.s.o
 }
 Overlay overlay82
 {
 	After overlay16
-	Object asm/overlay82/overlay82.o
+	Object main.nef.p/asm_overlay82_overlay82.s.o
 }
 Overlay overlay83
 {
 	After overlay16
-	Object asm/overlay83/overlay83.o
+	Object main.nef.p/asm_overlay83_overlay83.s.o
 }
 Overlay overlay84
 {
 	After overlay16
-	Object asm/overlay84/overlay84.o
+	Object main.nef.p/asm_overlay84_overlay84.s.o
 }
 Overlay overlay85
 {
 	After overlay16
-	Object asm/overlay85/overlay85.o
+	Object main.nef.p/asm_overlay85_overlay85.s.o
 }
 Overlay overlay86
 {
 	After overlay16
-	Object asm/overlay86/overlay86.o
+	Object main.nef.p/asm_overlay86_overlay86.s.o
 }
 Overlay overlay87
 {
 	After overlay16
-	Object asm/overlay87/overlay87.o
+	Object main.nef.p/asm_overlay87_overlay87.s.o
 }
 Overlay overlay88
 {
 	After overlay16
-	Object asm/overlay88/overlay88.o
+	Object main.nef.p/asm_overlay88_overlay88.s.o
 }
 Overlay overlay89
 {
 	After overlay16
-	Object asm/overlay89/overlay89.o
+	Object main.nef.p/asm_overlay89_overlay89.s.o
 }
 Overlay overlay90
 {
 	After overlay16
-	Object asm/overlay90/overlay90.o
+	Object main.nef.p/asm_overlay90_overlay90.s.o
 }
 Overlay overlay91
 {
 	After overlay16
-	Object asm/overlay91/overlay91.o
+	Object main.nef.p/asm_overlay91_overlay91.s.o
 }
 Overlay overlay92
 {
 	After overlay57
-	Object asm/overlay92/overlay92.o
+	Object main.nef.p/asm_overlay92_overlay92.s.o
 }
 Overlay overlay93
 {
 	After overlay57
-	Object asm/overlay93/overlay93.o
+	Object main.nef.p/asm_overlay93_overlay93.s.o
 }
 Overlay overlay94
 {
 	After overlay57
-	Object asm/overlay94/overlay94.o
+	Object main.nef.p/asm_overlay94_overlay94.s.o
 }
 Overlay overlay95
 {
 	After overlay57
-	Object asm/overlay95/overlay95.o
+	Object main.nef.p/asm_overlay95_overlay95.s.o
 }
 Overlay overlay96
 {
 	After overlay57
-	Object asm/overlay96/overlay96.o
+	Object main.nef.p/asm_overlay96_overlay96.s.o
 }
 Overlay overlay97
 {
 	After overlay57
-	Object asm/overlay97/overlay97.o
+	Object main.nef.p/asm_overlay97_overlay97.s.o
 }
 Overlay overlay98
 {
 	After overlay57
-	Object asm/overlay98/overlay98.o
+	Object main.nef.p/asm_overlay98_overlay98.s.o
 }
 Overlay overlay99
 {
 	After overlay57
-	Object asm/overlay99/overlay99.o
+	Object main.nef.p/asm_overlay99_overlay99.s.o
 }
 Overlay overlay100
 {
 	After overlay57
-	Object asm/overlay100/overlay100.o
+	Object main.nef.p/asm_overlay100_overlay100.s.o
 }
 Overlay overlay101
 {
 	After overlay57
-	Object asm/overlay101/overlay101.o
-	Object src/ov101.o
+	Object main.nef.p/asm_overlay101_overlay101.s.o
+	Object main.nef.p/src_ov101.cpp.o
 }
 Overlay overlay102
 {
 	After overlay57
-	Object asm/overlay102/overlay102.o
+	Object main.nef.p/asm_overlay102_overlay102.s.o
 }
 Overlay overlay103
 {
 	After overlay57
-	Object asm/overlay103/overlay103.o
+	Object main.nef.p/asm_overlay103_overlay103.s.o
 }
 Overlay overlay104
 {
 	After overlay57
-	Object asm/overlay104/overlay104.o
+	Object main.nef.p/asm_overlay104_overlay104.s.o
 }
 Overlay overlay105
 {
 	After overlay57
-	Object asm/overlay105/overlay105.o
+	Object main.nef.p/asm_overlay105_overlay105.s.o
 }
 Overlay overlay106
 {
 	After overlay57
-	Object asm/overlay106/overlay106.o
+	Object main.nef.p/asm_overlay106_overlay106.s.o
 }
 Overlay overlay107
 {
 	After overlay57
-	Object asm/overlay107/overlay107.o
+	Object main.nef.p/asm_overlay107_overlay107.s.o
 }
 Overlay overlay108
 {
 	After overlay57
-	Object asm/overlay108/overlay108.o
+	Object main.nef.p/asm_overlay108_overlay108.s.o
 }
 Overlay overlay109
 {
 	After overlay57
-	Object asm/overlay109/overlay109.o
+	Object main.nef.p/asm_overlay109_overlay109.s.o
 }
 Overlay overlay110
 {
 	After overlay57
-	Object asm/overlay110/overlay110.o
+	Object main.nef.p/asm_overlay110_overlay110.s.o
 }
 Overlay overlay111
 {
 	After overlay57
-	Object asm/overlay111/overlay111.o
+	Object main.nef.p/asm_overlay111_overlay111.s.o
 }
 Overlay overlay112
 {
 	After overlay57
-	Object asm/overlay112/overlay112.o
+	Object main.nef.p/asm_overlay112_overlay112.s.o
 }
 Overlay overlay113
 {
 	After overlay57
-	Object asm/overlay113/overlay113.o
+	Object main.nef.p/asm_overlay113_overlay113.s.o
 }
 Overlay overlay114
 {
 	After overlay57
-	Object asm/overlay114/overlay114.o
+	Object main.nef.p/asm_overlay114_overlay114.s.o
 }
 Overlay overlay115
 {
 	After overlay57
-	Object asm/overlay115/overlay115.o
+	Object main.nef.p/asm_overlay115_overlay115.s.o
 }
 Overlay overlay116
 {
 	After overlay57
-	Object src/ov116.o
-	Object asm/ov116_data.o
+	Object main.nef.p/src_ov116.cpp.o
+	Object main.nef.p/asm_ov116_data.s.o
 }
 Overlay overlay117
 {
 	After overlay57
-	Object asm/overlay117/overlay117.o
+	Object main.nef.p/asm_overlay117_overlay117.s.o
 }
 Overlay overlay118
 {
 	After overlay57
-	Object asm/overlay118/overlay118.o
+	Object main.nef.p/asm_overlay118_overlay118.s.o
 }
 Overlay overlay119
 {
 	After overlay57
-	Object asm/overlay119/overlay119.o
+	Object main.nef.p/asm_overlay119_overlay119.s.o
 }
 Overlay overlay120
 {
 	After overlay57
-	Object asm/overlay120/overlay120.o
+	Object main.nef.p/asm_overlay120_overlay120.s.o
 }
 Overlay overlay121
 {
 	After overlay57
-	Object asm/overlay121/overlay121.o
+	Object main.nef.p/asm_overlay121_overlay121.s.o
 }
 Overlay overlay122
 {
 	After overlay57
-	Object asm/overlay122/overlay122.o
+	Object main.nef.p/asm_overlay122_overlay122.s.o
 }
 Overlay overlay123
 {
 	After overlay57
-	Object asm/overlay123/overlay123.o
+	Object main.nef.p/asm_overlay123_overlay123.s.o
 }
 Overlay overlay124
 {
 	After overlay57
-	Object asm/overlay124/overlay124.o
+	Object main.nef.p/asm_overlay124_overlay124.s.o
 }
 Overlay overlay125
 {
 	After overlay57
-	Object asm/overlay125/overlay125.o
+	Object main.nef.p/asm_overlay125_overlay125.s.o
 }
 Overlay overlay126
 {
 	After overlay109
-	Object asm/overlay126/overlay126.o
+	Object main.nef.p/asm_overlay126_overlay126.s.o
 }
 Overlay overlay127
 {
@@ -1018,25 +1018,25 @@ Overlay overlay127
 Overlay overlay128
 {
 	After overlay109
-	Object lib/TwlSDK/asm/mb/libmb.o
+	Object main.nef.p/lib_TwlSDK_asm_mb_libmb.s.o
 }
 Overlay overlay129
 {
 	After overlay109
-	Library dsprot/dsprot.a
+	Library dsprot.a
 }
 Overlay overlay130
 {
 	After overlay109
-	Object src/ov130.o
+	Object main.nef.p/src_ov130.cpp.o
 }
 Overlay overlay131
 {
 	After overlay126
-	Object asm/overlay131/overlay131.o
+	Object main.nef.p/asm_overlay131_overlay131.s.o
 }
 Overlay overlay132
 {
 	After overlay126
-	Object asm/overlay132/overlay132.o
+	Object main.nef.p/asm_overlay132_overlay132.s.o
 }
