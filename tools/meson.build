@@ -1,1 +1,2 @@
 subdir('compstatic')
+subdir('postconf')
