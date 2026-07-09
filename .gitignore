@@ -39,7 +39,6 @@ tools/elfcoder/elfcoder
 # For decomp.me
 ctx.c
 
-*.lcf.template
 *.lcf
 *.response.template
 *.response
