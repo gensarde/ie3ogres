@@ -9,15 +9,16 @@ libMobiclip_srcs = files(
 )
 
 libMobiclip_includes = include_directories(
-    'asm'
+    'asm', 'include'
 )
+
+public_includes += libMobiclip_includes
 
 libMobiclip = static_library('Mobiclip',
     cpp_args: cpp_args,
     nasm_args: asm_args,
     include_directories: [
         public_includes,
-        libMobiclip_includes,
         twlsdk_includes
     ],
     pic: false,
