@@ -1,0 +1,43 @@
+prebuilt_files = [
+    'cnvdat.bin',
+    'ver0000.bin',
+    'ver0001.bin',
+    'ver0002.bin',
+    'ver0003.bin',
+    'ver0004.bin',
+    'ver0005.bin',
+    'ver0006.bin',
+    'ver0007.bin',
+    'ver0008.bin',
+    'ver0009.bin',
+    'ver0010.bin',
+    'ver0011.bin',
+    'ver0012.bin',
+    'ver0013.bin',
+    'ver0014.bin',
+    'ver0015.bin',
+    'ver0016.bin',
+    'ver0017.bin',
+    'ver0018.bin',
+    'ver0019.bin',
+    'ver0020.bin',
+    'ver0021.bin',
+    'ver0022.bin',
+    'ver0023.bin',
+    'ver0024.bin',
+    'ver0025.bin',
+    'ver0026.bin',
+    'ver0027.bin',
+    'ver0028.bin',
+    'ver0029.bin',
+    'ver0030.bin',
+    'ver0031.bin',
+    'ver0032.bin',
+    'ver0033.bin',
+    'ver0034.bin',
+    'ver0035.bin'
+]
+
+foreach f : prebuilt_files
+    nitrofs_files += fs.copyfile(f)
+endforeach

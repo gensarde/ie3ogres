@@ -1,0 +1,72 @@
+subdir('cmd')
+subdir('ending')
+subdir('field')
+subdir('menu')
+subdir('team')
+subdir('title')
+
+prebuilt_files = [
+    'csup_w00.pac_',
+    'debfont8.pac',
+    'gmdn_c00.pac_',
+    'gmdn_c01.pac_',
+    'gmdn_c02.pac_',
+    'mbd_bu01.pac_',
+    'mbd_bu02.pac_',
+    'mbd_bu03.pac_',
+    'mbd_bu04.pac_',
+    'mbd_c04.pac_',
+    'mbd_c10.pac_',
+    'mbd_c11.pac_',
+    'mbd_c19.pac_',
+    'mbd_c21.pac_',
+    'mbd_c23.pac_',
+    'mbd_z01.pac_',
+    'mbd_z02.pac_',
+    'mbd_z03.pac_',
+    'mbd_z04.pac_',
+    'mbd_z05.pac_',
+    'mbup_u01.pac_',
+    'MMSWic.SPF_',
+    'MPSAct.SPF_',
+    'MPSActPk.SPF_',
+    'MPSActSPow.SPF_',
+    'MPSBgn.SPF_',
+    'MPSClrM.SPF_',
+    'MPSDrw.SPF_',
+    'MPSFld.SPF_',
+    'MPSFrm.SPF_',
+    'MPSPIn.SPF_',
+    'MPSPk.SPF_',
+    'MPSPrd.SPF_',
+    'MPSWic.SPF_',
+    'MPSWip.SPF_',
+    'MTSPi.SPF_',
+    'MTSSrd.SPF_',
+    'MTSWfDL.SPF_',
+    'MTSWic.SPF_',
+    'MTSWiM.SPF_',
+    'MTSWip.SPF_',
+    'MTSWis.SPF_',
+    'po_w04.pac_',
+    'sb_g01.pac_',
+    'sb_g02.pac_',
+    'sb_n01.pac_',
+    'SPSAct.SPF_',
+    'SPSActM.SPF_',
+    'SPSClrM.SPF_',
+    'SPSEnc.SPF_',
+    'SPSPi.SPF_',
+    'SPSPIn.SPF_',
+    'SPSPk.SPF_',
+    'SPSPrd.SPF_',
+    'SPSPu.SPF_',
+    'SRSCmd.SPF_',
+    'SRSSru.SPF_',
+    'STSWic.SPF_',
+    'wc_level.pac_' 
+]
+
+foreach f : prebuilt_files
+    nitrofs_files += fs.copyfile(f)
+endforeach
