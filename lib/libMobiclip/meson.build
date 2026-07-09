@@ -1,4 +1,4 @@
-libMobilip_srcs = files(
+libMobiclip_srcs = files(
     'asm/YuvToArgb.s',
 	'src/libMobiclip.cpp',
 	'src/handle.cpp',
