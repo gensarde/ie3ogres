@@ -1,74 +1,501 @@
-from struct import unpack, unpack_from
-from math import ceil
+from struct import pack, unpack, unpack_from, Struct
+from dataclasses import dataclass
+from PIL import Image
 
-from archive import open_pac, open_pkb
+#from archive import open_pac, open_pkb
 
-# IMAGES
+PAC_PSCM_HEADER = Struct("<I II II II II I")
+PAC_PSC_HEADER = Struct("<I II II II I")
+PAC_SPM_HEADER = Struct("<I II II II I")
+PAC_METADATA = Struct("<H BBB 3B")
+PAC_METADATA_CHUNK = Struct("<HHHH")
 
-def read_footer(data: bytes) -> list[dict]:
-    image_count, unk0, unk1, unk2 = unpack_from("<H BB I", data)
-    image_config = []
-    offset = 8
-    for i in range(image_count):
-        x1, y1, x2, y2 = unpack_from("HHHH", data, offset)
-        offset += 8
-        image_config.append({f"image{str(i).zfill(4)}": [x1, y1, x2, y2]})
-    
-    return image_config
+GX_TEXFMT_PLTT16 = 3
+GX_TEXFMT_PLTT256 = 4
+GXTexSizeST = {
+    8: 0,
+    16: 1,
+    32: 2,
+    64: 3,
+    128: 4,
+    256: 5,
+    512: 6,
+    1024: 7,
+}
 
-class NBFP:
-    """Palette"""
+class PACMetaData:
+    @dataclass
+    class Chunk:
+        s: int
+        t: int
+        w: int
+        h: int
     
     def __init__(self):
-        self.Colors = []
-        self.numColors = 0
+        self.count = 0
+        self.s = 0
+        self.t = 0
+        self.fmt = 0
+        self.chunks: list[PACMetaData.Chunk] = []
+    
+    def set_st(self, width: int, height: int):
+        self.s = GXTexSizeST[1 << (width - 1).bit_length()]
+        self.t = GXTexSizeST[1 << (height - 1).bit_length()]
     
     def read(self, data: bytes):
-        if len(data) % 2 != 0:
-            raise ValueError("the filesize is not a multiple of 2: " + hex(len(data)))
+        self.count, self.s, self.t, self.fmt, pad, pad, pad = \
+            unpack_from(PAC_METADATA.format, data)
         
-        self.numColors = len(data) // 2
-        offset = 0
-        for i in range(self.numColors):
-            r = g = b = unpack_from("<H", data, offset)[0]
-            offset += 2
-            r = ceil(((((r) >> 0)  & 0x1F) * 255) / 31)
-            g = ceil(((((g) >> 5)  & 0x1F) * 255) / 31)
-            b = ceil(((((b) >> 10) & 0x1F) * 255) / 31)
-            self.Colors.append([r, g, b])
-
-class NBFC:
-    def __init__(self):
-        self.Tiles = []
-        self.width = 0
-        self.height = 0
-        self.bitDepth = 8
-        self.hasPalette = False
-        self.Palette: NBFP = None
-        self.hasTransparency = False
+        for i in range(self.count):
+            self.chunks.append(PACMetaData.Chunk(*unpack_from(PAC_METADATA_CHUNK.format, data, PAC_METADATA.size)))
     
-    def read(self, data: bytes, image_config: list[dict]):
-        for i, config in enumerate(image_config):
-            # top left corner
-            x1, y1 = (config[f"image{str(i).zfill(4)}"][0], config[f"image{str(i).zfill(4)}"][1])
-            # bottom right corner
-            x2, y2 = (config[f"image{str(i).zfill(4)}"][2], config[f"image{str(i).zfill(4)}"][3])
+    def write(self) -> bytes:
+        output = b""
+        output += pack(PAC_METADATA.format, self.count, self.s, self.t, self.fmt, 0, 0, 0)
+        for i in range(self.count):
+            output += pack(PAC_METADATA_CHUNK.format, self.chunks[i].s, self.chunks[i].t, self.chunks[i].w, self.chunks[i].h)
+        
+        return output
+    
+    def read_config(self, path: str):
+        try:
+            with open(path, "rt") as file:
+                text = file.read()
+        except:
+            return
+        lines = text.splitlines()
+        values = lines[1].split(";")
+        self.count, self.s, self.t, self.fmt = (int(values[0]), int(values[1]), int(values[2]), int(values[3]))
+        for i in range(self.count):
+            values = lines[4 + i].split(";")
+            self.chunks.append(PACMetaData.Chunk(int(values[0]), int(values[1]), int(values[2]), int(values[3])))
+    
+    def write_config(self, outpath: str) -> str:
+        with open(outpath, "wt") as out:
+            out.write("Count;GXTexSizeS;GXTexSizeT;GXTexFmt\n")
+            out.write(";".join([str(self.count), str(self.s), str(self.t), str(self.fmt)]) + "\n")
+            out.write("\n")
+            out.write("X;Y;W;H\n")
+            for c in self.chunks:
+                out.write(";".join([str(c.s), str(c.t), str(c.w), str(c.h)]) + "\n")
+
+####################################################
+# READ
+####################################################
+
+def get_palette(data: bytes) -> list:
+    """Get a [r, g, b] list from a raw BGR555 palette data
+
+    >>> get_palette(data)
+    [[255, 0, 255], [32, 32, 32], [164, 148, 148], ...]
+    """
+
+    if len(data) % 2 != 0:
+        raise ValueError("the filesize is not a multiple of 2: " + hex(len(data)))
+    
+    colors = []
+    count = len(data) // 2
+    offset = 0
+    for i in range(count):
+        c = unpack_from("<H", data, offset)[0]
+        offset += 2
+        r = ((((c) >> 0)  & 0x1F) * 255) // 31
+        g = ((((c) >> 5)  & 0x1F) * 255) // 31
+        b = ((((c) >> 10) & 0x1F) * 255) // 31
+        colors.append([r, g, b])
+    
+    return colors
+
+def convert_tiles_to_tex_PSCM(meta: PACMetaData, chara: bytes, screen: bytes) -> bytes:
+    """Convert raw character+screen (NBFC+NBFS?) data to NTFT texture"""
+
+    ppby = 1
+    if (meta.fmt == GX_TEXFMT_PLTT16):
+        ppby = 2
+    size = ((8 << meta.s) * (8 << meta.t)) // ppby
+    
+    dest = bytearray(size)
+    
+    tile_size_x = 8 // ppby
+    width = (8 << meta.s) // 8
+    height = (8 << meta.t) // 8
+    
+    for y in range(height):
+        for x in range(width):
+            tile_size = tile_size_x * 8
+            scrn_idx = (y * width + x) * 2
+            char_idx = unpack("<H", screen[scrn_idx : scrn_idx + 2])[0]
             
-# ARCHIVES
-
-def read_face2d_fac(filepath: str):
-    with open(filepath, "rb") as file:
-        data = file.read()
-    pac = open_pac(data, False)
+            for r in range(8):
+                dest_idx = tile_size_x * ((r + y * 8) * width + x)
+                chara_idx = (tile_size * char_idx) + (r * tile_size_x)
+                dest[dest_idx : dest_idx + tile_size_x] = chara[chara_idx : chara_idx + tile_size_x]
     
-    nbfs_data = pac[1]
-    image_config = read_footer(pac[3])
-    nbfp = NBFP()
-    nbfp.read(pac[0])
-    nbfc = NBFC()
-    nbfc.bitDepth = 4
-    nbfc.hasPalette = True
-    nbfc.read(pac[2], image_config)
-    print(nbfp.Colors)
+    return bytes(dest)
 
-read_face2d_fac("./tools/ie3tools/fac/fac00000100.pac_")
+def convert_tiles_to_tex_PSC(chara: bytes, screen: bytes, width: int, fmt: int) -> tuple[bytes, int, int]:
+    """Convert raw character+screen (NBFC+NBFS?) data to NTFT texture"""
+
+    ppby = 1
+    if (fmt == GX_TEXFMT_PLTT16):
+        ppby = 2
+    
+    height = len(screen) // width // 2
+    tex_width = width * 8
+    tex_height = height * 8
+    wtex = 4
+    htex = 4
+    wexp = 0
+    hexp = 0
+    while (wtex < 0x400):
+        wtex *= 2
+        if tex_width <= wtex:
+            break
+        wexp += 1
+    while (htex < 0x400):
+        htex *= 2
+        if tex_height <= htex:
+            break
+        hexp += 1
+    size = (wtex * htex) // ppby
+    
+    dest = bytearray(size)
+
+    tile_size_x = 8 // ppby
+    tile_count_w = wtex // 8
+
+    for y in range(height):
+        for x in range(width):
+            tile_size = tile_size_x * 8
+            scrn_idx = (y * width + x) * 2
+            char_idx = unpack("<H", screen[scrn_idx : scrn_idx + 2])[0]
+
+            for r in range(8):
+                dest_idx = tile_size_x * ((r + y * 8) * tile_count_w + x)
+                chara_idx = (tile_size * char_idx) + (r * tile_size_x)
+                dest[dest_idx : dest_idx + tile_size_x] = chara[chara_idx : chara_idx + tile_size_x]
+    
+    return (bytes(dest), tex_width, tex_height)
+
+def convert_tex_to_image(texture: bytes, palette: list,
+                         width: int, height: int,
+                         fmt: int,
+                         real_width: int = None, real_height: int = None) -> Image.Image:
+    """Convert NTFT texture data to Pillow Image"""
+
+    total = len(texture)
+    if fmt == GX_TEXFMT_PLTT16:
+        total = len(texture) * 2
+    
+    if width is None:
+        width = (total + height - 1) // height
+    if height is None:
+        height = (total + width - 1) // width
+    
+    if fmt == GX_TEXFMT_PLTT16:
+        px = bytearray(total)
+        for i, t in enumerate(texture):
+            px[i * 2] = t & 0x0F
+            px[i * 2 + 1] = t >> 4
+    elif fmt == GX_TEXFMT_PLTT256:
+        px = texture
+    else:
+        raise ValueError("Unsupported format for paletted image")
+    
+    rw = real_width or width
+    rh = real_height or height
+
+    img = Image.frombytes("P", (width, height), bytes(px[ : width * height]))
+
+    if rw != width or rh != height:
+        img = img.crop((0, 0, rw, rh))
+    
+    flat_palette = []
+    for r, g, b in palette:
+        flat_palette += [r] + [g] + [b]
+    img.putpalette(flat_palette)
+    
+    return img
+
+def convert_PAC_PSCM_to_image(path: str, outpath: str):
+    with open(path, "rb") as file:
+        data = file.read()
+    file_count, pltt_offset, pltt_size, scrn_offset, scrn_size, char_offset, char_size, meta_offset, meta_size, data_size = \
+        unpack_from(PAC_PSCM_HEADER.format, data)
+    
+    pltt_data = data[pltt_offset : pltt_offset + pltt_size]
+    scrn_data = data[scrn_offset : scrn_offset + scrn_size]
+    char_data = data[char_offset : char_offset + char_size]
+    meta_data = PACMetaData()
+    meta_data.read(data[meta_offset : meta_offset + meta_size])
+    
+    palette = get_palette(pltt_data)
+    texture = convert_tiles_to_tex_PSCM(meta_data, char_data, scrn_data)
+    image = convert_tex_to_image(texture, palette, (8 << meta_data.s), (8 << meta_data.t), meta_data.fmt)
+    
+    image.save(outpath, format="PNG")
+    if (meta_data.count > 1):
+        meta_data.write_config(outpath.replace(".png", ".csv"))
+
+def convert_PAC_PSC_to_image(path: str, outpath: str, width: int):
+    with open(path, "rb") as file:
+        data = file.read()
+    file_count, pltt_offset, pltt_size, scrn_offset, scrn_size, char_offset, char_size, data_size = \
+        unpack_from(PAC_PSC_HEADER.format, data)
+    
+    pltt_data = data[pltt_offset : pltt_offset + pltt_size]
+    scrn_data = data[scrn_offset : scrn_offset + scrn_size]
+    char_data = data[char_offset : char_offset + char_size]
+    
+    palette = get_palette(pltt_data)
+    fmt = GX_TEXFMT_PLTT16
+    if (len(palette) > 16):
+        fmt = GX_TEXFMT_PLTT256
+
+    palette = get_palette(pltt_data)
+    texture, width, height = convert_tiles_to_tex_PSC(char_data, scrn_data, width // 8, fmt)
+    image = convert_tex_to_image(texture, palette, width, height, fmt)
+    
+    image.save(outpath, format="PNG")
+
+def convert_PAC_SPM_to_image(path: str, outpath: str):
+    with open(path, "rb") as file:
+        data = file.read()
+    file_count, scrn_offset, scrn_size, pltt_offset, pltt_size, meta_offset, meta_size, data_size = \
+        unpack_from(PAC_SPM_HEADER.format, data)
+    
+    texture = data[scrn_offset : scrn_offset + scrn_size]
+    pltt_data = data[pltt_offset : pltt_offset + pltt_size]
+    meta_data = PACMetaData()
+    meta_data.read(data[meta_offset : meta_offset + meta_size])
+    
+    width = (8 << meta_data.s)
+    height = (8 << meta_data.t)
+    if width >= height:
+        height = None
+    elif width < height:
+        width = None
+    
+    palette = get_palette(pltt_data)
+    image = convert_tex_to_image(texture, palette, width, height, meta_data.fmt)
+    
+    image.save(outpath, format="PNG")
+    meta_data.write_config(outpath.replace(".png", ".csv"))
+
+####################################################
+# WRITE
+####################################################
+
+def write_palette(palette: list, fmt: int) -> bytes:
+    """Convert RGB palette to BGR555 data
+
+    >>> write_palette(img.getpalette())
+    >>> write_palette([255, 0, 255, 32, 32, 32, 164, 148, 148, ...])
+    """
+
+    rbg = [palette[i : i + 3] for i in range(0, len(palette), 3)]
+    output = bytes()
+    
+    count = 16
+    if fmt == GX_TEXFMT_PLTT256:
+        count = 256
+    for i in range(count):
+        r, g, b = rbg[i]
+        
+        rgb = (((b // 8) << 10) | ((g // 8) << 5) | (r // 8))
+
+        output += pack("<B", rgb & 0xFF)
+        output += pack("<B", rgb >> 8)
+
+    return output
+
+def convert_tex_to_char_and_screen_PSCM(texture: bytes, width: int, height: int, fmt: int) -> tuple[bytes, bytes]:
+    """Convert NTFT texture to raw character+screen (NBFC+NBFS?)"""
+
+    ppby = 1
+    if fmt == GX_TEXFMT_PLTT16:
+        ppby = 2
+
+    tile_size_x = 8 // ppby
+    tile_size = tile_size_x * 8
+
+    chara = bytearray(width * height * tile_size)
+    screen = bytearray(width * height * 2)
+
+    char_idx = 0
+
+    for y in range(height):
+        for x in range(width):
+            screen[(y * width + x) * 2 : (y * width + x + 1) * 2] = pack("<H", char_idx)
+
+            for r in range(8):
+                tex_idx = tile_size_x * ((r + y * 8) * width + x)
+                chara_idx = char_idx * tile_size + r * tile_size_x
+                chara[chara_idx : chara_idx + tile_size_x] = texture[tex_idx : tex_idx + tile_size_x]
+
+            char_idx += 1
+
+    return (bytes(screen), bytes(chara))
+
+def convert_tex_to_char_and_screen_PSC(texture: bytes, tex_width: int, tex_height: int, fmt: int):
+    """Convert NTFT texture to raw character+screen (NBFC+NBFS?)"""
+
+    ppby = 1
+    if fmt == GX_TEXFMT_PLTT16:
+        ppby = 2
+
+    width = tex_width // 8
+    height = tex_height // 8
+
+    tile_size_x = 8 // ppby
+    tile_size = tile_size_x * 8
+    tile_count_w = tex_width // 8
+
+    chara = bytearray()
+    screen = bytearray()
+
+    tile_map = {}
+
+    for y in range(height):
+        for x in range(width):
+
+            tile = bytearray(tile_size)
+
+            for r in range(8):
+                src_idx = tile_size_x * ((r + y * 8) * tile_count_w + x)
+                dst_idx = r * tile_size_x
+                tile[dst_idx:dst_idx + tile_size_x] = texture[src_idx:src_idx + tile_size_x]
+
+            tile = bytes(tile)
+
+            if tile in tile_map:
+                idx = tile_map[tile]
+            else:
+                idx = len(chara) // tile_size
+                tile_map[tile] = idx
+                chara.extend(tile)
+
+            screen.extend(pack("<H", idx))
+
+    return (bytes(screen), bytes(chara))
+
+def convert_image_to_tex(img: Image.Image, fmt: int) -> bytes:
+    """Convert Pillow Image to NTFT texture data"""
+
+    px = img.tobytes()
+
+    texture = None
+    if fmt == GX_TEXFMT_PLTT16:
+        texture = bytearray(len(px) // 2)
+        for i in range(len(texture)):
+            texture[i] = (px[i * 2] & 0x0F) | ((px[i * 2 + 1] & 0x0F) << 4)
+    elif fmt == GX_TEXFMT_PLTT256:
+        texture = px
+    else:
+        raise ValueError("Unsupported format for paletted image")
+    
+    return texture
+
+def convert_image_to_PAC_PSCM(path: str, outpath: str):
+    img = Image.open(path)
+    
+    palette = img.getpalette()
+    
+    fmt = GX_TEXFMT_PLTT16
+    if (len(palette) // 3) > 16:
+        fmt = GX_TEXFMT_PLTT256
+    
+    texture = convert_image_to_tex(img, fmt)
+
+    pltt_data = write_palette(palette, fmt)
+    scrn_data, char_data = convert_tex_to_char_and_screen_PSCM(texture, img.width, img.height, fmt)
+
+    meta = PACMetaData()
+    meta.read_config(path.replace(".png", ".csv"))
+    meta.set_st(img.width, img.height)
+    meta.fmt = fmt
+    meta_data = meta.write()
+    
+    output = bytes()
+    output += pack(PAC_PSCM_HEADER.format,
+                   4,
+                   64, len(pltt_data),
+                   64 + len(pltt_data), len(scrn_data),
+                   64 + len(pltt_data) + len(scrn_data), len(char_data),
+                   64 + len(pltt_data) + len(scrn_data) + len(char_data), PAC_METADATA.size + (PAC_METADATA_CHUNK.size * meta.count),
+                   len(pltt_data) + len(scrn_data) + len(char_data) + len(meta_data))
+    output += pack("<iiiiii", -1, -1, -1, -1, -1, -1) # don't judge me
+    output += pltt_data
+    output += scrn_data
+    output += char_data
+    output += meta_data
+
+    with open(outpath, "wb") as out:
+        out.write(output)
+
+def convert_image_to_PAC_PSC(path: str, outpath: str):
+    img = Image.open(path)
+    
+    palette = img.getpalette()
+    
+    fmt = GX_TEXFMT_PLTT16
+    if (len(palette) // 3) > 16:
+        fmt = GX_TEXFMT_PLTT256
+    
+    texture = convert_image_to_tex(img, fmt)
+
+    pltt_data = write_palette(palette, fmt)
+    scrn_data, char_data = convert_tex_to_char_and_screen_PSC(texture, img.width, img.height, fmt)
+
+    output = bytes()
+    output += pack(PAC_PSC_HEADER.format,
+                   3,
+                   32, len(pltt_data),
+                   32 + len(pltt_data), len(scrn_data),
+                   32 + len(pltt_data) + len(scrn_data), len(char_data),
+                   len(pltt_data) + len(scrn_data) + len(char_data))
+    output += pltt_data
+    output += scrn_data
+    output += char_data
+
+    with open(outpath, "wb") as out:
+        out.write(output)
+
+def convert_image_to_PAC_SPM(path: str, outpath: str):
+    img = Image.open(path)
+    
+    palette = img.getpalette()
+    
+    fmt = GX_TEXFMT_PLTT16
+    if (len(palette) // 3) > 16:
+        fmt = GX_TEXFMT_PLTT256
+    
+    texture = convert_image_to_tex(img, fmt)
+    pltt_data = write_palette(palette, fmt)
+
+    meta = PACMetaData()
+    meta.read_config(path.replace(".png", ".csv"))
+    meta.set_st(img.width, img.height)
+    meta.fmt = fmt
+    meta_data = meta.write()
+    
+    output = bytes()
+    output += pack(PAC_SPM_HEADER.format,
+                   3,
+                   32, len(texture),
+                   32 + len(texture), len(pltt_data),
+                   32 + len(texture) + len(pltt_data), PAC_METADATA.size + (PAC_METADATA_CHUNK.size * meta.count),
+                   len(texture) + len(pltt_data) + len(meta_data))
+    output += texture
+    output += pltt_data
+    output += meta_data
+
+    with open(outpath, "wb") as out:
+        out.write(output)
+
+#convert_PAC_PSCM_to_image("./tools/ie3tools/archives/fac/fac00000100.pac", "./test.png")
+#convert_image_to_PAC_PSCM("./test.png", "./tools/ie3tools/archives/fac/fac00000100/test.pac")
+#convert_PAC_PSC_to_image("./tools/ie3tools/archives/level5_bottom/level5_bottom.pac", "./test.png", 256)
+#convert_image_to_PAC_PSC("./test.png", "./tools/ie3tools/archives/level5_bottom/test.pac")
+#convert_PAC_SPM_to_image("./tools/ie3tools/archives/c3t0100/c3t0100.pac", "./test.png")
+#convert_image_to_PAC_SPM("./test.png", "./tools/ie3tools/archives/c3t0100/test.pac")
