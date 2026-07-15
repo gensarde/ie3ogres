@@ -1,0 +1,22 @@
+twlsdk_asm = files(
+    'card/libcard.s',
+    'cp/libcp.s',
+    'crypto/rc4.s',
+    'ctrdg/libctrdg.s',
+    'fs/libfs.s',
+    'fx/libfx.s',
+    'gx/libgx.s',
+    'init/crt0.s',
+    'math/libmath.s',
+    'mb/libmb.s',
+    'memory/libmi.s',
+    'os/dtcm.s',
+    'os/libos.s',
+    'pm/libpm.s',
+    'pxi/libpxi.s',
+    'rtc/librtc.s',
+    'snd/libsnd.s',
+    'std/libstd.s',
+    'tp/libtp.s',
+    'wm/libwm.s'
+)

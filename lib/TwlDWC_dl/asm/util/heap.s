@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.public MI_CpuFill8
 	.public NNS_FndAllocFromExpHeapEx
 	.public NNS_FndCreateExpHeapEx

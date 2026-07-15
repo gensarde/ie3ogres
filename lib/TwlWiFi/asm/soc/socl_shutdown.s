@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.public CPS_TcpShutdown
 	.public SOCL_SocketIsInvalid
 	.public SOCLi_CreateCommandPacket

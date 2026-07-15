@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.public DWC_GetApInfo
 	.public DWC_NdGetProgress
 	.public DWCi_BM_GetWiFiInfo

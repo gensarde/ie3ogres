@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.public DWCi_BACKUPlRead
 	.public DWCi_MOV_MBP_Cancel
 	.public DWCi_MOV_MBP_GetChildBmp

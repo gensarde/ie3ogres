@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.include "libmi.inc"
 
 	.section .itcm, 4

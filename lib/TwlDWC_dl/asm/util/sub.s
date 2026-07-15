@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.public GX_DisableBankForARM7
 	.public GX_DisableBankForBG
 	.public GX_DisableBankForBGExtPltt

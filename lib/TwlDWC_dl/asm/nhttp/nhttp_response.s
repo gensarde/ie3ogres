@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.public NHTTPi_Response2Connection
 	.public NHTTPi_alloc
 	.public NHTTPi_compareTokenN_HdrRecvBuf

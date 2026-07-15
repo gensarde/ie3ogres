@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.public DWCi_CEINlRead
 	.public DWCi_CMNlLoadResource
 	.public DWCi_COMMENTlInit

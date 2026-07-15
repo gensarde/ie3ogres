@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.public memcmp
 	.public MI_CpuCopy8
 	.public MATH_MD5Init

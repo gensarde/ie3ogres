@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.public NHTTPi_BufferFullCallback
 	.public NHTTPi_CompleteCallback
 	.public NHTTPi_DeleteConnection

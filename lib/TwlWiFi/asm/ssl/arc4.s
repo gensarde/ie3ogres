@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 
 	.text
 	arm_func_start CPSi_rc4_init

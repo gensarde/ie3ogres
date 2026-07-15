@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.public DWCi_AUTH_GetNewWiFiInfo
 	.public DWCi_BACKUPlConvMaskAddr
 	.public DWCi_BACKUPlConvMaskCidr

@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.public DC_InvalidateRange
 	.public DWC_AC_GetApSpotInfo
 	.public DWC_AC_GetApType

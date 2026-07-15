@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.public DWC_Netcheck_Abort
 	.public DWC_Netcheck_Destroy
 	.public WCM_GetPhase

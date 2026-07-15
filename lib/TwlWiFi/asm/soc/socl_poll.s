@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.public OS_DisableInterrupts
 	.public OS_RestoreInterrupts
 	.public SOCL_SocketIsInvalid

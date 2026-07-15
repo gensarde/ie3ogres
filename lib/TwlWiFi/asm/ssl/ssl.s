@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.public CPSiAlloc
 	.public CPSiFree
 	.public CPSiRand32ctx

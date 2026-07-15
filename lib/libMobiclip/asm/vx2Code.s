@@ -1,7 +1,7 @@
 
 ; TODO: replace "add/sub rX, pc #X" by "adr _LABEL"
 
-	.include "asm/macros/function.inc"
+	.include "macros/function.inc"
 
 	.text
 ; don't ask me why, but all the stuff here should belong to .rodata,

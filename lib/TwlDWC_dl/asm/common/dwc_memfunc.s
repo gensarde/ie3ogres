@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 
 	.text
 	arm_static_func_start DWCi_GetAllocateHeader

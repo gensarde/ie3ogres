@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.include "crt0.inc"
 
 	.public SDK_AUTOLOAD_DTCM_START

@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 
 	.data
 	.global SOCLSocketParamUDP

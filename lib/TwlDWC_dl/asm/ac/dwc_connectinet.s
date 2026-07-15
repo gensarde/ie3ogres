@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.public MI_CpuFill8
 	.public CPS_SetSslHandshakePriority
 	.public DWC_AC_Create

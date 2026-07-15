@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.public NHTTPi_SetError
 	.public NHTTPi_alloc
 	.public NHTTPi_compareToken

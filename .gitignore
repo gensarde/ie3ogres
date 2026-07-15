@@ -3,6 +3,7 @@
 
 # Compilers
 tools/mwccarm/**
+tools/metroskrew/
 
 # SDK
 tools/bin/**
@@ -16,6 +17,11 @@ cmake-build-debug/
 
 # VSCode folder
 .vscode/
+
+# Meson
+subprojects/meson-*/
+subprojects/nitrorom/
+.wraplock
 
 # "cmake.buildDirectory": "${workspaceFolder}/build-cmake-${buildType}"
 build-cmake-*
@@ -39,7 +45,6 @@ tools/elfcoder/elfcoder
 # For decomp.me
 ctx.c
 
-*.lcf.template
 *.lcf
 *.response.template
 *.response
@@ -67,6 +72,7 @@ files/**/*.c
 *.o
 *.naix
 *.a
+!lib/dsprot/*.a
 
 # Utilities
 ntruncompbw

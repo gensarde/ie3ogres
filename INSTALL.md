@@ -1,96 +1,291 @@
-This doc details the steps necessary to build a copy of Inazuma Eleven 3 - Sekai e no Chousen - The Ogre!! from the sources contained in this repository.
+# Installation Instructions
 
-### 0. Clone the repository
+This document details the steps necessary to build a copy of Inazuma Eleven 3
+(JP) using this repository.
 
-Using a terminal or git client, clone this repository to your local device. All the steps that followed should be performed in the directory to which you cloned this repository.
+## Table of Contents
 
-### 1. Install Twl SDK
+- [1. Setting Up Your Development Environment](#1-setting-up-your-development-environment)
+  - [Windows Subsystem for Linux](#windows-subsystem-for-linux)
+    - [New Installs](#new-installs)
+    - [Existing Installs](#existing-installs)
+    - [Install Build Dependencies](#install-build-dependencies)
+  - [Windows with MSYS2](#windows-with-msys2)
+  - [macOS](#macos)
+  - [Linux](#linux)
+    - [Debian (and derivatives, e.g., Ubuntu, Mint)](#debian-and-derivatives-eg-ubuntu-mint)
+    - [Arch Linux (and derivatives, e.g., Manjaro, Endeavour)](#arch-linux-and-derivatives-eg-manjaro-endeavour)
+    - [Fedora (and derivatives, e.g., AlmaLinux, Red Hat Enterprise Linux)](#fedora-and-derivatives-eg-almalinux-red-hat-enterprise-linux)
+- [2. Downloading the Repository](#2-downloading-the-repository)
+- [3. Building the Repository](#3-building-the-repository)
+- [4. Debugger Support](#4-debugger-support)
+- [Troubleshooting FAQ](#troubleshooting-faq)
+  - [My Build is Failing After Merging from Main](#my-build-is-failing-after-merging-from-main)
 
-The game uses the version 5.4 of the [TwlSDK](https://twlsdk.randommeaninglesscharacters.com/download/TwlSDK/TwlSDK-5_4-20091225a.zip), plus the [patch1](https://twlsdk.randommeaninglesscharacters.com/download/TwlSDK/TwlSDK-5_4-patch1-20100204.zip).
-Extract and copy the folder `tools/bin` from the TwlSDK into the folder `tools` in your `ie3ogres` clone. At the end of this operation, you should have the file `tools/bin/makelcf.exe` inside your `ie3ogres` clone. Copy the folder `include` into the folder `lib/TwlSDK` in your `ie3ogres` clone. Finally, copy `include/nitro/specfiles/ARM9-TS.lcf.template` and `include/nitro/specfiles/mwldarm.response.template` into the project root.
+## 1. Setting Up Your Development Environment
 
-### 2. Dependencies
+### Windows Subsystem for Linux
 
-#### Linux
+> [!IMPORTANT]
+> If you intend to store your project on the Windows file system (or do not know
+> what that means), then use these instructions, which will guide you through
+> installing WSL version 1. If you intend to use WSL version 2, then instead
+> follow the instructions for [Linux](#linux).
 
-Building the ROM requires the following packages. If you cannot find one or more of these using your package distribution, it may be under a different name.
+#### New Installs
 
-* make
-* git
-* build-essentials (build-essential on Ubuntu)
-* binutils-arm-none-eabi
-* wine (to run the mwcc executables)
-* python3 (for asm preprocessor)
-* libpng-devel (libpng-dev on Ubuntu)
-* pkg-config
-* pugixml (libpugixml-dev on Ubuntu)
+Follow these instructions if you do not have an existing install of WSL.
 
-NOTE: If you are using Arch/Manjaro or Void you will only need base-devel instead of build-essentials or make or git. You will still need wine.
+1. Open [Windows PowerShell as Administrator](https://i.imgur.com/QKmVbP9.png).
+Paste (Right Click or Shift+Insert) the following command:
 
-#### Windows
+    ```powershell
+    wsl --install -d Ubuntu
+    ```
 
-Before following the respective guides, please install devkitARM and ensure the DEVKITPRO and DEVKITARM variables are added to bashrc such that:
+2. Once the process finishes, you will be prompted to restart your machine.
+Accept.
 
-Msys2:
-```console
-export DEVKITPRO=C:/devkitPro
-export DEVKITARM=${DEVKITPRO}/devkitARM
+3. After rebooting, reopen PowerShell and run the following command to downgrade
+WSL to version 1:
+
+    ```powershell
+    wsl --set-version Ubuntu 1
+    ```
+
+    WSL version 1 is preferred for most WSL users due to its increased performance
+when accessing files in the Windows file system.
+
+4. Open `Ubuntu` from your Start menu.
+
+5. `Ubuntu` will set up its own installation when it runs for the first time. Once
+finished, it will ask for a username and password as input.
+
+    > [!NOTE]
+    > When typing the password, there will be no visible response; this is normal,
+    > and the terminal is still reading your input.
+
+6. Update `Ubuntu`'s package registry:
+
+    ```bash
+    sudo apt update && sudo apt upgrade
+    ```
+
+7. [`Install build dependencies`](#install-build-dependencies).
+
+#### Existing Installs
+
+Follow these instructions if you have an existing install of WSL, specifically
+`Ubuntu`.
+
+Older versions of `Ubuntu` (e.g., `20.04`) ship with an outdated version of
+Python, which is not supported. To remedy this, you can upgrade your existing
+install to a more recent version of `Ubuntu`:
+
+1. Run the following inside `Ubuntu`:
+
+    ```bash
+    sudo apt upgrade && sudo apt full-upgrade
+    ```
+
+2. Open PowerShell and run the following commands to restart `Ubuntu`:
+
+    ```powershell
+    wsl -t Ubuntu
+    wsl -d Ubuntu
+    ```
+
+3. Re-open `Ubuntu` and run the following to start a system upgrade:
+
+    ```bash
+    sudo do-release-upgrade
+    ```
+
+    This process may take a long time.
+
+4. Once `Ubuntu` is done upgrading, update `Ubuntu`'s package registry:
+
+    ```bash
+    sudo apt update && sudo apt upgrade
+    ```
+
+5. [`Install build dependencies`](#install-build-dependencies).
+
+#### Install Build Dependencies
+
+1. Run the following to install build dependencies from the `Ubuntu` package
+registry:
+
+    ```bash
+    sudo apt install bison flex g++ gcc-arm-none-eabi git lib32z1 make ninja-build pkg-config python3 p7zip
+    ```
+
+2. [Download the repository](#2-downloading-the-repository).
+
+### Windows with MSYS2
+
+If you are unable to run Windows Subsystem for Linux due to performance reasons
+or lacking virtualization requirements, then MSYS2 may be an option for you.
+
+1. Download the MSYS2 installer from [the official website](https://www.msys2.org/)
+and install it on your system.
+
+2. Once the installation is complete, a terminal should automatically pop up.
+To update your package registry, enter the following command:
+
+    ```bash
+    pacman -Syu
+    ```
+
+    Press 'Y' when prompted to confirm the update. This process may take a few
+minutes. Once completed, the terminal will automatically close.
+
+3. Re-open an MSYS terminal (the pink icon) from your Start Menu, then enter
+the following commands to install necessary build dependencies:
+
+    ```bash
+    echo 'export PATH=${PATH}:/mingw64/bin' >> ~/.bashrc
+    source ~/.bashrc
+    pacman -S bison flex gcc git make ninja python mingw-w64-x86_64-arm-none-eabi-gcc p7zip
+    ```
+
+    Press 'Y' when prompted to confirm the installation.
+
+4. [Download the repository](#2-downloading-the-repository).
+
+### macOS
+
+1. Apple bundles a number of the requisite utilities into Xcode Command Line Tools;
+to install these, run:
+
+    ```zsh
+    xcode-select --install
+    ```
+
+2. Install [Homebrew](https://brew.sh/).
+
+3. Run the following commands to install additional dependencies:
+
+    ```zsh
+    brew update
+    brew install gcc@14 ninja libpng pkg-config arm-none-eabi-gcc xz
+    brew install --cask wine-stable
+    ```
+
+4. You may need to authorize the Wine installation to satisfy macOS security
+requirements. To do this, open the Applications folder in Finder and locate the
+Wine Stable application. Control-Click on this icon to open the context menu,
+then Control-Click on Open and grant the requested permissions.
+
+5. If your macOS installation is Monterey (12) or earlier, then you may also need
+GNU `coreutils` installed to run the build scripts:
+
+    ```zsh
+    brew install coreutils
+    ```
+
+6. [Download the repository](#2-downloading-the-repository).
+
+> [!TIP]
+> You can run a persistent Wine server in the background to speed up builds.
+>
+> To do this, open the Wine Stable application from your Applications folder.
+> In the terminal window that opens, run the following command:
+>
+> ```zsh
+> wineserver -p
+> ```
+>
+> When trying to build the repository, the first invocation of `make` may hang
+> on compiling a file. If that happens, hit Control+C to interrupt the build,
+> and run `make` again.
+>
+> If you need to stop the Wine server, run the following command:
+>
+> ```zsh
+> wineserver -k
+> ```
+
+### Linux
+
+> [!NOTE]
+> Precise packages to be installed will vary by Linux distribution and
+> package registry. A handful of common distributions are listed below for
+> convenience.
+
+Once you have installed all of the listed dependencies, proceed to [downloading
+the repository](#2-downloading-the-repository).
+
+#### Debian (and derivatives, e.g., Ubuntu, Mint)
+
+1. Enable 32-bit installations using `dpkg`:
+
+    ```bash
+    sudo dpkg --add-architecture i386 && sudo apt update
+    ```
+
+2. Install the following packages via `apt`:
+
+    ```bash
+    sudo apt install bison flex g++ gcc-arm-none-eabi git make ninja-build pkg-config wget python3 xz-utils nasm libc6:i386
+    ```
+
+#### Arch Linux (and derivatives, e.g., Manjaro, Endeavour)
+
+1. Enable the [multilib repository](https://wiki.archlinux.org/title/Multilib).
+
+2. Install dependencies via `pacman`:
+
+    ```bash
+    sudo pacman -S arm-none-eabi-gcc bison flex gcc git make ninja python wget xz lib32-glibc
+    ```
+
+#### Fedora (and derivatives, e.g., AlmaLinux, Red Hat Enterprise Linux)
+
+```bash
+sudo dnf install arm-none-eabi-gcc-cs bison flex gcc-c++ git make ninja-build python3 wget2 xz glibc32
 ```
 
-Cygwin:
-```console
-export DEVKITPRO=/cygdrive/c/devkitPro
-export DEVKITARM=${DEVKITPRO}/devkitARM
+## 2. Downloading the Repository
+
+From your terminal, navigate to the path in which you will store the repository.
+Users of WSL 1 should ensure that their target is on the Windows file drive.
+
+```bash
+git clone https://github.com/CacaBueno64/ie3ogres
+cd ie3ogres
 ```
 
-You will still require the following packages:
+## 2a. Install Twl library headers:
 
-* make
-* git
-* build-essentials
-* libpng-devel
-* pugixml
-* pkg-config
+The repository needs the headers for the Twl system libraries to build. Copy the `include` folder from the following versions into the corresponding directories under `lib`:
 
-Install them using either the Cygwin package manager or using pacman on Msys2.
+* [TwlSDK 5.4](https://twlsdk.randommeaninglesscharacters.com/download/TwlSDK/TwlSDK-5_4-20091225a.zip), plus the [patch1](https://twlsdk.randommeaninglesscharacters.com/download/TwlSDK/TwlSDK-5_4-patch1-20100204.zip) (overwrite the headers in 5.4's include folder with the ones from patch1's)
+* [TwlSystem 2.2.0](https://twlsdk.randommeaninglesscharacters.com/download/TwlSystem/TwlSystem-2_2_0-20090805.zip)
+* [TwlWiFi 3.0](https://twlsdk.randommeaninglesscharacters.com/download/TwlWiFi/TwlWiFi-3_0-20081027.zip) plus the [patch3](https://twlsdk.randommeaninglesscharacters.com/download/TwlWiFi/TwlWiFi-3_3-20090731.zip) (overwrite the headers in 3.0's include folder with the ones from patch3's)
+* [TwlDWC 5.3 patch1](https://twlsdk.randommeaninglesscharacters.com/download/TwlDWC/TwlDWC-5_3-patch1-20091029-jp.zip)
 
-**NOTE FOR MSYS2:** You will need to compile and install [libpng](https://www.libpng.org/pub/png/libpng.html) from source.
+## 3. Building the Repository
 
-#### macOS
+To build the ROM, run:
 
-macOS 10.15 Catalina and later is supported on Intel and ARM64 hardware configurations. On ARM64, Rosetta 2 must be installed, as well as the following dependencies:
-
-* GNU coreutils
-* GNU make
-* GNU sed
-* LLVM clang compiler
-* arm-gcc-bin
-* git
-* libpng
-* pkg-config
-* pugixml
-* wine-crossover (includes wine32on64, required on Catalina and later to run 32-bit x86 EXEs)
-
-They can be installed with the following commands:
-
-```console
-$ brew tap osx-cross/homebrew-arm
-$ brew tap gcenx/wine
-$ brew install coreutils make gnu-sed llvm arm-gcc-bin libpng git pkg-config
-$ brew install wine-crossover
+```bash
+make
 ```
 
-### 3. Build ROM
+If everything works, then the following ROM should be built:
 
-If you are using wine, open [platform.mk](./platform.mk) and set `NOWINE` to 0.
+- [build/ie3ogre.jp.nds](https://datomatic.no-intro.org/index.php?page=show_record&s=28&n=5421) `sha1: 9380f1d7ee75e7c6ef24f1b76c88ecdc85088957`
 
-Run `make` to build the ROM. The ROM will be output as `build/ie3ojp/ie3ojp.nds`.
+## Troubleshooting FAQ
 
-There are targets for building and testing changes to individual components without repackaging the ROM. For the ARM9 modules, run `make main`. For the ARM7 module, run `make sub`. For the filesystem, run `make filesystem`.
-(At the moment, only `make main` is supported)
+### My Build is Failing After Merging from Main
 
-At the end of building each of these, there is a checksum verification step. This makes sure that the final product is byte-for-byte equivalent to the retail ROM. To disable this, append `COMPARE=0` to your command.
+It is likely that your subprojects are out of date; update them with the following
+command:
 
-#### Windows
+```bash
+make update
+```
 
-If you get an error in saving configuration settings when specifying the license file, you need to add a system environment variable called LM_LICENSE_FILE and point it to the license.dat file. Alternatively, run mwccarm.exe from an Administrator command prompt, PowerShell, or WSL session.
+And then try rebuilding.

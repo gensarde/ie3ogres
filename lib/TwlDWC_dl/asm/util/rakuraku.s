@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.public ATERMi_ApConfigEnd
 	.public ATERMi_ApConfigGetResult
 	.public ATERMi_ApConfigStart

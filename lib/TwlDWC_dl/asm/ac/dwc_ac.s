@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.public MIi_CpuClear32
 	.public DWCi_BM_GetApInfo
 	.public WCM_Init

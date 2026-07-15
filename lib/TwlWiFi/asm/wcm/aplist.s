@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.public MI_CpuComp8
 	.public MI_CpuCopy
 	.public MI_CpuFill8

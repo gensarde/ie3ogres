@@ -1,4 +1,4 @@
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.public CPSi_SslCleanup
 	.public CPSi_SslClose
 	.public CPSi_SslConnect

@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.public DWC_Auth_GetCalInfoFromWiFiInfo
 	.public DWC_Auth_SetCalInfoToHttp
 	.public DWC_Auth_SetNasTimeDiff

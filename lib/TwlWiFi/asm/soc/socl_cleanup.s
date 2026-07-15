@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.public CPSMyIp
 	.public CPS_CalmDown
 	.public CPS_Cleanup

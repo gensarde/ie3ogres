@@ -1,5 +1,5 @@
 
-	.include "asm/macros/function.inc"
+	.include "macros//function.inc"
 	.public CPS_SocBind
 	.public CPS_SocGetEport
 	.public CPS_SocWrite
