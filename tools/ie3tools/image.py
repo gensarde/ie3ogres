@@ -2,8 +2,6 @@ from struct import pack, unpack, unpack_from, Struct
 from dataclasses import dataclass
 from PIL import Image
 
-#from archive import open_pac, open_pkb
-
 PAC_PSCM_HEADER = Struct("<I II II II II I")
 PAC_PSC_HEADER = Struct("<I II II II I")
 PAC_SPM_HEADER = Struct("<I II II II I")
@@ -22,6 +20,8 @@ GXTexSizeST = {
     512: 6,
     1024: 7,
 }
+def get_st(width: int, height: int) -> tuple[int, int]:
+    return (GXTexSizeST[1 << (width - 1).bit_length()], GXTexSizeST[1 << (height - 1).bit_length()])
 
 class PACMetaData:
     @dataclass
@@ -36,11 +36,10 @@ class PACMetaData:
         self.s = 0
         self.t = 0
         self.fmt = 0
-        self.chunks: list[PACMetaData.Chunk] = []
+        self.chunks: list[PACMetaData.Chunk] = [PACMetaData.Chunk(0, 0, 0, 0)]
     
     def set_st(self, width: int, height: int):
-        self.s = GXTexSizeST[1 << (width - 1).bit_length()]
-        self.t = GXTexSizeST[1 << (height - 1).bit_length()]
+        self.s, self.t = get_st(width, height)
     
     def read(self, data: bytes):
         self.count, self.s, self.t, self.fmt, pad, pad, pad = \
@@ -62,6 +61,7 @@ class PACMetaData:
             with open(path, "rt") as file:
                 text = file.read()
         except:
+            self.count = 1
             return
         lines = text.splitlines()
         values = lines[1].split(";")
@@ -143,26 +143,11 @@ def convert_tiles_to_tex_PSC(chara: bytes, screen: bytes, width: int, fmt: int) 
     height = len(screen) // width // 2
     tex_width = width * 8
     tex_height = height * 8
-    wtex = 4
-    htex = 4
-    wexp = 0
-    hexp = 0
-    while (wtex < 0x400):
-        wtex *= 2
-        if tex_width <= wtex:
-            break
-        wexp += 1
-    while (htex < 0x400):
-        htex *= 2
-        if tex_height <= htex:
-            break
-        hexp += 1
-    size = (wtex * htex) // ppby
+    size = (tex_width * tex_height) // ppby
     
     dest = bytearray(size)
 
     tile_size_x = 8 // ppby
-    tile_count_w = wtex // 8
 
     for y in range(height):
         for x in range(width):
@@ -171,7 +156,7 @@ def convert_tiles_to_tex_PSC(chara: bytes, screen: bytes, width: int, fmt: int) 
             char_idx = unpack("<H", screen[scrn_idx : scrn_idx + 2])[0]
 
             for r in range(8):
-                dest_idx = tile_size_x * ((r + y * 8) * tile_count_w + x)
+                dest_idx = tile_size_x * ((r + y * 8) * width + x)
                 chara_idx = (tile_size * char_idx) + (r * tile_size_x)
                 dest[dest_idx : dest_idx + tile_size_x] = chara[chara_idx : chara_idx + tile_size_x]
     
@@ -252,7 +237,6 @@ def convert_PAC_PSC_to_image(path: str, outpath: str, width: int):
     if (len(palette) > 16):
         fmt = GX_TEXFMT_PLTT256
 
-    palette = get_palette(pltt_data)
     texture, width, height = convert_tiles_to_tex_PSC(char_data, scrn_data, width // 8, fmt)
     image = convert_tex_to_image(texture, palette, width, height, fmt)
     
@@ -309,7 +293,7 @@ def write_palette(palette: list, fmt: int) -> bytes:
 
     return output
 
-def convert_tex_to_char_and_screen_PSCM(texture: bytes, width: int, height: int, fmt: int) -> tuple[bytes, bytes]:
+def convert_tex_to_char_and_screen_PSCM(texture: bytes, s: int, t: int, fmt: int) -> tuple[bytes, bytes]:
     """Convert NTFT texture to raw character+screen (NBFC+NBFS?)"""
 
     ppby = 1
@@ -318,6 +302,10 @@ def convert_tex_to_char_and_screen_PSCM(texture: bytes, width: int, height: int,
 
     tile_size_x = 8 // ppby
     tile_size = tile_size_x * 8
+
+    width = (8 << s) // 8
+    height = (8 << t) // 8
+    print(width, height)
 
     chara = bytearray(width * height * tile_size)
     screen = bytearray(width * height * 2)
@@ -408,12 +396,15 @@ def convert_image_to_PAC_PSCM(path: str, outpath: str):
     texture = convert_image_to_tex(img, fmt)
 
     pltt_data = write_palette(palette, fmt)
-    scrn_data, char_data = convert_tex_to_char_and_screen_PSCM(texture, img.width, img.height, fmt)
+    scrn_data, char_data = convert_tex_to_char_and_screen_PSCM(texture, GXTexSizeST[img.width], GXTexSizeST[img.height], fmt)
 
     meta = PACMetaData()
     meta.read_config(path.replace(".png", ".csv"))
     meta.set_st(img.width, img.height)
     meta.fmt = fmt
+    if (meta.count == 1):
+        meta.chunks[0].w = img.width
+        meta.chunks[0].h = img.height
     meta_data = meta.write()
     
     output = bytes()
@@ -494,8 +485,10 @@ def convert_image_to_PAC_SPM(path: str, outpath: str):
         out.write(output)
 
 #convert_PAC_PSCM_to_image("./tools/ie3tools/archives/fac/fac00000100.pac", "./test.png")
-#convert_image_to_PAC_PSCM("./test.png", "./tools/ie3tools/archives/fac/fac00000100/test.pac")
+convert_image_to_PAC_PSCM("./test.png", "./tools/ie3tools/archives/fac/fac00000100/test.pac")
 #convert_PAC_PSC_to_image("./tools/ie3tools/archives/level5_bottom/level5_bottom.pac", "./test.png", 256)
 #convert_image_to_PAC_PSC("./test.png", "./tools/ie3tools/archives/level5_bottom/test.pac")
+#convert_PAC_PSC_to_image("./tools/ie3tools/archives/cmd/tcd_c00000001.pac", "./test.png", 136)
+#convert_image_to_PAC_PSC("./test.png", "./tools/ie3tools/archives/cmd/test.pac")
 #convert_PAC_SPM_to_image("./tools/ie3tools/archives/c3t0100/c3t0100.pac", "./test.png")
 #convert_image_to_PAC_SPM("./test.png", "./tools/ie3tools/archives/c3t0100/test.pac")
