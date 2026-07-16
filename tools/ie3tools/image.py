@@ -23,6 +23,11 @@ GXTexSizeST = {
 def get_st(width: int, height: int) -> tuple[int, int]:
     return (GXTexSizeST[1 << (width - 1).bit_length()], GXTexSizeST[1 << (height - 1).bit_length()])
 
+def pad(data: bytes) -> bytes:
+    """16 bytes padding."""
+    pad_len = (-len(data)) % 32
+    return data + bytes([0xFF]) * pad_len
+
 class PACMetaData:
     @dataclass
     class Chunk:
@@ -293,8 +298,8 @@ def write_palette(palette: list, fmt: int) -> bytes:
 
     return output
 
-def convert_tex_to_char_and_screen_PSCM(texture: bytes, s: int, t: int, fmt: int) -> tuple[bytes, bytes]:
-    """Convert NTFT texture to raw character+screen (NBFC+NBFS?)"""
+def convert_tex_to_char_and_screen(texture: bytes, tex_width: int, tex_height: int, fmt: int) -> tuple[bytes, bytes]:
+    """Convert NTFT texture to raw character+screen"""
 
     ppby = 1
     if fmt == GX_TEXFMT_PLTT16:
@@ -303,9 +308,8 @@ def convert_tex_to_char_and_screen_PSCM(texture: bytes, s: int, t: int, fmt: int
     tile_size_x = 8 // ppby
     tile_size = tile_size_x * 8
 
-    width = (8 << s) // 8
-    height = (8 << t) // 8
-    print(width, height)
+    width = tex_width // 8
+    height = tex_height // 8
 
     chara = bytearray(width * height * tile_size)
     screen = bytearray(width * height * 2)
@@ -325,8 +329,8 @@ def convert_tex_to_char_and_screen_PSCM(texture: bytes, s: int, t: int, fmt: int
 
     return (bytes(screen), bytes(chara))
 
-def convert_tex_to_char_and_screen_PSC(texture: bytes, tex_width: int, tex_height: int, fmt: int):
-    """Convert NTFT texture to raw character+screen (NBFC+NBFS?)"""
+def convert_tex_to_char_and_screen_opt(texture: bytes, tex_width: int, tex_height: int, fmt: int):
+    """Convert NTFT texture to raw character+screen without duplicated tiles"""
 
     ppby = 1
     if fmt == GX_TEXFMT_PLTT16:
@@ -337,7 +341,6 @@ def convert_tex_to_char_and_screen_PSC(texture: bytes, tex_width: int, tex_heigh
 
     tile_size_x = 8 // ppby
     tile_size = tile_size_x * 8
-    tile_count_w = tex_width // 8
 
     chara = bytearray()
     screen = bytearray()
@@ -350,9 +353,9 @@ def convert_tex_to_char_and_screen_PSC(texture: bytes, tex_width: int, tex_heigh
             tile = bytearray(tile_size)
 
             for r in range(8):
-                src_idx = tile_size_x * ((r + y * 8) * tile_count_w + x)
+                src_idx = tile_size_x * ((r + y * 8) * width + x)
                 dst_idx = r * tile_size_x
-                tile[dst_idx:dst_idx + tile_size_x] = texture[src_idx:src_idx + tile_size_x]
+                tile[dst_idx : dst_idx + tile_size_x] = texture[src_idx : src_idx + tile_size_x]
 
             tile = bytes(tile)
 
@@ -361,9 +364,9 @@ def convert_tex_to_char_and_screen_PSC(texture: bytes, tex_width: int, tex_heigh
             else:
                 idx = len(chara) // tile_size
                 tile_map[tile] = idx
-                chara.extend(tile)
+                chara += tile
 
-            screen.extend(pack("<H", idx))
+            screen += pack("<H", idx)
 
     return (bytes(screen), bytes(chara))
 
@@ -376,7 +379,8 @@ def convert_image_to_tex(img: Image.Image, fmt: int) -> bytes:
     if fmt == GX_TEXFMT_PLTT16:
         texture = bytearray(len(px) // 2)
         for i in range(len(texture)):
-            texture[i] = (px[i * 2] & 0x0F) | ((px[i * 2 + 1] & 0x0F) << 4)
+            p1, p2 = unpack_from("<BB", px, i * 2)
+            texture[i] = (p1 & 0x0F) | ((p2 & 0x0F) << 4)
     elif fmt == GX_TEXFMT_PLTT256:
         texture = px
     else:
@@ -396,7 +400,7 @@ def convert_image_to_PAC_PSCM(path: str, outpath: str):
     texture = convert_image_to_tex(img, fmt)
 
     pltt_data = write_palette(palette, fmt)
-    scrn_data, char_data = convert_tex_to_char_and_screen_PSCM(texture, GXTexSizeST[img.width], GXTexSizeST[img.height], fmt)
+    scrn_data, char_data = convert_tex_to_char_and_screen(texture, img.width, img.height, fmt)
 
     meta = PACMetaData()
     meta.read_config(path.replace(".png", ".csv"))
@@ -408,17 +412,16 @@ def convert_image_to_PAC_PSCM(path: str, outpath: str):
     meta_data = meta.write()
     
     output = bytes()
-    output += pack(PAC_PSCM_HEADER.format,
+    output += pad(pack(PAC_PSCM_HEADER.format,
                    4,
                    64, len(pltt_data),
-                   64 + len(pltt_data), len(scrn_data),
-                   64 + len(pltt_data) + len(scrn_data), len(char_data),
-                   64 + len(pltt_data) + len(scrn_data) + len(char_data), PAC_METADATA.size + (PAC_METADATA_CHUNK.size * meta.count),
-                   len(pltt_data) + len(scrn_data) + len(char_data) + len(meta_data))
-    output += pack("<iiiiii", -1, -1, -1, -1, -1, -1) # don't judge me
-    output += pltt_data
-    output += scrn_data
-    output += char_data
+                   64 + len(pad(pltt_data)), len(scrn_data),
+                   64 + len(pad(pltt_data)) + len(pad(scrn_data)), len(char_data),
+                   64 + len(pad(pltt_data)) + len(pad(scrn_data)) + len(pad(char_data)), PAC_METADATA.size + (PAC_METADATA_CHUNK.size * meta.count),
+                   len(pad(pltt_data)) + len(pad(scrn_data)) + len(pad(char_data)) + len(meta_data)))
+    output += pad(pltt_data)
+    output += pad(scrn_data)
+    output += pad(char_data)
     output += meta_data
 
     with open(outpath, "wb") as out:
@@ -436,18 +439,21 @@ def convert_image_to_PAC_PSC(path: str, outpath: str):
     texture = convert_image_to_tex(img, fmt)
 
     pltt_data = write_palette(palette, fmt)
-    scrn_data, char_data = convert_tex_to_char_and_screen_PSC(texture, img.width, img.height, fmt)
+    if (img.width == 256 and img.height == 192):
+        scrn_data, char_data = convert_tex_to_char_and_screen_opt(texture, img.width, img.height, fmt)
+    else:
+        scrn_data, char_data = convert_tex_to_char_and_screen(texture, img.width, img.height, fmt)
 
     output = bytes()
     output += pack(PAC_PSC_HEADER.format,
                    3,
                    32, len(pltt_data),
-                   32 + len(pltt_data), len(scrn_data),
-                   32 + len(pltt_data) + len(scrn_data), len(char_data),
-                   len(pltt_data) + len(scrn_data) + len(char_data))
-    output += pltt_data
-    output += scrn_data
-    output += char_data
+                   32 + len(pad(pltt_data)), len(scrn_data),
+                   32 + len(pad(pltt_data)) + len(pad(scrn_data)), len(char_data),
+                   len(pad(pltt_data)) + len(pad(scrn_data)) + len(pad(char_data)))
+    output += pad(pltt_data)
+    output += pad(scrn_data)
+    output += pad(char_data)
 
     with open(outpath, "wb") as out:
         out.write(output)
@@ -474,18 +480,18 @@ def convert_image_to_PAC_SPM(path: str, outpath: str):
     output += pack(PAC_SPM_HEADER.format,
                    3,
                    32, len(texture),
-                   32 + len(texture), len(pltt_data),
-                   32 + len(texture) + len(pltt_data), PAC_METADATA.size + (PAC_METADATA_CHUNK.size * meta.count),
-                   len(texture) + len(pltt_data) + len(meta_data))
-    output += texture
-    output += pltt_data
+                   32 + len(pad(texture)), len(pltt_data),
+                   32 + len(pad(texture)) + len(pad(pltt_data)), PAC_METADATA.size + (PAC_METADATA_CHUNK.size * meta.count),
+                   len(pad(texture)) + len(pad(pltt_data)) + len(meta_data))
+    output += pad(texture)
+    output += pad(pltt_data)
     output += meta_data
 
     with open(outpath, "wb") as out:
         out.write(output)
 
 #convert_PAC_PSCM_to_image("./tools/ie3tools/archives/fac/fac00000100.pac", "./test.png")
-convert_image_to_PAC_PSCM("./test.png", "./tools/ie3tools/archives/fac/fac00000100/test.pac")
+#convert_image_to_PAC_PSCM("./test.png", "./tools/ie3tools/archives/fac/fac00000100/test.pac")
 #convert_PAC_PSC_to_image("./tools/ie3tools/archives/level5_bottom/level5_bottom.pac", "./test.png", 256)
 #convert_image_to_PAC_PSC("./test.png", "./tools/ie3tools/archives/level5_bottom/test.pac")
 #convert_PAC_PSC_to_image("./tools/ie3tools/archives/cmd/tcd_c00000001.pac", "./test.png", 136)
